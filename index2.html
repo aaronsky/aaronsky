@@ -8,142 +8,35 @@
         <meta name="author" content="Aaron Sky">
         <link rel="icon" href="res/favicon.ico">
         <title>Aaron Sky Portfolio</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     </head>
     <body role="document">
-        <div class="navbar-wrapper">
-            <div class="container">
-                
-                
-                <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                            <a class="navbar-brand" href="#">Aaron Sky</a> </div>
-                        <div class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav" id="top-nav">
-                                <li><a href="#resume">Resume</a></li>
-                                <li class="dropdown"> <a href="#projects" class="dropdown-toggle" data-toggle="dropdown">Projects<span class="caret"></span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li class="dropdown-header">2014</li>
-                                        <li><a href="#projects">Unannoucned Wii U Title</a></li>
-                                        <li><a href="#projects">River de Mambo!!</a></li>
-                                        <li><a href="#projects">Packed</a></li>
-                                        <li class="divider"></li>
-                                        <li class="dropdown-header">2013</li>
-                                        <li><a href="#projects">Zombies Ate My Coworkers</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#contact">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
+        <div id="main-container">
+            <header>
+                <div id="header-container">
+                    <h1>Aaron Sky</h1>
+                    <img data-retina src="/res/images/logo.svg" alt="Aaron Sky" data-png style="cursor:pointer;" />
                 </div>
+            </header>
+            <div id="main">
+                <section for="projects" id="projects">
+                    <ul id="tile-container">
+                    </ul>
+                </section>
+                <section for="languages" id="languages"></section>
+                <section for="experience" id="experience"></section>
+                <section for="education" id="education"></section>
             </div>
-        </div>
-        
-        <div class="jumbotron">
-            <h1>Hello Wordl</h1>
-        </div>
-        
-        <div id="projects" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#projects" data-slide-to="0" class="active"></li>
-                <li data-target="#projects" data-slide-to="1"></li>
-                <li data-target="#projects" data-slide-to="2"></li>
-                <li data-target="#projects" data-slide-to="3"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Unannounced Wii U Title</h1>
-                            <p>It's gonna be pretty neat</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>River de Mambo!!</h1>
-                            <p>This game was made using Unity and C#</p>
-                            <p><a class="btn btn-lg btn-primary" href="river.html" role="button">Try the Demo!</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Packed</h1>
-                            <p>Package Tracking app for Windows Phone 8 and Windows 8</p>
-                            <p><button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Learn More</button></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAFVVVQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Zombies Ate My Coworkers</h1>
-                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">More Information</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a class="left carousel-control" href="#projects" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-            <a class="right carousel-control" href="#projects" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-        </div>
-        
-        <div class="container theme-showcase" role="main">
-            
-            <div class="block" id="resume">
-                <h2 class="page-header">contact me</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at gravida metus, id placerat erat. Ut elementum mauris fringilla, condimentum urna ut, laoreet mauris. Donec a hendrerit elit, ut aliquam nibh. Ut nibh lacus, posuere non scelerisque ac, auctor sit amet mi. In et neque non nisi posuere dignissim. Proin nec odio sed tellus commodo mattis at eu urna. In vestibulum elit ac risus auctor tincidunt.
-                    
-                    Suspendisse ac sagittis diam. Morbi vulputate rhoncus urna quis hendrerit. Etiam hendrerit rhoncus turpis, quis fermentum mi sagittis quis. Duis sagittis neque quis malesuada lacinia. In gravida fringilla odio, non fermentum quam consectetur ac. Vivamus accumsan lacinia augue, ac suscipit justo mattis eu. Donec pretium ligula a vehicula facilisis. Sed nec odio nulla. Vivamus sit amet quam at magna tristique consequat vitae non augue. Suspendisse sagittis enim sed feugiat fringilla. Nam rutrum neque ac quam euismod, eget facilisis velit iaculis. Mauris quis pharetra purus.
-                    
-                    Vestibulum justo orci, ornare quis dignissim eu, malesuada non leo. Nullam dui augue, pharetra ullamcorper ultricies et, interdum eu nibh. Proin ante diam, faucibus in hendrerit eget, porttitor et sem. Ut rhoncus ac diam eu rhoncus. Aliquam mattis massa non sem tempus, eu vehicula neque congue. Nunc ut blandit sem, non fermentum leo. Integer scelerisque sapien placerat magna mattis dapibus. Praesent aliquet in nulla luctus suscipit. Curabitur in iaculis sem. Curabitur ultrices sapien in egestas molestie. Donec facilisis dolor ut lacus faucibus auctor. In sit amet quam eu tellus volutpat volutpat a ac lacus. Morbi varius lobortis ante ut egestas. Suspendisse eu nisl eu sapien pretium elementum vitae nec orci.
-                    
-                    Nulla faucibus eleifend ligula, a laoreet lacus. Nunc in dignissim nulla, et facilisis ante. Maecenas blandit congue lorem, sit amet laoreet nisl posuere non. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam arcu dui, imperdiet vulputate felis vel, egestas imperdiet massa. Ut sed tristique odio, id sodales nunc. Mauris egestas dolor enim, convallis varius diam faucibus et. Nullam tristique tortor non orci ornare mollis.
-                    
-                    Etiam neque ante, feugiat feugiat nunc a, interdum varius nulla. Fusce vehicula erat nunc, nec cursus nisl tincidunt et. Nunc feugiat dignissim diam id pretium. Curabitur ac pharetra sapien, eu pharetra dui. Duis placerat dictum nunc, ac volutpat nibh viverra vitae. Etiam quis augue cursus mi aliquet pellentesque quis id neque. Proin volutpat turpis arcu, nec lobortis purus vehicula vel. Sed euismod non est ac hendrerit. Donec facilisis arcu et justo facilisis semper. Donec sodales elementum ornare. Fusce diam ante, sagittis non eros eget, venenatis venenatis purus. Donec rhoncus sed metus dignissim placerat.</p>
-            </div>
-            
-            <div class="block" id="contact">
-                <h2 class="page-header">contact me</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at gravida metus, id placerat erat. Ut elementum mauris fringilla, condimentum urna ut, laoreet mauris. Donec a hendrerit elit, ut aliquam nibh. Ut nibh lacus, posuere non scelerisque ac, auctor sit amet mi. In et neque non nisi posuere dignissim. Proin nec odio sed tellus commodo mattis at eu urna. In vestibulum elit ac risus auctor tincidunt.
-                    
-                    Suspendisse ac sagittis diam. Morbi vulputate rhoncus urna quis hendrerit. Etiam hendrerit rhoncus turpis, quis fermentum mi sagittis quis. Duis sagittis neque quis malesuada lacinia. In gravida fringilla odio, non fermentum quam consectetur ac. Vivamus accumsan lacinia augue, ac suscipit justo mattis eu. Donec pretium ligula a vehicula facilisis. Sed nec odio nulla. Vivamus sit amet quam at magna tristique consequat vitae non augue. Suspendisse sagittis enim sed feugiat fringilla. Nam rutrum neque ac quam euismod, eget facilisis velit iaculis. Mauris quis pharetra purus.
-                    
-                    Vestibulum justo orci, ornare quis dignissim eu, malesuada non leo. Nullam dui augue, pharetra ullamcorper ultricies et, interdum eu nibh. Proin ante diam, faucibus in hendrerit eget, porttitor et sem. Ut rhoncus ac diam eu rhoncus. Aliquam mattis massa non sem tempus, eu vehicula neque congue. Nunc ut blandit sem, non fermentum leo. Integer scelerisque sapien placerat magna mattis dapibus. Praesent aliquet in nulla luctus suscipit. Curabitur in iaculis sem. Curabitur ultrices sapien in egestas molestie. Donec facilisis dolor ut lacus faucibus auctor. In sit amet quam eu tellus volutpat volutpat a ac lacus. Morbi varius lobortis ante ut egestas. Suspendisse eu nisl eu sapien pretium elementum vitae nec orci.
-                    
-                    Nulla faucibus eleifend ligula, a laoreet lacus. Nunc in dignissim nulla, et facilisis ante. Maecenas blandit congue lorem, sit amet laoreet nisl posuere non. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam arcu dui, imperdiet vulputate felis vel, egestas imperdiet massa. Ut sed tristique odio, id sodales nunc. Mauris egestas dolor enim, convallis varius diam faucibus et. Nullam tristique tortor non orci ornare mollis.
-                    
-                    Etiam neque ante, feugiat feugiat nunc a, interdum varius nulla. Fusce vehicula erat nunc, nec cursus nisl tincidunt et. Nunc feugiat dignissim diam id pretium. Curabitur ac pharetra sapien, eu pharetra dui. Duis placerat dictum nunc, ac volutpat nibh viverra vitae. Etiam quis augue cursus mi aliquet pellentesque quis id neque. Proin volutpat turpis arcu, nec lobortis purus vehicula vel. Sed euismod non est ac hendrerit. Donec facilisis arcu et justo facilisis semper. Donec sodales elementum ornare. Fusce diam ante, sagittis non eros eget, venenatis venenatis purus. Donec rhoncus sed metus dignissim placerat.</p>
-            </div>
-            
             <footer>
-                <p>&copy; Aaron Sky 2014</p>
+                <div id="footer-container">
+                <section>
+                    <div>
+                        <a href="https://twitter.com/twitter" target="_blank">@twitter</a>
+                        <a href="mailto:aaronsky@skyaaron.com" target="_blank">Contact&nbsp;me</a>
+                    </div>
+                    ©&nbsp;2014 Aaron&nbsp;Sky. All&nbsp;Rights&nbsp;Reserved.
+                </section>
+                </div>
             </footer>
-            
         </div>
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script>
-            $('#top-nav').onePageNav({
-                currentClass: 'active',
-                changeHash: true,
-                scrollSpeed: 1200
-            });
-        </script>
     </body>
 </html>
