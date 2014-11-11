@@ -22,7 +22,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #18bc9c;
+    color: #318fff;
 }
 
 h1,
@@ -63,7 +63,7 @@ hr.star-light {
 
 hr.star-light:after {
     color: #fff;
-    background-color: #18bc9c;
+    background-color: #318fff;
 }
 
 hr.star-primary {
@@ -194,7 +194,7 @@ section.success {
     }
 }
 
-#portfolio .portfolio-item {
+#page-top .portfolio-item {
     right: 0;
     padding: 1em;
 }
@@ -254,6 +254,7 @@ section.success {
 
 .btn-outline {
     margin-top: 15px;
+    margin-bottom: 15px;
     border: solid 2px #fff;
     font-size: 20px;
     color: #fff;
@@ -266,7 +267,7 @@ section.success {
 .btn-outline:active,
 .btn-outline.active {
     border: solid 2px #fff;
-    color: #18bc9c;
+    color: #318fff;
     background: #fff;
 }
 
@@ -319,7 +320,7 @@ section.success {
 }
 
 .floating-label-form-group-with-focus label {
-    color: #18bc9c;
+    color: #318fff;
 }
 
 form .row:first-child .floating-label-form-group {
