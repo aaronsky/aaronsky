@@ -252,6 +252,11 @@ section.success {
     }
 }
 
+canvas {
+    width: 100%;
+    height: auto;
+}
+
 .btn-outline {
     margin-top: 15px;
     margin-bottom: 15px;

@@ -197,7 +197,7 @@
                             <li role="presentation"><span style="padding:3px 20px">3 years</span></li>
                             <!--<li role="presentation" class="divider"></li>-->
                             <li role="presentation" class="dropdown-header">Projects</li>
-                            <li role="presentation"><a href="#packedModal">Packed</a></li>
+                            <li role="presentation"><a href="#packedModal" class="portfolio-link" data-toggle="modal">Packed</a></li>
                         </ul>
                     </li>
                     <li class="presentation dropdown">
@@ -257,7 +257,7 @@
                             <li role="presentation"><span style="padding:3px 20px">1 year</span></li>
                             <!--<li role="presentation" class="divider"></li>-->
                             <li role="presentation" class="dropdown-header">Projects</li>
-                            <li role="presentation"><a href="#openSkiesModal">OpenSkies</a></li>
+                            <li role="presentation"><a href="#openSkiesModal" class="portfolio-link" data-toggle="modal">OpenSkies</a></li>
                         </ul>
                     </li>
                     <li class="presentation dropdown">
@@ -342,7 +342,7 @@
                             <div class="modal-body">
                                 <h2>Microsoft Student Partner</h2>
                                 <hr class="star-primary">
-                                <img src="img/portfolio/mstudentp-logo.jpg" class="img-responsive img-centered" alt="">
+                                <img src="img/portfolio/mstudentp-logo.jpg" class="img-responsive img-centered img-lg" alt="">
                                 <p>Responsible for promoting a thriving developer community at RIT through hosting workshops, developing and publishing apps, and completing other development tasks on behalf of Microsoft.</p>
                                 <ul class="list-inline item-details">
                                     <li>Employer:
@@ -506,13 +506,10 @@
                             <div class="modal-body">
                                 <h2>Key Daemon</h2>
                                 <hr class="star-primary">
-                                <div class="canvas-container-main">
-                                    <div class="canvas-container">
-                                        <canvas id="game-stage" width="1280" height="720"></canvas>
-                                    </div>
-                                </div>
-                                <canvas id="game-stage"></canvas>
-                                <p>Four player competitive typing game created in Javascript for HTML5 Canvas. I was personally responsible for the underlying game structure, daemon, and rapid prototype implementation. Developed in a team of four as part of a five-week sprint in Game Design and Development 2. Try it out above!</p>
+                                        <canvas id="game-stage" class="can" width="1280" height="720">
+                                            Sorry, your browser doesn't support the &lt;canvas&gt; element.
+                                        </canvas>
+                            <p>Four player competitive typing game created in Javascript for HTML5 Canvas. I was personally responsible for the underlying game structure, daemon, and rapid prototype implementation. Developed in a team of four as part of a five-week sprint in Game Design and Development 2. Try it out above!</p>
                                 <ul class="list-inline item-details">
                                     <li>Project Type:
                                         <strong>
@@ -672,6 +669,22 @@
         <!-- Custom Theme JavaScript -->
         <script src="js/freelancer.js"></script>
 
+
+        <!--<script type="text/javascript" src="lib/bind.js"></script>
+        <script type="text/javascript" src="lib/rAF.js"></script>-->
+
+        <!--Key Daemon Scripts-->
+        <script type="text/javascript" src="js/keyDaemon/Word.js"></script>
+        <script type="text/javascript" src="js/keyDaemon/WordManager.js"></script>
+        <script type="text/javascript" src="js/keyDaemon/InputManager.js"></script>
+        <script type="text/javascript" src="js/keyDaemon/Player.js"></script>
+        <script type="text/javascript" src="js/keyDaemon/Level.js"></script>
+        <script type="text/javascript" src="js/keyDaemon/LoadSpinner.js"></script>
+        <script type="text/javascript" src="js/keyDaemon/RulesMenu.js"></script>
+        <script type="text/javascript" src="js/keyDaemon/StartScreen.js"></script>
+        <script type="text/javascript" src="js/keyDaemon/RuleFadeIn.js"></script>
+        <script type="text/javascript" src="js/keyDaemon/EndScreen.js"></script>
+        <script type="text/javascript" src="js/keyDaemon/main.js"></script>
     </body>
 
 </html>
