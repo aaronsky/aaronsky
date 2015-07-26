@@ -1,0 +1,178 @@
+/* Button
+---------------------------*/
+.btn-social {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 48px;
+}
+
+.btn:focus,
+.btn:active,
+.btn.active {
+    outline: 0;
+}
+
+.btn-outline {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: solid 2px #fff;
+    font-size: 27px;
+    color: #fff;
+    background: 0 0;
+    transition: all .3s ease-in-out;
+}
+
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active,
+.btn-outline.active {
+    border: solid 2px #fff;
+    color: #2c3e50;
+    background: #fff;
+}
+
+/* Sections
+---------------------------*/
+.section {
+    padding: 8rem 0 7rem;
+    text-align: center;
+}
+.section-heading,
+.section-description {
+    margin-bottom: 1.2rem;
+}
+
+/* Landing
+---------------------------*/
+.landing {
+    background-color: #2c3e50;
+    color: #fff;
+}
+.landing-heading {   
+}
+.landing-description {
+    margin-bottom: 1.2rem;
+}
+.landing-profile {
+    float: right;
+    width: 20%;
+}
+.social {
+}
+
+/* Work
+---------------------------*/
+.work {
+    background-color: #318FFF;
+    color: #fff;
+}
+.work-heading {
+    margin-bottom: 0.3rem;
+}
+.work-description {
+    opacity: 0.8;
+    font-weight: 300;
+}
+.work-language {
+    font-size: 14pt;
+}
+
+/* Projects
+---------------------------*/
+.projects {
+    background-color: #fff;
+}
+.project-heading {
+    margin-bottom: 0.3rem;
+}
+.project-description {
+    opacity: 0.8;
+    font-weight: 300;
+}
+.project-language {
+    font-size: 14pt;
+}
+
+/* Edu
+---------------------------*/
+.edu {
+    background-color: #318FFF;
+    color: #fff;
+}
+.edu-heading {
+    margin-bottom: 0.3rem;
+}
+.edu-description {
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+
+/* Legal
+---------------------------*/
+.legal {
+    background-color: #2c3e50;
+    color: #fff;
+}
+.legal-heading {
+    margin-bottom: 0.3rem;
+}
+.legal-description {
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+    .section {
+        padding: 12rem 0 11rem;
+    }
+    .landing {
+        padding-bottom: 12rem;
+        text-align: left;
+        height: 165px;
+    }
+    .landing-heading {
+        font-size: 2.4rem;
+    }
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+    .landing {
+        height: 190px;
+    }
+    .landing-heading {
+        font-size: 2.6rem;
+    }
+    .section {
+        padding: 14rem 0 15rem;
+    }
+    .landing {
+        padding: 16rem 0 14rem;
+    }
+    .section-description {
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Bigger than 1000 */
+@media (min-width: 1000px) {
+    .section {
+        padding: 20rem 0 19rem;
+    }
+    .landing {
+        padding: 22rem 0;
+    }
+    .landing-heading {
+        font-size: 3.0rem;
+    }
+}
