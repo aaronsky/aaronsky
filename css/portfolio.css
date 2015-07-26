@@ -56,7 +56,7 @@ a {
 /* Landing
 ---------------------------*/
 .landing {
-    background-color: #2c3e50;
+    background-color: #0D3D70;
     color: #fff;
 }
 .landing-heading {
@@ -76,18 +76,18 @@ a {
 }
 .social li {
     display: inline-block;
-    margin: 20px 4% 0 4%;
+    margin: 20px 2.5% 0 2.5%;
 }
 
 /* Work
  * Projects
 ---------------------------*/
 .work {
-    background-color: #18477F;
+    background-color: #22558C;
     color: #fff;
 }
 .projects {
-    background-color: #fff;
+    background-color: #E1F0F5;
 }
 .project {
     border-radius: 6px;
@@ -95,17 +95,15 @@ a {
     cursor: pointer;
     margin-bottom: 10px;
 }
-.work .project:hover,
-.project:focus,
-.project:active,
-.project.active {
-    color: orange;
+.work .project:hover {
+    color: #ddd;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px #bbb;
 }
-.projects .project:hover,
-.project:focus,
-.project:active,
-.project.active {
-    color: lightgray;
+.projects .project:hover {
+    color: #222;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px #666;
 }
 .project-img {
     width: 25%;
@@ -116,16 +114,16 @@ a {
 .project-heading {
     margin-bottom: 0.5rem;
     font-size: 2rem;
+    font-weight: 400;
 }
 .project-info {
     opacity: 0.8;
     font-weight: 300;
-    font-size: 1.55rem;
+    font-size: 1.5rem;
     margin-bottom: 5px;
 }
 .project-description {
     opacity: 0.8;
-    font-weight: 300;
     font-size: 1.25rem;
     margin-bottom: 5px;
     width: 65%;
@@ -135,7 +133,6 @@ a {
 }
 .project-languages {
     opacity: 0.8;
-    font-weight: 300;
     font-size: 1.5rem;
     margin-bottom: 5px;
 }
@@ -157,7 +154,12 @@ a {
 /* Certification
  --------------------------*/
 .cert {
-    background-color: bisque;
+    background-color: #95D0E6;
+}
+.cert .project:hover {
+    color: #222;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px #eee;
 }
 .cert img {
     width: 50%;
@@ -165,7 +167,7 @@ a {
 /* Edu
 ---------------------------*/
 .edu {
-    background-color: #2C81E5;
+    background-color: #1E71B0;
     color: #fff;
 }
 
@@ -173,7 +175,7 @@ a {
 /* Legal
 ---------------------------*/
 .legal {
-    background-color: #2c3e50;
+    background-color: #022245;
     color: #fff;
     padding: 3rem 0;
     text-align: center;
