@@ -8,9 +8,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="127"
-   height="113.00001"
-   viewBox="0 0 127 113.00001"
+   width="130"
+   height="130"
+   viewBox="0 0 130 130"
    version="1.1"
    id="svg2"
    inkscape:version="0.91 r13725"
@@ -45,8 +45,8 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="6.5764414"
-     inkscape:cx="45.157257"
-     inkscape:cy="48.509718"
+     inkscape:cx="47.555117"
+     inkscape:cy="71.863846"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -62,12 +62,12 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Layer 2"
-     transform="translate(-39,-44.999996)">
+     transform="translate(-39,-27.999989)">
     <g
        style="fill:#ffffff;fill-rule:evenodd;stroke:none;stroke-width:1"
        id="Page-1-1"
        sketch:type="MSPage"
-       transform="matrix(0.74701869,0,0,0.74701869,29.143397,14.432753)">
+       transform="matrix(0.77096482,0,0,0.71068627,27.750749,8.3570009)">
       <g
          style="fill:#ffffff"
          id="xamagon-6"
@@ -86,12 +86,13 @@
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="Layer 1"
-     sodipodi:insensitive="true"
-     transform="translate(-39,-44.999996)">
+     transform="translate(-39,-27.999989)"
+     sodipodi:insensitive="true">
     <g
        style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1"
        id="Page-1"
-       sketch:type="MSPage">
+       sketch:type="MSPage"
+       transform="translate(2,-8)">
       <g
          id="xamagon"
          sketch:type="MSArtboardGroup"

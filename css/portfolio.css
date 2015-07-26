@@ -8,14 +8,14 @@ a {
     text-decoration: none;
 }
 .btn-social {
+    width: 35px;
+    height: 35px;
     display: inline-block;
-    width: 50px;
-    height: 50px;
     border: 2px solid #fff;
     border-radius: 100%;
     text-align: center;
     font-size: 20px;
-    line-height: 48px;
+    line-height: 35px;
 }
 
 .btn:focus,
@@ -25,10 +25,9 @@ a {
 }
 
 .btn-outline {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 15px auto;
     border: solid 2px #fff;
-    font-size: 27px;
+    font-size: 20px;
     color: #fff;
     background: 0 0;
     transition: all .3s ease-in-out;
@@ -60,12 +59,23 @@ a {
     background-color: #2c3e50;
     color: #fff;
 }
+.landing-heading {
+    font-weight: 700;
+}
 .landing-description {
     margin-bottom: 4rem;
+    font-style: italic;
 }
 .landing-profile {
     float: right;
     width: 20%;
+}
+.social {
+    list-style: none;
+}
+.social li {
+    display: inline-block;
+    margin: 20px 5% 0;
 }
 
 /* Work
@@ -79,10 +89,10 @@ a {
     background-color: #fff;
 }
 .project {
-    padding: 2rem;
     border-radius: 6px;
     transition: all .3s ease-in-out;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 .work .project:hover,
 .project:focus,
@@ -97,23 +107,38 @@ a {
     color: lightgray;
 }
 .project-img {
-    float: left;
     width: 25%;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin: 10px;
+    display: block;
+    float: left;
 }
 .project-heading {
-    margin: 0.5rem;
-    font-size: 20pt;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+.project-info {
+    opacity: 0.8;
+    font-weight: 300;
+    font-size: 1.55rem;
+    margin-bottom: 5px;
 }
 .project-description {
     opacity: 0.8;
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+    width: 65%;
+    margin-right: 10px;
+    float: right;
+    font-style: italic;
 }
 .project-languages {
-    
+    opacity: 0.8;
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
 }
+/*
 .xamarin {
 }
 .rit {
@@ -126,19 +151,21 @@ a {
 }
 .packed {
 }
+*/
 
+/* Certification
+ --------------------------*/
+.cert {
+    background-color: bisque;
+}
+.cert img {
+    width: 50%;
+}
 /* Edu
 ---------------------------*/
 .edu {
     background-color: #2C81E5;
     color: #fff;
-}
-.edu-heading {
-    margin-bottom: 0.3rem;
-}
-.edu-description {
-    opacity: 0.8;
-    font-weight: 300;
 }
 
 
@@ -151,6 +178,8 @@ a {
     text-align: center;
 }
 
+/* Media Queries
+ -------------------------*/
 /* Bigger than 550 */
 @media (min-width: 550px) {
     .section {
@@ -166,8 +195,16 @@ a {
         font-style: italic;
     }
     .project-img {
-        width: 130px;
-        float: inherit;
+        width: 100px;
+        float: none;
+        margin: 10px auto;
+    }
+    .project-heading {
+        
+    }
+    .project-description {
+        float: none;
+        width: auto;
     }
     .resumes {
         position: absolute;
@@ -180,7 +217,14 @@ a {
 
 /* Bigger than 750 */
 @media (min-width: 750px) {
+    .btn-social {
+        width: 50px;
+        height: 50px;
+        font-size: 28px;
+        line-height: 48px;
+    }
     .landing {
+        padding: 16rem 0 14rem;
         height: 190px;
     }
     .landing-heading {
@@ -189,13 +233,13 @@ a {
     .section {
         padding: 14rem 0 15rem;
     }
-    .landing {
-        padding: 16rem 0 14rem;
-    }
     .section-description {
         max-width: 60%;
         margin-left: auto;
         margin-right: auto;
+    }
+    .project-img {
+        width: 130px;
     }
 }
 
