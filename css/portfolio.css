@@ -1,5 +1,9 @@
-/* Button
+/* Shared
 ---------------------------*/
+body {
+    font-family: 'Roboto', sans-serif;
+}
+a { color: inherit; } 
 .btn-social {
     display: inline-block;
     width: 50px;
@@ -39,7 +43,7 @@
 /* Sections
 ---------------------------*/
 .section {
-    padding: 8rem 0 7rem;
+    padding: 3rem 0 5rem;
     text-align: center;
 }
 .section-heading,
@@ -56,52 +60,77 @@
 .landing-heading {   
 }
 .landing-description {
-    margin-bottom: 1.2rem;
+    margin-bottom: 4rem;
 }
 .landing-profile {
     float: right;
     width: 20%;
 }
-.social {
-}
 
 /* Work
+ * Projects
 ---------------------------*/
 .work {
-    background-color: #318FFF;
+    background-color: #18477F;
     color: #fff;
 }
-.work-heading {
-    margin-bottom: 0.3rem;
-}
-.work-description {
-    opacity: 0.8;
-    font-weight: 300;
-}
-.work-language {
-    font-size: 14pt;
-}
-
-/* Projects
----------------------------*/
 .projects {
     background-color: #fff;
 }
+.project {
+    padding: 2rem;
+    border-radius: 6px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+.work .project:hover,
+.project:focus,
+.project:active,
+.project.active {
+    color: orange;
+}
+.projects .project:hover,
+.project:focus,
+.project:active,
+.project.active {
+    color: lightgray;
+}
+.project-img {
+    float: left;
+    width: 25%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
 .project-heading {
     margin-bottom: 0.3rem;
+    font-size: 20pt;
+    margin-top: 20px;
 }
 .project-description {
     opacity: 0.8;
     font-weight: 300;
+    font-size: 1.5rem;
 }
-.project-language {
-    font-size: 14pt;
+.project-languages {
+    
+}
+.xamarin {
+}
+.rit {
+}
+.idtc {
+}
+.topeka {
+}
+.starmen {
+}
+.packed {
 }
 
 /* Edu
 ---------------------------*/
 .edu {
-    background-color: #318FFF;
+    background-color: #2C81E5;
     color: #fff;
 }
 .edu-heading {
@@ -118,15 +147,9 @@
 .legal {
     background-color: #2c3e50;
     color: #fff;
+    padding: 3rem 0;
+    text-align: center;
 }
-.legal-heading {
-    margin-bottom: 0.3rem;
-}
-.legal-description {
-    opacity: 0.8;
-    font-weight: 300;
-}
-
 
 /* Bigger than 550 */
 @media (min-width: 550px) {
@@ -138,8 +161,14 @@
         text-align: left;
         height: 165px;
     }
-    .landing-heading {
+    .landing-description {
         font-size: 2.4rem;
+        font-style: italic;
+    }
+    .project-img {
+        width: 50%;
+        margin-top: 10px;
+        margin-left: 10px;
     }
 }
 
@@ -172,7 +201,7 @@
     .landing {
         padding: 22rem 0;
     }
-    .landing-heading {
-        font-size: 3.0rem;
+    .landing-description {
+        margin-bottom: 10rem;
     }
 }
