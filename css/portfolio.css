@@ -256,4 +256,10 @@ a {
     .landing-description {
         margin-bottom: 10rem;
     }
+    .project-heading {
+        font-size: 2.5rem;
+    }
+    .project-description {
+        font-size: 1.45rem;
+    }
 }
