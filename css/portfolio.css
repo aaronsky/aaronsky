@@ -98,11 +98,11 @@ a {
 * Projects
 ---------------------------*/
 .work {
-    background-color: #22558C;
+    background-color: #3d638c;
     color: #fff;
 }
 .projects {
-    background-color: #E1F0F5;
+    background-color: #e6ebf0;
 }
 .project {
     border-radius: 6px;
@@ -169,7 +169,7 @@ a {
 /* Certification
 --------------------------*/
 .cert {
-    background-color: #95D0E6;
+    background-color: #b6c4d4;
 }
 .cert .project:hover {
     color: #222;
@@ -182,7 +182,7 @@ a {
 /* Edu
 ---------------------------*/
 .edu {
-    background-color: #1E71B0;
+    background-color: #3d638c;
     color: #fff;
 }
 
@@ -190,7 +190,7 @@ a {
 /* Legal
 ---------------------------*/
 .legal {
-    background-color: #022245;
+    background-color: #0a3059;
     color: #fff;
     padding: 3rem 0;
     text-align: center;
