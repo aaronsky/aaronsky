@@ -113,12 +113,10 @@ a {
 .work .project:hover {
     color: #ddd;
     background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 5px #bbb;
 }
 .projects .project:hover {
     color: #222;
     background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 5px #666;
 }
 .project-img {
     width: 25%;
@@ -174,7 +172,6 @@ a {
 .cert .project:hover {
     color: #222;
     background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 5px #eee;
 }
 .cert img {
     width: 50%;
