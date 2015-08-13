@@ -192,6 +192,9 @@ a {
     padding: 3rem 0;
     text-align: center;
 }
+.brand-img {
+    width: 25%;
+}
 
 /* Media Queries
 -------------------------*/
@@ -228,6 +231,9 @@ a {
     .resumes a {
         margin-left: 10px;
     }
+    .brand-img {
+        width: 15%;
+    }
 }
 
 /* Bigger than 750 */
@@ -252,6 +258,9 @@ a {
     }
     .project-img {
         width: 130px;
+    }
+    .brand-img {
+        width: 10%;
     }
 }
 
