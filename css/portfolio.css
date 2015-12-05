@@ -81,6 +81,7 @@ a {
 .landing-profile {
     float: right;
     width: 20%;
+    margin-top: -1em;
 }
 .social {
     list-style: none;
