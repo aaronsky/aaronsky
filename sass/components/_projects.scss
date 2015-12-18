@@ -1,0 +1,82 @@
+.projects_container {
+  @include outer-container;
+}
+
+.project {
+  border-radius: 6px;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 10px;
+  @include span-columns(1 of 1);
+  @include media($tablet) {
+    @include span-columns(3 of 12);
+    @include shift(1);
+  }
+  //work
+  &-lighten {
+    &:hover {
+      color: $light-gray;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+  //projects, cert
+  &-darken {
+    &:hover {
+      color: $dark-gray;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  &_cert {
+    @include span-columns(4);
+    @include shift(4);
+  }
+  &_img {
+    width: 25%;
+    margin: 10px;
+    display: block;
+    float: left;
+    @include media($tablet) {
+      width: 100px;
+      float: none;
+      margin: 10px auto;
+    }
+    @include media($medium) {
+      width: 130px;
+    }
+  }
+  &_heading {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: 400;
+    @include media($large) {
+      font-size: 2.5rem;
+    }
+  }
+  &_info {
+    opacity: 0.8;
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  &_description {
+    opacity: 0.8;
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+    width: 65%;
+    margin-right: 10px;
+    float: right;
+    font-style: italic;
+    @include media($tablet) {
+      float: none;
+      width: auto;
+    }
+    @include media($large) {
+      font-size: 1.45rem;
+    }
+  }
+  &_languages {
+    opacity: 0.8;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+}

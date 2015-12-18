@@ -1,0 +1,43 @@
+.social {
+  &_item {
+    @include span-columns(2);
+  }
+}
+
+.button {
+  &:focus,
+  &:active,
+  &.active {
+    outline: 0;
+  }
+  &_social {
+    display: inline-block;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 32px;
+    line-height: 48px;
+    @include media ($medium) {
+      width: 50px;
+      height: 50px;
+      font-size: 28px;
+      line-height: 48px;
+    }
+    i {
+      font-family: $font-icons;
+    }
+  }
+  &-outline {
+    margin: 0 auto;
+    font-size: 32px;
+    color: $white;
+    background: 0 0;
+    transition: all .2s ease-in-out;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: $blue;
+      background: $white;
+    }
+  }
+}

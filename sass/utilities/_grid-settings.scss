@@ -1,0 +1,9 @@
+@import '../vendor/neat/neat-helpers';
+
+$tablet-size: 550px;
+$medium-size: 750px;
+$large-size: 1000px;
+
+$tablet: new-breakpoint(min-width $tablet-size 3);
+$medium: new-breakpoint(min-width $medium-size 3);
+$large: new-breakpoint(min-width $large-size 3);

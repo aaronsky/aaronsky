@@ -1,0 +1,112 @@
+.section {
+  padding: 3rem 0 5rem;
+  text-align: center;
+  position: relative;
+  @include media($tablet) {
+    padding: 10rem 0 10rem;
+  }
+  @include media($medium) {
+    padding: 5rem 0 5rem;
+  }
+  &_heading,
+  &_description {
+    margin-bottom: 1.2rem;
+  }
+  &_link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 24px;
+    margin: 10px;
+    a {
+      color: $blue;
+      transition: all .2s ease-in-out;
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+        color: $light-gray;
+      }
+    }
+  }
+  &_landing {
+    padding: 5rem 0 3rem;
+    background-color: $darker-blue;
+    color: $white;
+    @include media($tablet) {
+      padding-bottom: 12rem;
+      text-align: left;
+      height: 165px;
+    }
+    @include media($medium) {
+      padding: 5em 0 10rem;
+      height: 190px;
+    }
+    @include media($large) {
+      padding: 12rem 0 17rem;
+    }
+    &_heading {
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+    }
+    &_description {
+      margin-bottom: 4rem;
+      font-style: italic;
+      @include media($tablet) {
+        font-size: 2.4rem;
+      }
+      @include media($medium) {
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include media($large) {
+        margin-bottom: 10rem;
+      }
+    }
+    &_profile {
+      float: right;
+      width: 20%;
+      margin-top: -1em;
+    }
+    &_social {
+      list-style: none;
+      li {
+        display: inline-block;
+        margin: 20px 2% 0 2%;
+      }
+    }
+  }
+  &_work {
+    background-color: $dark-blue;
+    color: $white;
+  }
+  &_projects {
+    background-color: $lightest-blue;
+  }
+  &_cert {
+    background-color: $light-blue;
+    img {
+      width: 50%;
+    }
+  }
+  &_edu {
+    background-color: $dark-blue;
+    color: $white;
+  }
+  &_legal {
+    position: static;
+    background-color: $darkest-blue;
+    color: $white;
+    padding: 3rem 0;
+    &_brand {
+      width: 25%;
+      @include media($tablet) {
+        width: 15%;
+      }
+      @include media($medium) {
+        width: 10%;
+      }
+    }
+  }
+}
