@@ -21,13 +21,12 @@
     display: inline-block;
     border-radius: 100%;
     text-align: center;
+    width: 50px;
+    height: 50px;
     font-size: 32px;
     line-height: 48px;
     @include media ($desktop) {
-      width: 50px;
-      height: 50px;
       font-size: 28px;
-      line-height: 48px;
     }
   }
   &-outline {
