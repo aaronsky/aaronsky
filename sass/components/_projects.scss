@@ -1,17 +1,30 @@
 .container {
   @include outer-container;
+  .project {
+    @include span-columns(1 of 1);
+    @include media($phablet) {
+      //@include omega-reset(2n); // Reset previous @include omega()
+      @include span-columns(4 of 12);
+      @include shift(2);
+      min-height: 350px;
+      //@include omega(3n);
+    }
+    @include media($desktop) {
+      //@include omega-reset(3n); // Reset previous @include omega()
+      @include span-columns(3 of 12);
+      @include shift(1);
+      //@include omega(4n);
+    }
+  }
 }
 
 .project {
   border-radius: 6px;
+  opacity: 0;
   transition: all .3s ease-in-out;
+  @include animation--fallIn(0);
   cursor: pointer;
   margin-bottom: 10px;
-  @include span-columns(1 of 1);
-  @include media($phablet) {
-    @include span-columns(3 of 12);
-    @include shift(1);
-  }
   //work
   &-lighten {
     &:hover {
