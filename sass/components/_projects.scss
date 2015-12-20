@@ -1,4 +1,4 @@
-.projects_container {
+.container {
   @include outer-container;
 }
 
@@ -8,7 +8,7 @@
   cursor: pointer;
   margin-bottom: 10px;
   @include span-columns(1 of 1);
-  @include media($tablet) {
+  @include media($phablet) {
     @include span-columns(3 of 12);
     @include shift(1);
   }
@@ -27,20 +27,22 @@
     }
   }
   &_cert {
-    @include span-columns(4);
-    @include shift(4);
+    @include media($phablet) {
+      @include span-columns(6 of 12);
+      @include shift(3);
+    }
   }
   &_img {
     width: 25%;
     margin: 10px;
     display: block;
     float: left;
-    @include media($tablet) {
+    @include media($phablet) {
       width: 100px;
       float: none;
       margin: 10px auto;
     }
-    @include media($medium) {
+    @include media($tablet) {
       width: 130px;
     }
   }
@@ -48,7 +50,7 @@
     margin-bottom: 0.5rem;
     font-size: 2rem;
     font-weight: 400;
-    @include media($large) {
+    @include media($desktop) {
       font-size: 2.5rem;
     }
   }
@@ -66,11 +68,11 @@
     margin-right: 10px;
     float: right;
     font-style: italic;
-    @include media($tablet) {
+    @include media($phablet) {
       float: none;
       width: auto;
     }
-    @include media($large) {
+    @include media($desktop) {
       font-size: 1.45rem;
     }
   }

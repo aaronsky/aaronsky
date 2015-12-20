@@ -16,7 +16,7 @@ module.exports = function(grunt) {
           filter: 'isFile'
         }, {
           expand: true,
-          src: ['font/**/*'],
+          src: ['fonts/**/*'],
           dest: 'build/',
           filter: 'isFile'
         }, {
