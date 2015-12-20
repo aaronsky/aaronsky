@@ -5,8 +5,8 @@ Twitter: @theaaronsky
 From: New Bedford, Massachusetts, United States
 
 /* SITE */
-Last update: 07/25/2015
+Last update: 12/20/2015
 Language: English
-Standards: HTML5, CSS3
-Components: Skeleton
-Code written using: Brackets, Sublime Text 3
+Standards: HTML5, Sass
+Components: Bourbon, Neat, Font Awesome, Roboto
+Code written using: Sublime Text 3
