@@ -5,7 +5,7 @@
     opacity: 0;
     @for $i from 1 through 6 {
       &:nth-child(#{$i}) {
-        @include animation--fallIn($i/12);
+        @include animation--fallIn(0.8 + $i/12);
       }
     }
   }

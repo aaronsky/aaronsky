@@ -4,13 +4,14 @@ module.exports = function(grunt) {
   grunt.initConfig({
     clean: {
       dist: ['build'],
-      sassCache: ['.sass-cache']
+      sassCache: ['.sass-cache'],
+      indexZero: ['build/index-0.html']
     },
     copy: {
       main: {
         files: [{
           expand: true,
-          src: ['index.html', '*.md', 'humans.txt', 'robots.txt', 'sitemap.xml', 'CNAME'],
+          src: ['*.md', 'humans.txt', 'robots.txt', 'sitemap.xml', 'CNAME'],
           dest: 'build/',
           flatten: true,
           filter: 'isFile'
@@ -27,28 +28,39 @@ module.exports = function(grunt) {
         }]
       }
     },
+    replace: {
+      build: {
+        src: ['index.html'],
+        dest: 'build/index-0.html',
+        replacements: [{
+          from: 'build/css/critical.css',
+          to: 'css/critical.min.css'
+        }, {
+          from: 'portfolio.css',
+          to: 'portfolio.min.css'
+        }]
+      }
+    },
     imagemin: {
-      dist: {
-        options: {
-          optimizationLevel: 1,
-          progressive: true
-        },
+      dynamic: {
         files: [{
           expand: true,
-          cwd: 'img/',
-          src: '{,*/}*.{png,jpg,jpeg}',
-          dest: 'build/img/'
-        }, {
-          expand: true,
-          cwd: 'brand/',
-          src: '{,*/}*.{png,jpg,jpeg}',
-          dest: 'build/brand/'
+          options: {
+            optimizationLevel: 7,
+            progressive: true
+          },
+          src: ['favicon.{png,jpg,jpeg}', 'img/**/*.{png,jpg}', 'brand/**/*.{png,jpg}'],
+          dest: 'build/'
         }]
       }
     },
     svgmin: {
       dist: {
         files: [{
+          expand: true,
+          src: 'favicon.svg',
+          dest: 'build/'
+        }, {
           expand: true,
           cwd: 'img/',
           src: '{,*/}*.svg',
@@ -67,7 +79,18 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         files: {
-          'build/css/portfolio.css': 'sass/main.scss'
+          'build/css/portfolio.css': 'sass/main.scss',
+          'build/css/critical.css': 'sass/critical.scss'
+        }
+      },
+      build: {
+        options: {
+          sourcemap: 'none',
+          style: 'compressed'
+        },
+        files: {
+          'build/css/portfolio.min.css': 'sass/main.scss',
+          'build/css/critical.min.css': 'sass/critical.scss'
         }
       }
     },
@@ -77,10 +100,10 @@ module.exports = function(grunt) {
           'sass/**/*.scss',
           'sass/**/*.sass'
         ],
-        tasks: ['sass']
+        tasks: ['sass:dev']
       },
       media: {
-        files: ['img/**/*', 'brand/favicon.*'],
+        files: ['img/**/*', 'brand/**/*', 'favicon.*'],
         tasks: ['imagemin', 'svgmin']
       },
       other: {
@@ -108,6 +131,16 @@ module.exports = function(grunt) {
           base: 'build'
         }
       }
+    },
+    inline: {
+      dev: {
+        src: 'index.html',
+        dest: 'build/index.html'
+      },
+      build: {
+        src: 'build/index-0.html',
+        dest: 'build/index.html'
+      }
     }
   });
 
@@ -117,26 +150,32 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-text-replace');
+  grunt.loadNpmTasks('grunt-inline');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Register tasks
   grunt.registerTask('default', [
     'clean',
-    'copy',
     'imagemin',
     'svgmin',
-    'sass',
+    'copy',
+    'sass:dev',
+    'inline:dev',
     'connect',
     'watch'
   ]);
 
   grunt.registerTask('build', [
     'clean',
-    'copy',
     'imagemin',
     'svgmin',
-    'sass'
+    'copy',
+    'sass:build',
+    'replace',
+    'inline:build',
+    'clean:indexZero'
   ]);
 
 };

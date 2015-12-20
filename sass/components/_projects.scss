@@ -15,6 +15,16 @@
       @include shift(1);
       //@include omega(4n);
     }
+    &_cert {
+      @include media($phablet) {
+        @include span-columns(6 of 12);
+        @include shift(3);
+      }
+      @include media($desktop) {
+        @include span-columns(6 of 12);
+        @include shift(3);
+      }
+    }
   }
 }
 
@@ -22,7 +32,7 @@
   border-radius: 6px;
   opacity: 0;
   transition: all .3s ease-in-out;
-  @include animation--fallIn(0);
+  @include animation--fallIn(0.8);
   cursor: pointer;
   margin-bottom: 10px;
   //work
@@ -37,12 +47,6 @@
     &:hover {
       color: $dark-gray;
       background-color: rgba(0, 0, 0, 0.2);
-    }
-  }
-  &_cert {
-    @include media($phablet) {
-      @include span-columns(6 of 12);
-      @include shift(3);
     }
   }
   &_img {
