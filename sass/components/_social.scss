@@ -2,6 +2,12 @@
   @include outer-container;
   &_item {
     @include span-columns(2 of 12);
+    opacity: 0;
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        @include animation--fallIn($i/12);
+      }
+    }
   }
 }
 
