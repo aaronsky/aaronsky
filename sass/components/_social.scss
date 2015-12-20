@@ -1,0 +1,47 @@
+.social {
+  @include outer-container;
+  &_item {
+    @include span-columns(2 of 12);
+    opacity: 0;
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        @include animation--fallIn($i/12);
+      }
+    }
+  }
+}
+
+.button {
+  &:focus,
+  &:active,
+  &.active {
+    outline: 0;
+  }
+  &_social {
+    display: inline-block;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 32px;
+    line-height: 48px;
+    @include media ($desktop) {
+      width: 50px;
+      height: 50px;
+      font-size: 28px;
+      line-height: 48px;
+    }
+  }
+  &-outline {
+    margin: 0 auto;
+    font-size: 32px;
+    color: $white;
+    background: 0 0;
+    transition: all .2s ease-in-out;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: $blue;
+      background: $white;
+    }
+  }
+}

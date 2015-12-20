@@ -1,0 +1,17 @@
+@include keyframes(fallIn) {
+  from {
+    @include transform(translateY(-20px));
+    opacity: 0;
+  }
+  to {
+    @include transform(translateY(0));
+    opacity: 1;
+  }
+}
+
+@mixin animation--fallIn($delay) {
+  @include animation(fallIn 0.3s ease-in-out);
+  @include animation-iteration-count(1);
+  @include animation-fill-mode(forwards);
+  @include animation-delay(#{$delay}s);
+}
