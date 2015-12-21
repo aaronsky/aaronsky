@@ -1,4 +1,4 @@
-**/.sass-cache/*
+.temp
 .sass-cache
 build
 node_modules
