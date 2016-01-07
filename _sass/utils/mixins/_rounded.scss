@@ -1,0 +1,4 @@
+// @include rounded(VALUE);
+@mixin rounded($radius:4px) {
+  border-radius: $radius;
+}

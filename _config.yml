@@ -1,0 +1,47 @@
+# Site wide configuration
+
+title: Aaron Sky
+locale: en_US
+description: A blog for Aaron Sky
+logo: site-logo.png
+search: false
+url: http://skyaaron.com
+comments: true
+
+# Jekyll configuration
+
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..2
+  enable_coderay: false
+
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "grunt", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "vendor", "sass"]
+
+# Site owner
+owner:
+  name: Aaron Sky
+  web: http://skyaaron.com
+  avatar: face.png
+  email: aaronsky@skyaaron.com
+  bio: "I'm cool probably"
+  disqus-shortname: aaronsky
+  twitter: theaaronsky
+  github: aaronsky
+  linkedin: aaronsky
+  google:
+    analytics: UA-65633049-1
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:

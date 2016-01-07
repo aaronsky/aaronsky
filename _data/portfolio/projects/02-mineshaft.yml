@@ -1,0 +1,8 @@
+title: "Mineshaft Mayhem"
+img: "assets/img/mineshaft.png"
+link: "assets/docs/MineshaftMayhem.zip"
+start: "August 2015"
+end: "December 2015"
+languages: ["C++", "DirectX", "Lua"]
+type: "Group Project - Team of 5"
+roles: ["Project Manager", "Gameplay Programmer"]
