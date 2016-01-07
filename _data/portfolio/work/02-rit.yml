@@ -1,0 +1,7 @@
+employer: "Rochester Institute of Technology"
+title: "Teaching Assistant"
+img: "assets/img/rit.svg"
+link: "https://www.rit.edu/gccis/igm/"
+start: "August 2015"
+languages: ["Swift", "Objective-C", "Java"]
+description: "Graded course submissions, assisted students with questions related to iOS and Android coursework."

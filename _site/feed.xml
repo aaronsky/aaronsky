@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title type="text">Aaron Sky</title>
+<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="http://skyaaron.com/feed.xml" />
+<link rel="alternate" type="text/html" href="http://skyaaron.com" />
+<updated>2016-01-06T20:17:04-05:00</updated>
+<id>http://skyaaron.com/</id>
+<author>
+  <name>Aaron Sky</name>
+  <uri>http://skyaaron.com/</uri>
+  <email>aaronsky@skyaaron.com</email>
+</author>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Why I Educate: Looking back on learnVCS]]></title>
+  <link rel="alternate" type="text/html" href="http://skyaaron.com/blog/learnvcs-post-mortem/" />
+  <id>http://skyaaron.com/blog/learnvcs-post-mortem</id>
+  <published>2015-12-13T13:20:00-05:00</published>
+  <updated>2015-12-13T13:20:00-05:00</updated>
+  <author>
+    <name>Aaron Sky</name>
+    <uri>http://skyaaron.com</uri>
+    <email>aaronsky@skyaaron.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;There’s only a few more days left in my penultimate semester. That’s pretty crazy. Part of me is amazed it went by so fast, but the other part of me is pretty thrilled it’s over. I’m proud of the work I’ve done this term, but above all else, I’m proud of the work my team and I have accomplished leading a major student-driven initiative born out of my co-op experiences.&lt;/p&gt;
+
+&lt;p&gt;A bit of background: two summers ago, I was working on a sizable games project with a friend from school the summer following our second year. We used Git and Bitbucket and it was my first big experience learning basic version control fundamentals. I had been taught a little bit of SVN in a single freshman class, although saying we were taught is a bit of an overstatement (we were basically told to use TortoiseSVN for the big project, given a brief functionality overview and then never revisited it or general version control principles again). The following semester, I discovered my peers had absolutely no working knowledge of version control and I had a hard time convincing any of them to use it in our group projects. It wasn’t until I was at my last job when I realized just how little my department had prepared me in this regard.&lt;/p&gt;
+
+&lt;p&gt;It’s unreasonable to expect that a good engineering program must teach you absolutely everything you need to know. Not only is that unrealistic, but self-discovery is one of the best ways to become a better programmer. While some of my mechanical and electrical engineering friends will balk at me saying this, many of the principles of learning effective construction are consistent between hardware and software engineering and this is one of those commonalities. With all that in mind, any academic program that purports to teach software development (because games are absolutely software) has to give attention to version control in a meaningful, repetitious way. Version control is essential to the collaboration process, and given the fact my department normally ingrains that process exceptionally well, it isn’t taught at any level.&lt;/p&gt;
+
+&lt;p&gt;I educate for a number of reasons. I believe the traditional model of schooling is broken and is unsustainable in the long run. I believe education has the power to bring about great change, and I want to be part of big things. Teachers of all sorts make up most of my extended family on both sides, so there may be influence on that front. Most importantly of all, education has the power to make people happy and bring them the joy of satisfied curiousity, and making people happy is one of the greatest joys of all for me. When I see someone curious about a topic or a broken system with potential for me to help, like in the case of my department’s approach to version control, it makes me want to do something.&lt;/p&gt;
+
+&lt;p&gt;Fast-forward to last Friday, with the conclusion of my team’s big initiative. My team and I have developed a website, a design document, and some presentation slides for my department this term in order to improve the state of version control education in my department. The website can be found at http://learnvcs.github.io, our design document can be found &lt;a href=&quot;http://learnvcs.github.io/blog/design/&quot;&gt;here&lt;/a&gt;, and the slides can be found &lt;a href=&quot;https://github.com/learnVCS/documentation/tree/master/slides&quot;&gt;here&lt;/a&gt;. Everything is open-sourced under an MIT License and will hopefully help an educator of software construction somewhere present version control to their entry-level classes without overloading them with information.&lt;/p&gt;
+
+&lt;p&gt;learnVCS was built by &lt;a href=&quot;http://benjwilcox.com/&quot;&gt;Benjamin Wilcox&lt;/a&gt;, &lt;a href=&quot;http://www.stephaniejurgiel.com/&quot;&gt;Stephanie Jurgiel&lt;/a&gt;, and myself over fifteen weeks. We used React for the live interactive commits graph, Sass for the styling, Grunt for the build system, Scrum for the development style and Git for the VCS. The project was overseen by Professor Steve Maier, formerly of Microsoft, and Dr. David Schwartz, the department chair of the School of Interactive Games and Media at RIT. I wrote the backend over the course of three weeks, maintained and updated it over the following six weeks, and tested it rigorously throughout. I was also responsible for writing and editing nearly all the content, maintaining the build system and repositories, and building out the front-end React behaviors.&lt;/p&gt;
+
+&lt;p&gt;This project taught me a lot of things I can’t expect I would learn without immense risk in the real world. This was my first big production and management role and all my experience with a good PM comes from my last job. I learned to plan out the project as a series of well-scoped sprints, oversee the project on high and low levels, improve my ability to speak designer, and separate the rest of my team from the direct oversight of higher overseers. I worked very hard on the build system and I’m really proud of our Grunt configuration, which could only be more robust if we wrote more tests. I had to teach myself CoffeeScript in the span of a week in order to be able to modify our fork of &lt;a href=&quot;https://github.com/jsdf/react-commits-graph&quot;&gt;react-commits-graph&lt;/a&gt; and make it work the way we needed it to.&lt;/p&gt;
+
+&lt;p&gt;In the end, I couldn’t have asked for a better project my senior. learnVCS was an excellent crossroads of some of my passions: programming, education, and the web. It remains to be see how much impact it will have on my department, but it won’t stop me from trying to influence the way things are done here in my last semester.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://skyaaron.com/blog/learnvcs-post-mortem/&quot;&gt;Why I Educate: Looking back on learnVCS&lt;/a&gt; was originally published by Aaron Sky at &lt;a href=&quot;http://skyaaron.com&quot;&gt;Aaron Sky&lt;/a&gt; on December 13, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[It's me!]]></title>
+  <link rel="alternate" type="text/html" href="http://skyaaron.com/blog/its-me/" />
+  <id>http://skyaaron.com/blog/its-me</id>
+  <published>2015-12-04T13:20:00-05:00</published>
+  <updated>2015-12-04T13:20:00-05:00</updated>
+  <author>
+    <name>Aaron Sky</name>
+    <uri>http://skyaaron.com</uri>
+    <email>aaronsky@skyaaron.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;I’m Aaron Sky. I live in Rochester, NY studying Game Design &amp;amp; Development at the Rochester Institute of Technology. I am an app and web developer by trade, and have some terrible apps on various app stores. My portfolio is linked above. Maybe you found this blog through my portfolio. That’s pretty neat.&lt;/p&gt;
+
+&lt;p&gt;This is probably going to end up being yet another programming blog powered by Jekyll and hosted by GitHub, but my plan is to write about whatever topic happens to be on my mind at the moment. I want this blog to be a project for me; one that I would like to flourish like some of my other personal projects have. Personal projects and the self-determination that leads to finishing them are how I got my last internship at &lt;a href=&quot;https://xamarin.com/&quot;&gt;Xamarin&lt;/a&gt;, and I strongly believe in their importance as an engineer.&lt;/p&gt;
+
+&lt;p&gt;I started my programming adventures with Java, though I had a less-than-meaningful experience with VB.NET programming a Space Invaders clone in Windows Forms for a class. Since then I have worked extensively in C#, JavaScript, Java, Objective-C, and have worked professionally with Swift, CoffeeScript, Ruby, and several others. My favorite language to work in is C# and I’ll probably end up writing an article on it at some point, but I don’t personally believe that a perfect, truly “best” language has been built yet. I try to avoid that kind of demagoguery when I can.&lt;/p&gt;
+
+&lt;p&gt;To end this off, a few loose facts about me:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I grew up outside Washington D.C. around the Dulles Tech Corridor during the late 90s and all of the 00s. After I moved to school in Rochester my family found opportunities in New Bedford, Massachusetts, which is where my roots are now.&lt;/li&gt;
+  &lt;li&gt;My favorite professional book is &lt;a href=&quot;http://www.amazon.com/exec/obidos/ASIN/0735619670/codihorr-20&quot;&gt;Code Complete&lt;/a&gt; by &lt;a href=&quot;http://www.stevemcconnell.com/&quot;&gt;Steve McConnell&lt;/a&gt;. Yeah, I’m one of those programmers.&lt;/li&gt;
+  &lt;li&gt;My favorite game is Mother 3, and I have been a member of the EarthBound-centric &lt;a href=&quot;http://starmen.net/&quot;&gt;Starmen.net&lt;/a&gt; since 2009.&lt;/li&gt;
+  &lt;li&gt;I got my start in Objective-C in 2010, but I started developing apps professionally in 2013 at the recommendation of an adjunct professor in my department who worked full-time for Microsoft at the time. I started developing for the web shortly thereafter.&lt;/li&gt;
+  &lt;li&gt;I chose Game Design &amp;amp; Development as a major at RIT because it was the only program I could find on the East Coast that a) was at least a four-year program, b) was comprehensive outside of pure game design, and c) had a mandatory co-op requirement. I’ve found that all of these requirements have been exceptionally necessary as I moved away from game design as a career interest in my sophomore year, and focused more on software development (since games are just highly-coupled, monstrously-scoped performance-optimized software).&lt;/li&gt;
+&lt;/ul&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://skyaaron.com/blog/its-me/&quot;&gt;It&#39;s me!&lt;/a&gt; was originally published by Aaron Sky at &lt;a href=&quot;http://skyaaron.com&quot;&gt;Aaron Sky&lt;/a&gt; on December 04, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+</feed>
