@@ -6,27 +6,27 @@ title: Portfolio
 <!--<header style="background-color:yellow;font-size:20px;"><i class="icon-warning" style="margin:20px;"></i>This page is under construction!</header>-->
 <div class="section section_landing">
     <div class="container">
-        <img src="assets/img/face.png" class="section_landing_profile">
+        <img src="{{site.baseurl}}{{site.assets.img}}face.png" class="section_landing_profile">
         <h1 class="section_landing_heading">Aaron Sky</h1>
         <h4 class="section_landing_description">App & Web Developer - Gameplay Programmer - Wizard</h4>
         <div class="social">
             <div class="social_item">
-                <a href="https://www.facebook.com/METC500/" title="My Facebook!" class="button_social button-outline"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.facebook.com/{{site.owner.facebook}}" title="My Facebook!" class="button_social button-outline"><i class="fa fa-facebook"></i></a>
             </div>
             <div class="social_item">
-                <a href="https://twitter.com/theaaronsky" title="My Twitter!" class="button_social button-outline"><i class="fa fa-twitter"></i></a>
+                <a href="https://twitter.com/{{site.owner.twitter}}" title="My Twitter!" class="button_social button-outline"><i class="fa fa-twitter"></i></a>
             </div>
             <div class="social_item">
                 <a href="http://www.linkedin.com/pub/aaron-sky/81/930/605/" title="My LinkedIn!" class="button_social button-outline"><i class="fa fa-linkedin"></i></a>
             </div>
             <div class="social_item">
-                <a href="https://github.com/aaronsky" title="My GitHub!" class="button_social button-outline"><i class="fa fa-github"></i></a>
+                <a href="https://github.com/{{site.owner.github}}" title="My GitHub!" class="button_social button-outline"><i class="fa fa-github"></i></a>
             </div>
             <div class="social_item">
-                <a href="docs/resume.pdf" title="My Resume!" class="button_social button-outline"><i class="fa fa-file-text-o"></i></a>
+                <a href="{{site.baseurl}}{{site.assets.docs}}resume.pdf" title="My Resume!" class="button_social button-outline"><i class="fa fa-file-text-o"></i></a>
             </div>
             <div class="social_item">
-                <a href="http://blog.skyaaron.com" title="Blog" class="button_social button-outline"><i class="fa fa-rss"></i></a>
+                <a href="{{site.baseurl}}/blog/" title="Blog" class="button_social button-outline"><i class="fa fa-rss"></i></a>
             </div>
         </div>
     </div>
@@ -42,7 +42,7 @@ title: Portfolio
         {% assign work = work_hash[1] %}
         <a href="{{ work.link }}">
             <div class="project project-lighten">
-                <img class="project_img" src="{{ work.img }}">
+                <img class="project_img" src="{{site.baseurl}}{{site.assets.img}}{{ work.img }}">
                 <h2 class="project_heading">{{ work.title }}</h2>
                 <h3 class="project_info">{{ work.start }} to {% if work.end %}{{ work.end }}{% else %}Present{% endif %}
                     <p class="project_languages">{{ work.languages | join:' - ' }}</p></h3>
@@ -63,7 +63,7 @@ title: Portfolio
         {% assign project = project_hash[1] %}
         <a href="{{ project.link }}">
             <div class="project project-darken">
-                <img class="project_img" src="{{ project.img }}">
+                <img class="project_img" src="{{site.baseurl}}{{site.assets.img}}{{ project.img }}">
                 <h2 class="project_heading">{{ project.title }}</h2>
                 <h3 class="project_info">{{ project.start }}{% if project.end %} to {{ project.end }}{% endif %}
                     <p class="project_languages">{{ project.languages | join:', ' }}</p></h3>
@@ -83,9 +83,9 @@ title: Portfolio
     <div class="container">
         {% for cert_hash in site.data.portfolio.certification %}
         {% assign cert = cert_hash[1] %}
-        <a href="{{ cert.link }}">
+        <a href="{{site.baseurl}}{{site.assets.docs}}{{ cert.link }}">
             <div class="project project_cert project-darken">
-                <img class="project_img" src="{{ cert.img }}">
+                <img class="project_img" src="{{site.baseurl}}{{site.assets.img}}{{ cert.img }}">
                 <h2 class="project_heading">{{ cert.title }}</h2>
                 <p class="project_info">{{ cert.description }}</p>
             </div>
