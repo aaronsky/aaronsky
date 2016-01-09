@@ -3,7 +3,7 @@
 title: Aaron Sky
 locale: en_US
 description: A blog for Aaron Sky
-logo: site-logo.png
+logo: brand.svg
 search: false
 url: http://skyaaron.com
 comments: true
@@ -18,6 +18,13 @@ sass:
   style: compressed
 gems:
   - jekyll-sitemap
+assets:
+  root: /assets/
+  brand: /assets/brand/
+  css: /assets/css/
+  docs: /assets/docs/
+  fonts: /assets/fonts/
+  img: /assets/img/
 
 kramdown:
   auto_ids: true
@@ -26,7 +33,7 @@ kramdown:
   toc_levels: 1..2
   enable_coderay: false
 
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "grunt", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "vendor", "sass"]
+exclude: ["grunt", "Gruntfile.js", "node_modules", "package.json", "Gemfile", "Gemfile.lock", "vendor", "sass"]
 
 # Site owner
 owner:
@@ -36,6 +43,7 @@ owner:
   email: aaronsky@skyaaron.com
   bio: "I'm cool probably"
   disqus-shortname: aaronsky
+  facebook: METC500
   twitter: theaaronsky
   github: aaronsky
   linkedin: aaronsky

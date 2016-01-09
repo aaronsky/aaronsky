@@ -33,6 +33,7 @@
   img {
     width: 100px;
     height: 100px;
+    margin-top: 7rem;
     @include animation-duration(1s);
     @include animation-delay(.05s);
     //border: 4px solid $border-color;
@@ -58,7 +59,7 @@
 .site-title {
   margin-bottom: 0;
   font-weight: 700;
-  @include font-size(48, no, 48);
+  @include font-size(52, no, 52);
   @include animation-duration(1s);
   @include animation-delay(.75s);
   a {
@@ -74,7 +75,7 @@
 .site-description {
   margin-top: 0.5rem;
   font-family: $alt-font;
-  @include font-size(16);
+  //@include font-size(16);
   font-weight: 400;
   @include font-size(28, no, 28);
   font-style: italic;

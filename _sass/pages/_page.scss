@@ -15,6 +15,7 @@
 	@include clearfix;
 	border-bottom: 1px solid lighten($black,80);
 	border-bottom: 1px solid rgba($black,.10);
+  padding-bottom: 2rem;
 }
 
 /* feature image */
@@ -170,7 +171,7 @@ span + .entry-title {
 /* main content block */
 
 .entry-content {
-	@include span-columns(12);
+	@include span-columns(12 of 12);
 	p:first-child {
 		margin-top: 0;
 	}
