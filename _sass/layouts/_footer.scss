@@ -2,9 +2,10 @@
   position: static;
   background-color: $darkest-blue;
   color: $white;
-  padding: 3rem 0;
+  padding: 1rem 0;
   &_brand {
     width: 25%;
+    margin-top: 2rem;
     @include media($phablet) {
       width: 15%;
     }
