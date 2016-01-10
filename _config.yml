@@ -2,7 +2,7 @@
 
 title: Aaron Sky
 locale: en_US
-description: A blog for Aaron Sky
+description: Programming Wizard but also Bad
 logo: brand.svg
 search: false
 url: http://skyaaron.com
@@ -18,13 +18,18 @@ sass:
   style: compressed
 gems:
   - jekyll-sitemap
+  - jemoji
 assets:
   root: /assets/
   brand: /assets/brand/
   css: /assets/css/
   docs: /assets/docs/
   fonts: /assets/fonts/
-  img: /assets/img/
+  img:
+    root: /assets/img/
+    site: /assets/img/site/
+    portfolio: /assets/img/portfolio/
+    blog: /assets/img/blog/
 
 kramdown:
   auto_ids: true

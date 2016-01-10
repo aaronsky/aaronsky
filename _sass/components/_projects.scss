@@ -6,7 +6,7 @@
       //@include omega-reset(2n); // Reset previous @include omega()
       @include span-columns(4 of 12);
       @include shift(2);
-      min-height: 350px;
+      min-height: 18rem;
       //@include omega(3n);
     }
     @include media($desktop) {
@@ -16,6 +16,7 @@
       //@include omega(4n);
     }
     &_cert {
+      min-height: 12.5rem;
       @include media($phablet) {
         @include span-columns(6 of 12);
         @include shift(3);
@@ -64,22 +65,27 @@
     }
   }
   &_heading {
+    @include font-size(18, no, 18);
     margin-bottom: 0.5rem;
-    font-size: 2rem;
+    //font-size: 1rem;
     font-weight: 400;
     @include media($desktop) {
-      font-size: 2.5rem;
+      @include font-size(20, no, 20);
+      margin-bottom: 0.5rem;
+      //font-size: 1.25rem;
     }
   }
   &_info {
     opacity: 0.8;
     font-weight: 300;
-    font-size: 1.5rem;
+    @include font-size(14, no, 14);
+    //font-size: 0.75rem;
     margin-bottom: 5px;
   }
   &_description {
     opacity: 0.8;
-    font-size: 1.25rem;
+    @include font-size(13, no, 13);
+    //font-size: 0.625rem;
     margin-bottom: 5px;
     width: 65%;
     margin-right: 10px;
@@ -90,12 +96,15 @@
       width: auto;
     }
     @include media($desktop) {
-      font-size: 1.45rem;
+      @include font-size(13.8, no, 13.8);
+      margin-bottom: 5px;
+      //font-size: 0.725rem;
     }
   }
   &_languages {
     opacity: 0.8;
-    font-size: 1.5rem;
+    @include font-size(14, no, 14);
+    //font-size: 0.75rem;
     margin-bottom: 5px;
   }
 }
