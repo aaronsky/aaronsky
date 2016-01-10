@@ -2,6 +2,7 @@
    Archive pages
    ========================================================================== */
 
+
 /*
    Post archive
    ========================================================================== */
@@ -12,12 +13,13 @@
   list-style-type: none;
   li {
     padding: 8px 0;
-    border-bottom: 1px solid lighten($black,80);
-    border-bottom: 1px solid rgba($black,.10);
-    @include font-size(28,no);
+    border-bottom: 1px solid lighten($darker-blue, 80);
+    border-bottom: 1px solid rgba($darker-blue, .10);
+    @include font-size(20, no);
     @include clearfix;
     > a {
-      border-bottom-width: 0; /* remove underlines from items in post indexes */
+      border-bottom-width: 0;
+      /* remove underlines from items in post indexes */
       font-weight: bold;
     }
   }
@@ -25,7 +27,7 @@
     float: right;
   }
   .entry-date {
-    @include font-size(14,no);
+    @include font-size(14, no);
     font-weight: bold;
     text-transform: uppercase;
     display: none;
@@ -37,9 +39,9 @@
   .excerpt {
     display: block;
     float: none;
-
+    opacity: 0.75;
     p {
-      @include font-size(19.2, no, 30.72);
+      @include font-size(16, no, 28);
       font-style: italic;
       margin-top: 1rem;
       padding-left: 2rem;
@@ -48,6 +50,7 @@
     }
   }
 }
+
 
 /*
    Tag archive
@@ -67,7 +70,7 @@
   a {
     padding: 4px 6px;
     margin: 2px;
-    background-color: lighten($black, 90);
+    background-color: lighten($darker-blue, 90);
     @include rounded(4px);
     text-decoration: none;
     span {

@@ -6,9 +6,9 @@ title: Portfolio
 <!--<header style="background-color:yellow;font-size:20px;"><i class="icon-warning" style="margin:20px;"></i>This page is under construction!</header>-->
 <div class="section section_landing">
     <div class="container">
-        <img src="{{site.baseurl}}{{site.assets.img}}face.png" class="section_landing_profile">
+        <img src="{{site.baseurl}}{{site.assets.img.site}}face.png" class="section_landing_profile">
         <h1 class="section_landing_heading">Aaron Sky</h1>
-        <h4 class="section_landing_description">App & Web Developer - Gameplay Programmer - Wizard</h4>
+        <h4 class="section_landing_description">App & Web Developer :iphone: Gameplay Programmer :video_game: Wizard :sparkles: </h4>
         {% include social.html %}
     </div>
 </div>
@@ -23,7 +23,7 @@ title: Portfolio
         {% assign work = work_hash[1] %}
         <a href="{{ work.link }}">
             <div class="project project-lighten">
-                <img class="project_img" src="{{site.baseurl}}{{site.assets.img}}{{ work.img }}">
+                <img class="project_img" src="{{site.baseurl}}{{site.assets.img.portfolio}}{{ work.img }}">
                 <h2 class="project_heading">{{ work.title }}</h2>
                 <h3 class="project_info">{{ work.start }} to {% if work.end %}{{ work.end }}{% else %}Present{% endif %}
                     <p class="project_languages">{{ work.languages | join:' - ' }}</p></h3>
@@ -44,7 +44,7 @@ title: Portfolio
         {% assign project = project_hash[1] %}
         <a href="{{ project.link }}">
             <div class="project project-darken">
-                <img class="project_img" src="{{site.baseurl}}{{site.assets.img}}{{ project.img }}">
+                <img class="project_img" src="{{site.baseurl}}{{site.assets.img.portfolio}}{{ project.img }}">
                 <h2 class="project_heading">{{ project.title }}</h2>
                 <h3 class="project_info">{{ project.start }}{% if project.end %} to {{ project.end }}{% endif %}
                     <p class="project_languages">{{ project.languages | join:', ' }}</p></h3>
@@ -66,7 +66,7 @@ title: Portfolio
         {% assign cert = cert_hash[1] %}
         <a href="{{site.baseurl}}{{site.assets.docs}}{{ cert.link }}">
             <div class="project project_cert project-darken">
-                <img class="project_img" src="{{site.baseurl}}{{site.assets.img}}{{ cert.img }}">
+                <img class="project_img" src="{{site.baseurl}}{{site.assets.img.portfolio}}{{ cert.img }}">
                 <h2 class="project_heading">{{ cert.title }}</h2>
                 <p class="project_info">{{ cert.description }}</p>
             </div>
@@ -81,8 +81,8 @@ title: Portfolio
     </div>
     <div class="container">
         <h3 class="section_heading">Education</h3>
-        <p class="section_description">{{ site.data.education.school }}</p>
-        <p class="section_description">{{ site.data.education.degree }}</p>
-        <p class="section_description">{{ site.data.education.date }}</p>
+        <p class="section_description">{{ site.data.portfolio.education.school }}</p>
+        <p class="section_description">{{ site.data.portfolio.education.degree }}</p>
+        <p class="section_description">{{ site.data.portfolio.education.date }}</p>
     </div>
 </div>

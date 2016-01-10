@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .masthead {
-  margin-top: 40px;
+  margin: 3rem 0;
   @include clearfix;
   @include media($phablet) {
     margin-top: 0;
@@ -33,7 +33,6 @@
   img {
     width: 100px;
     height: 100px;
-    margin-top: 7rem;
     @include animation-duration(1s);
     @include animation-delay(.05s);
     //border: 4px solid $border-color;
@@ -59,11 +58,11 @@
 .site-title {
   margin-bottom: 0;
   font-weight: 700;
-  @include font-size(52, no, 52);
+  @include font-size(38, no, 38);
   @include animation-duration(1s);
   @include animation-delay(.75s);
   a {
-    color: $black;
+    color: $darker-blue;
   }
 }
 
@@ -75,13 +74,9 @@
 .site-description {
   margin-top: 0.5rem;
   font-family: $alt-font;
-  @include font-size(16);
   font-weight: 400;
-  @include font-size(28, no, 28);
+  @include font-size(20, no, 20);
   font-style: italic;
   @include animation-duration(1s);
   @include animation-delay(1s);
-  @include media($phablet) {
-    //@include font-size(20);
-  }
 }

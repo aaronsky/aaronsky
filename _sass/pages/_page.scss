@@ -65,7 +65,7 @@
   &-title {
     font-family: $alt-font;
     font-style: italic;
-    @include font-size(36, yes, 36);
+    @include font-size(38, yes, 40);
     font-weight: 300;
     line-height: 1;
     letter-spacing: -3px;
@@ -73,16 +73,11 @@
       color: $black;
       text-decoration: underline;
     }
-    @include media($phablet) {
-      @include font-size(52, yes, 54);
-    }
-    @include media($tablet) {
-      @include font-size(68, yes, 72);
-    }
   }
   /* page/post wrapper */
   &-wrapper {
     @include outer-container;
+    max-width: 60em;
     margin-top: 0;
     margin-bottom: 3em;
     padding-right: $gutter;
@@ -93,7 +88,7 @@
     @include span-columns(12);
     #text-transform: uppercase;
     font-weight: 400;
-    @include font-size(20);
+    @include font-size(14);
     a {
       color: $text-color;
     }
@@ -119,9 +114,6 @@
     }
     @include media($tablet) {
       @include span-columns(9.5 of 12);
-    }
-    & > p {
-      margin-bottom: 1rem;
     }
     /* nice link underlines */
     p > a,
@@ -211,6 +203,7 @@ span + .entry-title {
 
 #home,
 #page {
+  background-color: $lightest-blue;
   .entry-wrapper {
     max-width: em(760);
   }
@@ -221,6 +214,10 @@ span + .entry-title {
   .entry-content {
     @include span-columns(12);
   }
+}
+
+#post {
+  background-color: $lightest-blue;
 }
 
 
