@@ -1,0 +1,10 @@
+// Hide from visual and speaking browsers
+@mixin hidden() {
+  display: none !important;
+  visibility: hidden;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}

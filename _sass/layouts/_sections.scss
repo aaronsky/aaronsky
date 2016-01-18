@@ -1,0 +1,95 @@
+.section {
+  padding: 3rem 0 5rem;
+  text-align: center;
+  position: relative;
+  @include media($phablet) {
+    padding: 5rem 0;
+  }
+  @include media($tablet) {
+    padding: 5rem 0 5rem;
+  }
+  &_heading {
+    @include font-size(42,no,42);
+    margin-bottom: 1.2rem;
+  }
+  &_description {
+    @include font-size(16,no,16);
+    margin-bottom: 1.2rem;
+  }
+  &_link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 24px;
+    margin: 10px;
+    a {
+      color: $blue;
+      transition: all .2s ease-in-out;
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+        color: $light-gray;
+      }
+    }
+  }
+  &_landing {
+    padding: 5rem 0 3rem;
+    background-color: $darker-blue;
+    color: $white;
+    @include media($phablet) {
+      padding: 5em 0;
+      text-align: left;
+    }
+    @include media($desktop) {
+      padding: 8rem 0;
+    }
+    &_heading {
+      font-weight: 700;
+      @include font-size(38, no, 38);
+      margin-bottom: 1.2rem;
+      opacity: 0;
+      @include animation--fadeInDown(0);
+      @include media($phablet) {
+      @include font-size(48, no);
+      margin-bottom: 1.2rem;
+      }
+    }
+    &_description {
+      @include font-size(18, no);
+      margin-bottom: 5rem;
+      font-style: italic;
+      opacity: 0;
+      @include animation--fadeInDown(0.4);
+    }
+    &_profile {
+      float: right;
+      width: 20%;
+      margin-top: -1em;
+    }
+    &_social {
+      list-style: none;
+      li {
+        display: inline-block;
+        margin: 20px 2% 0 2%;
+      }
+    }
+  }
+  &_work {
+    background-color: $dark-blue;
+    color: $white;
+  }
+  &_projects {
+    background-color: $lightest-blue;
+  }
+  &_cert {
+    background-color: $light-blue;
+    img {
+      width: 50%;
+    }
+  }
+  &_edu {
+    background-color: $dark-blue;
+    color: $white;
+  }
+}

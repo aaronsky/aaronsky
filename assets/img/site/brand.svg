@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="197px" height="129px" viewBox="0 0 197 129" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>SkyLogo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="21.4090716%" y1="10.6106371%" x2="95.9447213%" y2="93.6539561%" id="linearGradient-1">
+            <stop stop-color="#CEE1ED" offset="0%"></stop>
+            <stop stop-color="#7EC0EE" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-2" sketch:type="MSArtboardGroup" transform="translate(-442.000000, -254.000000)" fill="url(#linearGradient-1)">
+            <g id="SkyLogo" sketch:type="MSLayerGroup" transform="translate(442.000000, 254.000000)">
+                <path d="M33.7543886,55.1319223 C33.1679595,52.1972559 32.8603441,49.1619085 32.8603441,46.0546911 C32.8603441,20.6193875 53.4732219,0 78.9004952,0 C96.4936848,0 111.782084,9.87109525 119.532706,24.3786451 L119.532706,24.3786451 C124.405336,22.2306551 129.79358,21.0380459 135.460285,21.0380459 C157.294574,21.0380459 174.994763,38.7438244 174.994763,60.5850089 C174.994763,66.6161523 173.645102,72.3319659 171.231423,77.4467154 C172.47594,77.2273587 173.75663,77.1129489 175.064034,77.1129489 C187.179282,77.1129489 197.000631,86.9373999 197.000631,99.0564745 C197.000631,109.540516 189.650591,118.307322 179.823839,120.482023 L179.823839,120.482023 C176.333912,121.751267 170.472131,122.184316 161.499995,121.5 C74.1519779,114.837863 90.7180429,134.999996 35.5000007,126.000001 C31.000567,125.266638 27.3700659,124.280963 24.5013988,123.088965 C10.807088,118.352811 0.97225454,105.341641 0.97225454,90.0326957 C0.97225454,71.4511726 15.4612782,56.2548109 33.7543886,55.1319223 Z" id="Oval-1" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

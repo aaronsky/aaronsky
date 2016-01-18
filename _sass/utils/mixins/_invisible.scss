@@ -1,0 +1,4 @@
+// Hide but maintain layout
+@mixin invisible() {
+  visibility: hidden;
+}

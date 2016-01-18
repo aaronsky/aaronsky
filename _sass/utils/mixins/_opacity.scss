@@ -1,0 +1,4 @@
+// @include opacity(VALUE);
+@mixin opacity($opacity: .5) {
+  opacity: $opacity;
+}

@@ -1,0 +1,8 @@
+employer: Xamarin
+title: Mobile Testing Intern
+img: xamagon.svg
+link: http://xamarin.com/
+start: January 2015
+end: August 2015
+languages: ["C#", "Ruby"]
+description: Wrote UI automation tests, built Chef infrastructure for maintaining bots, ported new Apple and Google samples to Xamarin.

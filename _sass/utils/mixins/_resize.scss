@@ -1,0 +1,5 @@
+// @include resize(VALUE) (none, both, horizontal, vertical, inherit)
+@mixin resize($direction: both) {
+  resize: $direction;
+  overflow: auto;
+}

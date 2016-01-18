@@ -1,0 +1,60 @@
+# Site wide configuration
+
+title: Aaron Sky
+locale: en_US
+description: Programming Wizard but also Bad
+logo: brand.svg
+search: false
+url: http://skyaaron.com
+comments: true
+
+# Jekyll configuration
+
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+  - jemoji
+assets:
+  root: /assets/
+  brand: /assets/brand/
+  css: /assets/css/
+  docs: /assets/docs/
+  fonts: /assets/fonts/
+  img:
+    root: /assets/img/
+    site: /assets/img/site/
+    portfolio: /assets/img/portfolio/
+    blog: /assets/img/blog/
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..2
+  enable_coderay: false
+
+exclude: ["grunt", "Gruntfile.js", "node_modules", "package.json", "Gemfile", "Gemfile.lock", "vendor", "sass"]
+
+# Site owner
+owner:
+  name: Aaron Sky
+  web: http://skyaaron.com
+  avatar: face.png
+  email: aaronsky@skyaaron.com
+  bio: "I'm cool probably"
+  disqus-shortname: aaronsky
+  facebook: METC500
+  twitter: theaaronsky
+  github: aaronsky
+  linkedin: aaronsky
+  google:
+    analytics: UA-65633049-1
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
