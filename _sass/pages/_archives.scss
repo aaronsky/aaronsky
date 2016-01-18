@@ -16,11 +16,13 @@
     border-bottom: 1px solid lighten($darker-blue, 80);
     border-bottom: 1px solid rgba($darker-blue, .10);
     @include font-size(20, no);
+    margin-bottom: 2rem;
     @include clearfix;
-    > a {
+    a {
       border-bottom-width: 0;
       /* remove underlines from items in post indexes */
       font-weight: bold;
+      letter-spacing: normal;
     }
   }
   a > span {
@@ -28,7 +30,6 @@
   }
   .entry-date {
     @include font-size(14, no);
-    font-weight: bold;
     text-transform: uppercase;
     display: none;
     @include media($phablet) {
@@ -40,9 +41,10 @@
     display: block;
     float: none;
     opacity: 0.75;
+    font-weight: normal;
     p {
       @include font-size(16, no, 28);
-      font-style: italic;
+      //font-style: italic;
       margin-top: 1rem;
       padding-left: 2rem;
       padding-right: 1rem;

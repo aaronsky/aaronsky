@@ -6,7 +6,7 @@
       //@include omega-reset(2n); // Reset previous @include omega()
       @include span-columns(4 of 12);
       @include shift(2);
-      min-height: 18rem;
+      min-height: 20rem;
       //@include omega(3n);
     }
     @include media($desktop) {

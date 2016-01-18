@@ -1,15 +1,6 @@
 .social {
   @include outer-container;
-  max-width: inherit;
-  
-  &_container {
-    width: 90%;
-    margin: 1rem auto;
-    @include media($phablet) {
-      width: 75%;
-    }
-  }
-
+  margin-top: 5rem;
   &_item {
     @include span-columns(2 of 12);
     opacity: 0;

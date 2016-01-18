@@ -3,7 +3,7 @@ $base-font: 'Roboto', sans-serif;
 $heading-font: $base-font;
 $caption-font: $base-font;
 $code-font: 'Roboto Mono', ;
-$alt-font: 'Roboto', sans-serif;
+$alt-font: $base-font;
 $icons-font: 'FontAwesome', sans-serif;
 
 $doc-font-size: 16;
