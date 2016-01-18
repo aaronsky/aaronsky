@@ -9,11 +9,11 @@
     padding: 5rem 0 5rem;
   }
   &_heading {
-    @include font-size(42,no,42);
+    @include font-size(42, no, 42);
     margin-bottom: 1.2rem;
   }
   &_description {
-    @include font-size(16,no,16);
+    @include font-size(16, no, 16);
     margin-bottom: 1.2rem;
   }
   &_link {
@@ -34,15 +34,15 @@
     }
   }
   &_landing {
-    padding: 5rem 0 3rem;
+    padding: 7rem 0;
     background-color: $darker-blue;
     color: $white;
     @include media($phablet) {
-      padding: 5em 0;
+      padding: 8rem 0;
       text-align: left;
     }
     @include media($desktop) {
-      padding: 8rem 0;
+      padding: 10rem 0;
     }
     &_heading {
       font-weight: 700;
@@ -51,13 +51,15 @@
       opacity: 0;
       @include animation--fadeInDown(0);
       @include media($phablet) {
-      @include font-size(48, no);
-      margin-bottom: 1.2rem;
+        @include font-size(48, no);
+        margin-bottom: 1.2rem;
       }
     }
     &_description {
       @include font-size(18, no);
-      margin-bottom: 5rem;
+      @include media($desktop) {
+        margin-bottom: 8rem;
+      }
       font-style: italic;
       opacity: 0;
       @include animation--fadeInDown(0.4);
