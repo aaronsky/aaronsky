@@ -1,0 +1,386 @@
+// Apply a natural box layout model to all elements
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100.0%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+// Display HTML5 elements in IE6-9 and FF3
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+
+// Display block in IE6-9 and FF3
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+// Prevents modern browsers from displaying 'audio' without controls
+audio:not([controls]) {
+  display: none;
+}
+
+// Prevent sub and sup affecting line-height in all browsers
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+// Normalize blockquotes
+blockquote {
+  margin: 0;
+}
+
+img {
+  // Responsive images (ensure images don't scale beyond their parents)
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  width: auto\9; // IE7-8 need help adjusting responsive images
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+// Prevent max-width from affecting Google Maps
+#map_canvas img,
+.google-maps img {
+  max-width: none;
+}
+
+// Consistent form font size in all browsers, margin changes, misc
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+button,
+input {
+  *overflow: visible; // Inner spacing ie IE6/7
+  line-height: normal; // FF3/4 have !important on line-height in UA stylesheet
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  // Inner padding and border oddities in FF3/4
+  padding: 0;
+  border: 0;
+}
+
+button,
+html input[type="button"], // Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls.
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; // Corrects inability to style clickable `input` types in iOS.
+  cursor: pointer; // Improves usability and consistency of cursor style between image-type `input` and others.
+}
+
+label,
+select,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer; // Improves usability and consistency of cursor style between image-type `input` and others.
+}
+
+input[type="search"] {
+  // Appearance in Safari/Chrome
+  box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none; // Inner-padding issues in Chrome OSX, Safari 5
+}
+
+textarea {
+  overflow: auto; // Remove vertical scrollbar in IE6-9
+  vertical-align: top; // Readability and alignment cross-browser
+}
+
+
+/* ==========================================================================
+   Base elements
+   ========================================================================== */
+
+
+/*
+   Selections
+   ========================================================================== */
+
+::-moz-selection {
+  background-color: lighten($base-color, 65%);
+  color: $base-color;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: lighten($base-color, 65%);
+  color: $base-color;
+  text-shadow: none;
+}
+
+
+/*
+   Body
+   ========================================================================== */
+
+body {
+  font-size: 1.5em;
+  /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+
+
+/* headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.67em 0;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-family: $heading-font;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-size: 4.0rem;
+  line-height: 1.2;
+  //letter-spacing: -.1rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+  line-height: 1.25;
+  //letter-spacing: -.1rem;
+}
+
+h3 {
+  font-size: 3.0rem;
+  line-height: 1.3;
+  //letter-spacing: -.1rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height: 1.35;
+  //letter-spacing: -.08rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  //letter-spacing: -.05rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  //letter-spacing: 0;
+}
+
+
+/* Larger than phablet */
+
+@media (min-width: 550px) {
+  h1 {
+    font-size: 5.0rem;
+  }
+  h2 {
+    font-size: 4.2rem;
+  }
+  h3 {
+    font-size: 3.6rem;
+  }
+  h4 {
+    font-size: 3.0rem;
+  }
+  h5 {
+    font-size: 2.4rem;
+  }
+  h6 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* underlined text */
+
+u,
+ins {
+  text-decoration: none;
+  border-bottom: 1px solid $text-color;
+}
+
+
+/*
+   Links
+   ========================================================================== */
+
+a {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  // Apply focus state
+  &:focus {
+    @extend %tab-focus;
+  }
+  // Remove outline
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}
+
+/*
+   Horizontal rules
+   ========================================================================== */
+
+hr {
+    display: block;
+    margin: 1em 0;
+    padding: 0;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #fff;
+}
+
+/*
+   Figures and Images
+   ========================================================================== */
+
+figure {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @include clearfix;
+  img {
+    margin-bottom: 10px;
+  }
+  a {
+    img {
+      @include transform(translateY(0));
+      -webkit-transition-duration: 0.25s;
+      -moz-transition-duration: 0.25s;
+      -o-transition-duration: 0.25s;
+      opacity: 0.7;
+      &:hover {
+        @include transform(translateY(-5px));
+        @include box-shadow(0 0 10px rgba($black, .20));
+        opacity: 1;
+      }
+    }
+  }
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+// Figure captions
+
+figcaption {
+  padding-top: 10px;
+  @include font-size(14);
+  line-height: 1.3;
+  color: lighten($text-color, 10);
+}
+
+// Tables
+// --------------------------------------------------
+table {
+  width: 100%;
+}
+
+
+// Blockquotes
+// --------------------------------------------------
+
+blockquote {
+  font-family: $alt-font;
+  font-style: italic;
+  @include font-size(16);
+  padding-left: 20px;
+  border-left: 8px solid $black;
+}
+
+// Code
+// --------------------------------------------------
+
+tt, code, kbd, samp, pre {
+  font-family: $code-font;
+}
+p,
+li {
+  code {
+    @include font-size(14);
+    font-family: $code-font;
+    white-space: nowrap;
+    margin: 0 2px;
+    padding: 0 5px;
+    border: 1px solid lighten($black, 90);
+    background-color: lighten($black, 95);
+    @include rounded(3px);
+  }
+}
+pre {
+  @include font-size(14);
+  overflow-x: auto;
+}
+
+// Global Transition
+// ---------------------------------------------------
+
+b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a, .highlight {
+  @include transition(all .2s ease);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
