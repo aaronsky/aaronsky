@@ -64,9 +64,12 @@
   /* page title */
   &-title {
     font-family: $alt-font;
-    @include font-size(38, yes, 40);
+    @include font-size(40, yes, 42);
     font-weight: bold;
-    line-height: 1;
+    @include media($tablet) {
+      margin-left: 21%;
+      text-align: center;
+    }
     a {
       color: $black;
       text-decoration: underline;
@@ -107,11 +110,17 @@
   /* main content block */
   &-content {
     @include span-columns(12 of 12);
-    p:first-child {
-      margin-top: 0;
-    }
     @include media($tablet) {
       @include span-columns(9.5 of 12);
+    }
+    h3 {
+      @include font-size(32);
+    }
+    p {
+      @include font-size(16);
+    }
+    p:first-child {
+      margin-top: 0;
     }
     /* nice link underlines */
     p > a,
