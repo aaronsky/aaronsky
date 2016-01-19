@@ -4,18 +4,10 @@ module.exports = {
   dist: {
     files: [{
       expand: true,
-      src: 'favicon.svg',
-      dest: '.temp/'
-    }, {
-      expand: true,
-      cwd: 'img/',
-      src: '{,*/}*.svg',
-      dest: '.temp/img/'
-    }, {
-      expand: true,
-      cwd: 'brand/',
-      src: '{,*/}*.svg',
-      dest: '.temp/brand/'
+      cwd: 'assets/img/',
+      src: '**/*.svg',
+      dest: 'optimized/assets/img/',
+      filter: 'isFile'
     }]
   }
 };
