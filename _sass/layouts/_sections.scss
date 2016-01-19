@@ -63,6 +63,9 @@
       font-style: italic;
       opacity: 0;
       @include animation--fadeInDown(0.4);
+      > span {
+        white-space: nowrap;
+      }
     }
     &_profile {
       float: right;
