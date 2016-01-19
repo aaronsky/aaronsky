@@ -21,6 +21,7 @@ title: Portfolio
     <div class="container">
         {% for work_hash in site.data.portfolio.work %}
         {% assign work = work_hash[1] %}
+        {% if work %}
         <a href="{{ work.link }}">
             <div class="project project-lighten">
                 <img class="project_img" src="{{site.baseurl}}{{site.assets.img.portfolio}}{{ work.img }}">
@@ -30,6 +31,7 @@ title: Portfolio
                 <p class="project_description">{{ work.description }}</p>
             </div>
         </a>
+        {% endif %}
         {% endfor %}
     </div>
 </div>
@@ -42,6 +44,7 @@ title: Portfolio
     <div class="container">
         {% for project_hash in site.data.portfolio.projects %}
         {% assign project = project_hash[1] %}
+        {% if project %}
         <a href="{{ project.link }}">
             <div class="project project-darken">
                 <img class="project_img" src="{{site.baseurl}}{{site.assets.img.portfolio}}{{ project.img }}">
@@ -52,6 +55,7 @@ title: Portfolio
                 <p class="project_description">{{ project.roles | join:', '}}</p>
             </div>
         </a>
+        {% endif %}
         {% endfor %}
     </div>
 </div>
