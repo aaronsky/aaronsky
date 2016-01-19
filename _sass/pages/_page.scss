@@ -64,11 +64,10 @@
   /* page title */
   &-title {
     font-family: $alt-font;
-    @include font-size(40, yes, 42);
+    @include font-size(42, yes, 44);
     font-weight: bold;
     @include media($tablet) {
       margin-left: 21%;
-      text-align: center;
     }
     a {
       color: $black;

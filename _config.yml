@@ -19,6 +19,7 @@ sass:
 gems:
   - jekyll-sitemap
   - jemoji
+excerpt_separator: <!--more--> 
 assets:
   root: /assets/
   brand: /assets/brand/

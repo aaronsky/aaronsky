@@ -8,6 +8,7 @@ date: 2015-12-13T13:20:00-05:00
 ---
 
 There's only a few more days left in my penultimate semester. That's pretty crazy. Part of me is amazed it went by so fast, but the other part of me is pretty thrilled it's over. I'm proud of the work I've done this term, but above all else, I'm proud of the work my team and I have accomplished leading a major student-driven initiative born out of my co-op experiences. 
+<!--more-->
 
 A bit of background: two summers ago, I was working on a sizable games project with a friend from school the summer following our second year. We used Git and Bitbucket and it was my first big experience learning basic version control fundamentals. I had been taught a little bit of SVN in a single freshman class, although saying we were taught is a bit of an overstatement (we were basically told to use TortoiseSVN for the big project, given a brief functionality overview and then never revisited it or general version control principles again). The following semester, I discovered my peers had absolutely no working knowledge of version control and I had a hard time convincing any of them to use it in our group projects. It wasn't until I was at my last job when I realized just how little my department had prepared me in this regard. 
 

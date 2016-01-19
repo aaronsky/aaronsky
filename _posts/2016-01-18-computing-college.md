@@ -10,6 +10,8 @@ College is a big personal decision.
 
 In a way, it's too big a decision for a 14-year old to make. I say 14-year old because with today's growing cost of tuition it's the absolute latest you should make the decision to start planning. The needs for college preparedness are changing times and it's important to stay focused on your passions and academic strengths in order to make a good decision.
 
+<!--more-->
+
 * It isn't feasible to wait until high school to start saving, nor to let your parents decide for you. 
 * Not everyone can or should go to college, regardless of what the adults in your life are telling you to do.
 * Furthermore, the cliché of getting your bachelor's degree by your early 20s is also slowly degrading. 

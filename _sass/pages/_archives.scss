@@ -42,13 +42,13 @@
     float: none;
     opacity: 0.75;
     font-weight: normal;
+    border-left: cornflowerblue 5px groove;
     p {
       @include font-size(16, no, 28);
       //font-style: italic;
       margin-top: 1rem;
       padding-left: 2rem;
       padding-right: 1rem;
-      border-left: cornflowerblue 5px groove;
     }
   }
 }
