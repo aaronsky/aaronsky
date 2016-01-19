@@ -1,0 +1,13 @@
+.social {
+  @include outer-container;
+  margin-top: 5rem;
+  &_item {
+    @include span-columns(2 of 12);
+    opacity: 0;
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        @include animation--fadeInDown(0.8 + $i/12);
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+// @include drop-shadow(HORIZONTAL, VERTICAL, BLUR, ALPHA);
+@mixin drop-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $alpha: 0.1) {
+  box-shadow: $x-axis $y-axis $blur rgba(0, 0, 0, $alpha);
+}

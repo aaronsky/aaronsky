@@ -1,0 +1,21 @@
+/*
+   Typography
+   ========================================================================== */
+body {
+  font-family: $base-font;
+  color: $text-color;
+  @include font-size(16, no);
+}
+
+p {
+  @include font-size(18,yes,28);
+}
+
+li {
+  @include font-size(16,12,24);
+}
+
+i {
+  font-family: $icons-font;
+  @include font-size(28, no, 42);
+}

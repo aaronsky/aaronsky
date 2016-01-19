@@ -1,0 +1,11 @@
+/* add .animated class to elements you wish to animate
+ * along with the type of animation (eg: <div class="animated fadeIn"></div>)
+ */
+
+.animated {
+  @include animation-fill-mode(both);
+  @include animation-duration(1s);
+  &.hinge {
+    @include animation-duration(2s);
+  }
+}

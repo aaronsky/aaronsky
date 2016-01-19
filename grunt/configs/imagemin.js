@@ -8,8 +8,8 @@ module.exports = {
         optimizationLevel: grunt.option('imgquality') || 1,
         progressive: true
       },
-      src: ['favicon.{png,jpg,jpeg}', 'img/**/*.{png,jpg}', 'brand/**/*.{png,jpg}'],
-      dest: '.temp/'
+      src: ['assets/img/**/*.{png,jpg,jpeg}'],
+      dest: 'optimized/assets/img/'
     }]
   }
 };
