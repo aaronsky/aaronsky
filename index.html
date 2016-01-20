@@ -22,7 +22,7 @@ title: Portfolio
         {% for work_hash in site.data.portfolio.work %}
         {% assign work = work_hash[1] %}
         {% if work %}
-        <div>
+        <div class="project_cell">
             <a href="{{ work.link }}">
                 <div class="project project-lighten">
                     <aside>
@@ -51,7 +51,7 @@ title: Portfolio
         {% for project_hash in site.data.portfolio.projects %}
         {% assign project = project_hash[1] %}
         {% if project %}
-        <div>
+        <div class="project_cell">
             <a href="{{ project.link }}">
                 <div class="project project-darken">
                     <aside>
@@ -80,9 +80,9 @@ title: Portfolio
     <div class="container">
         {% for cert_hash in site.data.portfolio.certification %}
         {% assign cert = cert_hash[1] %}
-        <div class="cert">
+        <div class="project_cell-cert">
             <a href="{{site.baseurl}}{{site.assets.docs}}{{ cert.link }}">
-                <div class="project project-darken">
+                <div class="project project_cell project-darken">
                     <aside>
                         <img class="project_img" src="{{site.baseurl}}{{site.assets.img.portfolio}}{{ cert.img }}">
                     </aside>
