@@ -1,41 +1,42 @@
 .container {
   @include outer-container;
-  .project {
-    @include span-columns(1 of 1);
+  > div {
+    div {
+      min-height: 6.5rem;
+    }
+    @include span-columns(12 of 12);
     @include media($phablet) {
-      //@include omega-reset(2n); // Reset previous @include omega()
-      @include span-columns(4 of 12);
-      @include shift(2);
-      min-height: 20rem;
-      //@include omega(3n);
+      @include span-columns(6 of 12);
+      @include omega(2n);
     }
     @include media($desktop) {
-      //@include omega-reset(3n); // Reset previous @include omega()
-      @include span-columns(3 of 12);
-      @include shift(1);
-      //@include omega(4n);
+      @include omega-reset(2n);
+      @include span-columns(4 of 12);
+      @include omega(3n);
     }
-    &_cert {
-      min-height: 12.5rem;
-      @include media($phablet) {
-        @include span-columns(6 of 12);
-        @include shift(3);
-      }
-      @include media($desktop) {
-        @include span-columns(6 of 12);
-        @include shift(3);
-      }
+  }
+  .cert {
+    div {
+      min-height: 15rem;
+    }
+    @include media($phablet) {
+      @include span-columns(8 of 12);
+      @include shift(2);
+    }
+    @include media($desktop) {
+      @include span-columns(6 of 12);
+      @include shift(3);
     }
   }
 }
 
 .project {
+  padding: 1rem;
   border-radius: 6px;
   opacity: 0;
   transition: all .3s ease-in-out;
   @include animation--fadeInDown(0.8);
   cursor: pointer;
-  margin-bottom: 10px;
   //work
   &-lighten {
     &:hover {
@@ -67,25 +68,21 @@
   &_heading {
     @include font-size(18, no, 18);
     margin-bottom: 0.5rem;
-    //font-size: 1rem;
     font-weight: 400;
     @include media($desktop) {
       @include font-size(20, no, 20);
       margin-bottom: 0.5rem;
-      //font-size: 1.25rem;
     }
   }
   &_info {
     opacity: 0.8;
     font-weight: 300;
     @include font-size(14, no, 14);
-    //font-size: 0.75rem;
     margin-bottom: 5px;
   }
   &_description {
     opacity: 0.8;
     @include font-size(13, no, 13);
-    //font-size: 0.625rem;
     margin-bottom: 5px;
     width: 65%;
     margin-right: 10px;
@@ -98,13 +95,11 @@
     @include media($desktop) {
       @include font-size(13.8, no, 13.8);
       margin-bottom: 5px;
-      //font-size: 0.725rem;
     }
   }
   &_languages {
     opacity: 0.8;
     @include font-size(14, no, 14);
-    //font-size: 0.75rem;
     margin-bottom: 5px;
   }
 }

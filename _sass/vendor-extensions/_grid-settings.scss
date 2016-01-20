@@ -1,5 +1,11 @@
 @import '../vendors/neat/neat-helpers';
 
+$column: golden-ratio(1em, 3) !default;
+$gutter: golden-ratio(1em, 3) !default;
+
+$fg-column: $column;
+$fg-gutter: $gutter;
+
 $mobile-size: 400px;
 $phablet-size: 550px;
 $tablet-size: 750px;
