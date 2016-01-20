@@ -19,8 +19,12 @@ title: Portfolio
     </div>
     <h2 class="section_heading">Experience</h2>
     <div class="container">
-        {% for work_hash in site.data.portfolio.work %}
-        {% assign work = work_hash[1] %}
+        {% assign work_buffer = "" | split: "" %}
+        {% for work_kvp in site.data.portfolio.work %}
+            {% assign work_buffer = work_buffer | push: work_kvp[1] %}
+        {% endfor %}
+        {% assign works = (work_buffer | sort: 'id') %}
+        {% for work in works %}
         {% if work %}
         <div class="project_cell">
             <a href="{{ work.link }}">
@@ -48,8 +52,12 @@ title: Portfolio
     </div>
     <h2 class="section_heading">Projects</h2>
     <div class="container">
-        {% for project_hash in site.data.portfolio.projects %}
-        {% assign project = project_hash[1] %}
+        {% assign project_buffer = "" | split: "" %}
+        {% for project_kvp in site.data.portfolio.projects %}
+            {% assign project_buffer = project_buffer | push: project_kvp[1] %}
+        {% endfor %}
+        {% assign projects = (project_buffer | sort: 'id') %}
+        {% for project in projects %}
         {% if project %}
         <div class="project_cell">
             <a href="{{ project.link }}">
@@ -78,8 +86,13 @@ title: Portfolio
     </div>
     <h3 class="section_heading">Certification</h3>
     <div class="container">
-        {% for cert_hash in site.data.portfolio.certification %}
-        {% assign cert = cert_hash[1] %}
+        {% assign cert_buffer = "" | split: "" %}
+        {% for cert_kvp in site.data.portfolio.certification %}
+            {% assign cert_buffer = cert_buffer | push: cert_kvp[1] %}
+        {% endfor %}
+        {% assign certs = (cert_buffer | sort: 'id') %}
+        {% for cert in certs %}
+        {% if cert %}
         <div class="project_cell-cert">
             <a href="{{site.baseurl}}{{site.assets.docs}}{{ cert.link }}">
                 <div class="project project_cert project-darken">
@@ -93,6 +106,7 @@ title: Portfolio
                 </div>
             </a>
         </div>
+        {% endif %}
         {% endfor %}
     </div>
 </section>
