@@ -1,9 +1,6 @@
 .container {
   @include outer-container;
-  > div {
-    div {
-      min-height: 6.5rem;
-    }
+  .project_cell {
     @include span-columns(12 of 12);
     @include media($phablet) {
       @include span-columns(6 of 12);
@@ -14,29 +11,36 @@
       @include span-columns(4 of 12);
       @include omega(3n);
     }
-  }
-  .cert {
-    div {
-      min-height: 15rem;
-    }
-    @include media($phablet) {
-      @include span-columns(8 of 12);
-      @include shift(2);
-    }
-    @include media($desktop) {
-      @include span-columns(6 of 12);
-      @include shift(3);
+    &-cert {
+      @include media($phablet) {
+        @include span-columns(8 of 12);
+        @include shift(2);
+      }
+      @include media($desktop) {
+        @include span-columns(6 of 12);
+        @include shift(3);
+      }
     }
   }
 }
 
 .project {
   padding: 1rem;
+  min-height: 8rem;
   border-radius: 6px;
+  cursor: pointer;
   opacity: 0;
   transition: all .3s ease-in-out;
   @include animation--fadeInDown(0.8);
-  cursor: pointer;
+  @include media($phablet) {
+    min-height: 0;
+  }
+  &_cert {
+    min-height: 15rem;
+    @include media($phablet) {
+      min-height: 0;
+    }
+  }
   //work
   &-lighten {
     &:hover {
@@ -53,8 +57,7 @@
   }
   &_img {
     width: 25%;
-    margin: 10px;
-    display: block;
+    margin: 0 10px;
     float: left;
     @include media($phablet) {
       width: 100px;
