@@ -1,4 +1,4 @@
-require_relative "blog_namespace"
+require_relative "../helpers/blog_namespace"
 
 require "open-uri"
 require "net/http"
@@ -46,8 +46,7 @@ class ImagesTest < Blog::Test
     @images.select do |img|
       url = img[:url]
 
-      assert_match /^https:\/\/cloud\.githubusercontent\.com/, url,
-        "Images should be hosted on GitHub. Try dragging an image into an issue comment, uploading it, and using that URL."
+      assert_match(/^https:\/\/cloud\.githubusercontent\.com/, url, "Images should be hosted on GitHub. Try dragging an image into an issue comment, uploading it, and using that URL.")
     end
   end
 
