@@ -4,7 +4,7 @@ task :default => [:rebuild]
 task :rebuild => [:clean, :build]
 
 task :clean do
-  sh 'rm -rf _site .sass-cache'
+  sh 'rm -rf _site .sass-cache tmp'
 end
 
 task :build do
