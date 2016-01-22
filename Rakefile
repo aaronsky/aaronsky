@@ -1,6 +1,7 @@
 require 'rake/testtask'
 
-task :default => [:clean, :build]
+task :default => [:rebuild]
+task :rebuild => [:clean, :build]
 
 task :clean do
   sh 'rm -rf _site .sass-cache'

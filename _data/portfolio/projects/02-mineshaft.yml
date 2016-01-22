@@ -1,7 +1,7 @@
 id: 2
 title: Mineshaft Mayhem
 img: mineshaft.png
-link: http://skyaaron.com/assets/docs/MineshaftMayhem.zip
+link: https://github.com/ritgraphics/MineshaftMayhem/releases/tag/v1.0
 start: August 2015
 end: December 2015
 languages: ["C++", "DirectX", "Lua"]
