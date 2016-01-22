@@ -39,7 +39,7 @@ kramdown:
   toc_levels: 1..2
   enable_coderay: false
 
-exclude: ["grunt", "Gruntfile.js", "node_modules", "package.json", "Gemfile", "Gemfile.lock", "vendor", "sass"]
+exclude: ["Rakefile", "node_modules", "package.json", "Gemfile", "Gemfile.lock", "vendor", "tests", "sass"]
 
 # Site owner
 owner:
