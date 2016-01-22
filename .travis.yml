@@ -1,0 +1,12 @@
+language: ruby
+rvm:
+  - 2.1
+  - 2.2
+script:
+  - bundle exec rake clean
+  - bundle exec rake build
+  - bundle exec htmlproof ./_site --only-4xx --check-favicon --check-html
+  - bundle exec rake test
+env:
+  global:
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
