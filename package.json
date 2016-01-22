@@ -1,36 +1,19 @@
 {
   "name": "portfolio",
   "version": "4.5.0",
-  "description": "I made this with Sass and some old-fashioned introspection.",
-  "main": "",
-  "directories": {
-    "doc": "docs"
-  },
+  "description": "Built with Jekyll, a touch of introspection, and a whole lot of elbow grease.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "bundle exec rake"
+    "test": "bundle exec rake test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aaronsky/portfolio.git"
+    "url": "git+https://github.com/aaronsky/aaronsky.github.io.git"
   },
   "author": "Aaronsky",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aaronsky/portfolio/issues"
+    "url": "https://github.com/aaronsky/aaronsky.github.io/issues"
   },
-  "homepage": "http://skyaaron.com",
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-clean": "^0.7.0",
-    "grunt-contrib-connect": "^0.11.2",
-    "grunt-contrib-copy": "^0.8.2",
-    "grunt-contrib-cssmin": "^0.14.0",
-    "grunt-contrib-imagemin": "^1.0.0",
-    "grunt-contrib-sass": "^0.9.2",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-inline": "^0.3.6",
-    "grunt-svgmin": "^3.1.0",
-    "grunt-text-replace": "^0.4.0",
-    "grunt-uncss": "^0.4.4"
-  }
+  "homepage": "http://skyaaron.com"
 }
