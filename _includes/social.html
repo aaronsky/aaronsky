@@ -1,20 +1,21 @@
-<div class="social">
+<div class="social" itemscope itemtype="http://schema.org/Organization">
+    <link itemprop="url" href="{{site.url}}"> 
     <div class="social_item">
-        <a href="https://www.facebook.com/{{site.owner.facebook}}" title="My Facebook!" class="button_social button-outline"><i class="fa fa-facebook"></i></a>
+        <a itemprop="sameAs" href="https://www.facebook.com/{{site.owner.facebook}}" title="My Facebook!" class="button_social button-outline"><i class="fa fa-facebook"></i></a>
     </div>
     <div class="social_item">
-        <a href="https://twitter.com/{{site.owner.twitter}}" title="My Twitter!" class="button_social button-outline"><i class="fa fa-twitter"></i></a>
+        <a itemprop="sameAs" href="https://twitter.com/{{site.owner.twitter}}" title="My Twitter!" class="button_social button-outline"><i class="fa fa-twitter"></i></a>
     </div>
     <div class="social_item">
-        <a href="http://www.linkedin.com/pub/aaron-sky/81/930/605/" title="My LinkedIn!" class="button_social button-outline"><i class="fa fa-linkedin"></i></a>
+        <a itemprop="sameAs" href="http://www.linkedin.com/pub/aaron-sky/81/930/605/" title="My LinkedIn!" class="button_social button-outline"><i class="fa fa-linkedin"></i></a>
     </div>
     <div class="social_item">
-        <a href="https://github.com/{{site.owner.github}}" title="My GitHub!" class="button_social button-outline"><i class="fa fa-github"></i></a>
+        <a itemprop="sameAs" href="https://github.com/{{site.owner.github}}" title="My GitHub!" class="button_social button-outline"><i class="fa fa-github"></i></a>
     </div>
     <div class="social_item">
-        <a href="{{site.baseurl}}{{site.assets.docs}}resume.pdf" title="My Resume!" class="button_social button-outline"><i class="fa fa-file-text-o"></i></a>
+        <a itemprop="sameAs" href="{{site.baseurl}}{{site.assets.docs}}resume.pdf" title="My Resume!" class="button_social button-outline"><i class="fa fa-file-text-o"></i></a>
     </div>
     <div class="social_item">
-        <a href="{{site.baseurl}}/blog/" title="Blog" class="button_social button-outline"><i class="fa fa-rss"></i></a>
+        <a itemprop="sameAs" href="{{site.baseurl}}/blog/" title="Blog" class="button_social button-outline"><i class="fa fa-rss"></i></a>
     </div>
 </div>

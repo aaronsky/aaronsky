@@ -5,18 +5,18 @@ excerpt: "A simple and clean responsive Jekyll theme for words and photos."
 search_omit: true
 ---
 
-<ul class="post-list">
+<ul class="post-list" itemscope itemtype="http://schema.org/Blog">
 {% for post in site.posts limit:10 %} 
-  <li>
+  <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
     <article>
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
+      <a itemprop="url name" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
         <span class="entry-date">
-          <time datetime="{{ post.date | date_to_xmlschema }}">
+          <time itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">
             {{ post.date | date: "%B %d, %Y" }}
           </time>
         </span>
         {% if post.excerpt %}
-          <span class="excerpt">
+          <span itemprop="description" class="excerpt">
             {{ post.excerpt }}
           </span>
         {% endif %}
