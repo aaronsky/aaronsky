@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem 'github-pages'
 gem 'jekyll-sitemap'
+gem 'jekyll-feed'
 gem 'rouge'
 gem 'octopress', '~> 3.0'
 gem 'jemoji'
