@@ -18,6 +18,7 @@ sass:
   style: compressed
 gems:
   - jekyll-sitemap
+  - jekyll-feed
   - jemoji
 excerpt_separator: <!--more--> 
 assets:
