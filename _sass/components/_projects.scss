@@ -27,7 +27,7 @@
 .project {
   padding: 1rem;
   min-height: 8rem;
-  border-radius: 6px;
+  @include rounded(6px);
   cursor: pointer;
   opacity: 0;
   transition: all .3s ease-in-out;
