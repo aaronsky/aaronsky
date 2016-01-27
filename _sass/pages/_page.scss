@@ -237,7 +237,7 @@ span + .entry-title {
   margin-bottom: $gutter;
   padding-left: 0;
   border: 1px solid $border-color;
-  border-radius: $border-radius;
+  @include rounded($border-radius);
   ul {
     list-style-type: none;
     padding-left: 0;
