@@ -1,9 +1,13 @@
 require 'optparse'
 require 'rake/testtask'
 
-task :default => [:rebuild]
+task :default => [:help]
 task :rebuild => [:clean, :build]
 task :watch => [:clean, :serve]
+
+task :help do
+    
+end
 
 task :clean do
   sh 'rm -rf _site .sass-cache tmp'
