@@ -2,9 +2,10 @@
   @include outer-container;
   margin-top: 5rem;
   &_item {
-    @include span-columns(2 of 12);
+    @include span-columns(3 of 12);
+    text-align: center;
     opacity: 0;
-    @for $i from 1 through 6 {
+    @for $i from 1 through 4 {
       &:nth-child(#{$i}) {
         @include animation--fadeInDown(0.8 + $i/12);
       }
