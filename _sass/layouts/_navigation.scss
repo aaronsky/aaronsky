@@ -1,48 +1,141 @@
 .nav {
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  width: 100%;
-  box-shadow: 0px 2px 2px 0px $dark-gray;
-  background-color: $darker-blue;
-  &-sticky {
-    position: fixed;
-    @include animation--fadeInDown(0);
-  }
-  &_logo {
-    padding: 1rem;
-    display: inline-block;
-    &_img {
-      height: 40px;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 2px 2px 0px $dark-gray;
+    background-color: $darker-blue;
+    box-sizing: border-box;
+    * {
+        box-sizing: border-box;
     }
-  }
-  &_links {
-    float: right;
-    &_list {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
+    &-sticky {
+        position: fixed;
+        @include animation--fadeInDown(0);
     }
-    &_item {
-      float: left;
-      margin: 0.5rem 0;
-      a {
-        display: block;
-        color: $white;
-        padding: 14px 16px;
-        text-align: center;
-        text-decoration: none;
-        &:hover {
-          border-bottom: $white 4px solid;
+    &_logo {
+        margin: 1rem;
+        display: inline-block;
+        height: 40px;
+    }
+    &-collapse {
+        @include media($phablet) {
+            float: right;
+            width: auto;
         }
-      }
-      &-divider {
-        float: left;
-        border-right: $light-gray 1px solid;
-        height: 50px;
-        margin: 0.5rem 1rem
-      }
+        &_list {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            display: block;
+            list-style: none;
+        }
+        &_item {
+            width: 100%;
+            display: block;
+            float: left;
+            margin: 0.5rem 0;
+            &.opened {
+                max-height: 9999px;
+            }
+            a {
+                display: block;
+                float: right;
+                color: $white;
+                padding: 14px 16px;
+                text-align: center;
+                text-decoration: none;
+                &:hover {
+                    border-bottom: $white 4px solid;
+                }
+            }
+        }
+        &-toggle {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            @include media($phablet) {
+                display: none;
+            }
+        }
     }
-  }
+}
+
+.js .nav-collapse {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+    @include media($phablet) {
+        position: relative;
+        &.closed {
+            max-height: none;
+        }
+    }
+}
+
+.disable-pointer-events {
+    pointer-events: none !important;
+}
+
+.nav-collapse,
+.nav-collapse .nav-collapse_list {
+    list-style: none;
+    float: right;
+}
+
+.nav-collapse .nav-collapse_item {
+    float: left;
+    width: 100%;
+    @include media($phablet) {
+        width: auto;
+    }
+}
+
+.nav-collapse ul ul a {
+    padding-left: 2em;
+    @include media($phablet) {
+        display: none;
+    }
+}
+
+#nav-toggle {
+    -webkit-tap-highlight-color: transparent;
+    @include user-select(none);
+    position: relative;
+    background: transparent;
+    margin: 1rem;
+    width: 70px;
+    padding: 0.5rem;
+    z-index: 300;
+    float: right;
+    &.active {
+        div {
+            &:nth-child(1) {
+                transform: rotate(45deg) translate3d(3px, 8px, 0)
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate3d(3px, -8px, 0)
+            }
+        }
+    }
+    div {
+        transform: translate3d(0, 0, 0);
+        transition: all .4s ease;
+        border-radius: 1px;
+        margin-left: 20px;
+        margin-bottom: 6px;
+        background: $white;
+        height: 2px;
+        width: 28px;
+    }
 }
