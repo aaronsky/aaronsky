@@ -1,6 +1,6 @@
 {% include browser-upgrade.html %} 
 {% if page.image.feature %}
-<header class="masthead">
+<header class="masthead" id="masthead">
     {% if site.logo != null %}
     <div class="wrap">
         <a href="{{ site.baseurl }}/" class="site-logo" rel="home" title="{{ site.title }}"><img src="{{ site.baseurl }}{{site.assets.img.site}}{{ site.logo }}" width="200" height="200" alt="{{ site.title }} logo" class="animated fadeInDown"></a>
@@ -9,7 +9,7 @@
 </header>
 <!-- /.masthead -->
 {% else %}
-<header class="masthead">
+<header class="masthead" id="masthead">
     <div class="wrap">
         {% if site.logo != null %}
         <a href="{{ site.baseurl }}/blog/" class="site-logo" rel="home" title="{{ site.title }}">

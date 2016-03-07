@@ -1,2 +1,21 @@
-<nav>
-</nav>
+<header id="nav" class="nav">
+    <a href="{{ site.url }}">
+        <img class="nav_logo" src="{{ site.url }}{{ site.assets.img.site }}brand.svg" alt="Site logo" />
+    </a>
+    <a href="#" id="nav-toggle" class="nav-toggle" aria-hidden="false">
+        <div></div>
+        <div></div>
+        <div></div>
+    </a>
+    <nav class="nav-collapse">
+        <ul class="nav-collapse_list">
+            <li class="nav-collapse_item"><a href="{{ site.url }}#work">Work</a></li>
+            <li class="nav-collapse_item"><a href="{{ site.url }}#projects">Projects</a></li>
+            <li class="nav-collapse_item"><a href="{{ site.url }}#certification">Certification</a></li>
+            <li class="nav-collapse_item"><a href="{{ site.url }}#education">Education</a></li>
+            <li class="nav-collapse_item-divider"></li>
+            <li class="nav-collapse_item"><a href="{{ site.url }}/blog/">Blog</a></li>
+            <li class="nav-collapse_item"><a href="{{ site.url }}{{ site.assets.docs }}resume.pdf">CV</a></li>
+        </ul>
+    </nav>
+</header>

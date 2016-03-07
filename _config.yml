@@ -32,6 +32,7 @@ assets:
     site: /assets/img/site/
     portfolio: /assets/img/portfolio/
     blog: /assets/img/blog/
+  js: /assets/js/
 
 kramdown:
   auto_ids: true

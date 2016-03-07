@@ -38,7 +38,7 @@
     background-color: $darker-blue;
     color: $white;
     @include media($phablet) {
-      padding: 8rem 0;
+      padding: 10rem 0 8rem 0;
       text-align: left;
     }
     @include media($desktop) {

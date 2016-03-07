@@ -1,9 +1,15 @@
 require 'optparse'
 require 'rake/testtask'
+require 'html/proofer'
 
-task :default => [:rebuild]
+task :default => [:help]
 task :rebuild => [:clean, :build]
 task :watch => [:clean, :serve]
+task :test => [:rebuild, :proof, :integrations]
+
+task :help do
+    
+end
 
 task :clean do
   sh 'rm -rf _site .sass-cache tmp'
@@ -17,6 +23,15 @@ task :serve do
   sh 'bundle exec jekyll serve'
 end
 
-task :test do
+task :proof do
+  HTML::Proofer.new("./_site", {
+    :allow_hash_href => true,
+    :check_html => true,
+    :only_4xx => true,
+    :check_favicon => true
+    }).run()
+end
+
+task :integrations do
   ruby "tests/test_helper.rb"
 end

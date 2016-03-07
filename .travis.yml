@@ -5,7 +5,6 @@ rvm:
 script:
   - bundle exec rake clean
   - bundle exec rake build
-  - bundle exec htmlproof ./_site --only-4xx --check-favicon --check-html
   - bundle exec rake test
 env:
   global:
