@@ -1,4 +1,10 @@
 <script type="text/javascript" src="{{ site.baseurl }}{{ site.assets.js }}scroll.js"></script>
+<script>
+  var nav = responsiveNav(".nav-collapse", {
+    customToggle: ".nav-toggle",
+    closeOnNavClick: true
+  });
+</script>
 {% if site.owner.google.analytics %}
 <!-- Asynchronous Google Analytics snippet -->
 <script>
