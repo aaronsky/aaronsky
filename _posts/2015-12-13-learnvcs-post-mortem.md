@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why I Educate: Looking back on learnVCS"
+title: "Why I Educate: Looking Back on learnVCS"
 categories: blog
 share: true
 tags: []
@@ -22,4 +22,4 @@ learnVCS was built by [Benjamin Wilcox](http://benjwilcox.com/), [Stephanie Jurg
 
 This project taught me a lot of things I can't expect I would learn without immense risk in the real world. This was my first big production and management role and all my experience with a good PM comes from my last job. I learned to plan out the project as a series of well-scoped sprints, oversee the project on high and low levels, improve my ability to speak designer, and separate the rest of my team from the direct oversight of higher overseers. I worked very hard on the build system and I'm really proud of our Grunt configuration, which could only be more robust if we wrote more tests. I had to teach myself CoffeeScript in the span of a week in order to be able to modify our fork of [react-commits-graph](https://github.com/jsdf/react-commits-graph) and make it work the way we needed it to. 
 
-In the end, I couldn't have asked for a better project my senior. learnVCS was an excellent crossroads of some of my passions: programming, education, and the web. It remains to be see how much impact it will have on my department, but it won't stop me from trying to influence the way things are done here in my last semester.
+In the end, I couldn't have asked for a better project my senior year. learnVCS was an excellent crossroads of some of my passions: programming, education, and the web. It remains to be see how much impact it will have on my department, but it won't stop me from trying to influence the way things are done here in my last semester.
