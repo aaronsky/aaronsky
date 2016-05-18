@@ -4,7 +4,6 @@ title: "Collaborative Education: Looking Back on Atlas"
 categories: blog
 share: true
 tags: []
-date: 2016-05-18T12:00:00-05:00
 ---
 
 Last semester, after completing learnVCS with my team of cool people, I met with Dr. David Schwartz, my department chair, to discuss the future of student involvement in shaping the IGM curriculum content. I wanted to use learnVCS as a jumping off point for future student-driven curriculum development and thought he might have some input. What Dr. Schwartz had for me was an opportunity. He had a high concept with some partially completed but ultimately unusable work, and a completed grant project that was making a transition to web technologies. After three months of hard work, that project ended up becoming Atlas. 

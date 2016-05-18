@@ -4,7 +4,6 @@ title: "Why I Educate: Looking Back on learnVCS"
 categories: blog
 share: true
 tags: []
-date: 2015-12-13T13:20:00-05:00
 ---
 
 There's only a few more days left in my penultimate semester. That's pretty crazy. Part of me is amazed it went by so fast, but the other part of me is pretty thrilled it's over. I'm proud of the work I've done this term, but above all else, I'm proud of the work my team and I have accomplished leading a major student-driven initiative born out of my co-op experiences. 
