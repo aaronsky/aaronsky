@@ -4,7 +4,6 @@ title: "Adventures in Freelance: Looking Back on Ibizan"
 categories: blog
 share: true
 tags: []
-date: 2016-05-07T12:00:00-05:00
 ---
 
 Back in January I was messaged by a good friend of mine, Reid Young of Fangamer. He wanted to know if I could make them a Slack bot to simplify their timesheet recording process. Despite committing to another project shortly before and having already signed on as an iOS TA for another semester, I figured I could handle three part-time jobs at the same time as my classes. However, this post isn't about my workload. This is about Ibizan, the dog-themed time-tracking Slack bot.

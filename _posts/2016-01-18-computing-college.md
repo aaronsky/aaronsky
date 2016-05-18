@@ -4,7 +4,6 @@ title: "Going to School for Computing"
 categories: blog
 share: true
 tags: []
-date: 2016-01-18T20:00:00-05:00
 ---
 College is a big personal decision. 
 
