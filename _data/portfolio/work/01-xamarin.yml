@@ -1,9 +1,12 @@
 id: 1
+resume: true
 employer: Xamarin
 title: Mobile Testing Intern
+description: Wrote UI automation tests, built Chef infrastructure for maintaining bots, ported new Apple and Google samples to Xamarin.
+long_description: "Responsible for automating product sample testing, filing and verifying bugs in the Xamarin platform, managing and enhancing internal QA infrastructure using Chef, overseeing automated test runs and porting newly released Android and iOS samples to Xamarin."
+location: "Boston, MA"
 img: xamagon.svg
 link: http://xamarin.com/
 start: January 2015
 end: August 2015
 languages: ["C#", "Ruby"]
-description: Wrote UI automation tests, built Chef infrastructure for maintaining bots, ported new Apple and Google samples to Xamarin.

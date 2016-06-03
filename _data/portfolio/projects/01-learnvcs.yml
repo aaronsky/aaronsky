@@ -7,3 +7,5 @@ end: December 2015
 languages: ["React", "Sass", "Grunt"]
 type: Independent Study - Team of 3
 roles: ["Project Manager", "Full Stack", "Content Editor"]
+resume: true
+long_description: "A student-driven effort to improve version control education in the Interactive Games & Media curricula, overseen by the department chair. Produced a web reference to prime newcomers on version control fundamentals with a curated collection of helpful links and an interactive Git graph using React and live data from GitHub."

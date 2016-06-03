@@ -7,3 +7,5 @@ end: January 2014
 languages: ["C#", "Windows Phone"]
 type: Personal Project
 roles: ["Full Stack"]
+resume: true
+long_description: "A package tracking application for Windows Phone 8 and Windows 8 developed using C# and XAML. Made extensive use of USPS, UPS and FedEx APIs and Windows Presentation Foundation. Independently created."
