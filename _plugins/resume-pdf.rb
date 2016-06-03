@@ -9,10 +9,10 @@ output_file = File.join(output_dir, 'resume.pdf')
 pdf = nil
 
 PDFKit.configure do |config|
+  config.wkhtmltopdf = '/usr/local/bin/wkhtmltopdf' if ENV['SKY_TRAVIS_CI']
   config.default_options = {
-    :page_size => 'Legal',
+    :page_size => 'Letter',
   }
-  # config.root_url = site_dir
   config.verbose = true
 end
 

@@ -46,7 +46,7 @@
             margin-bottom: 2pt;
         }
         &_description {
-            font-size: 11pt;
+            font-size: 10pt;
             color: $black;
             margin-bottom: 4pt;
             text-align: justify;
@@ -60,7 +60,7 @@
         }
     }
     &_footer {
-        margin-top: 4rem;
+        margin-top: 6rem;
         
         &_line {
             border: 0;
@@ -73,7 +73,7 @@
             position: relative;
             float: left;
             left: 45%;
-            top: -45px;
+            top: -33px;
             width: 10%;
             margin: 0 1%;
             background-color: $white;

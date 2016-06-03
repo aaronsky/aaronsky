@@ -4,7 +4,11 @@ rvm:
   - 2.2
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y wkhtmltopdf
+  - sudo apt-get install -y zlibc libssl-dev openssl build-essential fontconfig libfreetype6 xorg 
+  - wget http://download.gna.org/wkhtmltopdf/0.12/0.12.3/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
+  - tar xvjf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
+  - mv wkhtmltox-0.12.3_linux-generic-amd64 /usr/local/bin/wkhtmltopdf
+  - chmod +x /usr/local/bin/wkhtmltopdf
 script:
   - bundle exec rake clean
   - bundle exec rake build
@@ -12,3 +16,4 @@ script:
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+    - SKY_TRAVIS_CI=true
