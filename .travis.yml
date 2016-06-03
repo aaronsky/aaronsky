@@ -2,6 +2,9 @@ language: ruby
 rvm:
   - 2.1
   - 2.2
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y wkhtmltopdf
 script:
   - bundle exec rake clean
   - bundle exec rake build
