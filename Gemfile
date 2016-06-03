@@ -6,6 +6,7 @@ gem 'jekyll-feed'
 gem 'rouge'
 gem 'octopress', '~> 3.0'
 gem 'jemoji'
+gem 'pdfkit'
 
 gem 'rake'
 gem 'html-proofer'

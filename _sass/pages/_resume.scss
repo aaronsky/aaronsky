@@ -1,0 +1,83 @@
+.resume {
+    margin: 0.1in 0.5in;
+    
+    &_header {
+        &_title {
+            font-weight: bold;
+            font-size: 30pt;
+            margin-bottom: 2pt;
+        }
+        &_subtitle {
+            font-style: italic;
+            font-size: 12pt;
+            color: $pale-gray;
+            margin-bottom: 4pt;
+            > a {
+                color: $alt-link-color;
+                font-style: italic;
+                //text-decoration: underline;
+                font-size: 12pt;
+            }
+        }
+        &_line {
+            border: 0;
+            width: 100%;
+            height: 0.75pt;
+            margin: auto;
+            background-color: #2C73B5; 
+        }
+    }
+    &_section {
+        &_header {
+            font-weight: bold;
+            font-size: 18pt;
+            color: #2D73B5;
+            clear: left;
+            margin-top: 6pt;
+            margin-bottom: 0;
+        }
+    }
+    &_project {
+        &_header {
+            font-weight: bold;
+            font-size: 12pt;
+            color: #1F4D77;
+            margin-top: 3pt;
+            margin-bottom: 2pt;
+        }
+        &_description {
+            font-size: 11pt;
+            color: $black;
+            margin-bottom: 4pt;
+            text-align: justify;
+            text-justify: inter-word;
+            line-height: 1.3;
+        }
+    }
+    &_skill {
+        &_divider {
+            font-weight: 500;
+        }
+    }
+    &_footer {
+        margin-top: 4rem;
+        
+        &_line {
+            border: 0;
+            width: 100%;
+            height: 0.75pt;
+            margin: 15px auto;
+            background-color: #2C73B5;
+        }
+        &_logo {
+            position: relative;
+            float: left;
+            left: 45%;
+            top: -45px;
+            width: 10%;
+            margin: 0 1%;
+            background-color: $white;
+            padding: 0 1%;
+        }
+    }
+}

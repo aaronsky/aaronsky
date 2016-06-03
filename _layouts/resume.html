@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% include head.html %}
+</head>
+
+<body class="resume">
+    <header>
+        <span>
+            <h1 class="resume_header_title">Aaron Sky</h1>
+        </span>
+            <span>
+            <h2 class="resume_header_subtitle">+1.703.969.3517 • 
+                <a href="mailto:{{site.owner.email}}">aaronsky@skyaaron.com</a> • 
+                <a href="{{site.url}}">skyaaron.com/</a> • 
+                <a href="https://github.com/{{site.owner.github}}">github.com/aaronsky/</a>
+            </h2>
+        </span>
+        <hr class="resume_header_line">
+    </header>
+    <section class="resume_section">
+        <h2 class="resume_section_header">Experience</h2> 
+        {% assign work_buffer = "" | split: "" %} 
+        {% for work_kvp in site.data.portfolio.work %} 
+            {% assign work_buffer = work_buffer | push: work_kvp[1] %} 
+        {% endfor %} 
+        {% assign works = (work_buffer | sort: 'id') %} 
+        {% for work in works %} 
+            {% if work and work.resume %}
+            <div>
+                <a href="{{ work.link }}">
+                    <h3 class="resume_project_header">
+                        {{ work.title }}, {{ work.employer }}; 
+                        {{ work.location }} &ndash; 
+                        {{ work.start }} to 
+                        {% if work.end %}
+                            {{ work.end }}
+                        {% else %}
+                            Present
+                        {% endif %}</h3>
+                </a>
+                <p class="resume_project_description">
+                    {{ work.long_description }}
+                </p>
+            </div>
+            {% endif %} 
+        {% endfor %}
+    </section>
+    <section class="resume_section">
+        <h2 class="resume_section_header">Projects</h2> 
+        {% assign project_buffer = "" | split: "" %} 
+        {% for project_kvp in site.data.portfolio.projects %} 
+            {% assign project_buffer = project_buffer | push: project_kvp[1] %} 
+        {% endfor %} 
+        {% assign projects = (project_buffer | sort: 'id') %} 
+        {% for project in projects %} 
+            {% if project and project.resume %}
+            <div>
+                <a href="{{ project.link }}">
+                    <h3 class="resume_project_header">
+                        {{ project.title }} 
+                        ({{ project.start }}{% if project.end %} - {{ project.end }}{% endif %})
+                    </h3>
+                </a>
+                <p class="resume_project_description">
+                    {{project.long_description}} ({{project.type}})
+                </p>
+            </div>
+            {% endif %} 
+        {% endfor %}
+    </section>
+    <section class="resume_section">
+        <h2 class="resume_section_header">Skills</h2>
+        <h3 class="resume_project_header">
+            Programming Languages (selected by relevance and order of current confidence)
+        </h3>
+        <span class="resume_project_description">
+        {% for skill in site.data.portfolio.skills %}
+            <strong>{{skill.tool}}</strong> 
+            <em>{{skill.time}}</em>
+            {% if forloop.last == false %}
+            <span class="resume_skill_divider"> — </span>
+            {% endif %}
+        {% endfor %}
+        </span>
+    </section>
+    <section class="resume_section">
+        <h2 class="resume_section_header">Education</h2>
+        <p class="resume_project_description">
+            {{ site.data.portfolio.education.school }}, {{ site.data.portfolio.education.location }}<br>
+            {{ site.data.portfolio.education.degree }}, {{ site.data.portfolio.education.date }}
+        </p>
+        <span>
+    </section>
+    <footer class="resume_footer">
+        <hr class="resume_footer_line">
+        <img class="resume_footer_logo" src="{{site.assets.brand}}outline.svg">
+    </footer>
+</body>
+
+</html>
