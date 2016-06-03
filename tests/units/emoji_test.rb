@@ -1,9 +1,9 @@
-require_relative "../helpers/blog_namespace"
+require_relative "../helpers/test"
 
 require "open-uri"
 require "net/http"
 
-class EmojiTest < Blog::Test
+class EmojiTest < Blog::BlogTest
   def test_no_emoji
     puts "Testing for emoji in #{posts.length} posts\n----------------------------\n"
     posts.each do |post|

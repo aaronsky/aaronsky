@@ -1,6 +1,6 @@
 require 'optparse'
 require 'rake/testtask'
-require 'html/proofer'
+require 'html-proofer'
 
 task :default => [:help]
 task :rebuild => [:clean, :build]
@@ -24,12 +24,12 @@ task :serve do
 end
 
 task :proof do
-  HTML::Proofer.new("./_site", {
+  HTMLProofer.check_directory('./_site', {
     :allow_hash_href => true,
     :check_html => true,
     :only_4xx => true,
     :check_favicon => true
-    }).run()
+    }).run
 end
 
 task :integrations do

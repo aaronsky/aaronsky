@@ -3,9 +3,8 @@ require 'pdfkit'
 
 current_dir = File.dirname(__FILE__)
 site_dir = File.join(current_dir, '..', '_site')
-temp_dir = File.join(current_dir, '..', 'tmp')
 output_dir = File.join(site_dir, 'assets', 'docs')
-output_file = File.join(temp_dir, 'resume.pdf')
+output_file = File.join(output_dir, 'resume.pdf')
 
 pdf = nil
 
@@ -17,23 +16,17 @@ PDFKit.configure do |config|
   config.verbose = true
 end
 
-if Dir.exist? temp_dir
-  FileUtils.rm_r temp_dir
-end
-Dir.mkdir temp_dir
-
-Jekyll::Hooks.register :pages, :post_render do |page|
-  if page.name == 'resume.html'
-    html = page.output.gsub(/(href|src)=(['"])\/([^\"']*|[^"']*)['"]/, '\1=\2' + site_dir + '/\3\2')
-    kit = PDFKit.new(html)
-    # puts output_file
-    pdf = kit.to_file(output_file)
-  end
-end
+##
+# if Dir.exist? temp_dir
+#   FileUtils.rm_r temp_dir
+# end
+# Dir.mkdir temp_dir
 
 Jekyll::Hooks.register :site, :post_write do |site|
-  unless pdf.nil?
-    puts 'Copying resume to directory'
-    FileUtils.cp(output_file, output_dir)
+  page = site.pages.find { |page| page.name == "resume.html" }
+  if page
+    html = page.output.gsub(/(href|src)=(['"])\/([^\"']*|[^"']*)['"]/, '\1=\2' + site_dir + '/\3\2')
+    kit = PDFKit.new(html)
+    pdf = kit.to_file(output_file)
   end
 end
