@@ -11,7 +11,9 @@ Time to cook with me, a developer who can also cook.
 
 It's definitely been a while since I posted something here. I've been very busy with my new job working for [SapientNitro](http://www.sapientnitro.com/en-us.html#home), and even though I've only been there for a month, I've already been involved in some great work and I'm looking forward to times ahead.
 
-I'm going to divert from my normal topics of development and education. Now that I'm in the real world with the increasingly real need to take care of myself, I've been cooking cool stuff. I did most of the cooking in college and I cooked most meals in my own kitchen during last year's Boston internship adventures. I've always been interested in cooking, partly because I love to eat and more recently than childhood because I love to try new things. With that said, I have taken my own bolognese recipe (based heavily on the one at [SORTEDFood.com](https://sortedfood.com/recipe/1067)) and made adjustments based on what I had in my spice garden, what I had in my fridge, and what kind of bolognese I felt like making tonight. It's still cooking, so anyone reading this now should check in later for an update where I post pictures of the finished meal. It already tastes and smells amazing and I really wanted to share this!
+I'm going to divert from my normal topics of development and education. Now that I'm in the real world with the increasingly real need to take care of myself, I've been cooking cool stuff. I did most of the cooking in college and I cooked most meals in my own kitchen during last year's Boston internship adventures. I've always been interested in cooking, partly because I love to eat and more recently than childhood because I love to try new things. With that said, I have taken my own bolognese recipe (based heavily on the one at [SORTEDFood.com](https://sortedfood.com/recipe/1067)) and made adjustments based on what I had in my spice garden, what I had in my fridge, and what kind of bolognese I felt like making tonight. It tasted and smelled amazing and I really wanted to share this!
+
+![meat sauce image]()
 
 ### Ingredients: 
 
@@ -44,4 +46,4 @@ I'm going to divert from my normal topics of development and education. Now that
 5. Stir in the tomatoes and simmer on medium heat for 20 minutes, or on low for 2 hours.
 6. Add the parmesan and mix in thoroughly. Add salt and pepper to taste, top with parsley, and serve over an al dente pasta. I'd recommend a thick noodle like linguine or fettucine. 
 
-I hope you enjoy this! Like I mentioned, I'm going to be updating this later with pictures so you'll get to see what this actually ends up looking like. 
+I hope you enjoy this! 
