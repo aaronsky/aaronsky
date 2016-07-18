@@ -13,7 +13,7 @@ It's definitely been a while since I posted something here. I've been very busy 
 
 I'm going to divert from my normal topics of development and education. Now that I'm in the real world with the increasingly real need to take care of myself, I've been cooking cool stuff. I did most of the cooking in college and I cooked most meals in my own kitchen during last year's Boston internship adventures. I've always been interested in cooking, partly because I love to eat and more recently than childhood because I love to try new things. With that said, I have taken my own bolognese recipe (based heavily on the one at [SORTEDFood.com](https://sortedfood.com/recipe/1067)) and made adjustments based on what I had in my spice garden, what I had in my fridge, and what kind of bolognese I felt like making tonight. It tasted and smelled amazing and I really wanted to share this!
 
-![meat sauce image]()
+<img alt="meat sauce image" src="https://raw.githubusercontent.com/aaronsky/aaronsky.github.io/master/assets/img/blog/summer-bolognese.jpg" width="75%">
 
 ### Ingredients: 
 
