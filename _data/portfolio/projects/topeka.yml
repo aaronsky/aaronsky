@@ -1,8 +1,7 @@
-id: 3
 title: Topeka
 img: topeka.png
 link: https://github.com/xamarin/monodroid-samples/tree/master/android5.0/Topeka
-start: July 2015
+start: 2015-07-06 00:00:00 -0500
 languages: ["C#", "Java", "Android"]
 type: Ported on behalf of Xamarin
 roles: ["Solely Responsible"]

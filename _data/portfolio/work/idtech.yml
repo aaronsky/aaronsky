@@ -1,10 +1,9 @@
-id: 4
-ignore: true
 employer: iD Tech Camps
 title: Summer Instructor
 img: idtc.svg
 link: https://www.idtech.com/
-start: June 2013
-end: August 2014
+start: 2013-06-15 00:00:00 -0500
+end: 2014-08-02 00:00:00 -0500
 languages: ["Java", "C++"]
 description: Taught basic programming fundamentals to a class of eight teenagers with varying levels of previous experience.
+ignore: true
