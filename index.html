@@ -26,6 +26,7 @@ title: Portfolio
         {% assign works = (work_buffer | sort: 'id') %}
         {% for work in works %}
         {% if work %}
+        {% unless work.ignore %}
         <div class="project_cell">
             <a href="{{ work.link }}">
                 <div class="project project-lighten">
@@ -41,6 +42,7 @@ title: Portfolio
                 </div>
             </a>
         </div>
+        {% endunless %}
         {% endif %}
         {% endfor %}
     </div>
@@ -59,6 +61,7 @@ title: Portfolio
         {% assign projects = (project_buffer | sort: 'id') %}
         {% for project in projects %}
         {% if project %}
+        {% unless project.ignore %}
         <div class="project_cell">
             <a href="{{ project.link }}">
                 <div class="project project-darken">
@@ -75,6 +78,7 @@ title: Portfolio
                 </div>
             </a>
         </div>
+        {% endunless %}
         {% endif %}
         {% endfor %}
     </div>
