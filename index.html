@@ -23,9 +23,10 @@ title: Portfolio
         {% for work_kvp in site.data.portfolio.work %}
             {% assign work_buffer = work_buffer | push: work_kvp[1] %}
         {% endfor %}
-        {% assign works = (work_buffer | sort: 'id') %}
+        {% assign works = (work_buffer | sort: 'start') | reverse %}
         {% for work in works %}
         {% if work %}
+        {% unless work.ignore %}
         <div class="project_cell">
             <a href="{{ work.link }}">
                 <div class="project project-lighten">
@@ -34,13 +35,14 @@ title: Portfolio
                     </aside>
                     <div>
                         <h2 class="project_heading">{{ work.title }}</h2>
-                        <h3 class="project_info">{{ work.start }} to {% if work.end %}{{ work.end }}{% else %}Present{% endif %}</h3>
+                        <h3 class="project_info">{{ work.start | date: "%B %Y" }} to {% if work.end %}{{ work.end | date: "%B %Y" }}{% else %}Present{% endif %}</h3>
                         <p class="project_languages">{{ work.languages | join:' - ' }}</p>
                         <p class="project_description">{{ work.description }}</p>
                     </div>
                 </div>
             </a>
         </div>
+        {% endunless %}
         {% endif %}
         {% endfor %}
     </div>
@@ -56,9 +58,10 @@ title: Portfolio
         {% for project_kvp in site.data.portfolio.projects %}
             {% assign project_buffer = project_buffer | push: project_kvp[1] %}
         {% endfor %}
-        {% assign projects = (project_buffer | sort: 'id') %}
+        {% assign projects = (project_buffer | sort: 'start') | reverse %}
         {% for project in projects %}
         {% if project %}
+        {% unless project.ignore %}
         <div class="project_cell">
             <a href="{{ project.link }}">
                 <div class="project project-darken">
@@ -67,7 +70,7 @@ title: Portfolio
                     </aside>
                     <div>
                         <h2 class="project_heading">{{ project.title }}</h2>
-                        <h3 class="project_info">{{ project.start }}{% if project.end %} to {{ project.end }}{% endif %}</h3>
+                        <h3 class="project_info">{{ project.start  | date: "%B %Y"}}{% if project.end %} to {{ project.end  | date: "%B %Y"}}{% endif %}</h3>
                         <p class="project_languages">{{ project.languages | join:', ' }}</p>
                         <p class="project_description">{{ project.type }}</p>
                         <p class="project_description">{{ project.roles | join:', '}}</p>
@@ -75,6 +78,7 @@ title: Portfolio
                 </div>
             </a>
         </div>
+        {% endunless %}
         {% endif %}
         {% endfor %}
     </div>
