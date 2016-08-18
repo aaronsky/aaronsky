@@ -1,9 +1,8 @@
-id: 1
 title: learnVCS
 img: learnvcs.png
 link: http://learnvcs.github.io/
-start: August 2015
-end: December 2015
+start: 2015-08-24 00:00:00 -0500
+end: 2015-12-11 00:00:00 -0500
 languages: ["React", "Sass", "Grunt"]
 type: Independent Study - Team of 3
 roles: ["Project Manager", "Full Stack", "Content Editor"]
