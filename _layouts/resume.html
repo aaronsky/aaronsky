@@ -11,63 +11,71 @@
             <h1 class="resume_header_title">Aaron Sky</h1>
         </span>
             <span>
-            <h2 class="resume_header_subtitle">+1.703.969.3517 • 
-                <a href="mailto:{{site.owner.email}}">aaronsky@skyaaron.com</a> • 
-                <a href="{{site.url}}">skyaaron.com/</a> • 
+            <h2 class="resume_header_subtitle">+1.703.969.3517 •
+                <a href="mailto:{{site.owner.email}}">aaronsky@skyaaron.com</a> •
+                <a href="{{site.url}}">skyaaron.com/</a> •
                 <a href="https://github.com/{{site.owner.github}}">github.com/aaronsky/</a>
             </h2>
         </span>
         <hr class="resume_header_line">
     </header>
     <section class="resume_section">
-        <h2 class="resume_section_header">Experience</h2> 
-        {% assign work_buffer = "" | split: "" %} 
-        {% for work_kvp in site.data.portfolio.work %} 
-            {% assign work_buffer = work_buffer | push: work_kvp[1] %} 
-        {% endfor %} 
-        {% assign works = (work_buffer | sort: 'id') %} 
-        {% for work in works %} 
+        <h2 class="resume_section_header">Experience</h2>
+        {% assign work_buffer = "" | split: "" %}
+        {% for work_kvp in site.data.portfolio.work %}
+            {% assign work_buffer = work_buffer | push: work_kvp[1] %}
+        {% endfor %}
+        {% assign works = (work_buffer | sort: 'start') | reverse %}
+        {% for work in works %}
             {% if work and work.resume %}
             <div>
                 <a href="{{ work.link }}">
                     <h3 class="resume_project_header">
-                        {{ work.title }}, {{ work.employer }}; 
-                        {{ work.location }} &ndash; 
-                        {{ work.start }} to 
+                        {{ work.title }}, {{ work.employer }};
+                        {{ work.location }} &ndash;
+                        {{ work.start | date: "%B %Y" }} to
                         {% if work.end %}
-                            {{ work.end }}
+                            {{ work.end | date: "%B %Y" }}
                         {% else %}
                             Present
                         {% endif %}</h3>
                 </a>
                 <p class="resume_project_description">
+                  {% if work.long_description %}
                     {{ work.long_description }}
+                  {% else %}
+                    {{ work.description }}
+                  {% endif %}
                 </p>
             </div>
-            {% endif %} 
+            {% endif %}
         {% endfor %}
     </section>
     <section class="resume_section">
-        <h2 class="resume_section_header">Projects</h2> 
-        {% assign project_buffer = "" | split: "" %} 
-        {% for project_kvp in site.data.portfolio.projects %} 
-            {% assign project_buffer = project_buffer | push: project_kvp[1] %} 
-        {% endfor %} 
-        {% assign projects = (project_buffer | sort: 'id') %} 
-        {% for project in projects %} 
+        <h2 class="resume_section_header">Projects</h2>
+        {% assign project_buffer = "" | split: "" %}
+        {% for project_kvp in site.data.portfolio.projects %}
+            {% assign project_buffer = project_buffer | push: project_kvp[1] %}
+        {% endfor %}
+        {% assign projects = (project_buffer | sort: 'start') | reverse %}
+        {% for project in projects %}
             {% if project and project.resume %}
             <div>
                 <a href="{{ project.link }}">
                     <h3 class="resume_project_header">
-                        {{ project.title }} 
-                        ({{ project.start }}{% if project.end %} - {{ project.end }}{% endif %})
+                        {{ project.title }}
+                        ({{ project.start | date: "%B %Y" }}{% if project.end %} - {{ project.end | date: "%B %Y" }}{% endif %})
                     </h3>
                 </a>
                 <p class="resume_project_description">
-                    {{project.long_description}} ({{project.type}})
+                  {% if project.long_description %}
+                    {{ project.long_description }}
+                  {% else %}
+                    {{ project.description }}
+                  {% endif %} ({{ project.type }})
                 </p>
             </div>
-            {% endif %} 
+            {% endif %}
         {% endfor %}
     </section>
     <section class="resume_section">
@@ -77,7 +85,7 @@
         </h3>
         <span class="resume_project_description">
         {% for skill in site.data.portfolio.skills %}
-            <strong>{{skill.tool}}</strong> 
+            <strong>{{skill.tool}}</strong>
             <em>{{skill.time}}</em>
             {% if forloop.last == false %}
             <span class="resume_skill_divider"> — </span>
