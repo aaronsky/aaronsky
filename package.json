@@ -3,7 +3,7 @@
   "version": "4.5.0",
   "description": "Built with Jekyll, a touch of introspection, and a whole lot of elbow grease.",
   "scripts": {
-    "build": "bundle exec rake"
+    "build": "bundle exec rake",
     "test": "bundle exec rake test"
   },
   "repository": {

@@ -6,8 +6,12 @@ require "fastimage"
 require "nokogiri"
 require "redcarpet"
 
+class Test < MiniTest::Test
+  
+end
+
 module Blog
-  class Test < MiniTest::Test
+  class BlogTest < Test
     # All the posts we're interested in checking. This means we're looking at
     # files that have changed on this particular branch we're on.
     #

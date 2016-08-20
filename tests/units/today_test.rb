@@ -1,6 +1,6 @@
-require_relative "../helpers/blog_namespace"
+require_relative "../helpers/test"
 
-class TodayTest < Blog::Test
+class TodayTest < Blog::BlogTest
   def test_doesnt_start_with_today
     puts "Testing for bad style in #{posts.length} posts\n--------------------------------\n"
     posts.each do |post|
