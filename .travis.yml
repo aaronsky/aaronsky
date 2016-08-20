@@ -11,7 +11,7 @@ before_script:
   - tar Jxvf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
   - sudo mv wkhtmltox wkhtmltopdf
   - sudo cp -R wkhtmltopdf /usr/local/bin
-  - sudo chmod -R 755 /usr/local/bin/wkhtmltopdf
+  - sudo chmod -R 755 /usr/local/bin
 script:
   - bundle exec rake clean
   - bundle exec rake build
