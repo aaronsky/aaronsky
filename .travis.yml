@@ -4,9 +4,14 @@ rvm:
   - 2.2
 before_install:
   - sudo apt-get -qq update
-  # - sudo apt-get install -y zlibc libssl-dev openssl build-essential fontconfig libfreetype6 xorg
-  - sudo apt-get install -y wkhtmltopdf
-  - sudo apt-get -fy install
+before_script:
+  - sh -e /etc/init.d/xvfb start
+  - sudo apt-get -qq -y install fontconfig libxrender1
+  - wget http://download.gna.org/wkhtmltopdf/0.12/0.12.3/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
+  - tar Jxvf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
+  - sudo mv wkhtmltox-0.12.3_linux-generic-amd64 wkhtmltopdf
+  - sudo cp wkhtmltopdf /usr/local/bin
+  - sudo chmod +x /usr/local/bin/wkhtmltopdf
 script:
   - bundle exec rake clean
   - bundle exec rake build

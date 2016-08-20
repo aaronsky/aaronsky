@@ -8,7 +8,7 @@ task :watch => [:clean, :serve]
 task :test => [:rebuild, :proof, :integrations]
 
 task :help do
-    
+
 end
 
 task :clean do
@@ -16,7 +16,7 @@ task :clean do
 end
 
 task :build do
-  sh 'bundle exec jekyll build'
+  sh 'bundle exec jekyll build -- --verbose'
 end
 
 task :serve do
@@ -34,4 +34,8 @@ end
 
 task :integrations do
   ruby "tests/test_helper.rb"
+end
+
+task :deploy do
+  ruby "./.bin/deploy.rb"
 end
