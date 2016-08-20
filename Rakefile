@@ -37,5 +37,5 @@ task :integrations do
 end
 
 task :deploy do
-  ruby "./.bin/deploy.rb"
+  sh "./.bin/deploy.sh"
 end
