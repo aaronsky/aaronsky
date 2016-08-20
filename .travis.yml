@@ -11,11 +11,13 @@ before_script:
   - tar Jxvf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
   - sudo mv wkhtmltox wkhtmltopdf
   - sudo cp -R wkhtmltopdf /usr/local/bin
-  - sudo chmod +x /usr/local/bin/wkhtmltopdf
+  - sudo chmod -R 755 /usr/local/bin/wkhtmltopdf
 script:
   - bundle exec rake clean
   - bundle exec rake build
   - bundle exec rake test
+after_success:
+  - bundle exec rake deploy
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
