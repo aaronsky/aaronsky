@@ -1,9 +1,9 @@
-require_relative "../helpers/blog_namespace"
+require_relative "../helpers/test"
 
 require "open-uri"
 require "net/http"
 
-class ImagesTest < Blog::Test
+class ImagesTest < Blog::BlogTest
   def setup
     @images = posts.map do |post|
       content = File.read(post)
