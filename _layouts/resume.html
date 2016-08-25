@@ -29,17 +29,18 @@
         {% for work in works %}
             {% if work and work.resume %}
             <div>
-                <a href="{{ work.link }}">
-                    <h3 class="resume_project_header">
-                        {{ work.title }}, {{ work.employer }};
+                <h3 class="resume_project_header">
+                    <a href="{{ work.link }}">
+                        {{ work.title }}, {{ work.employer }}
                         {{ work.location }} &ndash;
                         {{ work.start | date: "%B %Y" }} to
                         {% if work.end %}
                             {{ work.end | date: "%B %Y" }}
                         {% else %}
                             Present
-                        {% endif %}</h3>
-                </a>
+                        {% endif %}
+                    </a>
+                </h3>
                 <p class="resume_project_description">
                   {% if work.long_description %}
                     {{ work.long_description }}
@@ -61,12 +62,12 @@
         {% for project in projects %}
             {% if project and project.resume %}
             <div>
-                <a href="{{ project.link }}">
-                    <h3 class="resume_project_header">
+                <h3 class="resume_project_header">
+                    <a href="{{ project.link }}">
                         {{ project.title }}
                         ({{ project.start | date: "%B %Y" }}{% if project.end %} - {{ project.end | date: "%B %Y" }}{% endif %})
-                    </h3>
-                </a>
+                    </a>
+                </h3>
                 <p class="resume_project_description">
                   {% if project.long_description %}
                     {{ project.long_description }}
