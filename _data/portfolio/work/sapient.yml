@@ -4,5 +4,6 @@ img: sapientnitro.png
 link: http://www.sapientnitro.com/
 start: 2016-06-06 00:00:00 -0500
 languages: ["Swift", "Objective-C", "JavaScript", "C#", "Java"]
-description: Delivered complete consumer-facing and Enterprise-grade application experiences and worked as part of a team to provide research, testing, application design and development services to clients.
+description: "Delivered complete consumer and enterprise-grade mobile applications as part of a multidisciplinary team, alongside research, testing, design and development services."
+long_description: "Responsible for providing native mobile solutions to a variety of consumer and enterprise-grade projects, practicing test driven development, setting up continous integration and build environments, and delivering complete experiences as part of a multidisciplinary team."
 resume: true
