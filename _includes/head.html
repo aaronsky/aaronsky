@@ -2,12 +2,12 @@
 <meta charset="utf-8">
 <title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
 {% if page.excerpt %}
-<meta name="description" content="{{ page.excerpt | strip_html }}"> 
+<meta name="description" content="{{ page.excerpt | strip_html }}">
 {% else %}
-<meta name="description" content="The latest of Aaron Sky"> 
+<meta name="description" content="The latest of Aaron Sky">
 {% endif %}
 <meta name="author" content="Aaron Sky">
-<link rel="author" href="{{ site.url }}humans.txt" /> 
+<link rel="author" href="{{ site.url }}humans.txt" />
 {% include open-graph.html %}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Webfonts -->
@@ -24,4 +24,3 @@
 {% feed_meta %}
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ site.baseurl }}{{ site.assets.css }}main.css">
-<script src="{{ site.baseurl }}{{ site.assets.js }}responsive-nav.min.js"></script>
