@@ -42,7 +42,7 @@
       text-align: left;
     }
     @include media($desktop) {
-      padding: 10rem 0;
+      padding: 10rem 0 5rem;
     }
     &_heading {
       font-weight: 700;

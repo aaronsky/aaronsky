@@ -5,6 +5,6 @@ start: 2016-01-24 00:00:00 -0500
 end: 2016-05-26 00:00:00 -0500
 languages: ["Coffeescript", "Node.js", "Mocha"]
 type: Developed on behalf of Fangamer
-roles: ["Project Manager", "Full Stack", "Content Editor"]
+roles: ["Contractor", "Full Stack"]
 resume: true
 long_description: "Ibizan is a chat bot built on the Hubot framework, originally contracted by Fangamer. Ibizan is designed to provide an intuitive and interactive interface to managing a timesheet. Developed under contract."
