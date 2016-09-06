@@ -1,10 +1,10 @@
 employer: Fangamer
-title: Web Developer - Contract
+title: Web Developer
 img: fangamer.svg
 link: http://www.fangamer.com/
 start: 2016-01-24 00:00:00 -0500
 end: 2016-05-26 00:00:00 -0500
 languages: ["Coffeescript", "JavaScript"]
-description: "Delivered a Slack-based time-tracking solution for distributed teams that supports periodic reminders and automatic payroll generation."
+description: "Delivered under contract a Slack-based time-tracking solution for distributed teams that supports periodic reminders and automatic payroll generation."
 long_description: "Responsible for delivering a Slack-based time tracking tool for use in a small, distributed office setting. Utilized principles of test driven development, client-focused delivery and asynchronous application design."
 resume: true
