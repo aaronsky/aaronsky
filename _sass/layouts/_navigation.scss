@@ -11,6 +11,7 @@
     }
     &-sticky {
         position: fixed;
+        opacity: 0;
         @include animation--fadeInDown(0);
     }
     &_logo {
@@ -58,9 +59,8 @@
             }
             a {
                 display: block;
-                float: right;
                 color: $white;
-                padding: 12px 36px;
+                padding: 1rem;
                 text-align: center;
                 text-decoration: none;
                 border-bottom: transparent 4px solid;
@@ -71,6 +71,9 @@
                 &:hover {
                     border-bottom: $white 4px solid;
                 }
+            }
+            i {
+                font-size: 24px;
             }
         }
     }
@@ -105,7 +108,7 @@
 
 .nav-collapse .nav-collapse_item {
     float: left;
-    width: 100%;
+    width: 50%;
     @include media($medium) {
         width: auto;
     }
