@@ -20,7 +20,7 @@ gems:
   - jekyll-sitemap
   - jekyll-feed
   - jemoji
-excerpt_separator: <!--more--> 
+excerpt_separator: <!--more-->
 assets:
   root: /assets/
   brand: /assets/brand/
@@ -41,7 +41,7 @@ kramdown:
   toc_levels: 1..2
   enable_coderay: false
 
-exclude: ["Rakefile", "vendor", "tmp", "tests", "Gemfile", "Gemfile.lock", "node_modules", "package.json"]
+exclude: ["Rakefile", "vendor", "tmp", "tests", "Gemfile", "Gemfile.lock", "node_modules", "package.json", "deploy_key.enc"]
 
 # Site owner
 owner:
