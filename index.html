@@ -29,10 +29,10 @@ title: Portfolio
         <div class="project_cell">
             <a href="{{ work.link }}">
                 <div class="project project-lighten">
-                    <aside>
+                    <aside class="project_img_container">
                         <img class="project_img" src="{{site.baseurl}}{{site.assets.img.portfolio}}{{ work.img }}" alt="{{work.employer}} logo">
                     </aside>
-                    <div>
+                    <div class="project_content">
                         <h2 class="project_heading">{{ work.title }}</h2>
                         <h3 class="project_info">{{ work.start | date: "%B %Y" }} to {% if work.end %}{{ work.end | date: "%B %Y" }}{% else %}Present{% endif %}</h3>
                         <p class="project_languages">{{ work.languages | join:' - ' }}</p>
@@ -64,10 +64,10 @@ title: Portfolio
         <div class="project_cell">
             <a href="{{ project.link }}">
                 <div class="project project-darken">
-                    <aside>
+                    <aside class="project_img_container">
                         <img class="project_img" src="{{site.baseurl}}{{site.assets.img.portfolio}}{{ project.img }}" alt="{{project.title}} logo">
                     </aside>
-                    <div>
+                    <div class="project_content">
                         <h2 class="project_heading">{{ project.title }}</h2>
                         <h3 class="project_info">{{ project.start  | date: "%B %Y"}}{% if project.end %} to {{ project.end  | date: "%B %Y"}}{% endif %}</h3>
                         <p class="project_languages">{{ project.languages | join:', ' }}</p>
@@ -99,10 +99,10 @@ title: Portfolio
         <div class="project_cell-cert">
             <a href="{{site.baseurl}}{{site.assets.docs}}{{ cert.link }}">
                 <div class="project project_cert project-darken">
-                    <aside>
+                    <aside class="project_img_container">
                         <img class="project_img" src="{{site.baseurl}}{{site.assets.img.portfolio}}{{ cert.img }}" alt="{{cert.title}} logo">
                     </aside>
-                    <div>
+                    <div class="project_content">
                         <h2 class="project_heading">{{ cert.title }}</h2>
                         <p class="project_info">{{ cert.description }}</p>
                     </div>

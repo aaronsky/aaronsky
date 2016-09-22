@@ -26,7 +26,7 @@
 
 .project {
   padding: 1rem;
-  min-height: 8rem;
+  min-height: 7rem;
   @include rounded(6px);
   cursor: pointer;
   opacity: 0;
@@ -35,10 +35,19 @@
   @include media($phablet) {
     min-height: 0;
   }
-  &_cert {
-    min-height: 15rem;
+  &_content {
+    width: 70%;
+    float: right;
     @include media($phablet) {
-      min-height: 0;
+      width: auto;
+      float: none;
+    }
+  }
+  &_cert {
+    @include media($phablet) {
+      img {
+        width: 50%;
+      }
     }
   }
   //work
@@ -56,16 +65,22 @@
     }
   }
   &_img {
-    width: 25%;
-    margin: 0 10px;
-    float: left;
+    margin: 0;
+    width: 80px;
     @include media($phablet) {
       width: 100px;
-      float: none;
       margin: 10px auto;
     }
     @include media($tablet) {
       width: 130px;
+    }
+    &_container {
+      width: 30%;
+      float: left;
+      @include media($phablet) {
+        float: none;
+        width: auto;
+      }
     }
   }
   &_heading {
@@ -85,15 +100,19 @@
   }
   &_description {
     opacity: 0.8;
+    visibility: hidden;
+    clear: both;
+    display: none;
     @include font-size(13, no, 13);
+    margin: 0 10px 5px;
     margin-bottom: 5px;
-    width: 65%;
     margin-right: 10px;
-    float: right;
     font-style: italic;
     @include media($phablet) {
-      float: none;
       width: auto;
+      visibility: visible;
+      clear: none;
+      display: inherit;
     }
     @include media($desktop) {
       @include font-size(13.8, no, 13.8);

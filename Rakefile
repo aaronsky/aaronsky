@@ -20,6 +20,7 @@ task :build do
 end
 
 task :serve do
+  trap('SIGINT') { puts "\nServer closed." ; exit }
   sh 'bundle exec jekyll serve'
 end
 
