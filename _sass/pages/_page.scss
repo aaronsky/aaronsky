@@ -86,7 +86,7 @@
   /* page/post meta content (date, author, etc) */
   &-meta {
     @include span-columns(12);
-    #text-transform: uppercase;
+    text-transform: uppercase;
     font-weight: 400;
     @include font-size(14);
     a {
@@ -195,8 +195,16 @@ span + .entry-title {
    ========================================================================== */
 
 .pagination {
+  display: flex;
+  justify-content: space-around;
   margin-top: 2em;
+  margin-left: 0;
   text-align: center;
+  width: 100%;
+  @include media($tablet) {
+    margin-left: 30%;
+    width: 60%
+  }
 }
 
 
