@@ -1,8 +1,0 @@
-title: Mineshaft Mayhem
-img: mineshaft.png
-link: https://github.com/ritgraphics/MineshaftMayhem/releases/tag/v1.0
-start: 2015-08-24 00:00:00 -0500
-end: 2015-12-11 00:00:00 -0500
-languages: ["C++", "DirectX", "Lua"]
-type: Group Project - Team of 5
-roles: ["Project Manager", "Gameplay Programmer"]
