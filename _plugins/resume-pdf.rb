@@ -5,6 +5,7 @@ current_dir = File.dirname(__FILE__)
 site_dir = File.join(current_dir, '..', '_site')
 output_dir = File.join(site_dir, 'assets', 'docs')
 output_file = File.join(output_dir, 'resume.pdf')
+assets_output = File.join(current_dir, '..', 'assets', 'docs')
 
 pdf = nil
 
@@ -28,5 +29,6 @@ Jekyll::Hooks.register :site, :post_write do |site|
     html = page.output.gsub(/(href|src)=(['"])\/([^\"']*|[^"']*)['"]/, '\1=\2' + site_dir + '/\3\2')
     kit = PDFKit.new(html)
     pdf = kit.to_file(output_file)
+    FileUtils.cp(output_file, assets_output, :verbose => true)
   end
 end

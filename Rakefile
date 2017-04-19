@@ -36,7 +36,3 @@ end
 task :integrations do
   ruby "tests/test_helper.rb"
 end
-
-task :deploy do
-  sh "./.bin/deploy.sh"
-end

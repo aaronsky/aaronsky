@@ -9,14 +9,7 @@ before_install:
   - "sudo dpkg -i wkhtmltox-0.12.2.1_linux-precise-amd64.deb"
   - WHICH_WK=`which wkhtmltopdf`
   - "export WKHTMLTOPDF_CMD=$WHICH_WK"
-script:
-  - bundle exec rake clean
-  - bundle exec rake build
-  - bundle exec rake test
-after_success:
-  - bundle exec rake deploy
+script: bundle exec rake test
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES: true # speeds up installation of html-proofer
-    - ENCRYPTION_LABEL: "8e5ef8d058ab"
-    - COMMIT_AUTHOR_EMAIL: "aaronsky@skyaaron.com"

@@ -41,7 +41,7 @@ kramdown:
   toc_levels: 1..2
   enable_coderay: false
 
-exclude: ["Rakefile", "vendor", "tmp", "tests", "Gemfile", "Gemfile.lock", "node_modules", "package.json", "deploy_key.enc"]
+exclude: ["Rakefile", "vendor", "tmp", "tests", "Gemfile", "Gemfile.lock", "node_modules", "package.json", "yarn.lock"]
 
 # Site owner
 owner:
