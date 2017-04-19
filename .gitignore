@@ -2,8 +2,5 @@ tmp
 .sass-cache
 _site
 node_modules
-.grunt
 .DS_STORE
 *.log
-.bin
-!.bin/deploy.sh
