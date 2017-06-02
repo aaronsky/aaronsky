@@ -25,6 +25,7 @@ exclude:
   - Rakefile
   - tests
   - tmp
+  - vendor
 gems:
   - jekyll-sitemap
   - jekyll-feed
