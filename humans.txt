@@ -1,12 +1,12 @@
 /* TEAM */
-Web developer: Aaron Sky
+Developer: Aaron Sky
 Contact: aaronsky@skyaaron.com
 Twitter: @theaaronsky
-From: New Bedford, Massachusetts, United States
+From: Boston, Massachusetts, United States
 
 /* SITE */
-Last update: 12/20/2015
+Last update: 06/02/2017
 Language: English
 Standards: HTML5, Sass
 Components: Bourbon, Neat, Font Awesome, Roboto
-Code written using: Sublime Text 3
+Code written using: Visual Studio Code

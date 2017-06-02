@@ -1,15 +1,15 @@
 title: Ibizan
 img: ibizan.svg
 link: http://github.com/aaronsky/ibizan/
+type: Developed under contract on behalf of Fangamer
+long_description: Ibizan is a chat bot built on the Hubot framework, originally contracted by Fangamer. Ibizan is designed to provide an intuitive and interactive interface to managing a timesheet.
 start: 2016-01-24 00:00:00 -0500
 end: 2016-05-26 00:00:00 -0500
 languages:
   - TypeScript
 platforms: 
   - node
-type: Developed under contract on behalf of Fangamer
 roles: 
   - Contractor
   - Full Stack
 resume: true
-long_description: Ibizan is a chat bot built on the Hubot framework, originally contracted by Fangamer. Ibizan is designed to provide an intuitive and interactive interface to managing a timesheet.

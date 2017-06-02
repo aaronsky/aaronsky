@@ -1,4 +1,18 @@
 {
     "vsicons.presets.angular": false,
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/.sass-cache": true,
+        "**/node_modules": true,
+        "**/Gemfile.lock": true
+    },
+    "search.exclude": {
+        "**/bower_components": true,
+        "**/_site": true
+    }
 }

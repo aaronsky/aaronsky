@@ -93,9 +93,10 @@ title: Portfolio
         {% for cert_kvp in site.data.portfolio.certification %}
             {% assign cert_buffer = cert_buffer | push: cert_kvp[1] %}
         {% endfor %}
-        {% assign certs = (cert_buffer | sort: 'id') %}
+        {% assign certs = (cert_buffer | sort: 'start') | reverse %}
         {% for cert in certs %}
         {% if cert %}
+        {% unless project.ignore %}
         <div class="project_cell-cert">
             <a href="{{site.baseurl}}{{site.assets.docs}}{{ cert.link }}">
                 <div class="project project_cert project-darken">
@@ -104,11 +105,12 @@ title: Portfolio
                     </aside>
                     <div class="project_content">
                         <h2 class="project_heading">{{ cert.title }}</h2>
-                        <p class="project_info">{{ cert.description }}</p>
+                        <p class="project_info">Certified {{ cert.start  | date: "%B %Y"}}{% if cert.end %} to {{ cert.end  | date: "%B %Y"}}{% endif %}</p>
                     </div>
                 </div>
             </a>
         </div>
+        {% endunless %}
         {% endif %}
         {% endfor %}
     </div>
