@@ -1,5 +1,4 @@
 # Site wide configuration
-
 title: Aaron Sky
 locale: en_US
 description: Another programmer writing about things on his mind.
@@ -9,7 +8,6 @@ url: http://skyaaron.com
 comments: true
 
 # Jekyll configuration
-
 permalink: /:categories/:title/
 markdown: kramdown
 highlighter: rouge
@@ -44,6 +42,7 @@ assets:
     blog: /assets/img/blog/
   js: /assets/js/
 
+# Kramdown configuration
 kramdown:
   auto_ids: true
   footnote_nr: 1

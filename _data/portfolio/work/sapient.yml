@@ -1,9 +1,11 @@
 employer: SapientNitro
-title: Junior Associate Mobile Solutions
+title: Mobile Developer
 img: sapientnitro.png
 link: http://www.sapientnitro.com/
-start: 2016-06-06 00:00:00 -0500
+description: Collaborate with teams from around the world to create client-facing mobile experiences.
+long_description: Developed native mobile solutions for Fortune 100 clients in the Boston area. Managed native iOS and Android aspects of several React Native apps. Created testing and release tools for teams to reduce development friction. Worked with clients to painlessly deploy to storefronts.
 location: Boston, MA
+start: 2016-06-06 00:00:00 -0500
 languages: 
   - Swift
   - Objective-C
@@ -13,6 +15,4 @@ languages:
 platforms: 
   - ios
   - android
-description: Collaborate with teams from around the world to create client-facing mobile experiences.
-long_description: Developed native mobile solutions for Fortune 100 clients in the Boston area. Managed native iOS and Android aspects of several React Native apps. Created testing and release tools for teams to reduce development friction. Worked with clients to painlessly deploy to storefronts.
 resume: true
