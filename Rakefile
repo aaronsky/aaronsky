@@ -4,7 +4,7 @@ require 'html-proofer'
 
 task :default => [:help]
 task :rebuild => [:clean, :build]
-task :watch => [:clean, :serve]
+task :watch => [:rebuild, :serve]
 task :test => [:rebuild, :proof, :integrations]
 
 task :help do
@@ -21,7 +21,7 @@ end
 
 task :serve do
   trap('SIGINT') { puts "\nServer closed." ; exit }
-  sh 'bundle exec jekyll serve --no-watch'
+  sh 'bundle exec jekyll serve --skip-initial-build'
 end
 
 task :proof do

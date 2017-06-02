@@ -3,8 +3,14 @@ img: learnvcs.png
 link: http://learnvcs.github.io/
 start: 2015-08-24 00:00:00 -0500
 end: 2015-12-11 00:00:00 -0500
-languages: ["React", "Sass"]
-platforms: ["web"]
+languages: 
+  - React
+  - Sass
+platforms: 
+  - web
 type: Independent Study - Team of 3
-roles: ["Project Manager", "Full Stack", "Content Editor"]
-long_description: "A student-driven effort to improve version control education in the Interactive Games & Media curricula, overseen by the department chair. Produced a web reference to prime newcomers on version control fundamentals with a curated collection of helpful links and an interactive Git graph using React and live data from GitHub."
+roles: 
+  - Project Manager
+  - Full Stack
+  - Content Editor
+long_description: A student-driven effort to improve version control education in the Interactive Games & Media curricula, overseen by the department chair. Produced a web reference to prime newcomers on version control fundamentals with a curated collection of helpful links and an interactive Git graph using React and live data from GitHub.
