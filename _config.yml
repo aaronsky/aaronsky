@@ -10,12 +10,21 @@ comments: true
 
 # Jekyll configuration
 
-permalink:   /:categories/:title/
-markdown:    kramdown
+permalink: /:categories/:title/
+markdown: kramdown
 highlighter: rouge
 sass:
   sass_dir: _sass
   style: compressed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - yarn.lock
+  - node_modules
+  - Rakefile
+  - tests
+  - tmp
 gems:
   - jekyll-sitemap
   - jekyll-feed
@@ -41,17 +50,14 @@ kramdown:
   toc_levels: 1..2
   enable_coderay: false
 
-exclude: ["Rakefile", "vendor", "tmp", "tests", "Gemfile", "Gemfile.lock", "node_modules", "package.json", "yarn.lock"]
-
 # Site owner
 owner:
   name: Aaron Sky
   web: http://skyaaron.com
   avatar: face.png
   email: aaronsky@skyaaron.com
-  bio: "I'm cool probably"
+  bio: I'm cool probably
   disqus-shortname: aaronsky
-  facebook: METC500
   twitter: theaaronsky
   github: aaronsky
   linkedin: aaronsky
