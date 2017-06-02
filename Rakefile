@@ -3,10 +3,12 @@ require 'html-proofer'
 require 'optparse'
 require 'rake/testtask'
 
+is_testing = false
+
 task :default => [:help]
 task :rebuild => [:clean, :build]
 task :watch => [:rebuild, :serve]
-task :test => [:rebuild, :proof, :integrations]
+task :test => [:setupTesting, :rebuild, :proof, :integrations]
 
 task :help do
 
@@ -18,7 +20,7 @@ end
 
 task :build do
   sh 'bundle exec jekyll build -- --verbose'
-  copy_resume_to_assets
+  copy_resume_to_assets unless is_testing
 end
 
 task :serve do
@@ -28,6 +30,10 @@ task :serve do
     exit 
   }
   sh 'bundle exec jekyll serve --skip-initial-build'
+end
+
+task :setupTesting do
+  is_testing = true
 end
 
 task :proof do
