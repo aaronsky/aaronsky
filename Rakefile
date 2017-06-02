@@ -21,7 +21,7 @@ end
 
 task :serve do
   trap('SIGINT') { puts "\nServer closed." ; exit }
-  sh 'bundle exec jekyll serve'
+  sh 'bundle exec jekyll serve --no-watch'
 end
 
 task :proof do

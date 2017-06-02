@@ -3,7 +3,8 @@ img: packed.png
 link: https://www.microsoft.com/en-us/store/apps/packed/9nblggh0f0gr
 start: 2013-10-03 00:00:00 -0500
 end: 2014-01-08 00:00:00 -0500
-languages: ["C#", "Windows Phone"]
+languages: ["C#"]
+platforms: ["winphone"]
 type: Personal Project
 roles: ["Full Stack"]
 ignore: true

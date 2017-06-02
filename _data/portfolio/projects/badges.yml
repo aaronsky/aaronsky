@@ -4,5 +4,7 @@ link: https://github.com/aaronsky/badges/
 start: 2015-01-28 00:00:00 -0500
 end: 2015-07-03 00:00:00 -0500
 languages: ["React", "CSS"]
+platforms: ["web"]
 type: Personal Project
 roles: ["Full Stack"]
+ignore: true

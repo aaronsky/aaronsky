@@ -4,7 +4,8 @@ img: fangamer.svg
 link: http://www.fangamer.com/
 start: 2016-01-24 00:00:00 -0500
 end: 2016-05-26 00:00:00 -0500
-languages: ["Coffeescript", "JavaScript"]
-description: "Delivered under contract a Slack-based time-tracking solution for distributed teams that supports periodic reminders and automatic payroll generation."
-long_description: "Responsible for delivering a Slack-based time tracking tool for use in a small, distributed office setting. Utilized principles of test driven development, client-focused delivery and asynchronous application design."
+languages: ["TypeScript"]
+platforms: ["node"]
+description: "Delivered a time-tracking Slack-bot under contract designed to automate timesheet management, post periodic reminders and generate payroll reports regularly."
+long_description: "Responsible for delivering a Slack-based time tracking tool for use in a small, distributed office setting. Utilized principles of test driven development, client-focused delivery and twelve-factor application design."
 resume: true
