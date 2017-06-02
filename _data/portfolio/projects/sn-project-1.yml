@@ -1,9 +1,10 @@
-title: Unnamed React Native Project
+title: Undisclosed React Native Project
 img: sapientnitro.png
 link: http://www.sapientnitro.com/
 start: 2016-06-23 00:00:00 -0500
 languages: ["Swift", "JavaScript", "Java", "Objective-C"]
+platforms: ["ios", "android"]
 type: Developed on behalf of SapientNitro
-roles: ["Mobile Developer", "iOS Specialist"]
+roles: ["Mobile Developer - iOS/Android", "Release Engineer"]
 resume: true
-long_description: "Unnamed app developed in accordance with client expectations. Responsible for the native codebase, build system, and providing pre- and post-launch support. Produced as part of a major push towards Agile and Scrum between SapientNitro and the client."
+long_description: "Developed and published four apps to iOS and Android storefronts using React Native for a Fortune 100 insurance client. Served as the team's native mobile specialist, DevOps specialist, and release coordinator. Utilized Scrum and Agile methodology to effectively respond to and pivot on client input."

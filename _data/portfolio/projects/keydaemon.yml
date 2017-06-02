@@ -3,5 +3,6 @@ img: key-daemon.png
 link: https://github.com/aaronsky/key-daemon
 start: 2014-10-07 00:00:00 -0500
 languages: ["JavaScript"]
+platforms: ["web"]
 type: Group Project - Team of 4
 roles: ["Lead Developer", "Gameplay Programmer"]

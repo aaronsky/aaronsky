@@ -5,6 +5,7 @@ link: http://www.sapientnitro.com/
 start: 2016-06-06 00:00:00 -0500
 location: "Boston, MA"
 languages: ["Swift", "Objective-C", "JavaScript", "C#", "Java"]
-description: "Delivered complete consumer and enterprise-grade mobile applications as part of a multidisciplinary team, alongside research, testing, design and development services."
-long_description: "Responsible for providing native mobile solutions to a variety of consumer and enterprise-grade projects, practicing test driven development, setting up continous integration and build environments, and delivering complete experiences as part of a multidisciplinary team."
+platforms: ["ios", "android"]
+description: "Collaborate with teams from around the world to create client-facing mobile experiences."
+long_description: "Developed native mobile solutions for Fortune 100 clients in the Boston area. Managed native iOS and Android aspects of several React Native apps. Created testing and release tools for teams to reduce development friction. Worked with clients to painlessly deploy to storefronts."
 resume: true

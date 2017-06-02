@@ -8,4 +8,5 @@ link: https://www.idtech.com/
 start: 2013-06-15 00:00:00 -0500
 end: 2014-08-02 00:00:00 -0500
 languages: ["Java", "C++"]
+platforms: []
 ignore: true
