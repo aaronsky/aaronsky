@@ -13,7 +13,8 @@ platforms:
   - ios
   - android
 roles: 
-  - iOS Developer
-  - Android Developer
-  - Release Engineer
+  - iOS
+  - Android
+  - DevOps
+  - Release
 resume: true

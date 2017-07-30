@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-{% include head.html %}
+{% include head/head.html %}
 </head>
 
 <body id="post">
 
-{% include navigation.html %}
-{% include masthead.html %}
+{% include navigation/navigation.html %}
+{% include navigation/masthead.html %}
 
 <div id="main" role="main">
   <article class="hentry" itemscope itemtype="http://schema.org/BlogPosting">
@@ -36,8 +36,8 @@
         <span class="entry-date date published"><time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}"><i class="fa fa-calendar-o"></i> {{ page.date | date: "%B %d, %Y" }}</time></span>
         {% if page.modified %}<span class="entry-date date modified"><time datetime="{{ page.modified }}"><i class="fa fa-pencil"></i> {{ page.modified | date: "%B %d, %Y" }}</time></span>{% endif %}
         {% if site.owner.disqus-shortname and page.comments or site.comments %}<span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>{% endif %}
-        {% if page.share %}{% include social-share.html %}{% endif %}
-        {% if page.ads == true %}{% include ad-sidebar.html %}<!-- /.google-ads -->{% endif %}
+        {% if page.share %}{% include social/social-share.html %}{% endif %}
+        {% if page.ads == true %}{% include ads/ad-sidebar.html %}<!-- /.google-ads -->{% endif %}
       </aside>
       <div class="entry-content">
         <article itemprop="articleBody">
@@ -45,17 +45,17 @@
         </article>
         {% if site.owner.disqus-shortname and page.comments or site.comments %}
           <div id="disqus_thread"></div><!-- /#disqus_thread -->
-          {% include disqus-comments.html %}
+          {% include social/disqus-comments.html %}
         {% endif %}
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
-    {% include pagination.html %}
+    {% include navigation/pagination.html %}
   </article>
 </div><!-- /#main -->
 
-{% include footer.html %}
+{% include footer/footer.html %}
 
-{% include scripts.html %}
+{% include footer/scripts.html %}
 
 </body>
 </html>

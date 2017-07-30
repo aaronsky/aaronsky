@@ -10,5 +10,5 @@ languages:
 platforms: 
   - ios
 roles: 
-  - iOS Developer
+  - iOS
 resume: true

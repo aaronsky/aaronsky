@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    {% include head.html %}
+    {% include head/head.html %}
 </head>
 
 <body class="resume">
@@ -11,10 +11,11 @@
             <h1 class="resume_header_title">Aaron Sky</h1>
         </span>
             <span>
-            <h2 class="resume_header_subtitle">+1.703.969.3517 •
-                <a href="mailto:{{site.owner.email}}">aaronsky@skyaaron.com</a> •
-                <a href="{{site.url}}">skyaaron.com/</a> •
-                <a href="https://github.com/{{site.owner.github}}">github.com/aaronsky/</a>
+            <h2 class="resume_header_subtitle">
+                <a href="tel:{{ site.owner.phone }}">{{ site.owner.phone }}</a> •
+                <a href="mailto:{{ site.owner.email }}">{{ site.owner.email }}</a> •
+                <a href="{{ site.owner.web }}">{{ site.owner.web }}</a> •
+                <a href="https://github.com/{{ site.owner.github }}">github.com/{{ site.owner.github }}</a>
             </h2>
         </span>
         <hr class="resume_header_line">

@@ -33,10 +33,11 @@ title: Portfolio
                         <img class="project_img" src="{{site.baseurl}}{{site.assets.img.portfolio}}{{ work.img }}" alt="{{work.employer}} logo">
                     </aside>
                     <div class="project_content">
-                        <h2 class="project_heading">{{ work.title }}</h2>
-                        <h3 class="project_info">{{ work.start | date: "%B %Y" }} to {% if work.end %}{{ work.end | date: "%B %Y" }}{% else %}Present{% endif %}</h3>
-                        <p class="project_languages">{{ work.languages | join:' - ' }}</p>
-                        <p class="project_description">{{ work.description }}</p>
+                        <h2 class="project_heading">{{ work.employer }}</h2>
+                        <h3 class="project_info_title">{{ work.title }}</h3>
+                        <h3 class="project_info_dates">{{ work.start | date: "%B %Y" }} to {% if work.end %}{{ work.end | date: "%B %Y" }}{% else %}Present{% endif %}</h3>
+                        <p class="project_info_languages">{{ work.languages | join:' • ' }}</p>
+                        <p class="project_info_description">{{ work.description }}</p>
                     </div>
                 </div>
             </a>
@@ -69,10 +70,10 @@ title: Portfolio
                     </aside>
                     <div class="project_content">
                         <h2 class="project_heading">{{ project.title }}</h2>
-                        <h3 class="project_info">{{ project.start  | date: "%B %Y"}}{% if project.end %} to {{ project.end  | date: "%B %Y"}}{% endif %}</h3>
-                        <p class="project_languages">{{ project.languages | join:', ' }}</p>
-                        <p class="project_description">{{ project.type }}</p>
-                        <p class="project_description">{{ project.roles | join:', '}}</p>
+                        <h3 class="project_info_dates">{{ project.start  | date: "%B %Y"}}{% if project.end %} to {{ project.end  | date: "%B %Y"}}{% endif %}</h3>
+                        <p class="project_info_languages">{{ project.languages | join:' • ' }}</p>
+                        <p class="project_info_description">{{ project.type }}</p>
+                        <p class="project_info_description">{{ project.roles | join:' • '}}</p>
                     </div>
                 </div>
             </a>
@@ -105,7 +106,7 @@ title: Portfolio
                     </aside>
                     <div class="project_content">
                         <h2 class="project_heading">{{ cert.title }}</h2>
-                        <p class="project_info">Certified {{ cert.start  | date: "%B %Y"}}{% if cert.end %} to {{ cert.end  | date: "%B %Y"}}{% endif %}</p>
+                        <p class="project_info_dates">Certified {{ cert.start  | date: "%B %Y"}}{% if cert.end %} to {{ cert.end  | date: "%B %Y"}}{% endif %}</p>
                     </div>
                 </div>
             </a>
@@ -122,6 +123,12 @@ title: Portfolio
     </div>
     <div class="container">
         <h3 class="section_heading">Education</h3>
+        <aside class="section_img_container">
+            <img 
+                class="section_img" 
+                src="{{site.baseurl}}{{ site.assets.img.portfolio }}{{ site.data.portfolio.education.img }}" 
+                alt="{{ site.data.portfolio.education.school }} logo">
+        </aside>     
         <p class="section_description">{{ site.data.portfolio.education.school }}</p>
         <p class="section_description">{{ site.data.portfolio.education.degree }}</p>
         <p class="section_description">{{ site.data.portfolio.education.date }}</p>

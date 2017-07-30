@@ -1,0 +1,11 @@
+<meta charset="utf-8">
+<title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
+{% if page.excerpt %}
+    <meta name="description" content="{{ page.excerpt | strip_html }}">
+{% else %}
+    <meta name="description" content="The latest of Aaron Sky">
+{% endif %}
+<meta name="author" content="Aaron Sky">
+<link rel="author" href="{{ site.url }}/humans.txt" />
+{% include head/open-graph.html %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
