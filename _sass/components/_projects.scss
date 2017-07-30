@@ -95,33 +95,37 @@
   &_info {
     opacity: 0.8;
     font-weight: 300;
-    @include font-size(14, no, 14);
-    margin-bottom: 5px;
-  }
-  &_description {
-    opacity: 0.8;
-    visibility: hidden;
-    clear: both;
-    display: none;
-    @include font-size(13, no, 13);
-    margin: 0 10px 5px;
-    margin-bottom: 5px;
-    margin-right: 10px;
-    font-style: italic;
-    @include media($phablet) {
-      width: auto;
-      visibility: visible;
-      clear: none;
-      display: inherit;
+    &_title {
+      @include font-size(16, no, 16);
+      margin-bottom: 0.5rem;
     }
-    @include media($desktop) {
-      @include font-size(13.8, no, 13.8);
+    &_dates {
+      @include font-size(14, no, 14);
       margin-bottom: 5px;
     }
-  }
-  &_languages {
-    opacity: 0.8;
-    @include font-size(14, no, 14);
-    margin-bottom: 5px;
+    &_description {
+      visibility: hidden;
+      clear: both;
+      display: none;
+      @include font-size(13, no, 13);
+      margin: 0 10px 5px;
+      margin-bottom: 5px;
+      margin-right: 10px;
+      font-style: italic;
+      @include media($phablet) {
+        width: auto;
+        visibility: visible;
+        clear: none;
+        display: inherit;
+      }
+      @include media($desktop) {
+        @include font-size(13.8, no, 13.8);
+        margin-bottom: 5px;
+      }
+    }
+    &_languages {
+      @include font-size(14, no, 14);
+      margin-bottom: 5px;
+    }
   }
 }

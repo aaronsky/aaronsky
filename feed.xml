@@ -35,7 +35,7 @@ sitemap: false
   </author>
   <content type="html">
     {{ post.content | xml_escape }}
-    {% include feed-footer.html %}
+    {% include footer/feed-footer.html %}
   </content>
 </entry>
 {% endfor %}
