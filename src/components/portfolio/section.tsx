@@ -9,7 +9,7 @@ interface PortfolioSectionProps {
 export default (props: PortfolioSectionProps) =>
     <section className="section section_work">
         <div className="section_link">
-            <a name={ props.id }></a>
+            <a id={ props.id }></a>
             <a href={`#${props.id}`}><i className="fa fa-link"></i></a>
         </div>
         <h2 className="section_heading">{props.heading}</h2>
