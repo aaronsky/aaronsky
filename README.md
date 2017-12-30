@@ -1,5 +1,13 @@
-# Portfolio
+# gatsby-starter-default
+The default Gatsby starter
 
-[![Build Status](https://travis-ci.org/aaronsky/aaronsky.github.io.svg?branch=master)](https://travis-ci.org/aaronsky/aaronsky.github.io)
+For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
 
-My portfolio! I built it with Jekyll using the [so-simple](https://github.com/mmistakes/so-simple-theme) theme as a starting point. The current version includes my blog, which has some posts about some stuff.
+Install this starter (assuming Gatsby is installed) by running from your CLI:
+```
+gatsby new gatsby-example-site
+```
+
+## Deploy
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)

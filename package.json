@@ -1,24 +1,41 @@
 {
   "name": "portfolio",
-  "version": "4.5.0",
-  "description": "Built with Jekyll, a touch of introspection, and a whole lot of elbow grease.",
+  "version": "5.0.0",
+  "description": "Built with Gatsby.js",
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
-    "postinstall": "bundle install",
-    "build": "bundle exec rake build",
-    "test": "bundle exec rake test"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aaronsky/aaronsky.github.io.git"
+    "url": "git+https://github.com/aaronsky/portfolio.git"
   },
   "author": "Aaronsky",
   "license": "MIT",
+  "main": "n/a",
   "bugs": {
-    "url": "https://github.com/aaronsky/aaronsky.github.io/issues"
+    "url": "https://github.com/aaronsky/portfolio/issues"
   },
   "homepage": "http://skyaaron.com",
-  "devDependencies": {
-    "pre-commit": "^1.2.2"
+  "dependencies": {
+    "gatsby": "^1.9.130",
+    "gatsby-link": "^1.6.31",
+    "gatsby-plugin-react-helmet": "^2.0.3",
+    "gatsby-plugin-typescript": "^1.4.12",
+    "gatsby-source-filesystem": "^1.5.11",
+    "gatsby-transformer-json": "^1.0.14",
+    "moment": "^2.20.1",
+    "react-helmet": "^5.2.0"
   },
-  "precommit": "test"
+  "devDependencies": {
+    "@types/node": "^8.5.2",
+    "@types/react": "^16.0.31",
+    "@types/react-dom": "^16.0.3",
+    "prettier": "^1.8.2"
+  }
 }
