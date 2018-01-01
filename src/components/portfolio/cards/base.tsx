@@ -16,6 +16,7 @@ export interface PortfolioItem {
 interface CardProps {
     item: PortfolioItem;
     hoverEffect: HoverEffect;
+    cert?: boolean;
     children?: any;
 }
 
@@ -37,12 +38,14 @@ const styleForHoverEffect = (hoverEffect: HoverEffect) => {
     }
 }
 
+const getImage = (image: string) => require(`../../../assets/portfolio/${image}`);
+
 export default (props: CardProps) =>
-    <div className={styles.projectCell}>
+    <div className={props.cert ? styles.projectCellCert : styles.projectCell}>
         <a href={props.item.link}>
-            <div className={[styles.project, styleForHoverEffect(props.hoverEffect)].join(' ')}>
+            <div className={[styles.project, props.cert ? styles.projectCert : '', styleForHoverEffect(props.hoverEffect)].join(' ')}>
                 <aside className={styles.projectImgContainer}>
-                    <img className={styles.projectImg} src="" alt={`${props.item.title} logo`} />
+                    <img className={styles.projectImg} src={getImage(props.item.image)} alt={`${props.item.title} logo`} />
                 </aside>
                 {props.children}
             </div>

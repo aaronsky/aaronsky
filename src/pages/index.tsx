@@ -83,7 +83,6 @@ export default ({ data }: IndexPageProps) =>
             {data.allCertificationJson.skills.map(skill => <SkillPortfolioCard key={skill.skill.id} skill={skill.skill} />)}
         </PortfolioSection>
         <PortfolioSection id="education" heading="Education">
-            <h3 className="section_heading">Education</h3>
             <aside className="section_img_container">
                 <img
                     className="section_img"

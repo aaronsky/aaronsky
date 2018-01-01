@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import * as sectionStyles from '../index.module.css';
+import * as sectionStyles from '../base.module.css';
 import * as styles from './index.module.css';
 
 interface PortfolioHeaderProps {

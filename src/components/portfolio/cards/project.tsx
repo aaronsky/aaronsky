@@ -17,7 +17,7 @@ const ProjectCardContent = ({ project }: ProjectCardContentProps) =>
         <h3 className={styles.projectInfoDates}>{getDatesString(project.start, project.end)}</h3>
         <p className={styles.projectInfoLanguages}>{project.languages.join(' • ')}</p>
         <p className={styles.projectInfoDescription}>{project.type}</p>
-        <p className={styles.projectInfoDescription}>{project.roles}</p>
+        <p className={styles.projectInfoDescription}>{project.roles.join(' • ')}</p>
     </div>
 
 interface ProjectCardProps {

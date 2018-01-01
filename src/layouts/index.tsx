@@ -5,6 +5,8 @@ import Head from '../components/head';
 import NavigationMenu from '../components/navigation/menu';
 import Footer from '../components/footer';
 
+import '../css/reset.css';
+
 interface IndexTemplateProps {
     data: {
         site: {
