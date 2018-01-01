@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+import * as styles from './index.module.css';
+import * as logo from '../../assets/brand/brand.svg';
+
 interface FooterProps {
     author: {
         name: string;
@@ -7,9 +10,6 @@ interface FooterProps {
 }
 
 export default ({ author }: FooterProps) =>
-    <footer className="section section_legal">
-        <img 
-            className="section_legal_brand" 
-            src="brand.svg" 
-            alt={`${author.name} brand logo`} />
+    <footer className={[styles.section, styles.sectionLegal].join(' ')}>
+        <img className={styles.sectionLegalBrand} src={logo} alt={`${author.name} brand logo`} />
     </footer>

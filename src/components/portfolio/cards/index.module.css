@@ -1,0 +1,139 @@
+.container {
+    display: grid;
+}
+
+.container .projectCell {
+    grid-column: 1;
+}
+
+.project {
+    padding: 1rem;
+    min-height: 7rem;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    composes: fadeInDownLongDelay from "../../../css/animations.css";
+}
+
+.projectContent {
+    width: 70%;
+    float: right;
+}
+
+.projectLighten:hover {
+    color: #dddddd/*var(--light-gray)*/;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.projectDarken:hover {
+    color: #222222/*var(--dark-gray)*/;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.projectImg {
+    margin: 0;
+    width: 80px;
+}
+
+.projectImgContainer {
+    width: 30%;
+    float: left;
+}
+
+.projectHeading {
+    font-size: 18;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.projectInfo {
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+.projectInfoTitle {
+    font-size: 16;
+    margin-bottom: 0.5rem;
+}
+
+.projectInfoDates {
+    font-size: 14;
+    margin-bottom: 5px;
+}
+
+.projectInfoDescription {
+    visibility: hidden;
+    clear: both;
+    display: none;
+    font-size: 13;
+    margin: 0 10px 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    font-style: italic;
+}
+
+.projectInfoLanguages {
+    font-size: 14;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 550px/*var(--phablet-size)*/) {
+    .container .projectCell {
+        grid-column: 1 / 2;
+    }
+    .container .projectCellCert {
+        grid-column: 2 / 3;
+        grid-column-start: 1 / 3;
+    }
+    .project {
+        min-height: 0;
+    }
+    .projectContent {
+        width: auto;
+        float: none;
+    }
+    .projectCert img {
+        width: 50%;
+    }
+    .projectImg {
+        width: 100px;
+        margin: 10px auto;
+    }
+    .projectImgContainer {
+        float: none;
+        width: auto;
+    }
+    .projectInfoDescription {
+        width: auto;
+        visibility: visible;
+        clear: none;
+        display: inherit;
+    }
+}
+
+@media only screen and (min-width: 750px/*var(--tablet-size)*/) {
+    .projectImg {
+        width: 130px;
+    }
+}
+
+@media only screen and (min-width: 1000px/*var(--desktop-size)*/) {
+    .container .projectCell {
+        grid-column: 1 / 3;
+        grid-column-start: 1 / 6;
+    }
+    .container .projectCellCert {
+        grid-column: 1 / 2;
+        grid-column-start: 1 / 3;
+    }
+    .projectHeading {
+        font-size: 20;
+        margin-bottom: 0.5rem;
+    }
+    .projectInfoDescription {
+        font-size: 13.8;
+        margin-bottom: 5px;
+    }
+}

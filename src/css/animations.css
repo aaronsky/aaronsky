@@ -1,0 +1,31 @@
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fadeInDownNoDelay {
+    animation: fadeInDown 0.3s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0s
+}
+
+.fadeInDownShortDelay {
+    animation: fadeInDown 0.3s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s
+}
+
+.fadeInDownLongDelay {
+    animation: fadeInDown 0.3s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.8s
+}

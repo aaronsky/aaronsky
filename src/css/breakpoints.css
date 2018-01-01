@@ -1,0 +1,8 @@
+:root {
+    --mobile-size: 400px;
+    --phablet-size: 550px;
+    --medium-size: 640px;
+    --tablet-size: 750px;
+    --desktop-size: 1000px;
+    --desktopHDsize: 1200px;
+}

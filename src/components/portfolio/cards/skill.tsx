@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import Card, { PortfolioItem, getDatesString } from './base';
+import * as styles from './index.module.css';
 
 interface SkillPortfolioItem extends PortfolioItem {}
 

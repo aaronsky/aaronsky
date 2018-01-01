@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import Card, { PortfolioItem, getDatesString } from './base';
+import * as styles from './index.module.css';
 
 interface ProjectPortfolioItem extends PortfolioItem {
     languages: string[];
@@ -11,12 +12,12 @@ interface ProjectPortfolioItem extends PortfolioItem {
 interface ProjectCardContentProps extends ProjectCardProps {}
 
 const ProjectCardContent = ({ project }: ProjectCardContentProps) =>
-    <div className="project_content">
-        <h2 className="project_heading">{project.title}</h2>
-        <h3 className="project_info_dates">{getDatesString(project.start, project.end)}</h3>
-        <p className="project_info_languages">{project.languages.join(' • ')}</p>
-        <p className="project_info_description">{project.type}</p>
-        <p className="project_info_description">{project.roles}</p>
+    <div className={styles.projectContent}>
+        <h2 className={styles.projectHeading}>{project.title}</h2>
+        <h3 className={styles.projectInfoDates}>{getDatesString(project.start, project.end)}</h3>
+        <p className={styles.projectInfoLanguages}>{project.languages.join(' • ')}</p>
+        <p className={styles.projectInfoDescription}>{project.type}</p>
+        <p className={styles.projectInfoDescription}>{project.roles}</p>
     </div>
 
 interface ProjectCardProps {
@@ -24,6 +25,6 @@ interface ProjectCardProps {
 }
 
 export default ({ project }: ProjectCardProps) =>
-    <Card item={project}>
+    <Card item={project} hoverEffect="dark">
         <ProjectCardContent project={project} />
     </Card>

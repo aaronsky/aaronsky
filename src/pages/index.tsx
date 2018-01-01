@@ -1,8 +1,7 @@
 import * as React from 'react'
 import Link from 'gatsby-link'
 
-import PortfolioHeader from '../components/portfolio/header';
-import PortfolioSection from '../components/portfolio/section';
+import { PortfolioLanding, PortfolioSection } from '../components/portfolio/sections';
 import { WorkPortfolioCard, ProjectPortfolioCard, SkillPortfolioCard } from '../components/portfolio/cards';
 
 interface IndexPageProps {
@@ -73,27 +72,27 @@ interface IndexPageProps {
 
 export default ({ data }: IndexPageProps) =>
     <div>
-        <PortfolioHeader author={data.site.siteMetadata.author} />
+        <PortfolioLanding author={data.site.siteMetadata.author} />
         <PortfolioSection id="work" heading="Experience">
-        { data.allWorkJson.jobs.map(work => <WorkPortfolioCard key={work.work.id} work={ work.work } />) }
+            {data.allWorkJson.jobs.map(work => <WorkPortfolioCard key={work.work.id} work={work.work} />)}
         </PortfolioSection>
         <PortfolioSection id="projects" heading="Projects">
-        { data.allProjectsJson.projects.map(project => <ProjectPortfolioCard key={project.project.id} project={project.project} />) }
+            {data.allProjectsJson.projects.map(project => <ProjectPortfolioCard key={project.project.id} project={project.project} />)}
         </PortfolioSection>
-        <PortfolioSection id="certification" heading="Certifications">
-        { data.allCertificationJson.skills.map(skill => <SkillPortfolioCard key={skill.skill.id} skill={skill.skill} />) }
+        <PortfolioSection id="skills" heading="Certifications">
+            {data.allCertificationJson.skills.map(skill => <SkillPortfolioCard key={skill.skill.id} skill={skill.skill} />)}
         </PortfolioSection>
         <PortfolioSection id="education" heading="Education">
             <h3 className="section_heading">Education</h3>
             <aside className="section_img_container">
-                <img 
-                    className="section_img" 
+                <img
+                    className="section_img"
                     src={`${data.allPortfolioJson.edges[0].education.image}`}
                     alt={`${data.allPortfolioJson.edges[0].education.school} logo`} />
-            </aside>     
-            <p className="section_description">{ data.allPortfolioJson.edges[0].education.school }</p>
-            <p className="section_description">{ data.allPortfolioJson.edges[0].education.degree }</p>
-            <p className="section_description">{ data.allPortfolioJson.edges[0].education.date }</p>
+            </aside>
+            <p className="section_description">{data.allPortfolioJson.edges[0].education.school}</p>
+            <p className="section_description">{data.allPortfolioJson.edges[0].education.degree}</p>
+            <p className="section_description">{data.allPortfolioJson.edges[0].education.date}</p>
         </PortfolioSection>
     </div>
 
