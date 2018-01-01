@@ -11,11 +11,15 @@ interface PortfolioHeaderProps {
     children?: any;
 }
 
+const getImage = (image: string) => require('./../../../../assets/site/' + image);
+
 export default ({ author }: PortfolioHeaderProps) =>
     <header className={[sectionStyles.section, styles.sectionLanding].join(' ')} id="masthead">
         <div className="container">
-            <img src={author.image} className={styles.sectionLandingProfile} alt={`${author.name} face photo`} />
+            <img src={getImage(author.image)} className={styles.sectionLandingProfile} alt={`${author.name} face photo`} />
             <h1 className={styles.sectionLandingHeading}>{author.name}</h1>
-            <h4 className={styles.sectionLandingDescription}><span>App &amp; Web Developer :globe_with_meridians:</span> <span>iOS Specialist :iphone:</span> <span>Wizard :sparkles:</span> </h4>
+            <h4 className={styles.sectionLandingDescription}>
+                App &amp; Web Developer :globe_with_meridians: iOS Specialist :iphone: Wizard :sparkles:
+            </h4>
         </div>
     </header>

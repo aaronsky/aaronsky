@@ -30,6 +30,10 @@ export const getDatesString = (start: string, end?: string) => {
     return startDate;
 };
 
+const projectCellStyleIfCert = (cert: boolean) => cert ? styles.projectCellCert : styles.projectCell
+
+const projectStyleIfCert = (cert: boolean) => cert ? styles.projectCert : ''
+
 const styleForHoverEffect = (hoverEffect: HoverEffect) => {
     if (hoverEffect == 'dark') {
         return styles.projectDarken;
@@ -38,12 +42,13 @@ const styleForHoverEffect = (hoverEffect: HoverEffect) => {
     }
 }
 
-const getImage = (image: string) => require(`../../../assets/portfolio/${image}`);
+// TODO: Determine better way of getting path to `assets`
+const getImage = (image: string) => require('./../../../assets/portfolio/' + image);
 
 export default (props: CardProps) =>
-    <div className={props.cert ? styles.projectCellCert : styles.projectCell}>
+    <div className={projectCellStyleIfCert(props.cert)}>
         <a href={props.item.link}>
-            <div className={[styles.project, props.cert ? styles.projectCert : '', styleForHoverEffect(props.hoverEffect)].join(' ')}>
+            <div className={[styles.project, projectStyleIfCert(props.cert), styleForHoverEffect(props.hoverEffect)].join(' ')}>
                 <aside className={styles.projectImgContainer}>
                     <img className={styles.projectImg} src={getImage(props.item.image)} alt={`${props.item.title} logo`} />
                 </aside>

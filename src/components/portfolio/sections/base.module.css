@@ -23,8 +23,7 @@
 }
 
 .sectionLink a {
-    color: #2c3e50/*var(--blue)*/
-    ;
+    color: #2c3e50/*var(--blue)*/;
     transition: all .2s ease-in-out;
 }
 
@@ -32,32 +31,25 @@
 .sectionLink a:focus,
 .sectionLink a:active,
 .sectionLink a.active {
-    color: #dddddd/*var(--light-gray)*/
-    ;
+    color: #dddddd/*var(--light-gray)*/;
 }
 
 .sectionWork {
-    background-color: #3d638c/*var(--dark-blue)*/
-    ;
-    color: #ffffff/*var(--white)*/
-    ;
+    background-color: #3d638c/*var(--dark-blue)*/;
+    color: #ffffff/*var(--white)*/;
 }
 
 .sectionProjects {
-    background-color: #e6ebf0/*var(--lightest-blue)*/
-    ;
+    background-color: #e6ebf0/*var(--lightest-blue)*/;
 }
 
 .sectionCert {
-    background-color: #b6c4d4/*var(--light-blue)*/
-    ;
+    background-color: #b6c4d4/*var(--light-blue)*/;
 }
 
 .sectionEducation {
-    background-color: #3d638c/*var(--dark-blue)*/
-    ;
-    color: #ffffff/*var(--white)*/
-    ;
+    background-color: #3d638c/*var(--dark-blue)*/;
+    color: #ffffff/*var(--white)*/;
 }
 
 .container {
@@ -68,12 +60,13 @@
     padding: 0 20px;
     box-sizing: border-box;
     font-size: 100%;
-}
+    
+    margin-left: auto;
+    margin-right: auto;
 
-.container:after {
-    content: "";
-    display: table;
     clear: both;
+    content: "";
+    display: table
 }
 
 @media only screen and (min-width: 400px) {
