@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Card, { PortfolioItem, getDatesString } from './base';
+import Card, { getDatesString, PortfolioItem } from './base';
 import * as styles from './index.module.css';
 
 interface WorkPortfolioItem extends PortfolioItem {
@@ -18,7 +18,7 @@ const WorkCardContent = ({ work }: WorkCardContentProps) =>
         <h3 className={styles.projectInfoDates}>{getDatesString(work.start, work.end)}</h3>
         <p className={styles.projectInfoLanguages}>{work.languages.join(' • ')}</p>
         <p className={styles.projectInfoDescription}>{work.description}</p>
-    </div>
+    </div>;
 
 interface WorkCardProps {
     work: WorkPortfolioItem;
@@ -27,4 +27,4 @@ interface WorkCardProps {
 export default ({ work }: WorkCardProps) =>
     <Card item={work} hoverEffect="light">
         <WorkCardContent work={work} />
-    </Card>
+    </Card>;

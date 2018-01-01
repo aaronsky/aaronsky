@@ -1,8 +1,8 @@
-import * as React from 'react'
-import Link from 'gatsby-link'
+import Link from 'gatsby-link';
+import * as React from 'react';
 
+import { ProjectPortfolioCard, SkillPortfolioCard, WorkPortfolioCard } from '../components/portfolio/cards';
 import { PortfolioLanding, PortfolioSection } from '../components/portfolio/sections';
-import { WorkPortfolioCard, ProjectPortfolioCard, SkillPortfolioCard } from '../components/portfolio/cards';
 
 interface IndexPageProps {
     data: {
@@ -11,11 +11,11 @@ interface IndexPageProps {
                 author: {
                     name: string;
                     image: string;
-                }
-            }
+                },
+            },
         }
         allWorkJson: {
-            jobs: {
+            jobs: Array<{
                 work: {
                     id: string;
                     title: string;
@@ -26,11 +26,11 @@ interface IndexPageProps {
                     end: string;
                     description: string;
                     languages: string[];
-                }
-            }[]
+                },
+            }>,
         }
         allProjectsJson: {
-            projects: {
+            projects: Array<{
                 project: {
                     id: string;
                     title: string;
@@ -41,11 +41,11 @@ interface IndexPageProps {
                     end: string;
                     roles: string[];
                     languages: string[];
-                }
-            }[]
+                },
+            }>,
         }
         allCertificationJson: {
-            skills: {
+            skills: Array<{
                 skill: {
                     id: string;
                     title: string;
@@ -53,34 +53,34 @@ interface IndexPageProps {
                     link: string;
                     start: string;
                     end: string;
-                }
-            }[]
+                },
+            }>,
         }
         allPortfolioJson: {
-            edges: {
+            edges: Array<{
                 education: {
                     image: string;
                     school: string;
                     location: string;
                     degree: string;
                     date: string;
-                }
-            }[]
-        }
-    }
+                },
+            }>,
+        },
+    };
 }
 
 export default ({ data }: IndexPageProps) =>
     <div>
         <PortfolioLanding author={data.site.siteMetadata.author} />
         <PortfolioSection id="work" heading="Experience">
-            {data.allWorkJson.jobs.map(work => <WorkPortfolioCard key={work.work.id} work={work.work} />)}
+            {data.allWorkJson.jobs.map((work) => <WorkPortfolioCard key={work.work.id} work={work.work} />)}
         </PortfolioSection>
         <PortfolioSection id="projects" heading="Projects">
-            {data.allProjectsJson.projects.map(project => <ProjectPortfolioCard key={project.project.id} project={project.project} />)}
+            {data.allProjectsJson.projects.map((project) => <ProjectPortfolioCard key={project.project.id} project={project.project} />)}
         </PortfolioSection>
         <PortfolioSection id="skills" heading="Certifications">
-            {data.allCertificationJson.skills.map(skill => <SkillPortfolioCard key={skill.skill.id} skill={skill.skill} />)}
+            {data.allCertificationJson.skills.map((skill) => <SkillPortfolioCard key={skill.skill.id} skill={skill.skill} />)}
         </PortfolioSection>
         <PortfolioSection id="education" heading="Education">
             <aside className="section_img_container">
@@ -93,7 +93,7 @@ export default ({ data }: IndexPageProps) =>
             <p className="section_description">{data.allPortfolioJson.edges[0].education.degree}</p>
             <p className="section_description">{data.allPortfolioJson.edges[0].education.date}</p>
         </PortfolioSection>
-    </div>
+    </div>;
 
 export const pageQuery = graphql`
     fragment Work on WorkJson {
@@ -107,7 +107,7 @@ export const pageQuery = graphql`
         description
         languages
     }
-  
+
     fragment Project on ProjectsJson {
         id
         title
@@ -147,7 +147,7 @@ export const pageQuery = graphql`
             }
         }
         allWorkJson(
-            sort: { fields: [start], order: DESC }, 
+            sort: { fields: [start], order: DESC },
             filter: { ignore: { eq: false } }
         ) {
             jobs: edges {
@@ -157,7 +157,7 @@ export const pageQuery = graphql`
             }
         }
         allProjectsJson(
-            sort: { fields: [start], order: DESC }, 
+            sort: { fields: [start], order: DESC },
             filter: { ignore: { eq: false } }
         ) {
             projects: edges {
@@ -167,7 +167,7 @@ export const pageQuery = graphql`
             }
         }
         allCertificationJson(
-            sort: { fields: [start], order: DESC }, 
+            sort: { fields: [start], order: DESC },
             filter: { ignore: { eq: false } }
         ) {
             skills: edges {

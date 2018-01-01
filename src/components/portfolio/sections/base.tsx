@@ -12,16 +12,16 @@ interface PortfolioSectionProps {
 }
 
 const styleForId = (id: SectionIdTypes) => {
-    if (id == 'work') {
+    if (id === 'work') {
         return styles.sectionWork;
-    } else if (id == 'projects') {
+    } else if (id === 'projects') {
         return styles.sectionProjects;
-    } else if (id == 'education') {
+    } else if (id === 'education') {
         return styles.sectionEducation;
-    } else if (id == 'skills') {
+    } else if (id === 'skills') {
         return styles.sectionCert;
     }
-}
+};
 
 export default (props: PortfolioSectionProps) =>
     <section className={[styles.section, styleForId(props.id)].join(' ')}>
@@ -35,4 +35,4 @@ export default (props: PortfolioSectionProps) =>
         <div className={styles.container}>
         {props.children}
         </div>
-    </section>
+    </section>;

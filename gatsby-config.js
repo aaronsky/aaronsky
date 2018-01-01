@@ -4,6 +4,8 @@ module.exports = {
         author: {
             name: 'Aaron Sky',
             image: 'face.png',
+            site: 'https://skyaaron.com',
+            email: 'aaronsky@skyaaron.com',
             github: 'aaronsky',
         },
     },

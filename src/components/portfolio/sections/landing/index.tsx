@@ -22,4 +22,4 @@ export default ({ author }: PortfolioHeaderProps) =>
                 App &amp; Web Developer :globe_with_meridians: iOS Specialist :iphone: Wizard :sparkles:
             </h4>
         </div>
-    </header>
+    </header>;

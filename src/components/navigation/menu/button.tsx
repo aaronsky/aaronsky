@@ -7,4 +7,4 @@ export default () =>
         <div />
         <div />
         <div />
-    </a>
+    </a>;

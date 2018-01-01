@@ -12,8 +12,8 @@ export default (props: HeadProps) => {
         <Helmet
             title="The latest of Aaron Sky"
             meta={[
-                { name: 'author', content: props.author.name }
+                { name: 'author', content: props.author.name },
             ]}
         />
     );
-}
+};

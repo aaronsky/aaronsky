@@ -1,5 +1,5 @@
-import * as React from 'react';
 import * as moment from 'moment';
+import * as React from 'react';
 
 import * as styles from './index.module.css';
 
@@ -24,23 +24,23 @@ export const getDatesString = (start: string, end?: string) => {
     const dateFormat = 'MMM YYYY';
     const startDate = moment(start).format(dateFormat);
     if (end) {
-        const endDate = moment(end).format(dateFormat)
+        const endDate = moment(end).format(dateFormat);
         return `${startDate} to ${endDate}`;
     }
     return startDate;
 };
 
-const projectCellStyleIfCert = (cert: boolean) => cert ? styles.projectCellCert : styles.projectCell
+const projectCellStyleIfCert = (cert: boolean) => cert ? styles.projectCellCert : styles.projectCell;
 
-const projectStyleIfCert = (cert: boolean) => cert ? styles.projectCert : ''
+const projectStyleIfCert = (cert: boolean) => cert ? styles.projectCert : '';
 
 const styleForHoverEffect = (hoverEffect: HoverEffect) => {
-    if (hoverEffect == 'dark') {
+    if (hoverEffect === 'dark') {
         return styles.projectDarken;
-    } else if (hoverEffect == 'light') {
+    } else if (hoverEffect === 'light') {
         return styles.projectLighten;
     }
-}
+};
 
 // TODO: Determine better way of getting path to `assets`
 const getImage = (image: string) => require('./../../../assets/portfolio/' + image);
@@ -55,4 +55,4 @@ export default (props: CardProps) =>
                 {props.children}
             </div>
         </a>
-    </div>
+    </div>;

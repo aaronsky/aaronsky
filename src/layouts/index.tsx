@@ -1,9 +1,9 @@
-import * as React from 'react'
-import Link from 'gatsby-link'
+import Link from 'gatsby-link';
+import * as React from 'react';
 
+import Footer from '../components/footer';
 import Head from '../components/head';
 import NavigationMenu from '../components/navigation/menu';
-import Footer from '../components/footer';
 
 import '../css/reset.css';
 
@@ -15,9 +15,9 @@ interface IndexTemplateProps {
                     name: string;
                     github: string;
                 };
-            }
-        }
-    },
+            },
+        },
+    };
     children: () => any;
 }
 
@@ -27,7 +27,7 @@ export default ({ data, children }: IndexTemplateProps) =>
         <NavigationMenu siteMetadata={data.site.siteMetadata} />
         {children()}
         <Footer author={data.site.siteMetadata.author} />
-    </div>
+    </div>;
 
 export const pageQuery = graphql`
     query LayoutIndexQuery {
@@ -41,4 +41,3 @@ export const pageQuery = graphql`
         }
     }
 `;
-
