@@ -1,42 +1,40 @@
 import Link from 'gatsby-link';
 import * as React from 'react';
+import 'typeface-roboto';
+import 'typeface-roboto-mono';
 
-import Footer from '../components/footer';
-import Head from '../components/head';
-import NavigationMenu from '../components/navigation/menu';
+import Head, { SiteMetadata } from '../components/head';
+import Header from '../components/header';
 
 import '../css/reset.css';
+import '../css/syntax.css';
 
 interface IndexTemplateProps {
     data: {
         site: {
-            siteMetadata: {
-                author: {
-                    name: string;
-                    github: string;
-                };
-            },
-        },
+            siteMetadata: SiteMetadata;
+        };
     };
     children: () => any;
 }
 
 export default ({ data, children }: IndexTemplateProps) =>
-    <div>
-        <Head author={data.site.siteMetadata.author} />
-        <NavigationMenu siteMetadata={data.site.siteMetadata} />
+    <div style={{
+        margin: '0 auto',
+        maxWidth: '80%',
+        padding: '3rem 1.5rem',
+    }}>
+        <Head meta={data.site.siteMetadata} />
+        <Header />
         {children()}
-        <Footer author={data.site.siteMetadata.author} />
     </div>;
 
 export const pageQuery = graphql`
     query LayoutIndexQuery {
         site {
             siteMetadata {
-                author {
-                    name
-                    github
-                }
+                author
+                github
             }
         }
     }

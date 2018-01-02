@@ -1,13 +1,11 @@
 module.exports = {
     siteMetadata: {
         title: 'Portfolio',
-        author: {
-            name: 'Aaron Sky',
-            image: 'face.png',
-            site: 'https://skyaaron.com',
-            email: 'aaronsky@skyaaron.com',
-            github: 'aaronsky',
-        },
+        author: 'Aaron Sky',
+        image: 'face.png',
+        site: 'https://skyaaron.com',
+        email: 'aaronsky@skyaaron.com',
+        github: 'aaronsky',
     },
     plugins: [
         'gatsby-plugin-typescript',
@@ -21,10 +19,15 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-plugin-typography`,
-            options: {
-                pathToConfigModule: `src/utils/typography.js`,
-            },
+          resolve: `gatsby-source-filesystem`,
+          options: {
+            path: `${__dirname}/src/pages`,
+            name: 'pages',
+          },
         },
-    ],
-}
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {},
+        },
+    ]
+};

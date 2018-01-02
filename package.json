@@ -27,14 +27,16 @@
     "gatsby-link": "^1.6.31",
     "gatsby-plugin-react-helmet": "^2.0.3",
     "gatsby-plugin-typescript": "^1.4.12",
-    "gatsby-plugin-typography": "^1.7.10",
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-json": "^1.0.14",
+    "gatsby-transformer-remark": "^1.7.26",
     "moment": "^2.20.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",
-    "react-icons": "^2.2.7"
+    "react-icons": "^2.2.7",
+    "typeface-roboto": "^0.0.45",
+    "typeface-roboto-mono": "^0.0.44"
   },
   "devDependencies": {
     "@types/node": "^8.5.2",

@@ -1,0 +1,36 @@
+/* TYPOGRAPHY 
+/* ================================================ */
+
+:root {
+    --base-font: 'Roboto', sans-serif;
+    --heading-font: var(--base-font);
+    --caption-font: var(--base-font);
+    --code-font: 'Roboto Mono', monospace;
+    --alt-font: var(--base-font);
+    --icons-font: 'FontAwesome', sans-serif;
+    --doc-font-size: 16;
+    --doc-line-height: 24;
+    --border-radius: 3px;
+}
+
+
+/* set-up the body font-size / line-height */
+
+body {
+    font-family: var(--base-font);
+    color: var(--text-color);
+    font-size: 16pt;
+}
+
+p {
+    font-size: 18pt;
+}
+
+li {
+    font-size: 16pt;
+}
+
+i {
+    font-family: var(--icons-font);
+    font-size: 28pt;
+}
