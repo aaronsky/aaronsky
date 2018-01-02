@@ -19,6 +19,7 @@
 
 .excerptBody {
     margin: 1rem auto;
+    font-size: 14pt;
 }
 
 @media (--phablet) {
