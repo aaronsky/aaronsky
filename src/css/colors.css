@@ -11,18 +11,18 @@
     --light-blue: #b6c4d4;
     --blue: #2c3e50;
     --body-color: --lightest-blue;
-    --text-color: --dark-gray;
+    --text-color: var(--dark-gray);
     --base-color: #343434;
     --comp-color: spin(--base-color, 180);
     --border-color: --dark-blue;
     --accent-color: --darker-blue;
-    --link-color: --dark-gray;
+    --link-color: var(--dark-gray);
     --alt-link-color: #0462c1;
-    --table-border-color: --border-color;
-    --table-border: 1px solid --table-border-color;
-    --table-background: --body-color;
-    --table-header-color: lighten(--table-background, 10);
-    --table-hover-color: darken(--table-background, 2);
-    --table-stripe-color: darken(--table-background, 4);
-    --table-stripe-color-hover: darken($table-stripe-color, 5);
+    --table-border-color: var(--border-color);
+    --table-border: 1px solid var(--table-border-color);
+    --table-background: var(--body-color);
+    --table-header-color: lighten(var(--table-background), 10);
+    --table-hover-color: darken(var(--table-background), 2);
+    --table-stripe-color: darken(var(--table-background), 4);
+    --table-stripe-color-hover: darken(var(--table-stripe-color), 5);
 }

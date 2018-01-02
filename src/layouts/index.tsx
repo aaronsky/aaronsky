@@ -25,7 +25,7 @@ export default ({ data, children }: IndexTemplateProps) =>
         padding: '3rem 1.5rem',
     }}>
         <Head meta={data.site.siteMetadata} />
-        <Header />
+        <Header meta={data.site.siteMetadata} />
         {children()}
     </div>;
 

@@ -4,10 +4,10 @@ import Helmet from 'react-helmet';
 export interface SiteMetadata {
     title: string;
     author: string;
-    image: string;
     site: string;
-    email: string;
+    linkedin: string;
     github: string;
+    npm: string;
 }
 
 interface HeadProps {

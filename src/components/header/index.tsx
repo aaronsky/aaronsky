@@ -3,6 +3,7 @@ import * as React from 'react';
 
 import * as logo from '../../assets/brand/brand.svg';
 import * as styles from './index.module.css';
+import { SiteMetadata } from '../head/index';
 
 const Logo = () => (
     <Link to="/">
@@ -20,19 +21,25 @@ const Caption = () => (
     </div>
 );
 
-const Navigation = () => (
+interface NavigationProps extends HeaderProps {}
+
+const Navigation = ({ meta }: NavigationProps) => (
     <div className={styles.navigation}>
         <Link to="/" className={styles.navigationItem}>Blog</Link>
-        <a href="https://github.com/aaronsky/" className={styles.navigationItem}>Github</a>
+        <a href={meta.github} className={styles.navigationItem}>Github</a>
         <Link to="/about/" className={styles.navigationItem}>About</Link>
     </div>
 );
 
-export default () => (
+interface HeaderProps {
+    meta: SiteMetadata;
+}
+
+export default ({ meta }: HeaderProps) => (
     <header className={styles.header}>
         <Logo />
         <Headline />
         <Caption />
-        <Navigation />
+        <Navigation meta={meta} />
     </header>
 );

@@ -1,16 +1,13 @@
 import * as React from 'react';
-import Helmet from 'react-helmet';
 
 import { BlogPostModel } from '../components/blog/models';
 import Header from '../components/header';
+import { SiteMetadata } from '../components/head/index';
 
 interface BlogPostTemplateProps {
   data: {
     site: {
-      siteMetadata: {
-        title: string;
-        author: string;
-      };
+      siteMetadata: SiteMetadata;
     };
     post: BlogPostModel;
   }
@@ -18,11 +15,8 @@ interface BlogPostTemplateProps {
 
 export default ({ data }: BlogPostTemplateProps) => (
       <div>
-        <Helmet title={`${data.post.frontmatter.title} | ${data.site.siteMetadata.title}`} />
-        <h1>{data.post.frontmatter.title}</h1>
-        <p>
-          {data.post.frontmatter.date}
-        </p>
+        <h3>{data.post.frontmatter.title}</h3>
+        <p>{data.post.frontmatter.date}</p>
         <div dangerouslySetInnerHTML={{ __html: data.post.html }} />
       </div>
   );

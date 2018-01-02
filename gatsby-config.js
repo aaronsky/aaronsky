@@ -2,10 +2,10 @@ module.exports = {
     siteMetadata: {
         title: 'Portfolio',
         author: 'Aaron Sky',
-        image: 'face.png',
         site: 'https://skyaaron.com',
-        email: 'aaronsky@skyaaron.com',
-        github: 'aaronsky',
+        linkedin: 'https://www.linkedin.com/in/aaronsky/',
+        github: 'https://github.com/aaronsky/',
+        npm: 'https://www.npmjs.com/~aaronsky',
     },
     plugins: [
         'gatsby-plugin-typescript',

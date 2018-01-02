@@ -1,0 +1,16 @@
+@import url("../css/colors.css");
+
+.aboutHeading {
+    font-size: 28pt;
+    font-weight: 600;
+    color: var(--darkest-blue);
+}
+
+.aboutBody {
+    font-size: 14pt;
+    margin-bottom: 2rem;
+}
+
+.aboutLink {
+    color: var(--alt-link-color);
+}
