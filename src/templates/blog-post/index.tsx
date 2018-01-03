@@ -1,8 +1,11 @@
 import * as React from 'react';
+import Helmet from 'react-helmet';
 
 import { BlogPostModel } from '../components/blog/models';
-import Header from '../components/header';
 import { SiteMetadata } from '../components/head/index';
+import Header from '../components/header';
+
+import * as styles from './index.module.css';
 
 interface BlogPostTemplateProps {
   data: {
@@ -10,14 +13,15 @@ interface BlogPostTemplateProps {
       siteMetadata: SiteMetadata;
     };
     post: BlogPostModel;
-  }
+  };
 }
 
 export default ({ data }: BlogPostTemplateProps) => (
-      <div>
-        <h3>{data.post.frontmatter.title}</h3>
-        <p>{data.post.frontmatter.date}</p>
-        <div dangerouslySetInnerHTML={{ __html: data.post.html }} />
+      <div className={styles.postContainer}>
+        <Helmet title={data.post.frontmatter.title} />
+        <h3 className={styles.postHeading}>{data.post.frontmatter.title}</h3>
+        <p className={styles.postDate}>{data.post.frontmatter.date}</p>
+        <div dangerouslySetInnerHTML={{ __html: data.post.html }} className={styles.postBodyContainer} />
       </div>
   );
 
@@ -27,6 +31,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        caption
       }
     }
     post: markdownRemark(fields: { slug: { eq: $slug } }) {

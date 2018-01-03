@@ -1,0 +1,33 @@
+@import url("../../css/breakpoints.css");
+@import url("../../css/colors.css");
+
+.postContainer {
+    
+}
+
+.postHeading {
+    font-size: 24pt;
+    font-weight: 600;
+    color: var(--darkest-blue);
+    margin-bottom: 1rem;
+}
+
+.postDate {
+    font-size: 12pt;
+    margin: 0 auto;
+}
+
+.postBodyContainer {
+
+}
+
+.postBodyContainer * {
+    margin: 1rem auto;
+    font-size: 14pt;
+}
+
+@media (--phablet) {
+    .postHeading {
+        font-size: 28pt;
+    }
+}

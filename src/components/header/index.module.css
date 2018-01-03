@@ -19,13 +19,15 @@
 }
 
 .headline {
-    margin-bottom: 1.5rem;
+    padding: 1rem;
+    margin: 0 auto;
     font-size: 32pt;
     font-weight: 700;
     align-self: center;
 }
 
 .caption {
+    padding: 1rem;
     width: 100%;
     display: flex;
     flex-direction: row;

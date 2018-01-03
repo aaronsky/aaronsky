@@ -2,8 +2,8 @@ import Link from 'gatsby-link';
 import * as React from 'react';
 import { SiteMetadata } from '../components/head/index';
 
-import * as styles from './index.module.css';
 import * as resumePdf from '../assets/portfolio/files/resume.pdf'
+import * as styles from './index.module.css';
 
 interface AboutPageProps {
   data: {
