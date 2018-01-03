@@ -2,6 +2,7 @@ module.exports = {
     siteMetadata: {
         title: 'Portfolio',
         author: 'Aaron Sky',
+        caption: '📱 App 🌐 Web 🎮 Game',
         site: 'https://skyaaron.com',
         linkedin: 'https://www.linkedin.com/in/aaronsky/',
         github: 'https://github.com/aaronsky/',

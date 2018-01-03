@@ -1,0 +1,12 @@
+/* TEAM */
+Developer: Aaron Sky
+Contact: aaronsky@skyaaron.com
+Twitter: @theaaronsky
+From: Boston, Massachusetts, United States
+
+/* SITE */
+Last update: 01/02/2018
+Language: English
+Standards: HTML5, CSS3, TypeScript
+Components: React, Gatsby, Roboto, Font Awesome
+Code written using: Visual Studio Code
