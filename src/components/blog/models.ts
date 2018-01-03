@@ -9,4 +9,4 @@ export interface BlogPostModel {
         date: string;
         title: string;
     };
-};
+}

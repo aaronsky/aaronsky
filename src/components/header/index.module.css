@@ -1,6 +1,5 @@
 @import url("../../css/breakpoints.css");
 @import url("../../css/colors.css");
-
 .header {
     margin: 3rem auto;
     width: 100%;
@@ -70,11 +69,9 @@ a:hover.navigationItem {
     .header {
         width: 75%;
     }
-
     .logo {
         height: 60px;
     }
-
     .headline {
         font-size: 42pt;
     }

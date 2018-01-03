@@ -1,19 +1,19 @@
 {
-  "title": "Badge Guide",
-  "image": "starmen.svg",
-  "link": "https://github.com/aaronsky/badges/",
-  "type": "Personal Project",
-  "start": "2015-01-28",
-  "end": "2015-07-03",
-  "languages": [
-    "React",
-    "CSS"
-  ],
-  "platforms": [
-    "web"
-  ],
-  "roles": [
-    "Full Stack"
-  ],
-  "ignore": true
+    "title": "Badge Guide",
+    "image": "starmen.svg",
+    "link": "https://github.com/aaronsky/badges/",
+    "type": "Personal Project",
+    "start": "2015-01-28",
+    "end": "2015-07-03",
+    "languages": [
+        "React",
+        "CSS"
+    ],
+    "platforms": [
+        "web"
+    ],
+    "roles": [
+        "Full Stack"
+    ],
+    "ignore": true
 }

@@ -8,22 +8,22 @@ import Header from '../components/header';
 import * as styles from './index.module.css';
 
 interface BlogPostTemplateProps {
-  data: {
-    site: {
-      siteMetadata: SiteMetadata;
+    data: {
+        site: {
+            siteMetadata: SiteMetadata;
+        };
+        post: BlogPostModel;
     };
-    post: BlogPostModel;
-  };
 }
 
 export default ({ data }: BlogPostTemplateProps) => (
-      <div className={styles.postContainer}>
+    <div className={styles.postContainer}>
         <Helmet title={data.post.frontmatter.title} />
         <h3 className={styles.postHeading}>{data.post.frontmatter.title}</h3>
         <p className={styles.postDate}>{data.post.frontmatter.date}</p>
         <div dangerouslySetInnerHTML={{ __html: data.post.html }} className={styles.postBodyContainer} />
-      </div>
-  );
+    </div>
+);
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -43,4 +43,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

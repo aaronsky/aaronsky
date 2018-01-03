@@ -1,18 +1,18 @@
 {
-  "title": "Key Daemon",
-  "image": "key-daemon.png",
-  "link": "https://github.com/aaronsky/key-daemon",
-  "type": "Group Project - Team of 4",
-  "start": "2014-10-07",
-  "languages": [
-    "JavaScript"
-  ],
-  "platforms": [
-    "web"
-  ],
-  "roles": [
-    "Lead Developer",
-    "Gameplay Programmer"
-  ],
+    "title": "Key Daemon",
+    "image": "key-daemon.png",
+    "link": "https://github.com/aaronsky/key-daemon",
+    "type": "Group Project - Team of 4",
+    "start": "2014-10-07",
+    "languages": [
+        "JavaScript"
+    ],
+    "platforms": [
+        "web"
+    ],
+    "roles": [
+        "Lead Developer",
+        "Gameplay Programmer"
+    ],
     "ignore": false
 }

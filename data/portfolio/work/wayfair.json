@@ -1,19 +1,19 @@
 {
-  "employer": "Wayfair",
-  "title": "iOS Engineer II",
-  "image": "wayfair.png",
-  "link": "http://www.wayfair.com/",
-  "description": "Work in an agile team to produce a pleasant storefront experience for iOS.",
-  "long_description": null,
-  "location": "Boston, MA",
-  "start": "2017-07-24",
-  "languages": [
-    "Swift",
-    "Objective-C"
-  ],
-  "platforms": [
-    "ios"
-  ],
-  "resume": true,
+    "employer": "Wayfair",
+    "title": "iOS Engineer II",
+    "image": "wayfair.png",
+    "link": "http://www.wayfair.com/",
+    "description": "Work in an agile team to produce a pleasant storefront experience for iOS.",
+    "long_description": null,
+    "location": "Boston, MA",
+    "start": "2017-07-24",
+    "languages": [
+        "Swift",
+        "Objective-C"
+    ],
+    "platforms": [
+        "ios"
+    ],
+    "resume": true,
     "ignore": false
 }

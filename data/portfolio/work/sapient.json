@@ -9,16 +9,16 @@
     "start": "2016-06-06",
     "end": "2017-07-07",
     "languages": [
-      "Swift",
-      "Objective-C",
-      "JavaScript",
-      "C#",
-      "Java"
+        "Swift",
+        "Objective-C",
+        "JavaScript",
+        "C#",
+        "Java"
     ],
     "platforms": [
-      "ios",
-      "android"
+        "ios",
+        "android"
     ],
     "resume": true,
     "ignore": false
-  }
+}

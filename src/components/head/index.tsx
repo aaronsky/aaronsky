@@ -2,13 +2,13 @@ import * as React from 'react';
 import Helmet from 'react-helmet';
 
 // import * as humans from '../../assets/site/humans.txt';
-import * as profileImage from '../../assets/site/face_square.png';
-import * as appleTouchIcon180 from '../../assets/site/apple/apple-touch-icon/apple-touch-icon.png';
-import * as favicon32 from '../../assets/site/favicon/favicon-32x32.png'
-import * as favicon16 from '../../assets/site/favicon/favicon-16x16.png'
-import * as favicon from '../../assets/site/favicon/favicon.ico';
 import * as manifest from '../../assets/site/android-chrome/manifest.json';
+import * as appleTouchIcon180 from '../../assets/site/apple/apple-touch-icon/apple-touch-icon.png';
 import * as safariPinnedTab from '../../assets/site/apple/safari/safari-pinned-tab.svg';
+import * as profileImage from '../../assets/site/face_square.png';
+import * as favicon16 from '../../assets/site/favicon/favicon-16x16.png';
+import * as favicon32 from '../../assets/site/favicon/favicon-32x32.png';
+import * as favicon from '../../assets/site/favicon/favicon.ico';
 // import * as browserconfig from '../../assets/site/microsoft/browserconfig.xml';
 
 export interface SiteMetadata {
@@ -39,7 +39,7 @@ export default (props: HeadProps) => {
             {/* <link href={humans} rel="author" /> */}
             {/** <!--Open Graph--> */}
             <meta property="fb:app_id" content="" />
-            <meta property="og:url" content={props.meta.site}  />
+            <meta property="og:url" content={props.meta.site} />
             <meta property="og:type" content="website" />
             <meta property="og:title" content={props.meta.author} />
             <meta property="og:image" content={profileImage} />
