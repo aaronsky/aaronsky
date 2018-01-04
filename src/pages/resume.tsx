@@ -119,28 +119,26 @@ export default ({ data }: ResumePageProps) =>
             {data.allProjectsJson.projects.map(({ project }) => <ResumeItem item={project} />)}
         </ResumeSection>
         <ResumeSection heading="Skills">
-            <h3 className={styles.projectHeading}>
-                Programming Languages (selected by relevance and order of current confidence)
-            </h3>
-            <span className={styles.projectDescription}>
+            <h4 className={styles.projectHeading}>
+                Selected by relevance and order of current confidence
+            </h4>
+            <div className={styles.projectDescription}>
                 {
-                    data.allSkillsJson.edges.map(({ skill }, index) =>
-                        <span>
-                            <strong>{skill.tool}</strong>&nbsp;
-                            <em>{skill.time}</em>
-                            {index < data.allSkillsJson.edges.length - 1 ? <span className={styles.skillDivider}> — </span> : null}
+                    data.allSkillsJson.edges.map(({ skill }) =>
+                        <span className={styles.skillItem} key={skill.tool}>
+                            <strong>{skill.tool}</strong>
+                            <em>{`(${skill.time})`}</em>
                         </span>
                     )
                 }
-            </span>
+            </div>
         </ResumeSection>
         <ResumeSection heading="Education">
             <p className={styles.projectDescription}>{`${data.allPortfolioJson.edges[0].education.school}, ${data.allPortfolioJson.edges[0].education.location}`}</p>
             <p className={styles.projectDescription}>{`${data.allPortfolioJson.edges[0].education.degree}, ${data.allPortfolioJson.edges[0].education.date}`}</p>
         </ResumeSection>
         <footer className={styles.footer}>
-            <hr className={styles.footerLine} />
-            <img className={styles.footerLogo} src={brandOutline} alt={`${data.site.meta.author} brand logo`} />
+            {/* <img className={styles.footerLogo} src={brandOutline} alt={`${data.site.meta.author} brand logo`} /> */}
         </footer>
     </div>;
 

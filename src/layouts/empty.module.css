@@ -1,3 +1,4 @@
+@import url("../css/colors.css");
 html {
-    background-color: white;
+    background-color: var(--white);
 }

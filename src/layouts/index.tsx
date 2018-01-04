@@ -9,6 +9,8 @@ import Header from '../components/header';
 import '../css/reset.css';
 import '../css/syntax.css';
 
+import './index.module.css';
+
 interface IndexTemplateProps {
     data: {
         site: {
