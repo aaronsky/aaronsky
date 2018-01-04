@@ -2,8 +2,7 @@ import * as moment from 'moment';
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
-import { SiteMetadata } from '../components/head/index';
-import * as styles from './resume.module.css';
+import * as styles from './index.module.css';
 import * as brandOutline from '../assets/brand/outline.svg';
 
 interface ResumePageProps {
@@ -61,8 +60,8 @@ interface ResumeSectionProps {
 }
 
 const ResumeSection = (props: ResumeSectionProps) =>
-    <section className={styles.section}>
-        <h2 className={styles.sectionHeading}>{props.heading}</h2>
+    <section className={styles.resumeSection}>
+        <h2 className={styles.resumeSectionHeading}>{props.heading}</h2>
         {props.children}
     </section>;
 
@@ -88,10 +87,10 @@ const ResumeItem = ({ item }: ResumeItemProps) => {
     }
     return (
         <div>
-            <h3 className={styles.projectHeading}>
+            <h3 className={styles.resumeProjectHeading}>
                 <a href={item.link}>{heading}</a>
             </h3>
-            <p className={styles.projectDescription}>{description}</p>
+            <p className={styles.resumeProjectDescription}>{description}</p>
         </div>
     );
 }
@@ -101,16 +100,16 @@ export default ({ data }: ResumePageProps) =>
         <Helmet title="Resume" />
         <header>
             <span>
-                <h1 className={styles.headerHeading}>Aaron Sky</h1>
+                <h1 className={styles.resumeHeaderHeading}>Aaron Sky</h1>
             </span>
             <span>
-                <h2 className={styles.headerSubheading}>
+                <h2 className={styles.resumeHeaderSubheading}>
                     <a href={`mailto:${data.site.meta.email}`}>{data.site.meta.email}</a> •&nbsp;
                     <a href={data.site.meta.site}>{data.site.meta.site.replace(/(^\w+:|^)\/\//, '')}</a> •&nbsp;
                     <a href={data.site.meta.github}>{data.site.meta.github.replace(/(^\w+:|^)\/\//, '')}</a>
                 </h2>
             </span>
-            <hr className={styles.headerLine} />
+            <hr className={styles.resumeHeaderLine} />
         </header>
         <ResumeSection heading="Experience">
             {data.allWorkJson.jobs.map(({ work }) => <ResumeItem item={work} />)}
@@ -119,13 +118,13 @@ export default ({ data }: ResumePageProps) =>
             {data.allProjectsJson.projects.map(({ project }) => <ResumeItem item={project} />)}
         </ResumeSection>
         <ResumeSection heading="Skills">
-            <h4 className={styles.projectHeading}>
+            <h4 className={styles.resumeProjectHeading}>
                 Selected by relevance and order of current confidence
             </h4>
-            <div className={styles.projectDescription}>
+            <div className={styles.resumeProjectDescription}>
                 {
                     data.allSkillsJson.edges.map(({ skill }) =>
-                        <span className={styles.skillItem} key={skill.tool}>
+                        <span className={styles.resumeSkillItem} key={skill.tool}>
                             <strong>{skill.tool}</strong>
                             <em>{`(${skill.time})`}</em>
                         </span>
@@ -134,11 +133,12 @@ export default ({ data }: ResumePageProps) =>
             </div>
         </ResumeSection>
         <ResumeSection heading="Education">
-            <p className={styles.projectDescription}>{`${data.allPortfolioJson.edges[0].education.school}, ${data.allPortfolioJson.edges[0].education.location}`}</p>
-            <p className={styles.projectDescription}>{`${data.allPortfolioJson.edges[0].education.degree}, ${data.allPortfolioJson.edges[0].education.date}`}</p>
+            <p className={styles.resumeProjectDescription}>{`${data.allPortfolioJson.edges[0].education.school}, ${data.allPortfolioJson.edges[0].education.location}`}</p>
+            <p className={styles.resumeProjectDescription}>{`${data.allPortfolioJson.edges[0].education.degree}, ${data.allPortfolioJson.edges[0].education.date}`}</p>
         </ResumeSection>
-        <footer className={styles.footer}>
-            {/* <img className={styles.footerLogo} src={brandOutline} alt={`${data.site.meta.author} brand logo`} /> */}
+        <footer className={styles.resumeFooter}>
+            <hr className={styles.resumeFooterLine} />
+            <img className={styles.resumeFooterLogo} src={brandOutline} alt={`${data.site.meta.author} brand logo`} />
         </footer>
     </div>;
 

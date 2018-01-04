@@ -77,17 +77,23 @@ exports.onPostBuild = async () => {
         const publicDir = path.resolve(__dirname, 'public');
         const staticDir = path.resolve(publicDir, 'static');
         const resumeHtml = path.resolve(publicDir, 'resume', 'index.html');
+        
         console.log('Reading', staticDir, 'to find an existing resume.(.*).pdf...');
-        const files = fs.readdirSync(staticDir);
-        const pdfFileName = files.filter((file => file.includes('resume') && path.extname(file) == '.pdf'))[0];
+        const pdfFileName = fs.readdirSync(staticDir)
+            .filter((file => file.includes('resume') && path.extname(file) == '.pdf'))
+            .map(file => ({ file, ...fs.statSync(path.resolve(staticDir, file)) }))
+            .sort((left, right) => left.mtime.getTime() - right.mtime.getTime())[0].file;
         if (!pdfFileName) {
             reject(new Error('No file path containing \'resume(.*).pdf\' was found'));
+            return;
         }
         const pdfFilePath = path.resolve(staticDir, pdfFileName);
         console.log('Found', pdfFileName, 'at', pdfFilePath);
+        
         console.log('Reading', resumeHtml, '...');
         const html = fs.readFileSync(resumeHtml, 'utf-8');
         console.log('Successfully loaded', resumeHtml);
+        
         console.log('Writing new PDF to', pdfFilePath);
         const options = {
             border: {
@@ -97,9 +103,11 @@ exports.onPostBuild = async () => {
                 right: '0.65in',
             }
         };
-        pdf.create(html, options).toFile(pdfFilePath, (err, result) => {
+        const scrubbedHtml = html.replace(/url\(\//gi, `url(file://${publicDir}/`);
+        pdf.create(scrubbedHtml, options).toFile(pdfFilePath, (err, result) => {
             if (err) {
                 reject(err);
+                return;
             }
             console.log('Successfully wrote', pdfFileName, 'to disk!');
             resolve();

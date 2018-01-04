@@ -1,3 +1,14 @@
+interface SiteMetadata {
+    title: string;
+    author: string;
+    caption: string;
+    site: string;
+    email: string;
+    linkedin: string;
+    github: string;
+    npm: string;
+}
+
 interface ResumeItem {
     title: string;
     link: string;

@@ -2,7 +2,6 @@ import Link from 'gatsby-link';
 import * as React from 'react';
 
 import * as logo from '../../assets/brand/brand.svg';
-import { SiteMetadata } from '../head/index';
 import * as styles from './index.module.css';
 
 const Logo = () => (

@@ -2,7 +2,6 @@ import * as React from 'react';
 import Helmet from 'react-helmet';
 
 import { BlogPostModel } from '../components/blog/models';
-import { SiteMetadata } from '../components/head/index';
 import Header from '../components/header';
 
 import * as styles from './index.module.css';

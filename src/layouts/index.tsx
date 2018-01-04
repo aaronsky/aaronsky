@@ -3,7 +3,7 @@ import * as React from 'react';
 import 'typeface-roboto';
 import 'typeface-roboto-mono';
 
-import Head, { SiteMetadata } from '../components/head';
+import Head from '../components/head';
 import Header from '../components/header';
 
 import '../css/reset.css';

@@ -11,17 +11,6 @@ import * as favicon32 from '../../assets/site/favicon/favicon-32x32.png';
 import * as favicon from '../../assets/site/favicon/favicon.ico';
 // import * as browserconfig from '../../assets/site/microsoft/browserconfig.xml';
 
-export interface SiteMetadata {
-    title: string;
-    author: string;
-    caption: string;
-    site: string;
-    email: string;
-    linkedin: string;
-    github: string;
-    npm: string;
-}
-
 interface HeadProps {
     meta: SiteMetadata;
 }

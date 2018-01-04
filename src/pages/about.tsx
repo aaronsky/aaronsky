@@ -1,7 +1,6 @@
 import Link from 'gatsby-link';
 import * as React from 'react';
 import Helmet from 'react-helmet';
-import { SiteMetadata } from '../components/head/index';
 
 import * as resumePdf from '../assets/portfolio/files/resume.pdf';
 import * as styles from './index.module.css';
