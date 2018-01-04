@@ -16,6 +16,7 @@ export interface SiteMetadata {
     author: string;
     caption: string;
     site: string;
+    email: string;
     linkedin: string;
     github: string;
     npm: string;

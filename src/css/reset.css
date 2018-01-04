@@ -178,14 +178,14 @@ textarea {
    ========================================================================== */
 
 ::-moz-selection {
-    background-color: lighten(var(--base-color), 65%);
-    color: var(--base-color);
+    background-color: var(--light-blue);
+    color: var(--darker-blue);
     text-shadow: none;
 }
 
 ::selection {
-    background-color: lighten(var(--base-color), 65%);
-    color: var(--base-color);
+    background-color: var(--light-blue);
+    color: var(--darker-blue);
     text-shadow: none;
 }
 

@@ -13,16 +13,16 @@
     --body-color: --lightest-blue;
     --text-color: var(--dark-gray);
     --base-color: #343434;
-    --comp-color: spin(--base-color, 180);
+    --comp-color: var(--base-color);
     --border-color: --dark-blue;
     --accent-color: --darker-blue;
-    --link-color: var(--dark-gray);
-    --alt-link-color: #0462c1;
+    --link-color: #0462c1;
+    --alt-link-color: var(--dark-gray);
     --table-border-color: var(--border-color);
     --table-border: 1px solid var(--table-border-color);
     --table-background: var(--body-color);
-    --table-header-color: lighten(var(--table-background), 10);
-    --table-hover-color: darken(var(--table-background), 2);
-    --table-stripe-color: darken(var(--table-background), 4);
-    --table-stripe-color-hover: darken(var(--table-stripe-color), 5);
+    --table-header-color: var(--white);
+    --table-hover-color: #e0e6ec;
+    --table-stripe-color: #d9e1e8;
+    --table-stripe-color-hover: #c9d4de;
 }

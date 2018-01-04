@@ -62,7 +62,11 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
 exports.onCreatePage = async({ page, boundActionCreators }) => {
     const { createPage, deletePage } = boundActionCreators;
     return new Promise(resolve => {
-        console.log('CREATING PAGE', page.path);
+        if (page.path.match(/^\/resume/)) {
+            console.log(page);
+            page.layout = 'empty';
+            createPage(page);
+        }
         resolve();
     });
 };

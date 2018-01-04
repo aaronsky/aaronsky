@@ -25,6 +25,7 @@
     "dependencies": {
         "gatsby": "^1.9.130",
         "gatsby-link": "^1.6.31",
+        "gatsby-plugin-nprogress": "^1.0.9",
         "gatsby-plugin-react-helmet": "^2.0.3",
         "gatsby-plugin-typescript": "^1.4.12",
         "gatsby-source-filesystem": "^1.5.11",

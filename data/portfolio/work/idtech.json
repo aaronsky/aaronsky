@@ -4,7 +4,7 @@
     "image": "idtc.svg",
     "link": "https://www.idtech.com/",
     "description": "Taught basic programming fundamentals to a class of eight teenagers with varying levels of previous experience.",
-    "long_description": "Responsible for instructing Java and C++ programming to groups of 13-17 year olds with varying levels of programming background. My weeklong course covered basic structures of the language such as variables, code structure and flow control. I also taught my advanced students basic UI, object-oriented programming, and the importance of project scope.",
+    "longDescription": "Responsible for instructing Java and C++ programming to groups of 13-17 year olds with varying levels of programming background. My weeklong course covered basic structures of the language such as variables, code structure and flow control. I also taught my advanced students basic UI, object-oriented programming, and the importance of project scope.",
     "location": "Washington, D.C.",
     "start": "2013-06-15",
     "end": "2014-08-02",
