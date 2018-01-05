@@ -1,0 +1,20 @@
+{
+    "title": "Drawn",
+    "image": "drawn.png",
+    "link": "https://github.com/aaronsky/drawn",
+    "type": "Personal Project",
+    "longDescription": "Drawn is a simple drawing app for iOS that utilizes CoreGraphics and UIKit to create a lightweight doodling experience. Implements Z-layers, custom color palettes, sharing and saving. Unfinished and unpublished, but later won a 2016 WWDC Student Scholarship from Apple.",
+    "start": "2015-10-28",
+    "end": "2015-12-10",
+    "languages": [
+        "Swift"
+    ],
+    "platforms": [
+        "ios"
+    ],
+    "roles": [
+        "iOS"
+    ],
+    "resume": true,
+    "ignore": false
+}
