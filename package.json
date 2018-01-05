@@ -13,15 +13,16 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/aaronsky/portfolio.git"
+        "url": "https://github.com/aaronsky/portfolio"
     },
-    "author": "Aaronsky",
+    "author": "aaronsky",
     "license": "MIT",
     "main": "n/a",
+    "private": true,
     "bugs": {
         "url": "https://github.com/aaronsky/portfolio/issues"
     },
-    "homepage": "http://skyaaron.com",
+    "homepage": "https://skyaaron.com/",
     "dependencies": {
         "gatsby": "^1.9.130",
         "gatsby-link": "^1.6.31",

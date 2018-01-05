@@ -1,3 +1,5 @@
+const packageJson = require('./package.json');
+
 module.exports = {
     siteMetadata: {
         title: 'Portfolio',
@@ -8,6 +10,7 @@ module.exports = {
         linkedin: 'https://www.linkedin.com/in/aaronsky/',
         github: 'https://github.com/aaronsky/',
         npm: 'https://www.npmjs.com/~aaronsky',
+        packageJson,
     },
     plugins: [
         'gatsby-plugin-typescript',

@@ -7,6 +7,14 @@ interface SiteMetadata {
     linkedin: string;
     github: string;
     npm: string;
+    packageJson: {
+        repository: {
+            url: string;
+        };
+        bugs: {
+            url: string;
+        };
+    };
 }
 
 interface ResumeItem {
@@ -27,4 +35,18 @@ interface Project extends ResumeItem {
     languages: string[];
     type: string;
     roles: string[];
+}
+
+interface BlogPostModel {
+    id?: string;
+    html?: string;
+    excerpt?: string;
+    timeToRead: number;
+    fields?: {
+        slug: string;
+    };
+    frontmatter: {
+        date: string;
+        title: string;
+    };
 }

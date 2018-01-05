@@ -1,7 +1,7 @@
 import Link from 'gatsby-link';
 import * as React from 'react';
 
-import { BlogPostExcerpt, BlogPostModel } from '../components/blog';
+import { BlogPostExcerpt } from '../components/blog';
 
 interface MarkdownEdge {
     node: BlogPostModel;
@@ -10,7 +10,7 @@ interface MarkdownEdge {
 interface IndexPageProps {
     data: {
         site: {
-            siteMetadata: {
+            meta: {
                 title: string;
             };
         };
@@ -29,25 +29,25 @@ export default ({ data }: IndexPageProps) => (
 );
 
 export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "DD MMMM, YYYY")
-            title
-          }
+    query IndexQuery {
+        site {
+            meta: siteMetadata {
+                title
+            }
         }
-      }
+        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+            edges {
+                node {
+                    excerpt
+                    fields {
+                        slug
+                    }
+                    frontmatter {
+                        date(formatString: "DD MMMM, YYYY")
+                        title
+                    }
+                }
+            }
+        }
     }
-  }
 `;

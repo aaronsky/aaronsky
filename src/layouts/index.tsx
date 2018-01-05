@@ -14,7 +14,7 @@ import './index.module.css';
 interface IndexTemplateProps {
     data: {
         site: {
-            siteMetadata: SiteMetadata;
+            meta: SiteMetadata;
         };
     };
     children: () => any;
@@ -26,15 +26,15 @@ export default ({ data, children }: IndexTemplateProps) =>
         maxWidth: '80%',
         padding: '3rem 1.5rem',
     }}>
-        <Head meta={data.site.siteMetadata} />
-        <Header meta={data.site.siteMetadata} />
+        <Head meta={data.site.meta} />
+        <Header meta={data.site.meta} />
         {children()}
     </div>;
 
 export const pageQuery = graphql`
     query LayoutIndexQuery {
         site {
-            siteMetadata {
+            meta: siteMetadata {
                 author
                 caption
                 github
