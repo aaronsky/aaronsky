@@ -4,19 +4,13 @@ import * as React from 'react';
 import { BlogPostExcerpt } from '../components/blog';
 
 interface MarkdownEdge {
-    node: BlogPostModel;
+    node: MarkdownRemark;
 }
 
 interface IndexPageProps {
     data: {
-        site: {
-            meta: {
-                title: string;
-            };
-        };
-        allMarkdownRemark: {
-            edges: MarkdownEdge[];
-        };
+        site: Site;
+        allMarkdownRemark: MarkdownRemarkConnection;
     };
 }
 

@@ -4,7 +4,7 @@ import * as React from 'react';
 import * as styles from './index.module.css';
 
 interface BlogPostProps {
-    meta: BlogPostModel;
+    meta: MarkdownRemark;
 }
 
 export default ({ meta }: BlogPostProps) => (

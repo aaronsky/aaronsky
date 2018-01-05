@@ -7,38 +7,11 @@ import * as brandOutline from '../assets/brand/outline.svg';
 
 interface ResumePageProps {
     data: {
-        site: {
-            meta: SiteMetadata;
-        };
-        allWorkJson: {
-            jobs: {
-                work: Work;
-            }[];
-        }
-        allProjectsJson: {
-            projects: {
-                project: Project;
-            }[];
-        }
-        allPortfolioJson: {
-            edges: {
-                education: {
-                    image: string;
-                    school: string;
-                    location: string;
-                    degree: string;
-                    date: string;
-                };
-            }[];
-        };
-        allSkillsJson: {
-            edges: {
-                skill: {
-                    time: string;
-                    tool: string;
-                }
-            }[];
-        }
+        site: Site;
+        allWorkJson: WorkJsonConnection
+        allProjectsJson: ProjectsJsonConnection;
+        allPortfolioJson: PortfolioJsonConnection;
+        allSkillsJson: SkillsJsonConnection;
     };
 }
 

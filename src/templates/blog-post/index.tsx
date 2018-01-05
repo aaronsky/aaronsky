@@ -7,10 +7,8 @@ import * as styles from './index.module.css';
 
 interface BlogPostTemplateProps {
     data: {
-        site: {
-            meta: SiteMetadata;
-        };
-        post: BlogPostModel;
+        site: Site;
+        post: MarkdownRemark;
     };
 }
 

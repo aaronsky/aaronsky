@@ -5,7 +5,7 @@ import * as safariPinnedTab from '../../assets/site/safari-pinned-tab.svg';
 import * as profileImage from '../../assets/site/face_square.png';
 
 interface HeadProps {
-    meta: SiteMetadata;
+    meta: siteMetadata_2;
 }
 
 export default (props: HeadProps) => {
