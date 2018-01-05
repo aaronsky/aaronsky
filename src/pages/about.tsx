@@ -7,9 +7,7 @@ import * as styles from './index.module.css';
 
 interface AboutPageProps {
     data: {
-        site: {
-            meta: SiteMetadata;
-        },
+        site: Site;
     };
 }
 

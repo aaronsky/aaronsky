@@ -7,9 +7,11 @@
     ],
     "scripts": {
         "build": "gatsby build",
-        "develop": "gatsby develop",
+        "dev": "gatsby develop",
+        "graphql": "gql-gen --url http://localhost:8000/___graphql --template typescript --out ./src/utils/models.d.ts",
         "lint": "tslint -c tslint.json 'src/**/*.ts?(x)'",
-        "test": "echo \"Error: no test specified\" && exit 0"
+        "test": "jest",
+        "coverage": "jest --coverage | codecov"
     },
     "repository": {
         "type": "git",
@@ -34,7 +36,6 @@
         "gatsby-source-filesystem": "^1.5.11",
         "gatsby-transformer-json": "^1.0.14",
         "gatsby-transformer-remark": "^1.7.26",
-        "html-pdf": "^2.2.0",
         "moment": "^2.20.1",
         "react": "^16.2.0",
         "react-dom": "^16.2.0",
@@ -48,6 +49,9 @@
         "@types/node": "^8.5.2",
         "@types/react": "^16.0.31",
         "@types/react-dom": "^16.0.3",
+        "codecov": "^3.0.0",
+        "graphql-code-generator": "^0.8.14",
+        "html-pdf": "^2.2.0",
         "jest": "^22.0.4",
         "ts-jest": "^22.0.0",
         "tslint": "^5.8.0",

@@ -34,7 +34,7 @@ const Navigation = ({ meta }: NavigationProps) => (
 );
 
 interface HeaderProps {
-    meta: SiteMetadata;
+    meta: siteMetadata_2;
 }
 
 export default ({ meta }: HeaderProps) => (

@@ -13,9 +13,7 @@ import './index.module.css';
 
 interface IndexTemplateProps {
     data: {
-        site: {
-            meta: SiteMetadata;
-        };
+        site: Site;
     };
     children: () => any;
 }
