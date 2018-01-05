@@ -23,6 +23,7 @@
     animation-delay: 0.8s;
 }
 
+
 /*
    Bounce-in animation .bounceIn
    ========================================================================== */
@@ -39,14 +40,15 @@
         transform: scale(0.9);
     }
     100% {
-      transform: scale(1);
-      opacity: 1;
+        transform: scale(1);
+        opacity: 1;
     }
 }
 
 .bounceIn {
     animation-name: bounceIn;
 }
+
 
 /*
    Drop animation .drop
@@ -65,6 +67,7 @@
     animation-name: drop;
 }
 
+
 /*
    Fade-in animation .fadeIn
    ========================================================================== */
@@ -81,6 +84,7 @@
 .fadeIn {
     animation-name: fadeIn;
 }
+
 
 /*
    Fade-in down big animation .fadeInDown
@@ -105,21 +109,40 @@
     animation-fill-mode: forwards;
 }
 
+
 /*
    Fade-in down big animation .fadeInDownBig
    ========================================================================== */
 
-   @keyframes fadeInDownBig {
+@keyframes fadeInDownBig {
     0% {
-      opacity: 0;
-      transform: translateY(-2000px);
+        opacity: 0;
+        transform: translateY(-2000px);
     }
     100% {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  
-  .fadeInDownBig {
+}
+
+.fadeInDownBig {
     animation-name: fadeInDownBig;
-  }
+}
+
+
+/*
+   Twist animation .twist
+   ========================================================================== */
+
+@keyframes twist {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(-15deg);
+    }
+}
+
+.twist {
+    animation-name: twist;
+}

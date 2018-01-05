@@ -1,3 +1,4 @@
+@import url("../../css/animations.module.css");
 @import url("../../css/breakpoints.css");
 @import url("../../css/colors.css");
 .header {
@@ -15,6 +16,18 @@
     left: 1rem;
     top: 1rem;
     height: 40px;
+    transform: rotateZ(0deg);
+    transition: transform 0.4s;
+}
+
+.logo:hover {
+    transform: rotateZ(10deg);
+    transition: transform 0.4s;
+}
+
+.logo:active {
+    transform: rotateZ(-10deg);
+    transition: transform 0.25s;
 }
 
 .headline {
@@ -58,10 +71,12 @@
 }
 
 a.navigationItem {
+    color: inherit;
     box-shadow: 0 0 0 0 var(--darkest-blue);
 }
 
 a:hover.navigationItem {
+    color: inherit;
     box-shadow: 0 4px 0 0 var(--darkest-blue);
 }
 

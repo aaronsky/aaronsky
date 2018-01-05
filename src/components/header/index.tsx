@@ -2,11 +2,12 @@ import Link from 'gatsby-link';
 import * as React from 'react';
 
 import * as logo from '../../assets/brand/brand.svg';
+import * as animationStyles from '../../css/animations.module.css';
 import * as styles from './index.module.css';
 
 const Logo = () => (
     <Link to="/">
-        <img src={logo} title="Aaron Sky logo" className={styles.logo} />
+        <img src={logo} title="Home" className={[styles.logo, animationStyles.animated].join(' ')} />
     </Link>
 );
 
