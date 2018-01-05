@@ -42,5 +42,23 @@ module.exports = {
             },
         },
         'gatsby-plugin-remove-trailing-slashes',
+        {
+            resolve: 'gatsby-plugin-favicon',
+            options: {
+                logo: './src/assets/site/favicon.png',
+                injectHTML: true,
+                icons: {
+                    android: { background: '#053a71', },
+                    appleIcon: { background: '#053a71', },
+                    appleStartup: { background: '#053a71', },
+                    coast: false,
+                    favicons: true,
+                    firefox: false,
+                    twitter: false,
+                    yandex: false,
+                    windows: true,
+                },
+            },
+        },
     ]
 };
