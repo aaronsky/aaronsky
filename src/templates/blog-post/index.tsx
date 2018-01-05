@@ -26,7 +26,7 @@ export default ({ data }: BlogPostTemplateProps) => (
             <p>
                 Open an <a href={`${data.site.meta.packageJson.bugs.url}/new?title=${encodeURIComponent(data.post.frontmatter.title)}&body=${encodeURIComponent(`Comments, Questions, Feedback: ${data.site.meta.site}${data.post.fields.slug}`)}&labels=${encodeURIComponent('blog comments & questions')}`}>issue</a>,
                 submit a <a href={`${data.site.meta.packageJson.repository.url}/compare`}>pull request</a>,
-                or <a href={`${data.site.meta.packageJson.repository.url}/edit/master${data.post.fields.slug}/index.md`}>edit</a> this post.
+                or <a href={`${data.site.meta.packageJson.repository.url}/edit/master/src/pages${data.post.fields.slug}/index.md`}>edit</a> this post.
             </p>
         </footer>
     </div>

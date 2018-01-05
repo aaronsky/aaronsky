@@ -298,6 +298,13 @@ a {
     background-color: transparent;
 }
 
+a:hover {
+    color: var(--dark-blue);
+}
+
+a:active {
+    color: var(--darker-blue);
+}
 
 /* Apply focus state */
 
