@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
-// import * as humans from '../../assets/site/humans.txt';
 import * as manifest from '../../assets/site/android-chrome/manifest.json';
 import * as appleTouchIcon180 from '../../assets/site/apple/apple-touch-icon/apple-touch-icon.png';
 import * as safariPinnedTab from '../../assets/site/apple/safari/safari-pinned-tab.svg';
@@ -9,7 +8,6 @@ import * as profileImage from '../../assets/site/face_square.png';
 import * as favicon16 from '../../assets/site/favicon/favicon-16x16.png';
 import * as favicon32 from '../../assets/site/favicon/favicon-32x32.png';
 import * as favicon from '../../assets/site/favicon/favicon.ico';
-// import * as browserconfig from '../../assets/site/microsoft/browserconfig.xml';
 
 interface HeadProps {
     meta: SiteMetadata;
@@ -26,7 +24,7 @@ export default (props: HeadProps) => {
             <meta http-equiv="cleartype" content="on" />
             <meta content={props.meta.caption} name="description" />
             <meta content={props.meta.author} name="author" />
-            {/* <link href={humans} rel="author" /> */}
+            <link href="/static/human.txt" rel="author" />
             {/** <!--Open Graph--> */}
             <meta property="fb:app_id" content="" />
             <meta property="og:url" content={props.meta.site} />
@@ -54,7 +52,6 @@ export default (props: HeadProps) => {
             <link href={manifest} rel="manifest" />
             <link href={safariPinnedTab} rel="mask-icon" color="#3d638c" />
             <link href={favicon} rel="shortcut icon" />
-            {/* <meta content={browserconfig} name="msapplication-config" /> */}
             <meta content="#0d3d70" name="theme-color" />
         </Helmet>
     );

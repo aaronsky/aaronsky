@@ -5,8 +5,8 @@ Twitter: @theaaronsky
 From: Boston, Massachusetts, United States
 
 /* SITE */
-Last update: 01/02/2018
+Last update: 06/02/2017
 Language: English
-Standards: HTML5, CSS3, TypeScript
-Components: React, Gatsby, Roboto, Font Awesome
+Standards: HTML5, Sass
+Components: Bourbon, Neat, Font Awesome, Roboto
 Code written using: Visual Studio Code

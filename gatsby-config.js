@@ -21,11 +21,11 @@ module.exports = {
             },
         },
         {
-          resolve: 'gatsby-source-filesystem',
-          options: {
-            path: `${__dirname}/src/pages`,
-            name: 'pages',
-          },
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                name: 'pages',
+                path: `${__dirname}/src/pages`,
+            },
         },
         {
             resolve: 'gatsby-transformer-remark',
@@ -38,5 +38,6 @@ module.exports = {
                 showSpinner: false,
             },
         },
+        'gatsby-plugin-remove-trailing-slashes',
     ]
 };
