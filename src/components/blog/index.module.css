@@ -1,0 +1,29 @@
+@import url("../../css/breakpoints.css");
+@import url("../../css/colors.css");
+
+.excerpt {
+    padding: 1rem auto;
+}
+
+.excerptHeading {
+    font-size: 24pt;
+    font-weight: 600;
+    color: var(--darkest-blue);
+    margin-bottom: 1rem;
+}
+
+.excerptDate {
+    font-size: 12pt;
+    margin: 0 auto;
+}
+
+.excerptBody {
+    margin: 1rem auto;
+    font-size: 14pt;
+}
+
+@media (--phablet) {
+    .excerptHeading {
+        font-size: 28pt;
+    }
+}

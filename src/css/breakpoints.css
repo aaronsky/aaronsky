@@ -1,0 +1,15 @@
+:root {
+    --mobile-size: 400px;
+    --phablet-size: 550px;
+    --medium-size: 640px;
+    --tablet-size: 750px;
+    --desktop-size: 1000px;
+    --desktopHD-size: 1200px;
+}
+
+@custom-media --mobile only screen and (min-width: 400px);
+@custom-media --phablet only screen and (min-width: 550px);
+@custom-media --medium only screen and (min-width: 640px);
+@custom-media --tablet only screen and (min-width: 750px);
+@custom-media --desktop only screen and (min-width: 1000px);
+@custom-media --desktopHD only screen and (min-width: 1200px);

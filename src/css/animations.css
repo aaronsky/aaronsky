@@ -1,0 +1,125 @@
+/* add .animated class to elements you wish to animate
+ * along with the type of animation (eg: <div class="animated fadeIn"></div>)
+ */
+
+.animated {
+    animation-fill-mode: both;
+    animation-duration: 1s;
+}
+
+.animated.hinge {
+    animation-duration: 2s;
+}
+
+.noDelay {
+    animation-delay: 0s;
+}
+
+.shortDelay {
+    animation-delay: 0.4s;
+}
+
+.longDelay {
+    animation-delay: 0.8s;
+}
+
+/*
+   Bounce-in animation .bounceIn
+   ========================================================================== */
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+}
+
+.bounceIn {
+    animation-name: bounceIn;
+}
+
+/*
+   Drop animation .drop
+   ========================================================================== */
+
+@keyframes drop {
+    0% {
+        transform: translateY(-500px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.drop {
+    animation-name: drop;
+}
+
+/*
+   Fade-in animation .fadeIn
+   ========================================================================== */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+/*
+   Fade-in down big animation .fadeInDown
+   ========================================================================== */
+
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/*
+   Fade-in down big animation .fadeInDownBig
+   ========================================================================== */
+
+   @keyframes fadeInDownBig {
+    0% {
+      opacity: 0;
+      transform: translateY(-2000px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fadeInDownBig {
+    animation-name: fadeInDownBig;
+  }

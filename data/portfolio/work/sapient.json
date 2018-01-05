@@ -1,0 +1,24 @@
+{
+    "employer": "SapientNitro",
+    "title": "Mobile Developer",
+    "image": "sapientnitro.png",
+    "link": "http://www.sapientnitro.com/",
+    "description": "Collaborated with teams from around the world to create client-facing mobile experiences for iOS and Android.",
+    "longDescription": "Developed native mobile solutions for Fortune 100 clients in the Boston area. Managed native iOS and Android aspects of several React Native apps. Created testing and release tools for teams to reduce development friction. Worked with clients to painlessly deploy to storefronts.",
+    "location": "Boston, MA",
+    "start": "2016-06-06",
+    "end": "2017-07-07",
+    "languages": [
+        "Swift",
+        "Objective-C",
+        "JavaScript",
+        "C#",
+        "Java"
+    ],
+    "platforms": [
+        "ios",
+        "android"
+    ],
+    "resume": true,
+    "ignore": false
+}

@@ -1,0 +1,52 @@
+@import url("../../css/breakpoints.css");
+@import url("../../css/colors.css");
+
+.postContainer {
+    
+}
+
+.postHeading {
+    font-size: 20pt;
+    font-weight: 600;
+    color: var(--darkest-blue);
+    margin-bottom: 1rem;
+}
+
+.postDate {
+    font-size: 10pt;
+    margin: 0 auto;
+}
+
+.postBodyContainer {
+
+}
+
+.postBodyContainer * {
+    margin: 1rem auto;
+    font-size: 12pt;
+}
+
+.postFooter {
+    text-align: center;
+    color: var(--base-color);
+}
+
+.postFooter h4 {
+    font-size: 11pt;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.postFooter p {
+    font-size: 10pt;
+}
+
+.postFooter a {
+    color: var(--link-color);
+}
+
+@media (--phablet) {
+    .postHeading {
+        font-size: 28pt;
+    }
+}
