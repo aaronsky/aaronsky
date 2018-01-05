@@ -13,7 +13,9 @@ import './index.module.css';
 
 interface IndexTemplateProps {
     data: {
-        site: Site;
+        site: {
+            meta: siteMetadata_2;
+        };
     };
     children: () => any;
 }
