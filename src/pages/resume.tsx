@@ -7,15 +7,33 @@ import * as brandOutline from '../assets/brand/outline.svg';
 
 interface ResumePageProps {
     data: {
-        site: Site;
-        allWorkJson: WorkJsonConnection
-        allProjectsJson: ProjectsJsonConnection;
-        allPortfolioJson: PortfolioJsonConnection;
-        allSkillsJson: SkillsJsonConnection;
+        site: {
+            meta: siteMetadata_2;
+        };
+        allWorkJson: {
+            jobs: {
+                work: WorkJson;
+            }[];
+        };
+        allProjectsJson: {
+            projects: {
+                project: ProjectsJson;
+            }[];
+        };
+        allPortfolioJson: {
+            edges: {
+                education: PortfolioJson;
+            }[];
+        };
+        allSkillsJson: {
+            edges: {
+                skill: SkillsJson;
+            }[];
+        };
     };
 }
 
-export const getDatesString = (start: string, end?: string, noEndMeansActive: boolean) => {
+export const getDatesString = (start: string, end?: string, noEndMeansActive?: boolean) => {
     const dateFormat = 'MMMM YYYY';
     const startDate = moment(start).format(dateFormat);
     if (end) {
@@ -39,12 +57,7 @@ const ResumeSection = (props: ResumeSectionProps) =>
     </section>;
 
 interface ResumeItemProps {
-    item: ResumeItem & {
-        employer?: string;
-        type?: string;
-        description?: string;
-        longDescription?: string;
-    };
+    item: WorkJson & ProjectsJson;
 }
 
 const ResumeItem = ({ item }: ResumeItemProps) => {

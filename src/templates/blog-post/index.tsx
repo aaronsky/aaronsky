@@ -1,13 +1,13 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
-import Header from '../components/header';
-
 import * as styles from './index.module.css';
 
 interface BlogPostTemplateProps {
     data: {
-        site: Site;
+        site: {
+            meta: siteMetadata_2;
+        };
         post: MarkdownRemark;
     };
 }
