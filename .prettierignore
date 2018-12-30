@@ -1,5 +1,10 @@
-**/*
-!**/*.js
-!**/*.jsx
-!**/*.ts
-!**/*.tsx
+.vscode/
+.prettierrc
+*.json
+*.md
+*.css
+*.yml
+*.pdf
+*.svg
+*.png
+*.jpg

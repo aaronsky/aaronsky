@@ -1,1 +1,1 @@
-export { default as BlogPostExcerpt } from './excerpt';
+export { default as BlogPostExcerpt } from './excerpt'
