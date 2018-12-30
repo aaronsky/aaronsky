@@ -3,22 +3,11 @@ import * as React from 'react'
 import { BlogPostExcerpt } from '../components/blog'
 import Layout from '../components/layouts'
 
-interface MarkdownEdge {
-    node: MarkdownRemark
-}
-
-interface IndexPageProps {
-    data: {
-        site: Site
-        allMarkdownRemark: MarkdownRemarkConnection
-    }
-}
-
-const renderBlogPost = ({ node }: MarkdownEdge) => (
+const renderBlogPost = ({ node }: any) => (
     <BlogPostExcerpt meta={node} key={node.fields.slug} />
 )
 
-export default ({ data }: IndexPageProps) => (
+export default ({ data }: any) => (
     <Layout>
         <div>{data.allMarkdownRemark.edges.map(renderBlogPost)}</div>
     </Layout>

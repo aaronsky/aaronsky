@@ -65,18 +65,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField(field)
 }
 
-exports.onCreatePage = async ({ page, actions }) => {
-    const { createPage } = actions
-    return new Promise(resolve => {
-        if (page.path.match(/^\/resume/)) {
-            console.log('Setting', page.path, "layout to 'empty'.")
-            page.layout = 'empty'
-            createPage(page)
-        }
-        resolve()
-    })
-}
-
 exports.onPostBuild = async ({ actions }) => {
     const { deletePage } = actions
 

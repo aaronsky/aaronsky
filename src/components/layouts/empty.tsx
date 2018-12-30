@@ -5,4 +5,4 @@ import '../../css/reset.css'
 import '../../css/syntax.css'
 import './empty.module.css'
 
-export default ({ children }) => <div>{children}</div>
+export default ({ children }: any) => <div>{children}</div>

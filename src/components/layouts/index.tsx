@@ -8,17 +8,7 @@ import Head from '../head'
 import Header from '../header'
 import './index.module.css'
 
-interface IndexTemplateProps {
-    children: any
-}
-
-interface IndexTemplateQuery {
-    site: {
-        meta: siteMetadata_2
-    }
-}
-
-export default ({ children }: IndexTemplateProps) => (
+export default ({ children }: any) => (
     <StaticQuery
         query={graphql`
             {
@@ -31,7 +21,7 @@ export default ({ children }: IndexTemplateProps) => (
                 }
             }
         `}
-        render={(data: IndexTemplateQuery) => (
+        render={(data: any) => (
             <div
                 style={{
                     margin: '0 auto',

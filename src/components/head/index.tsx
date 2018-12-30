@@ -3,11 +3,7 @@ import Helmet from 'react-helmet'
 import * as profileImage from '../../assets/site/face_square.png'
 import * as safariPinnedTab from '../../assets/site/safari-pinned-tab.svg'
 
-interface HeadProps {
-    meta: siteMetadata_2
-}
-
-export default (props: HeadProps) => {
+export default (props: any) => {
     return (
         <Helmet
             titleTemplate={`%s | ${props.meta.author}`}

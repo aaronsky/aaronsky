@@ -8,8 +8,7 @@
     "scripts": {
         "build": "gatsby build",
         "dev": "gatsby develop",
-        "graphql": "gql-gen --url http://localhost:8000/___graphql --template typescript --out ./src/utils/models.d.ts",
-        "lint": "tslint -c tslint.json 'src/**/*.ts?(x)'",
+        "graphql": "gql-gen --config codegen.yml",
         "test": "jest",
         "coverage": "jest --coverage | codecov"
     },
@@ -57,7 +56,9 @@
         "prettier": "^1.15.3",
         "pretty-quick": "^1.8.0",
         "ts-jest": "^23.0.0",
-        "typescript": "^3.2.0"
+        "typescript": "^3.2.0",
+        "graphql-codegen-typescript-common": "0.15.2",
+        "graphql-codegen-typescript-client": "0.15.2"
     },
     "husky": {
         "hooks": {

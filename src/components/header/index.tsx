@@ -16,13 +16,9 @@ const Logo = () => (
 
 const Headline = () => <h1 className={styles.headline}>Aaron Sky</h1>
 
-interface CaptionProps {
-    items: string[]
-}
-
-const Caption = ({ items }: CaptionProps) => (
+const Caption = ({ items }: any) => (
     <div className={styles.caption}>
-        {items.map(item => (
+        {items.map((item: any) => (
             <h3 className={styles.captionItem} key={item}>
                 {item}
             </h3>
@@ -30,9 +26,7 @@ const Caption = ({ items }: CaptionProps) => (
     </div>
 )
 
-interface NavigationProps extends HeaderProps {}
-
-const Navigation = ({ meta }: NavigationProps) => (
+const Navigation = ({ meta }: any) => (
     <div className={styles.navigation}>
         <Link to="/" className={styles.navigationItem}>
             Blog
@@ -46,11 +40,7 @@ const Navigation = ({ meta }: NavigationProps) => (
     </div>
 )
 
-interface HeaderProps {
-    meta: siteMetadata_2
-}
-
-export default ({ meta }: HeaderProps) => (
+export default ({ meta }: any) => (
     <header className={styles.header}>
         <Logo />
         <Headline />

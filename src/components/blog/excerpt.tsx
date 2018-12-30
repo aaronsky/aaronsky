@@ -2,11 +2,7 @@ import { Link } from 'gatsby'
 import * as React from 'react'
 import * as styles from './index.module.css'
 
-interface BlogPostProps {
-    meta: MarkdownRemark
-}
-
-export default ({ meta }: BlogPostProps) => (
+export default ({ meta }: any) => (
     <div className={styles.excerpt}>
         <h3 className={styles.excerptHeading}>
             <Link to={meta.fields.slug}>{meta.frontmatter.title}</Link>
