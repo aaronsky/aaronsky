@@ -1,29 +1,31 @@
-import Link from 'gatsby-link';
-import * as React from 'react';
-
-import { BlogPostExcerpt } from '../components/blog';
+import { graphql } from 'gatsby'
+import * as React from 'react'
+import { BlogPostExcerpt } from '../components/blog'
+import Layout from '../components/layouts'
 
 interface MarkdownEdge {
-    node: MarkdownRemark;
+    node: MarkdownRemark
 }
 
 interface IndexPageProps {
     data: {
-        site: Site;
-        allMarkdownRemark: MarkdownRemarkConnection;
-    };
+        site: Site
+        allMarkdownRemark: MarkdownRemarkConnection
+    }
 }
 
-const renderBlogPost = ({ node }: MarkdownEdge) => <BlogPostExcerpt meta={node} key={node.fields.slug} />;
+const renderBlogPost = ({ node }: MarkdownEdge) => (
+    <BlogPostExcerpt meta={node} key={node.fields.slug} />
+)
 
 export default ({ data }: IndexPageProps) => (
-    <div>
-        {data.allMarkdownRemark.edges.map(renderBlogPost)}
-    </div>
-);
+    <Layout>
+        <div>{data.allMarkdownRemark.edges.map(renderBlogPost)}</div>
+    </Layout>
+)
 
 export const pageQuery = graphql`
-    query IndexQuery {
+    {
         site {
             meta: siteMetadata {
                 title
@@ -44,4 +46,4 @@ export const pageQuery = graphql`
             }
         }
     }
-`;
+`

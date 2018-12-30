@@ -1,15 +1,15 @@
-import * as React from 'react';
-import Helmet from 'react-helmet';
-
-import * as styles from './index.module.css';
+import { graphql } from 'gatsby'
+import * as React from 'react'
+import Helmet from 'react-helmet'
+import * as styles from './index.module.css'
 
 interface BlogPostTemplateProps {
     data: {
         site: {
-            meta: siteMetadata_2;
-        };
-        post: MarkdownRemark;
-    };
+            meta: siteMetadata_2
+        }
+        post: MarkdownRemark
+    }
 }
 
 export default ({ data }: BlogPostTemplateProps) => (
@@ -17,21 +17,54 @@ export default ({ data }: BlogPostTemplateProps) => (
         <Helmet title={data.post.frontmatter.title} />
         <h3 className={styles.postHeading}>{data.post.frontmatter.title}</h3>
         <p className={styles.postDate}>{data.post.frontmatter.date}</p>
-        <div dangerouslySetInnerHTML={{ __html: data.post.html }} className={styles.postBodyContainer} />
+        <div
+            dangerouslySetInnerHTML={{ __html: data.post.html }}
+            className={styles.postBodyContainer}
+        />
         <hr />
         <footer className={styles.postFooter}>
             <h4>Questions? Feedback? Corrections?</h4>
             <p>
-                Open an <a href={`${data.site.meta.packageJson.bugs.url}/new?title=${encodeURIComponent(data.post.frontmatter.title)}&body=${encodeURIComponent(`Comments, Questions, Feedback: ${data.site.meta.site}${data.post.fields.slug}`)}&labels=${encodeURIComponent('blog comments & questions')}`}>issue</a>,
-                submit a <a href={`${data.site.meta.packageJson.repository.url}/compare`}>pull request</a>,
-                or <a href={`${data.site.meta.packageJson.repository.url}/edit/master/src/pages${data.post.fields.slug}/index.md`}>edit</a> this post.
+                Open an{' '}
+                <a
+                    href={`${
+                        data.site.meta.packageJson.bugs.url
+                    }/new?title=${encodeURIComponent(
+                        data.post.frontmatter.title
+                    )}&body=${encodeURIComponent(
+                        `Comments, Questions, Feedback: ${data.site.meta.site}${
+                            data.post.fields.slug
+                        }`
+                    )}&labels=${encodeURIComponent(
+                        'blog comments & questions'
+                    )}`}
+                >
+                    issue
+                </a>
+                , submit a{' '}
+                <a
+                    href={`${
+                        data.site.meta.packageJson.repository.url
+                    }/compare`}
+                >
+                    pull request
+                </a>
+                , or{' '}
+                <a
+                    href={`${
+                        data.site.meta.packageJson.repository.url
+                    }/edit/master/src/pages${data.post.fields.slug}/index.md`}
+                >
+                    edit
+                </a>{' '}
+                this post.
             </p>
         </footer>
     </div>
-);
+)
 
 export const pageQuery = graphql`
-    query BlogPostBySlug($slug: String!) {
+    query($slug: String!) {
         site {
             meta: siteMetadata {
                 title
@@ -61,4 +94,4 @@ export const pageQuery = graphql`
             }
         }
     }
-`;
+`
