@@ -1,4 +1,5 @@
-@import url("../../css/colors.css");
+@import url("../../../css/colors.css");
+
 html {
     background-color: var(--lightest-blue);
 }

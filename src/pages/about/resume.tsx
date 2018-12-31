@@ -2,9 +2,9 @@ import { graphql } from 'gatsby'
 import moment from 'moment'
 import * as React from 'react'
 import Helmet from 'react-helmet'
-import Layout from '../components/layouts/empty'
-import * as brandOutline from '../assets/brand/outline.svg'
-import * as styles from './index.module.css'
+import { EmptyLayout } from '../../components/layouts'
+import * as brandOutline from '../../assets/brand/outline.svg'
+import * as styles from '../index.module.css'
 
 export const getDatesString = (
     start: string,
@@ -61,7 +61,7 @@ const ResumeItem = ({ item }: any) => {
 }
 
 export default ({ data }: any) => (
-    <Layout>
+    <EmptyLayout>
         <div className={styles.resume}>
             <Helmet title="Resume" />
             <header>
@@ -128,7 +128,7 @@ export default ({ data }: any) => (
                 />
             </footer>
         </div>
-    </Layout>
+    </EmptyLayout>
 )
 
 export const query = graphql`

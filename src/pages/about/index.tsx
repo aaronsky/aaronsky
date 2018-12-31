@@ -1,12 +1,12 @@
 import { graphql, Link } from 'gatsby'
 import * as React from 'react'
 import Helmet from 'react-helmet'
-import * as resumePdf from '../assets/portfolio/files/resume.pdf'
-import Layout from '../components/layouts'
-import * as styles from './index.module.css'
+import * as resumePdf from '../../assets/portfolio/files/resume.pdf'
+import { BaseLayout } from '../../components/layouts'
+import * as styles from '../index.module.css'
 
 export default ({ data }: any) => (
-    <Layout>
+    <BaseLayout>
         <div>
             <Helmet title="About" />
             <h3 className={styles.aboutHeading}>Hello!</h3>
@@ -58,13 +58,13 @@ export default ({ data }: any) => (
                     can be found here
                 </a>
                 . You can{' '}
-                <Link to="/contact/" className={styles.aboutLink}>
+                <Link to="/about/contact/" className={styles.aboutLink}>
                     contact me here
                 </Link>
                 .
             </p>
         </div>
-    </Layout>
+    </BaseLayout>
 )
 
 export const query = graphql`

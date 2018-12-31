@@ -60,6 +60,27 @@
         "graphql-codegen-typescript-common": "0.15.2",
         "graphql-codegen-typescript-client": "0.15.2"
     },
+    "jest": {
+        "clearMocks": true,
+        "coverageDirectory": "coverage",
+        "globals": {
+            "ts-jest": {
+                "tsConfig": "tsconfig.json"
+            }
+        },
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js"
+        ],
+        "testEnvironment": "node",
+        "testMatch": [
+            "**/__tests__/*.+(ts|tsx|js)"
+        ],
+        "transform": {
+            "^.+\\.(ts|tsx)$": "ts-jest"
+        }
+    },
     "husky": {
         "hooks": {
             "pre-commit": "pretty-quick --staged"

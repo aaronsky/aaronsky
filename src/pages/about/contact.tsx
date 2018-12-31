@@ -1,9 +1,9 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
-import Layout from '../components/layouts'
+import { BaseLayout } from '../../components/layouts'
 
 export default (props: any) => (
-    <Layout>
+    <BaseLayout>
         <div>
             <Helmet title="Contact" />
             <h3>Contact</h3>
@@ -12,5 +12,5 @@ export default (props: any) => (
                 [at] <em>this domain</em>
             </p>
         </div>
-    </Layout>
+    </BaseLayout>
 )

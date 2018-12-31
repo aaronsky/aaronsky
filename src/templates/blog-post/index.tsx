@@ -1,11 +1,11 @@
 import { graphql } from 'gatsby'
 import * as React from 'react'
 import Helmet from 'react-helmet'
-import Layout from '../../components/layouts'
+import { BaseLayout } from '../../components/layouts'
 import * as styles from './index.module.css'
 
 export default ({ data }: any) => (
-    <Layout>
+    <BaseLayout>
         <div className={styles.postContainer}>
             <Helmet title={data.post.frontmatter.title} />
             <h3 className={styles.postHeading}>
@@ -58,7 +58,7 @@ export default ({ data }: any) => (
                 </p>
             </footer>
         </div>
-    </Layout>
+    </BaseLayout>
 )
 
 export const pageQuery = graphql`

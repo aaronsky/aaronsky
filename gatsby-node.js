@@ -30,7 +30,9 @@ const blogPostQuery = `
 
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
-    const blogPost = path.resolve('./src/templates/blog-post/index.tsx')
+    const blogPostTemplatePath = path.resolve(
+        './src/templates/blog-post/index.tsx'
+    )
     const result = await graphql(blogPostQuery)
     if (result.errors) {
         throw result.errors
@@ -39,7 +41,7 @@ exports.createPages = async ({ graphql, actions }) => {
     result.data.allMarkdownRemark.edges.forEach(edge => {
         const page = {
             path: edge.node.fields.slug,
-            component: blogPost,
+            component: blogPostTemplatePath,
             context: {
                 slug: edge.node.fields.slug,
             },
@@ -65,9 +67,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField(field)
 }
 
-exports.onPostBuild = async ({ actions }) => {
-    const { deletePage } = actions
-
+exports.onPostBuild = async () => {
     const publicDir = path.resolve(__dirname, 'public')
 
     const pdfFilePath = await getResumePath(publicDir)
@@ -141,7 +141,7 @@ const writePdfToFile = async (html, filepath) => {
     const result = pdf.create(html, options)
 
     return new Promise((resolve, reject) => {
-        result.toFile(filepath, (err, info) => {
+        result.toFile(filepath, (err, _info) => {
             if (err) {
                 reject(err)
                 return
