@@ -14,42 +14,6 @@ const readdirAsync = promisify(fs.readdir)
 const readFileAsync = promisify(fs.readFile)
 const statAsync = promisify(fs.stat)
 
-const blogPostQuery = `
-{
-  allMarkdownRemark(limit: 1000) {
-    edges {
-      node {
-        fields {
-          slug
-        }
-      }
-    }
-  }
-}
-`
-
-exports.createPages = async ({ graphql, actions }) => {
-    const { createPage } = actions
-    const blogPostTemplatePath = path.resolve(
-        './src/templates/blog-post/index.tsx'
-    )
-    const result = await graphql(blogPostQuery)
-    if (result.errors) {
-        throw result.errors
-    }
-    // Create blog posts pages.
-    result.data.allMarkdownRemark.edges.forEach(edge => {
-        const page = {
-            path: edge.node.fields.slug,
-            component: blogPostTemplatePath,
-            context: {
-                slug: edge.node.fields.slug,
-            },
-        }
-        createPage(page)
-    })
-}
-
 exports.onCreateNode = ({ node, actions, getNode }) => {
     if (node.internal.type !== `MarkdownRemark`) {
         return
@@ -116,7 +80,7 @@ const createFileWithStats = async (file, path) => {
 }
 
 const getResumeHtml = async publicDir => {
-    const resumeHtml = path.resolve(publicDir, 'about', 'resume', 'index.html')
+    const resumeHtml = path.resolve(publicDir, 'resume', 'index.html')
     console.log('Reading', resumeHtml, '...')
 
     const html = await readFileAsync(resumeHtml, 'utf-8')

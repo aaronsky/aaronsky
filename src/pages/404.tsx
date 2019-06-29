@@ -6,7 +6,7 @@ export default (props: any) => (
     <BaseLayout>
         <div>
             <Helmet title="Not Found" />
-            <h1>NOT FOUND</h1>
+            <h2>NOT FOUND</h2>
             <p>You just hit a route that doesn&#39;t exist.</p>
         </div>
     </BaseLayout>
