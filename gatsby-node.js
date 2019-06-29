@@ -116,7 +116,7 @@ const createFileWithStats = async (file, path) => {
 }
 
 const getResumeHtml = async publicDir => {
-    const resumeHtml = path.resolve(publicDir, 'resume', 'index.html')
+    const resumeHtml = path.resolve(publicDir, 'about', 'resume', 'index.html')
     console.log('Reading', resumeHtml, '...')
 
     const html = await readFileAsync(resumeHtml, 'utf-8')
