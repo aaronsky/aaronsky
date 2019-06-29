@@ -8,7 +8,6 @@
     "scripts": {
         "build": "gatsby build",
         "dev": "gatsby develop",
-        "graphql": "gql-gen --config codegen.yml",
         "test": "jest",
         "coverage": "jest --coverage | codecov"
     },
@@ -50,16 +49,13 @@
         "@types/react-helmet": "^5.0.3",
         "@types/html-pdf": "^2.1.2",
         "codecov": "^3.0.0",
-        "graphql-code-generator": "^0.15.0",
         "html-pdf": "^2.2.0",
         "husky": "^1.3.1",
         "jest": "^23.0.0",
         "prettier": "^1.15.3",
         "pretty-quick": "^1.8.0",
         "ts-jest": "^23.0.0",
-        "typescript": "^3.2.0",
-        "graphql-codegen-typescript-common": "0.15.2",
-        "graphql-codegen-typescript-client": "0.15.2"
+        "typescript": "^3.2.0"
     },
     "jest": {
         "clearMocks": true,
