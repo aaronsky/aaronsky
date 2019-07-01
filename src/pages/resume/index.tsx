@@ -2,8 +2,11 @@ import { graphql } from 'gatsby'
 import moment from 'moment'
 import * as React from 'react'
 import Helmet from 'react-helmet'
-import { EmptyLayout } from '../../components/layouts'
+import 'typeface-roboto'
+import 'typeface-roboto-mono'
 import * as brandOutline from '../../assets/brand/outline.svg'
+import '../../css/reset.css'
+import '../../css/syntax.css'
 import * as styles from './index.module.css'
 
 export const getDatesString = (
@@ -61,74 +64,69 @@ const ResumeItem = ({ item }: any) => {
 }
 
 export default ({ data }: any) => (
-    <EmptyLayout>
-        <div className={styles.resume}>
-            <Helmet title="Resume" />
-            <header>
-                <span>
-                    <h1 className={styles.resumeHeaderHeading}>Aaron Sky</h1>
-                </span>
-                <span>
-                    <h2 className={styles.resumeHeaderSubheading}>
-                        <a href={`mailto:${data.site.meta.email}`}>
-                            {data.site.meta.email}
-                        </a>{' '}
-                        •&nbsp;
-                        <a href={data.site.meta.site}>
-                            {data.site.meta.site.replace(/(^\w+:|^)\/\//, '')}
-                        </a>{' '}
-                        •&nbsp;
-                        <a href={data.site.meta.github}>
-                            {data.site.meta.github.replace(/(^\w+:|^)\/\//, '')}
-                        </a>
-                    </h2>
-                </span>
-                <hr className={styles.resumeHeaderLine} />
-            </header>
-            <ResumeSection heading="Experience">
-                {data.allWorkJson.jobs.map(({ work }: any) => (
-                    <ResumeItem item={work} />
+    <div className={styles.resume}>
+        <Helmet title="Resume" />
+        <header>
+            <span>
+                <h1 className={styles.resumeHeaderHeading}>Aaron Sky</h1>
+            </span>
+            <span>
+                <h2 className={styles.resumeHeaderSubheading}>
+                    <a href={`mailto:${data.site.meta.email}`}>
+                        {data.site.meta.email}
+                    </a>{' '}
+                    •&nbsp;
+                    <a href={data.site.meta.site}>
+                        {data.site.meta.site.replace(/(^\w+:|^)\/\//, '')}
+                    </a>{' '}
+                    •&nbsp;
+                    <a href={data.site.meta.github}>
+                        {data.site.meta.github.replace(/(^\w+:|^)\/\//, '')}
+                    </a>
+                </h2>
+            </span>
+            <hr className={styles.resumeHeaderLine} />
+        </header>
+        <ResumeSection heading="Experience">
+            {data.allWorkJson.jobs.map(({ work }: any) => (
+                <ResumeItem item={work} />
+            ))}
+        </ResumeSection>
+        <ResumeSection heading="Projects">
+            {data.allProjectsJson.projects.map(({ project }: any) => (
+                <ResumeItem item={project} />
+            ))}
+        </ResumeSection>
+        <ResumeSection heading="Skills">
+            <h4 className={styles.resumeProjectHeading}>
+                Selected by relevance and order of current confidence
+            </h4>
+            <div className={styles.resumeProjectDescription}>
+                {data.allSkillsJson.edges.map(({ skill }: any) => (
+                    <span className={styles.resumeSkillItem} key={skill.tool}>
+                        <strong>{skill.tool}</strong>
+                        <em>{`(${skill.time})`}</em>
+                    </span>
                 ))}
-            </ResumeSection>
-            <ResumeSection heading="Projects">
-                {data.allProjectsJson.projects.map(({ project }: any) => (
-                    <ResumeItem item={project} />
-                ))}
-            </ResumeSection>
-            <ResumeSection heading="Skills">
-                <h4 className={styles.resumeProjectHeading}>
-                    Selected by relevance and order of current confidence
-                </h4>
-                <div className={styles.resumeProjectDescription}>
-                    {data.allSkillsJson.edges.map(({ skill }: any) => (
-                        <span
-                            className={styles.resumeSkillItem}
-                            key={skill.tool}
-                        >
-                            <strong>{skill.tool}</strong>
-                            <em>{`(${skill.time})`}</em>
-                        </span>
-                    ))}
-                </div>
-            </ResumeSection>
-            <ResumeSection heading="Education">
-                <p className={styles.resumeProjectDescription}>{`${
-                    data.allPortfolioJson.edges[0].education.school
-                }, ${data.allPortfolioJson.edges[0].education.location}`}</p>
-                <p className={styles.resumeProjectDescription}>{`${
-                    data.allPortfolioJson.edges[0].education.degree
-                }, ${data.allPortfolioJson.edges[0].education.date}`}</p>
-            </ResumeSection>
-            <footer className={styles.resumeFooter}>
-                <hr className={styles.resumeFooterLine} />
-                <img
-                    className={styles.resumeFooterLogo}
-                    src={brandOutline}
-                    alt={`${data.site.meta.author} brand logo`}
-                />
-            </footer>
-        </div>
-    </EmptyLayout>
+            </div>
+        </ResumeSection>
+        <ResumeSection heading="Education">
+            <p className={styles.resumeProjectDescription}>{`${
+                data.allPortfolioJson.edges[0].education.school
+            }, ${data.allPortfolioJson.edges[0].education.location}`}</p>
+            <p className={styles.resumeProjectDescription}>{`${
+                data.allPortfolioJson.edges[0].education.degree
+            }, ${data.allPortfolioJson.edges[0].education.date}`}</p>
+        </ResumeSection>
+        <footer className={styles.resumeFooter}>
+            <hr className={styles.resumeFooterLine} />
+            <img
+                className={styles.resumeFooterLogo}
+                src={brandOutline}
+                alt={`${data.site.meta.author} brand logo`}
+            />
+        </footer>
+    </div>
 )
 
 export const query = graphql`
