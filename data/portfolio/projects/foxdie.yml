@@ -1,8 +1,8 @@
 title: Foxdie
-image: sapientnitro.png
-link: 'http://www.sapientnitro.com/'
+image: ''
+link: '#'
 type: Developed on behalf of Wayfair
-description: Rust application for deleting stale remote branches and pull requests on any GitHub or Gitlab repository, regardless of cloud/on-prem situation. Leverages libgit2 under the hood to achieve performance goals. Created a procedure for discerning between multiple SCMs using only a Git remote URL and an access token and adapted it for idiomatic Rust. Foxdie has deleted thousands of branches and hundreds of pull requests in its service life, reducing storage footprint and fetch times on several monorepos. 
+description: Rust application for deleting stale remote branches and pull requests on any GitHub or Gitlab repository, regardless of cloud/on-prem situation. Leverages libgit2 under the hood to achieve performance goals. Created a procedure for discerning between multiple SCMs using only a Git remote URL and an access token and adapted it for idiomatic Rust. Foxdie has deleted thousands of branches and hundreds of pull requests over its service life, reducing storage footprint and fetch times on several monorepos. 
 start: '2018-07-30'
 end: '2019-07-01'
 languages:
