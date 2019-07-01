@@ -2,7 +2,7 @@ employer: Wayfair
 title: App Platforms Engineer L3
 image: wayfair.png
 link: 'http://www.wayfair.com/'
-description: Led a team of four to create tools to support the development of apps across Wayfair. Maintained and administered our Jenkins and Buildkite continuous integration platforms on iOS and Android. Drove a substantial SCM migration across a team of over 100 developers. 
+description: Led a team of four to create tools to support the development of apps across Wayfair. Maintained and administered our Jenkins and Buildkite continuous integration platforms on iOS and Android. Drove a substantial SCM migration across a distributed team of over 100 developers and over 20 repositoriies from Gitlab Enterprise to GitHub Enterprise. 
 location: 'Boston, MA'
 start: '2017-07-24'
 languages:
@@ -14,4 +14,4 @@ platforms:
     - ios
     - android
 resume: true
-ignore: false
+
