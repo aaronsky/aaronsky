@@ -60,17 +60,20 @@ const getResumeHtml = async publicDir => {
     const resumeHtml = path.resolve(publicDir, 'resume', 'index.html')
     console.log('Reading', resumeHtml, '...')
 
-    const html = await readFileAsync(resumeHtml, 'utf-8')
+    const html = (await readFileAsync(resumeHtml, 'utf-8')).replace(
+        /url\(\//gi,
+        `url(file://${publicDir}/`
+    )
+
     console.log('Successfully loaded', resumeHtml)
 
     return html
 }
 
-const writePdfToFile = async (html, filepath, publicDir) => {
+const writePdfToFile = async (html, filepath) => {
     console.log('Writing new PDF to', filepath)
 
     const options = {
-        base: `file://${publicDir}`,
         border: {
             top: '0.30in',
             left: '0.65in',

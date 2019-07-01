@@ -2,12 +2,11 @@
 /* ================================================ */
 
 :root {
-    --base-font: 'Roboto', sans-serif;
+    --base-font: Tahoma, Arial, sans-serif;
     --heading-font: var(--base-font);
     --caption-font: var(--base-font);
-    --code-font: 'Roboto Mono', monospace;
+    --code-font: "Courier New", Courier, monospace;
     --alt-font: var(--base-font);
-    --icons-font: 'FontAwesome', sans-serif;
     --doc-font-size: 16;
     --doc-line-height: 24;
     --border-radius: 3px;
@@ -28,9 +27,4 @@ p {
 
 li {
     font-size: 16pt;
-}
-
-i {
-    font-family: var(--icons-font);
-    font-size: 28pt;
 }

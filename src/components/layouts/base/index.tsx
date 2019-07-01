@@ -1,7 +1,5 @@
 import { graphql, StaticQuery } from 'gatsby'
 import * as React from 'react'
-import 'typeface-roboto'
-import 'typeface-roboto-mono'
 import '../../../css/reset.css'
 import '../../../css/syntax.css'
 import Head from '../../head'

@@ -9,7 +9,7 @@
 
 .highlight {
     background-color: #efefef;
-    font-family: Roboto Mono, monospace;
+    font-family: "Courier New", Courier, monospace;
     color: #333332;
     margin-bottom: 1.5em;
     border-radius: 0px;
@@ -482,7 +482,7 @@
 
 .CodeRay {
     background-color: #efefef;
-    font-family: Roboto Mono, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-size: 12pt;
     color: #333332;
     margin-bottom: 1.5em;
@@ -493,8 +493,6 @@
     margin: 0px;
     padding: 1em;
 }
-
-div.CodeRay {}
 
 span.CodeRay {
     white-space: pre;
@@ -745,8 +743,6 @@ ol.CodeRay li {
     font-weight: bold
 }
 
-.CodeRay .operator {}
-
 .CodeRay .predefined-constant {
     font-weight: bold
 }
@@ -817,8 +813,6 @@ ol.CodeRay li {
     color: #d20;
 }
 
-.CodeRay .string .string {}
-
 .CodeRay .string .string .string {
     background-color: #ffd0d0
 }
@@ -838,8 +832,6 @@ ol.CodeRay li {
 .CodeRay .shell {
     color: #d14
 }
-
-.CodeRay .shell .content {}
 
 .CodeRay .shell .delimiter {
     color: #d14
