@@ -2,7 +2,7 @@ employer: Xamarin
 title: Mobile Testing Intern
 image: xamagon.svg
 link: 'http://xamarin.com/'
-description: 'Wrote UI automation tests, built Chef infrastructure for maintaining bots, ported new Apple and Google samples to Xamarin. Responsible for automating product sample testing, filing and verifying bugs in the Xamarin platform, managing and enhancing internal QA infrastructure using Chef, overseeing automated test runs and porting newly released iOS and Android samples to Xamarin.iOS and Xamarin.Android, respectively.'
+description: 'Contributed UI tests to product sample automation suite and oversaw test runs. Filled and verified bugs in the Xamarin platform. Managed and enhanced internal QA infrastructure using Chef. Drove QA-side of launch of day one support for the newly released Apple Watch. Ported newly released iOS and Android samples to come from Apple WWDC and Google I/O 2015 to Xamarin.iOS and Xamarin.Android, respectively.'
 location: 'Boston, MA'
 start: '2015-01-12'
 end: '2015-08-14'
