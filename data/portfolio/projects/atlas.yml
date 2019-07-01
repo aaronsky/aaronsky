@@ -1,0 +1,17 @@
+title: Atlas
+image: learnvcs.png
+link: 'http://github.com/igme-rit/contribute/'
+type: Developed on behalf of RIT
+start: '2016-01-24'
+end: '2016-05-20'
+languages:
+    - JavaScript
+    - C++
+platforms:
+    - node
+roles:
+    - Project Manager
+    - Back End
+    - Content Editor
+resume: false
+ignore: true

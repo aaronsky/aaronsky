@@ -1,4 +1,4 @@
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import * as React from 'react'
 import * as resumePdf from '../assets/portfolio/files/resume.pdf'
 import { BaseLayout } from '../components/layouts'

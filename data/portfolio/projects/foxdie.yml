@@ -1,0 +1,15 @@
+title: Foxdie
+image: sapientnitro.png
+link: 'http://www.sapientnitro.com/'
+type: Developed on behalf of Wayfair
+description: "Rust is cool"
+start: '2018-07-30'
+end: '2019-07-01'
+languages:
+    - Rust
+platforms:
+    - rust
+roles:
+    - Solely Responsible
+resume: true
+ignore: false

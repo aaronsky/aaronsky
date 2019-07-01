@@ -42,17 +42,16 @@ const ResumeItem = ({ item }: any) => {
             item.end,
             false
         )})`
-        description = `${item.longDescription || item.description} (${
-            item.type
-        })`
+        description = `${item.description} (${item.type})`
     } else {
         heading = `${item.title}, ${item.employer} – ${getDatesString(
             item.start,
             item.end,
             true
         )}`
-        description = `${item.longDescription || item.description}`
+        description = item.description
     }
+
     return (
         <div>
             <h3 className={styles.resumeProjectHeading}>
@@ -63,74 +62,82 @@ const ResumeItem = ({ item }: any) => {
     )
 }
 
-export default ({ data }: any) => (
-    <div className={styles.resume}>
-        <Helmet title="Resume" />
-        <header>
-            <span>
-                <h1 className={styles.resumeHeaderHeading}>Aaron Sky</h1>
-            </span>
-            <span>
-                <h2 className={styles.resumeHeaderSubheading}>
-                    <a href={`mailto:${data.site.meta.email}`}>
-                        {data.site.meta.email}
-                    </a>{' '}
-                    •&nbsp;
-                    <a href={data.site.meta.site}>
-                        {data.site.meta.site.replace(/(^\w+:|^)\/\//, '')}
-                    </a>{' '}
-                    •&nbsp;
-                    <a href={data.site.meta.github}>
-                        {data.site.meta.github.replace(/(^\w+:|^)\/\//, '')}
-                    </a>
-                </h2>
-            </span>
-            <hr className={styles.resumeHeaderLine} />
-        </header>
-        <ResumeSection heading="Experience">
-            {data.allWorkJson.jobs.map(({ work }: any) => (
-                <ResumeItem item={work} />
-            ))}
-        </ResumeSection>
-        <ResumeSection heading="Projects">
-            {data.allProjectsJson.projects.map(({ project }: any) => (
-                <ResumeItem item={project} />
-            ))}
-        </ResumeSection>
-        <ResumeSection heading="Skills">
-            <h4 className={styles.resumeProjectHeading}>
-                Selected by relevance and order of current confidence
-            </h4>
-            <div className={styles.resumeProjectDescription}>
-                {data.allSkillsJson.edges.map(({ skill }: any) => (
-                    <span className={styles.resumeSkillItem} key={skill.tool}>
-                        <strong>{skill.tool}</strong>
-                        <em>{`(${skill.time})`}</em>
-                    </span>
+export default ({ data }: any) => {
+    const { jobs = [] } = data.allWorkYaml || {}
+    const { projects = [] } = data.allProjectsYaml || {}
+
+    return (
+        <div className={styles.resume}>
+            <Helmet title="Resume" />
+            <header>
+                <span>
+                    <h1 className={styles.resumeHeaderHeading}>Aaron Sky</h1>
+                </span>
+                <span>
+                    <h2 className={styles.resumeHeaderSubheading}>
+                        <a href={`mailto:${data.site.meta.email}`}>
+                            {data.site.meta.email}
+                        </a>{' '}
+                        •&nbsp;
+                        <a href={data.site.meta.site}>
+                            {data.site.meta.site.replace(/(^\w+:|^)\/\//, '')}
+                        </a>{' '}
+                        •&nbsp;
+                        <a href={data.site.meta.github}>
+                            {data.site.meta.github.replace(/(^\w+:|^)\/\//, '')}
+                        </a>
+                    </h2>
+                </span>
+                <hr className={styles.resumeHeaderLine} />
+            </header>
+            <ResumeSection heading="Experience">
+                {jobs.map(({ work }: any) => (
+                    <ResumeItem item={work} />
                 ))}
-            </div>
-        </ResumeSection>
-        <ResumeSection heading="Education">
-            <p className={styles.resumeProjectDescription}>{`${
-                data.allPortfolioJson.edges[0].education.school
-            }, ${data.allPortfolioJson.edges[0].education.location}`}</p>
-            <p className={styles.resumeProjectDescription}>{`${
-                data.allPortfolioJson.edges[0].education.degree
-            }, ${data.allPortfolioJson.edges[0].education.date}`}</p>
-        </ResumeSection>
-        <footer className={styles.resumeFooter}>
-            <hr className={styles.resumeFooterLine} />
-            <img
-                className={styles.resumeFooterLogo}
-                src={brandOutline}
-                alt={`${data.site.meta.author} brand logo`}
-            />
-        </footer>
-    </div>
-)
+            </ResumeSection>
+            <ResumeSection heading="Projects">
+                {projects.map(({ project }: any) => (
+                    <ResumeItem item={project} />
+                ))}
+            </ResumeSection>
+            <ResumeSection heading="Skills">
+                <h4 className={styles.resumeProjectHeading}>
+                    Selected by relevance and order of current confidence
+                </h4>
+                <div className={styles.resumeProjectDescription}>
+                    {data.allSkillsYaml.edges.map(({ skill }: any) => (
+                        <span
+                            className={styles.resumeSkillItem}
+                            key={skill.tool}
+                        >
+                            <strong>{skill.tool}</strong>
+                            <em>{`(${skill.time})`}</em>
+                        </span>
+                    ))}
+                </div>
+            </ResumeSection>
+            <ResumeSection heading="Education">
+                <p className={styles.resumeProjectDescription}>{`${
+                    data.allPortfolioYaml.edges[0].education.school
+                }, ${data.allPortfolioYaml.edges[0].education.location}`}</p>
+                <p className={styles.resumeProjectDescription}>{`${
+                    data.allPortfolioYaml.edges[0].education.degree
+                }, ${data.allPortfolioYaml.edges[0].education.date}`}</p>
+            </ResumeSection>
+            <footer className={styles.resumeFooter}>
+                <hr className={styles.resumeFooterLine} />
+                <img
+                    className={styles.resumeFooterLogo}
+                    src={brandOutline}
+                    alt={`${data.site.meta.author} brand logo`}
+                />
+            </footer>
+        </div>
+    )
+}
 
 export const query = graphql`
-    fragment Work on WorkJson {
+    fragment Work on WorkYaml {
         id
         title
         employer
@@ -139,11 +146,10 @@ export const query = graphql`
         start
         end
         description
-        longDescription
         languages
     }
 
-    fragment Project on ProjectsJson {
+    fragment Project on ProjectsYaml {
         id
         title
         image
@@ -153,10 +159,10 @@ export const query = graphql`
         end
         roles
         languages
-        longDescription
+        description
     }
 
-    fragment Education on PortfolioJson {
+    fragment Education on PortfolioYaml {
         image
         school
         location
@@ -173,7 +179,7 @@ export const query = graphql`
                 github
             }
         }
-        allWorkJson(
+        allWorkYaml(
             sort: { fields: [start], order: DESC }
             filter: { ignore: { eq: false }, resume: { eq: true } }
         ) {
@@ -183,7 +189,7 @@ export const query = graphql`
                 }
             }
         }
-        allProjectsJson(
+        allProjectsYaml(
             sort: { fields: [start], order: DESC }
             filter: { ignore: { eq: false }, resume: { eq: true } }
         ) {
@@ -193,14 +199,14 @@ export const query = graphql`
                 }
             }
         }
-        allPortfolioJson {
+        allPortfolioYaml {
             edges {
                 education: node {
                     ...Education
                 }
             }
         }
-        allSkillsJson {
+        allSkillsYaml {
             edges {
                 skill: node {
                     time
