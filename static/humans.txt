@@ -8,5 +8,5 @@ From: Boston, Massachusetts, United States
 Last update: 06/02/2017
 Language: English
 Standards: HTML5, Sass
-Components: Bourbon, Neat, Font Awesome, Roboto
+Components: Bourbon, Neat, Font Awesome
 Code written using: Visual Studio Code
