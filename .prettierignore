@@ -1,0 +1,10 @@
+.vscode/
+.prettierrc
+*.json
+*.md
+*.css
+*.yml
+*.pdf
+*.svg
+*.png
+*.jpg

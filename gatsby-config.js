@@ -1,10 +1,10 @@
-const packageJson = require('./package.json');
+const packageJson = require('./package.json')
 
 module.exports = {
     siteMetadata: {
         title: 'Portfolio',
         author: 'Aaron Sky',
-        caption: '📱 App • 🌐 Web • 🎮 Game',
+        caption: 'Tools and Build Engineer for Apps, Web, Games',
         email: 'aaronsky@skyaaron.com',
         site: 'https://skyaaron.com',
         linkedin: 'https://www.linkedin.com/in/aaronsky/',
@@ -48,9 +48,9 @@ module.exports = {
                 logo: './src/assets/site/favicon.png',
                 injectHTML: true,
                 icons: {
-                    android: { background: '#053a71', },
-                    appleIcon: { background: '#053a71', },
-                    appleStartup: { background: '#053a71', },
+                    android: { background: '#053a71' },
+                    appleIcon: { background: '#053a71' },
+                    appleStartup: { background: '#053a71' },
                     coast: false,
                     favicons: true,
                     firefox: false,
@@ -60,5 +60,5 @@ module.exports = {
                 },
             },
         },
-    ]
-};
+    ],
+}

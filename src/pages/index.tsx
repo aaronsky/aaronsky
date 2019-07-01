@@ -1,47 +1,44 @@
-import Link from 'gatsby-link';
-import * as React from 'react';
+import { graphql, Link } from 'gatsby'
+import * as React from 'react'
+import Helmet from 'react-helmet'
+import * as resumePdf from '../assets/portfolio/files/resume.pdf'
+import { BaseLayout } from '../components/layouts'
+import * as styles from './index.module.css'
 
-import { BlogPostExcerpt } from '../components/blog';
+export default ({ data }: any) => (
+    <BaseLayout>
+        <div className={styles.about}>
+            <div
+                dangerouslySetInnerHTML={{
+                    __html: data.markdownRemark.html,
+                }}
+            />
+            <p>
+                My full resume{' '}
+                <a href={resumePdf} className={styles.aboutLink}>
+                    can be found here
+                </a>
+                . You can{' '}
+                <Link to="/contact/" className={styles.aboutLink}>
+                    contact me here
+                </Link>
+                .
+            </p>
+        </div>
+    </BaseLayout>
+)
 
-interface MarkdownEdge {
-    node: MarkdownRemark;
-}
-
-interface IndexPageProps {
-    data: {
-        site: Site;
-        allMarkdownRemark: MarkdownRemarkConnection;
-    };
-}
-
-const renderBlogPost = ({ node }: MarkdownEdge) => <BlogPostExcerpt meta={node} key={node.fields.slug} />;
-
-export default ({ data }: IndexPageProps) => (
-    <div>
-        {data.allMarkdownRemark.edges.map(renderBlogPost)}
-    </div>
-);
-
-export const pageQuery = graphql`
-    query IndexQuery {
+export const query = graphql`
+    {
         site {
             meta: siteMetadata {
-                title
+                linkedin
+                github
+                npm
             }
         }
-        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-            edges {
-                node {
-                    excerpt
-                    fields {
-                        slug
-                    }
-                    frontmatter {
-                        date(formatString: "DD MMMM, YYYY")
-                        title
-                    }
-                }
-            }
+        markdownRemark(fields: { slug: { eq: "/home/" } }) {
+            html
         }
     }
-`;
+`
