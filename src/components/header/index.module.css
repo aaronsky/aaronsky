@@ -1,6 +1,7 @@
 @import url("../../css/animations.module.css");
 @import url("../../css/breakpoints.css");
 @import url("../../css/colors.css");
+
 .header {
     margin: 3rem auto;
     width: 100%;
@@ -48,9 +49,9 @@
 }
 
 .captionItem {
-    font-size: 12pt;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-size: 16pt;
+    font-weight: 400;
+    /* text-transform: uppercase; */
     margin-bottom: 0;
 }
 
@@ -61,7 +62,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 2px solid var(--darkest-blue);
+    border-bottom: 1px solid var(--darkest-blue);
 }
 
 .navigationItem {
@@ -84,9 +85,11 @@ a:hover.navigationItem {
     .header {
         width: 75%;
     }
+
     .logo {
         height: 60px;
     }
+
     .headline {
         font-size: 42pt;
     }

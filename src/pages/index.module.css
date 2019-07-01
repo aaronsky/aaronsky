@@ -1,22 +1,26 @@
 @import url("../css/colors.css");
 
-
 /*
    About page
    ========================================================================== */
 
-.aboutHeading {
+.about :global(h1), 
+.about :global(h2), 
+.about :global(h3), 
+.about :global(h4), 
+.about :global(h5), 
+.about :global(h6) {
     font-size: 28pt;
     font-weight: 600;
     color: var(--darkest-blue);
 }
 
-.aboutBody {
+.about :global(p) {
     font-size: 14pt;
     margin-bottom: 2rem;
 }
 
-.aboutLink {
+.about :global(a) {
     color: var(--link-color);
 }
 
@@ -85,7 +89,7 @@
     text-justify: inter-word;
 }
 
-.resumeSkillItem > strong~em {
+.resumeSkillItem>strong~em {
     margin-left: 0.25rem;
     margin-right: 0.25rem;
 }

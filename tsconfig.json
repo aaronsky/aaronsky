@@ -1,18 +1,23 @@
 {
     "compilerOptions": {
-        "sourceMap": true,
-        "noImplicitAny": true,
         "module": "commonjs",
-        "target": "esnext",
+        "esModuleInterop": true,
+        "sourceMap": true,
+        "target": "es2017",
+        "strict": true,
         "jsx": "react",
+        "declaration": true,
+        "outDir": "dist",
         "lib": [
             "dom",
             "es2015",
             "es2017"
         ],
     },
+    "compileOnSave": true,
     "include": [
         "src/**/*.ts",
         "src/**/*.tsx",
+        "src/**/*.d.ts"
     ]
 }
