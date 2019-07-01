@@ -1,0 +1,13 @@
+employer: Fangamer
+title: Node Developer - Contract
+image: fangamer.svg
+link: 'http://www.fangamer.com/'
+description: 'Responsible for delivering a Slack-based time tracking tool for use in a small, distributed office setting. Utilized principles of test driven development, client-focused delivery and twelve-factor application design.'
+start: '2016-01-24'
+end: '2016-05-26'
+languages:
+    - TypeScript
+platforms:
+    - node
+resume: true
+ignore: false

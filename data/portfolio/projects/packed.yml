@@ -1,0 +1,15 @@
+title: Packed
+image: packed.png
+link: 'https://www.microsoft.com/en-us/store/apps/packed/9nblggh0f0gr'
+type: Personal Project
+description: 'A package tracking application for Windows Phone 8 and Windows 8 developed using C# and XAML. Made extensive use of USPS, UPS and FedEx APIs and Windows Presentation Foundation. Independently created.'
+start: '2013-10-03'
+end: '2014-01-08'
+languages:
+    - 'C#'
+platforms:
+    - windows
+roles:
+    - Full Stack
+resume: false
+ignore: true

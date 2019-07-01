@@ -15,7 +15,7 @@ module.exports = {
     plugins: [
         'gatsby-plugin-typescript',
         'gatsby-plugin-react-helmet',
-        'gatsby-transformer-json',
+        'gatsby-transformer-yaml',
         {
             resolve: 'gatsby-source-filesystem',
             options: {
@@ -30,17 +30,7 @@ module.exports = {
                 path: `${__dirname}/src/pages`,
             },
         },
-        {
-            resolve: 'gatsby-transformer-remark',
-            options: {},
-        },
-        {
-            resolve: 'gatsby-plugin-nprogress',
-            options: {
-                color: '#3d638c',
-                showSpinner: false,
-            },
-        },
+        'gatsby-transformer-remark',
         'gatsby-plugin-remove-trailing-slashes',
         {
             resolve: 'gatsby-plugin-favicon',
