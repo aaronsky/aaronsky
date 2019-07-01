@@ -1,18 +1,14 @@
 - 
-    time: 8yrs
-    tool: Objective-C/Swift
+    skill: Swift/Objective-C
 - 
-    time: 5yrs
-    tool: JavaScript
+    skill: JavaScript/TypeScript
+-
+    skill: Rust
 - 
-    time: 5yrs
-    tool: 'C#'
+    skill: 'C#'
 - 
-    time: 7yrs
-    tool: Java
+    skill: Java
 - 
-    time: 3yrs
-    tool: Ruby
+    skill: C++
 - 
-    time: 3yrs
-    tool: C++
+    skill: Ruby

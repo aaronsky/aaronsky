@@ -106,21 +106,20 @@ export default ({ data }: any) => {
                     {data.allSkillsYaml.edges.map(({ skill }: any) => (
                         <span
                             className={styles.resumeSkillItem}
-                            key={skill.tool}
+                            key={skill.skill}
                         >
-                            <strong>{skill.tool}</strong>
-                            <em>{`(${skill.time})`}</em>
+                            <strong>{skill.skill}</strong>
                         </span>
                     ))}
                 </div>
             </ResumeSection>
             <ResumeSection heading="Education">
-                <p className={styles.resumeProjectDescription}>{`${
-                    data.allPortfolioYaml.edges[0].education.school
-                }, ${data.allPortfolioYaml.edges[0].education.location}`}</p>
-                <p className={styles.resumeProjectDescription}>{`${
-                    data.allPortfolioYaml.edges[0].education.degree
-                }, ${data.allPortfolioYaml.edges[0].education.date}`}</p>
+                <p
+                    className={styles.resumeProjectDescription}
+                >{`${data.allPortfolioYaml.edges[0].education.school}, ${data.allPortfolioYaml.edges[0].education.location}`}</p>
+                <p
+                    className={styles.resumeProjectDescription}
+                >{`${data.allPortfolioYaml.edges[0].education.degree}, ${data.allPortfolioYaml.edges[0].education.date}`}</p>
             </ResumeSection>
             <footer className={styles.resumeFooter}>
                 <hr className={styles.resumeFooterLine} />
@@ -179,7 +178,7 @@ export const query = graphql`
         }
         allWorkYaml(
             sort: { fields: [start], order: DESC }
-            filter: { ignore: { eq: false }, resume: { eq: true } }
+            filter: { resume: { eq: true } }
         ) {
             jobs: edges {
                 work: node {
@@ -189,7 +188,7 @@ export const query = graphql`
         }
         allProjectsYaml(
             sort: { fields: [start], order: DESC }
-            filter: { ignore: { eq: false }, resume: { eq: true } }
+            filter: { resume: { eq: true } }
         ) {
             projects: edges {
                 project: node {
@@ -207,8 +206,7 @@ export const query = graphql`
         allSkillsYaml {
             edges {
                 skill: node {
-                    time
-                    tool
+                    skill
                 }
             }
         }

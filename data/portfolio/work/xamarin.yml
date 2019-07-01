@@ -14,4 +14,3 @@ platforms:
     - ios
     - android
 resume: true
-ignore: false
