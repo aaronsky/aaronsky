@@ -2,8 +2,8 @@ import { graphql } from 'gatsby'
 import moment from 'moment'
 import * as React from 'react'
 import Helmet from 'react-helmet'
-import { EmptyLayout } from '../components/layouts'
-import * as brandOutline from '../assets/brand/outline.svg'
+import { EmptyLayout } from '../../components/layouts'
+import * as brandOutline from '../../assets/brand/outline.svg'
 import * as styles from './index.module.css'
 
 export const getDatesString = (

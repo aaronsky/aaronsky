@@ -1,6 +1,5 @@
 import { graphql, Link } from 'gatsby'
 import * as React from 'react'
-import Helmet from 'react-helmet'
 import * as resumePdf from '../assets/portfolio/files/resume.pdf'
 import { BaseLayout } from '../components/layouts'
 import * as styles from './index.module.css'
@@ -18,11 +17,8 @@ export default ({ data }: any) => (
                 <a href={resumePdf} className={styles.aboutLink}>
                     can be found here
                 </a>
-                . You can{' '}
-                <Link to="/contact/" className={styles.aboutLink}>
-                    contact me here
-                </Link>
-                .
+                . You can contact me by emailing me at <strong>aaronsky</strong>{' '}
+                [at] <em>this domain</em>.
             </p>
         </div>
     </BaseLayout>
@@ -37,7 +33,7 @@ export const query = graphql`
                 npm
             }
         }
-        markdownRemark(fields: { slug: { eq: "/home/" } }) {
+        markdownRemark(fields: { slug: { eq: "/index/copy/" } }) {
             html
         }
     }
