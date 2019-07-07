@@ -23,6 +23,25 @@ export const getDatesString = (
     return startDate
 }
 
+const jobsToResumeItems = (work: any): any | any[] => {
+    if (Array.isArray(work.roles)) {
+        return work.roles.map((role: any) => (
+            <ResumeItem
+                item={{
+                    type: work.type,
+                    start: role.start,
+                    end: role.end,
+                    description: role.description,
+                    title: role.title,
+                    employer: work.employer,
+                    link: work.link,
+                }}
+            />
+        ))
+    }
+    return <ResumeItem item={work} />
+}
+
 const ResumeSection = (props: any) => (
     <section className={styles.resumeSection}>
         <h2 className={styles.resumeSectionHeading}>{props.heading}</h2>
@@ -89,9 +108,7 @@ export default ({ data }: any) => {
                 <hr className={styles.resumeHeaderLine} />
             </header>
             <ResumeSection heading="Experience">
-                {jobs.map(({ work }: any) => (
-                    <ResumeItem item={work} />
-                ))}
+                {jobs.map(({ work }: any) => jobsToResumeItems(work))}
             </ResumeSection>
             <ResumeSection heading="Projects">
                 {projects.map(({ project }: any) => (
@@ -103,14 +120,16 @@ export default ({ data }: any) => {
                     Selected by relevance and order of current confidence
                 </h4>
                 <div className={styles.resumeProjectDescription}>
-                    {data.allSkillsYaml.edges.map(({ skill }: any) => (
-                        <span
-                            className={styles.resumeSkillItem}
-                            key={skill.skill}
-                        >
-                            <strong>{skill.skill}</strong>
-                        </span>
-                    ))}
+                    {data.allSkillsYaml.edges.map(
+                        ({ skill: { skill } }: any) => (
+                            <span
+                                className={styles.resumeSkillItem}
+                                key={skill}
+                            >
+                                <strong>{skill}</strong>
+                            </span>
+                        )
+                    )}
                 </div>
             </ResumeSection>
             <ResumeSection heading="Education">
@@ -144,6 +163,12 @@ export const query = graphql`
         end
         description
         languages
+        roles {
+            title
+            description
+            start
+            end
+        }
     }
 
     fragment Project on ProjectsYaml {
