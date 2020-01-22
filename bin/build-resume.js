@@ -51,23 +51,14 @@ const getResumePath = async publicDir => {
     }
 
     const filepath = path.resolve(staticDir, filename)
-    console.log('Found', filename, 'at', filepath)
+    console.log('Found matching file at', filepath)
 
     return filepath
 }
 
-const getResumeHtml = async publicDir => {
+const getResumeHtml = publicDir => {
     const resumeHtml = path.resolve(publicDir, 'resume', 'index.html')
-    console.log('Reading', resumeHtml, '...')
-
-    const html = (await readFileAsync(resumeHtml, 'utf-8')).replace(
-        /url\(\//gi,
-        `url(file://${publicDir}/`
-    )
-
-    console.log('Successfully loaded', resumeHtml)
-
-    return html
+    return readFileAsync(resumeHtml, 'utf-8')
 }
 
 const writePdfToFile = async (html, filepath) => {

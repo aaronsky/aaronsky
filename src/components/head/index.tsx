@@ -28,14 +28,6 @@ export default (props: any) => {
             <meta property="og:site_name" content={props.meta.author} />
             <meta property="og:locale" content="en_US" />
             <meta property="article:author" content={props.meta.author} />
-            {/** <!--Twitter metadata--> */}
-            <meta name="twitter:card" content="summary" />
-            <meta name="twitter:site" content="@theaaronsky" />
-            <meta name="twitter:creator" content="@theaaronsky" />
-            <meta name="twitter:url" content={props.meta.site} />
-            <meta name="twitter:title" content={props.meta.author} />
-            <meta name="twitter:description" content={props.meta.caption} />
-            <meta name="twitter:image" content={profileImage} />
             {/** <!-- disallow Twitter from using your site's info for personalization purposes --> */}
             <meta name="twitter:dnt" content="on" />
             {/** <!--Icons--> */}

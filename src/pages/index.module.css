@@ -4,20 +4,19 @@
    About page
    ========================================================================== */
 
-.about :global(h1), 
-.about :global(h2), 
-.about :global(h3), 
-.about :global(h4), 
-.about :global(h5), 
-.about :global(h6) {
-    font-size: 28pt;
+.about :global(h3) {
+    font-size: 24pt;
     font-weight: 600;
     color: var(--darkest-blue);
 }
 
 .about :global(p) {
     font-size: 14pt;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5em;
+}
+
+.about :global(li) {
+    font-size: 14pt;
 }
 
 .about :global(a) {
