@@ -17,8 +17,7 @@ export default ({ data }: any) => (
                 <a href={resumePdf} className={styles.aboutLink}>
                     can be found here
                 </a>
-                . You can contact me by emailing me at <strong>aaronsky</strong>{' '}
-                [at] <em>this domain</em>.
+                .
             </p>
         </div>
     </BaseLayout>

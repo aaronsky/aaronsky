@@ -4,7 +4,7 @@ module.exports = {
     siteMetadata: {
         title: 'Portfolio',
         author: 'Aaron Sky',
-        caption: 'Tools and Build Engineer for Apps, Web, Games',
+        caption: 'Mobile Tools Developer',
         email: 'aaronsky@skyaaron.com',
         site: 'https://skyaaron.com',
         linkedin: 'https://www.linkedin.com/in/aaronsky/',
@@ -38,15 +38,35 @@ module.exports = {
                 logo: './src/assets/site/favicon.png',
                 injectHTML: true,
                 icons: {
-                    android: { background: '#053a71' },
-                    appleIcon: { background: '#053a71' },
-                    appleStartup: { background: '#053a71' },
+                    android: {
+                        background: '#053a71',
+                    },
+                    appleIcon: {
+                        background: '#053a71',
+                    },
+                    appleStartup: {
+                        background: '#053a71',
+                    },
                     coast: false,
                     favicons: true,
                     firefox: false,
                     twitter: false,
                     yandex: false,
                     windows: true,
+                },
+            },
+        },
+        {
+            resolve: 'gatsby-plugin-humans-txt',
+            options: {
+                team: [
+                    {
+                        Developer: 'Aaron Sky',
+                        GitHub: 'aaronsky',
+                    },
+                ],
+                site: {
+                    'Last update': '21/12/2020',
                 },
             },
         },

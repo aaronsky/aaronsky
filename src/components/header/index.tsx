@@ -5,28 +5,23 @@ import * as logo from '../../assets/brand/brand.svg'
 import * as animationStyles from '../../css/animations.module.css'
 import * as styles from './index.module.css'
 
+const join = (...classes: string[]) => classes.join(' ')
+
 const Logo = () => (
     <Link to="/">
         <img
             src={logo}
             title="Home"
-            className={[styles.logo, animationStyles.animated].join(' ')}
+            className={join(styles.logo, animationStyles.animated)}
         />
     </Link>
 )
 
-const Headline = () => (
-    <Link to="/" className={styles.navigationItem}>
-        <h1 className={styles.headline}>Aaron Sky</h1>
+const Title = ({ meta }: any) => (
+    <Link to="/" className={join(styles.navigationItem, styles.navigation)}>
+        <h1 className={styles.author}>{meta.author}</h1>
+        <h3 className={styles.caption}>{meta.caption}</h3>
     </Link>
-)
-
-const Caption = ({ caption }: any) => (
-    <div className={styles.caption}>
-        <h3 className={styles.captionItem} key={caption}>
-            {caption}
-        </h3>
-    </div>
 )
 
 const Navigation = ({ meta }: any) => (
@@ -38,10 +33,11 @@ const Navigation = ({ meta }: any) => (
 )
 
 export default ({ meta }: any) => (
-    <header className={styles.header}>
+    <div>
         <Logo />
-        <Headline />
-        <Caption caption={meta.caption} />
-        <Navigation meta={meta} />
-    </header>
+        <header className={styles.header}>
+            <Title meta={meta} />
+            <Navigation meta={meta} />
+        </header>
+    </div>
 )
