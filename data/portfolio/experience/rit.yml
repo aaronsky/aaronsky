@@ -1,0 +1,10 @@
+name: Rochester Institute of Technology
+image: rit.svg
+link: 'https://www.rit.edu/gccis/igm/'
+location: 'Rochester, NY'
+roles:
+    - title: Web Developer, Teaching Assistant
+      description: Wrote backend for open source education software developed under grant program. Assisted students with questions related to iOS and Android coursework.
+      start: '2015-08-24'
+      end: '2016-05-20'
+resume: false

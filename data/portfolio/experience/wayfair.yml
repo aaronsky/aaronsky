@@ -1,21 +1,17 @@
-employer: Wayfair
+name: Wayfair
 image: wayfair.png
 link: 'http://www.wayfair.com/'
 location: 'Boston, MA'
 roles:
+    - title: Senior Development Platforms Engineer
+      description: Pushed forward migration of build infrastructure from on-premises data centers to autoscaled Google Cloud Platform Compute. Adopted new features in Terraform and Puppet that reduce infrastructure toil. Supported the design of a model for ephemeral testing environments for services teams.
+      start: '2020-04-27'
     - title: Senior App Infrastructure Engineer
       description: Led a team of five to create tools to support the development of apps across Wayfair. Drove a substantial SCM migration across a distributed team of over 100 developers and over 20 repositories from Gitlab Enterprise to GitHub Enterprise. Designed a framework for more performant, reproducible iOS and Android builds on Buildkite. Supported the broader transition to a weekly release of the Storefront iOS application.
       start: '2019-03-01'
+      end: '2020-04-01'
     - title: iOS Platforms Engineer L2
       description: Led a team of three to create tools to support the development of iOS apps in the Storefront division. Maintained and administered our Jenkins and Buddybuild continuous integration platforms on iOS and Android. Created a metrics platform for build system performance and a reporting system to surface regression alerts from local and remote builds to a shared source. Negotiated infrastructural support with partners in Release Engineering to run Swift-based endpoint integration tests on Linux in Docker.
       start: '2017-07-24'
       end: '2019-03-01'
-languages:
-    - Swift
-    - Objective-C
-    - TypeScript
-    - Python
-platforms:
-    - ios
-    - android
 resume: true
