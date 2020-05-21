@@ -3,8 +3,6 @@ import moment from 'moment'
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
 import * as brandOutline from '../../assets/brand/outline.svg'
-import '../../css/reset.css'
-import '../../css/syntax.css'
 import * as styles from './index.module.css'
 
 export const getDatesString = (
@@ -23,95 +21,105 @@ export const getDatesString = (
     return startDate
 }
 
-const jobsToResumeItems = (work: any): any | any[] => {
-    if (Array.isArray(work.roles)) {
-        return work.roles.map((role: any) => (
-            <ResumeItem
-                item={{
-                    type: work.type,
-                    start: role.start,
-                    end: role.end,
-                    description: role.description,
-                    title: role.title,
-                    employer: work.employer,
-                    link: work.link,
-                }}
-            />
-        ))
-    }
-    return <ResumeItem item={work} />
+const ResumeHeader = ({ meta }: { meta: SiteMetadata }) => {
+    return (
+        <header>
+            <span>
+                <h1 className={styles.resumeHeaderHeading}>Aaron Sky</h1>
+            </span>
+            <span>
+                <h2 className={styles.resumeHeaderSubheading}>
+                    <a href={`mailto:${meta.email}`}>{meta.email}</a> •&nbsp;
+                    <a href={meta.site}>
+                        {meta.site.replace(/(^\w+:|^)\/\//, '')}
+                    </a>{' '}
+                    •&nbsp;
+                    <a href={meta.github}>
+                        {meta.github.replace(/(^\w+:|^)\/\//, '')}
+                    </a>
+                </h2>
+            </span>
+            <hr className={styles.resumeHeaderLine} />
+        </header>
+    )
 }
 
-const ResumeSection = (props: any) => (
+const ResumeFooter = ({ meta }: { meta: SiteMetadata }) => {
+    return (
+        <footer className={styles.resumeFooter}>
+            <hr className={styles.resumeFooterLine} />
+            <img
+                className={styles.resumeFooterLogo}
+                src={brandOutline}
+                alt={`${meta.author} brand logo`}
+            />
+        </footer>
+    )
+}
+
+const ResumeSection = (props: { heading: string; children?: any }) => (
     <section className={styles.resumeSection}>
         <h2 className={styles.resumeSectionHeading}>{props.heading}</h2>
         {props.children}
     </section>
 )
 
-const ResumeItem = ({ item }: any) => {
-    const isProject = !!item.type
-    let heading
-    let description
-    if (isProject) {
-        heading = `${item.title} (${getDatesString(
-            item.start,
-            item.end,
-            false
-        )})`
-        description = `${item.description} (${item.type})`
-    } else {
-        heading = `${item.title}, ${item.employer} – ${getDatesString(
-            item.start,
-            item.end,
-            true
-        )}`
-        description = item.description
-    }
+const isExperience = (item: Experience | Project): item is Experience =>
+    (item as Experience).roles !== undefined
 
+const ResumeItem = ({ item }: { item: Experience | Project }) => {
+    const headingElement = (
+        <h2 className={styles.resumeProjectHeading}>
+            <a href={item.link}>{item.name}</a>
+        </h2>
+    )
+    if (isExperience(item)) {
+        return (
+            <>
+                {headingElement}
+                {item.roles.map((role) => (
+                    <>
+                        <h3 className={styles.resumeProjectHeading}>
+                            {`${role.title} – ${getDatesString(
+                                role.start,
+                                role.end,
+                                true
+                            )}`}
+                        </h3>
+                        <p className={styles.resumeProjectDescription}>
+                            {role.description}
+                        </p>
+                    </>
+                ))}
+            </>
+        )
+    }
     return (
-        <div>
-            <h3 className={styles.resumeProjectHeading}>
-                <a href={item.link}>{heading}</a>
-            </h3>
-            <p className={styles.resumeProjectDescription}>{description}</p>
-        </div>
+        <>
+            {headingElement}
+            <p className={styles.resumeProjectDescription}>
+                {item.description}
+            </p>
+        </>
     )
 }
 
-export default ({ data }: any) => {
-    const { jobs = [] } = data.allWorkYaml || {}
+export default ({ data }: { data: GraphQLQuery }) => {
+    const { experiences = [] } = data.allExperienceYaml || {}
     const { projects = [] } = data.allProjectsYaml || {}
+    const education = data.allPortfolioYaml.edges[0].education
 
     return (
         <div className={styles.resume}>
             <Helmet title="Resume" />
-            <header>
-                <span>
-                    <h1 className={styles.resumeHeaderHeading}>Aaron Sky</h1>
-                </span>
-                <span>
-                    <h2 className={styles.resumeHeaderSubheading}>
-                        <a href={`mailto:${data.site.meta.email}`}>
-                            {data.site.meta.email}
-                        </a>{' '}
-                        •&nbsp;
-                        <a href={data.site.meta.site}>
-                            {data.site.meta.site.replace(/(^\w+:|^)\/\//, '')}
-                        </a>{' '}
-                        •&nbsp;
-                        <a href={data.site.meta.github}>
-                            {data.site.meta.github.replace(/(^\w+:|^)\/\//, '')}
-                        </a>
-                    </h2>
-                </span>
-                <hr className={styles.resumeHeaderLine} />
-            </header>
+            <ResumeHeader meta={data.site.meta} />
             <ResumeSection heading="Experience">
-                {jobs.map(({ work }: any) => jobsToResumeItems(work))}
+                {experiences.map(({ experience }) => (
+                    <ResumeItem item={experience} />
+                ))}
             </ResumeSection>
             <ResumeSection heading="Projects">
-                {projects.map(({ project }: any) => (
+                {projects.map(({ project }) => (
                     <ResumeItem item={project} />
                 ))}
             </ResumeSection>
@@ -120,78 +128,88 @@ export default ({ data }: any) => {
                     Selected by relevance and order of current confidence
                 </h4>
                 <div className={styles.resumeProjectDescription}>
-                    {data.allSkillsYaml.edges.map(
-                        ({ skill: { skill } }: any) => (
-                            <span
-                                className={styles.resumeSkillItem}
-                                key={skill}
-                            >
-                                <strong>{skill}</strong>
-                            </span>
-                        )
-                    )}
+                    {data.allSkillsYaml.edges.map(({ skill: { skill } }) => (
+                        <span className={styles.resumeSkillItem} key={skill}>
+                            <strong>{skill}</strong>
+                        </span>
+                    ))}
                 </div>
             </ResumeSection>
             <ResumeSection heading="Education">
                 <p
                     className={styles.resumeProjectDescription}
-                >{`${data.allPortfolioYaml.edges[0].education.school}, ${data.allPortfolioYaml.edges[0].education.location}`}</p>
+                >{`${education.school}, ${education.location}`}</p>
                 <p
                     className={styles.resumeProjectDescription}
-                >{`${data.allPortfolioYaml.edges[0].education.degree}, ${data.allPortfolioYaml.edges[0].education.date}`}</p>
+                >{`${education.degree}, ${education.date}`}</p>
             </ResumeSection>
-            <footer className={styles.resumeFooter}>
-                <hr className={styles.resumeFooterLine} />
-                <img
-                    className={styles.resumeFooterLogo}
-                    src={brandOutline}
-                    alt={`${data.site.meta.author} brand logo`}
-                />
-            </footer>
+            <ResumeFooter meta={data.site.meta} />
         </div>
     )
 }
 
+interface GraphQLQuery {
+    site: {
+        meta: SiteMetadata
+    }
+    allExperienceYaml: {
+        experiences: {
+            experience: Experience
+        }[]
+    }
+    allProjectsYaml: {
+        projects: {
+            project: Project
+        }[]
+    }
+    allPortfolioYaml: {
+        edges: {
+            education: Education
+        }[]
+    }
+    allSkillsYaml: {
+        edges: {
+            skill: {
+                skill: string
+            }
+        }[]
+    }
+}
+
+interface SiteMetadata {
+    author: string
+    site: string
+    email: string
+    github: string
+}
+
+interface Experience {
+    id: string
+    name: string
+    link: string
+    roles: {
+        title: string
+        description: string
+        start: string
+        end?: string
+    }[]
+}
+
+interface Project {
+    id: string
+    name: string
+    link: string
+    description: string
+}
+
+interface Education {
+    school: string
+    location: string
+    degree: string
+    date: string
+}
+
 export const query = graphql`
-    fragment Work on WorkYaml {
-        id
-        title
-        employer
-        image
-        link
-        start
-        end
-        description
-        languages
-        roles {
-            title
-            description
-            start
-            end
-        }
-    }
-
-    fragment Project on ProjectsYaml {
-        id
-        title
-        image
-        link
-        type
-        start
-        end
-        roles
-        languages
-        description
-    }
-
-    fragment Education on PortfolioYaml {
-        image
-        school
-        location
-        degree
-        date
-    }
-
     query ResumeQuery {
         site {
             meta: siteMetadata {
@@ -201,18 +219,18 @@ export const query = graphql`
                 github
             }
         }
-        allWorkYaml(
-            sort: { fields: [start], order: DESC }
+        allExperienceYaml(
+            sort: { fields: roles___start, order: DESC }
             filter: { resume: { eq: true } }
         ) {
-            jobs: edges {
-                work: node {
-                    ...Work
+            experiences: edges {
+                experience: node {
+                    ...Experience
                 }
             }
         }
         allProjectsYaml(
-            sort: { fields: [start], order: DESC }
+            sort: { fields: name, order: ASC }
             filter: { resume: { eq: true } }
         ) {
             projects: edges {
@@ -235,5 +253,31 @@ export const query = graphql`
                 }
             }
         }
+    }
+
+    fragment Experience on ExperienceYaml {
+        id
+        name
+        link
+        roles {
+            title
+            description
+            start
+            end
+        }
+    }
+
+    fragment Project on ProjectsYaml {
+        id
+        name
+        link
+        description
+    }
+
+    fragment Education on PortfolioYaml {
+        school
+        location
+        degree
+        date
     }
 `

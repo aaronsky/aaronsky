@@ -1,0 +1,10 @@
+name: iD Tech Camps
+image: idtc.svg
+link: 'https://www.idtech.com/'
+location: 'Washington, D.C.'
+roles:
+    - title: Instructor
+      description: Responsible for instructing Java and C++ programming to groups of 13-17 year olds with varying levels of programming background. My weeklong course covered basic structures of the language such as variables, code structure and flow control. I also taught my advanced students basic UI, object-oriented programming, and the importance of project scope.
+      start: '2013-06-15'
+      end: '2014-08-02'
+resume: false
