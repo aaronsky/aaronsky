@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby'
 import moment from 'moment'
 import * as React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import * as brandOutline from '../../assets/brand/outline.svg'
 import '../../css/reset.css'
 import '../../css/syntax.css'

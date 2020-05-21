@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import * as profileImage from '../../assets/site/favicon.png'
 import * as safariPinnedTab from '../../assets/site/safari-pinned-tab.svg'
 
