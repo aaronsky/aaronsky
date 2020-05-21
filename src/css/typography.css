@@ -5,13 +5,12 @@
     --base-font: Tahoma, Arial, sans-serif;
     --heading-font: var(--base-font);
     --caption-font: var(--base-font);
-    --code-font: "Courier New", Courier, monospace;
+    --code-font: 'Courier New', Courier, monospace;
     --alt-font: var(--base-font);
     --doc-font-size: 16;
     --doc-line-height: 24;
     --border-radius: 3px;
 }
-
 
 /* set-up the body font-size / line-height */
 

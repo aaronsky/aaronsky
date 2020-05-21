@@ -1,4 +1,4 @@
-@import url("../../css/colors.css");
+@import url('../../css/colors.css');
 
 html {
     background-color: var(--white);
@@ -26,7 +26,7 @@ html {
     margin-bottom: 4pt;
 }
 
-.resumeHeaderSubheading>a {
+.resumeHeaderSubheading > a {
     color: var(--link-color);
     font-style: italic;
     font-size: 10pt;
@@ -68,12 +68,12 @@ html {
     text-justify: inter-word;
 }
 
-.resumeSkillItem>strong~em {
+.resumeSkillItem > strong ~ em {
     margin-left: 0.25rem;
     margin-right: 0.25rem;
 }
 
-.resumeSkillItem~.resumeSkillItem {
+.resumeSkillItem ~ .resumeSkillItem {
     padding-left: 0.25rem;
     border-left: 1pt solid var(--fun-blue);
 }

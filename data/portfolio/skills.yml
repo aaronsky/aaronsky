@@ -1,16 +1,7 @@
-- 
-    skill: Swift/Objective-C
-- 
-    skill: JavaScript/TypeScript
--
-    skill: Rust
--
-    skill: Python
-- 
-    skill: 'C#'
-- 
-    skill: Java
-- 
-    skill: C++
-- 
-    skill: Ruby
+- skill: Swift/Objective-C
+- skill: Go
+- skill: Rust
+- skill: JavaScript/TypeScript
+- skill: Python
+- skill: Java
+- skill: Ruby

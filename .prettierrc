@@ -3,5 +3,10 @@
     "tabWidth": 4,
     "semi": false,
     "singleQuote": true,
-    "parser": "typescript"
+    "overrides": [
+        {
+            "files": ".prettierrc",
+            "options": { "parser": "json" }
+        }
+    ]
 }
