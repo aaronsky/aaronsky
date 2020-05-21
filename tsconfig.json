@@ -8,16 +8,8 @@
         "jsx": "react",
         "declaration": true,
         "outDir": "dist",
-        "lib": [
-            "dom",
-            "es2015",
-            "es2017"
-        ],
+        "lib": ["dom", "es2015", "es2017"]
     },
     "compileOnSave": true,
-    "include": [
-        "src/**/*.ts",
-        "src/**/*.tsx",
-        "src/**/*.d.ts"
-    ]
+    "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts"]
 }
