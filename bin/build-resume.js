@@ -20,17 +20,20 @@ module.exports = async () => {
     await writePdfToFile(resumeHtml, pdfFilePath, publicDir)
 }
 
-const getResumePath = async publicDir => {
+/**
+ * @param {string} publicDir - public directory path
+ */
+const getResumePath = async (publicDir) => {
     const staticDir = path.resolve(publicDir, 'static')
 
     console.log('Reading', staticDir, 'to find an existing resume.(.*).pdf...')
 
     const files = await readdirAsync(staticDir)
     const matches = files.filter(
-        file => file.includes('resume') && path.extname(file) == '.pdf'
+        (file) => file.includes('resume') && path.extname(file) == '.pdf'
     )
     const matchesWithStats = await Promise.all(
-        matches.map(async file => {
+        matches.map(async (file) => {
             const filepath = path.resolve(staticDir, file)
             const stats = await statAsync(filepath)
             return {
@@ -56,15 +59,24 @@ const getResumePath = async publicDir => {
     return filepath
 }
 
-const getResumeHtml = publicDir => {
-    const resumeHtml = path.resolve(publicDir, 'resume', 'index.html')
-    return readFileAsync(resumeHtml, 'utf-8')
+/**
+ * @param {string} publicDir - public directory path
+ */
+const getResumeHtml = (publicDir) => {
+    const resumeHtmlPath = path.resolve(publicDir, 'resume', 'index.html')
+    return readFileAsync(resumeHtmlPath, 'utf-8')
 }
 
-const writePdfToFile = async (html, filepath) => {
+/**
+ * @param {string} html - html content
+ * @param {string} filepath - path to write to
+ * @param {string} baseDir - path resources live in
+ */
+const writePdfToFile = async (html, filepath, baseDir) => {
     console.log('Writing new PDF to', filepath)
 
     const options = {
+        base: 'file://' + baseDir + '/',
         border: {
             top: '0.30in',
             left: '0.65in',
@@ -76,12 +88,12 @@ const writePdfToFile = async (html, filepath) => {
     const result = pdf.create(html, options)
 
     return new Promise((resolve, reject) => {
-        result.toFile(filepath, (err, _info) => {
+        result.toFile(filepath, (err, info) => {
             if (err) {
                 reject(err)
                 return
             }
-            console.log('Successfully wrote', filepath, 'to disk!')
+            console.log('Successfully wrote', info.filename, 'to disk!')
             resolve()
         })
     })
