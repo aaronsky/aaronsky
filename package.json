@@ -7,9 +7,7 @@
     ],
     "scripts": {
         "build": "GATSBY_TELEMETRY_DISABLED=1 gatsby build",
-        "dev": "GATSBY_TELEMETRY_DISABLED=1 gatsby develop",
-        "test": "jest",
-        "coverage": "jest --coverage | codecov"
+        "dev": "GATSBY_TELEMETRY_DISABLED=1 gatsby develop"
     },
     "repository": {
         "type": "git",
