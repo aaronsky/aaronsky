@@ -5,7 +5,7 @@
  */
 
 const { createFilePath } = require('gatsby-source-filesystem')
-const buildResume = require('./bin/build-resume')
+const buildResume = require('./build/resume')
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
     if (node.internal.type !== `MarkdownRemark`) {

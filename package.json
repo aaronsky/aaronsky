@@ -24,58 +24,32 @@
     },
     "homepage": "https://skyaaron.com/",
     "dependencies": {
-        "gatsby": "^2.22.4",
+        "gatsby": "^2.24.23",
         "gatsby-plugin-favicon": "^3.1.6",
         "gatsby-plugin-humans-txt": "^1.1.4",
-        "gatsby-plugin-nprogress": "^2.3.2",
-        "gatsby-plugin-react-helmet": "^3.3.2",
-        "gatsby-plugin-remove-trailing-slashes": "^2.3.3",
-        "gatsby-plugin-typescript": "^2.4.3",
-        "gatsby-source-filesystem": "^2.3.7",
-        "gatsby-transformer-remark": "^2.8.12",
-        "gatsby-transformer-yaml": "^2.4.2",
+        "gatsby-plugin-react-helmet": "^3.3.10",
+        "gatsby-plugin-remove-trailing-slashes": "^2.3.11",
+        "gatsby-plugin-typescript": "^2.4.16",
+        "gatsby-source-filesystem": "^2.3.23",
+        "gatsby-transformer-remark": "^2.8.27",
+        "gatsby-transformer-yaml": "^2.4.10",
         "html-pdf": "^2.2.0",
-        "moment": "^2.26.0",
+        "moment": "^2.27.0",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
-        "react-helmet": "^6.0.0",
+        "react-helmet": "^6.1.0",
         "react-icons": "^3.10.0",
-        "typescript": "^3.9.3"
+        "typescript": "^3.9.7"
     },
     "devDependencies": {
         "@types/html-pdf": "^2.2.0",
-        "@types/jest": "^25.2.3",
-        "@types/node": "^14.0.4",
-        "@types/react": "^16.9.35",
+        "@types/node": "^14.0.27",
+        "@types/react": "^16.9.44",
         "@types/react-dom": "^16.9.8",
         "@types/react-helmet": "^6.0.0",
-        "codecov": "^3.7.1",
         "husky": "^4.2.5",
-        "jest": "^26.0.1",
         "prettier": "^2.0.5",
-        "pretty-quick": "^2.0.1",
-        "ts-jest": "^26.0.0"
-    },
-    "jest": {
-        "clearMocks": true,
-        "coverageDirectory": "coverage",
-        "globals": {
-            "ts-jest": {
-                "tsConfig": "tsconfig.json"
-            }
-        },
-        "moduleFileExtensions": [
-            "ts",
-            "tsx",
-            "js"
-        ],
-        "testEnvironment": "node",
-        "testMatch": [
-            "**/__tests__/*.+(ts|tsx|js)"
-        ],
-        "transform": {
-            "^.+\\.(ts|tsx)$": "ts-jest"
-        }
+        "pretty-quick": "^2.0.1"
     },
     "husky": {
         "hooks": {
