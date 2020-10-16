@@ -39,7 +39,6 @@ const ResumeHeader = ({ meta }: { meta: SiteMetadata }) => {
                     </a>
                 </h2>
             </span>
-            <hr className={styles.resumeHeaderLine} />
         </header>
     )
 }
@@ -47,7 +46,6 @@ const ResumeHeader = ({ meta }: { meta: SiteMetadata }) => {
 const ResumeFooter = ({ meta }: { meta: SiteMetadata }) => {
     return (
         <footer className={styles.resumeFooter}>
-            <hr className={styles.resumeFooterLine} />
             <img
                 className={styles.resumeFooterLogo}
                 src={brandOutline}
@@ -78,18 +76,7 @@ const ResumeItem = ({ item }: { item: Experience | Project }) => {
             <>
                 {headingElement}
                 {item.roles.map((role) => (
-                    <>
-                        <h3 className={styles.resumeProjectHeading}>
-                            {`${role.title} – ${getDatesString(
-                                role.start,
-                                role.end,
-                                true
-                            )}`}
-                        </h3>
-                        <p className={styles.resumeProjectDescription}>
-                            {role.description}
-                        </p>
-                    </>
+                    <ResumeRoleItem key={role.start} role={role} />
                 ))}
             </>
         )
@@ -104,6 +91,15 @@ const ResumeItem = ({ item }: { item: Experience | Project }) => {
     )
 }
 
+const ResumeRoleItem = ({ role }: { role: Role }) => (
+    <>
+        <h3 className={styles.resumeProjectHeading}>
+            {`${role.title} – ${getDatesString(role.start, role.end, true)}`}
+        </h3>
+        <p className={styles.resumeProjectDescription}>{role.description}</p>
+    </>
+)
+
 export default ({ data }: { data: GraphQLQuery }) => {
     const { experiences = [] } = data.allExperienceYaml || {}
     const { projects = [] } = data.allProjectsYaml || {}
@@ -115,18 +111,18 @@ export default ({ data }: { data: GraphQLQuery }) => {
             <ResumeHeader meta={data.site.meta} />
             <ResumeSection heading="Experience">
                 {experiences.map(({ experience }) => (
-                    <ResumeItem item={experience} />
+                    <ResumeItem key={experience.id} item={experience} />
                 ))}
             </ResumeSection>
-            <ResumeSection heading="Projects">
+            <ResumeSection heading="Open Source Projects">
                 {projects.map(({ project }) => (
-                    <ResumeItem item={project} />
+                    <ResumeItem key={project.id} item={project} />
                 ))}
             </ResumeSection>
             <ResumeSection heading="Skills">
-                <h4 className={styles.resumeProjectHeading}>
+                <h3 className={styles.resumeSkillsHeading}>
                     Selected by relevance and order of current confidence
-                </h4>
+                </h3>
                 <div className={styles.resumeProjectDescription}>
                     {data.allSkillsYaml.edges.map(({ skill: { skill } }) => (
                         <span className={styles.resumeSkillItem} key={skill}>
@@ -187,12 +183,14 @@ interface Experience {
     id: string
     name: string
     link: string
-    roles: {
-        title: string
-        description: string
-        start: string
-        end?: string
-    }[]
+    roles: Role[]
+}
+
+interface Role {
+    title: string
+    description: string
+    start: string
+    end?: string
 }
 
 interface Project {

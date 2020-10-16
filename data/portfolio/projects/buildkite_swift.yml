@@ -1,4 +1,4 @@
 name: Buildkite Swift Client
 link: 'https://github.com/aaronsky/buildkite-swift'
 description: Swift package for interacting with Buildkite's REST and GraphQL APIs.
-resume: true
+resume: false
