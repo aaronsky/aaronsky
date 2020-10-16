@@ -22,7 +22,7 @@
     },
     "homepage": "https://skyaaron.com/",
     "dependencies": {
-        "gatsby": "^2.24.23",
+        "gatsby": "^2.24.80",
         "gatsby-plugin-favicon": "^3.1.6",
         "gatsby-plugin-humans-txt": "^1.1.4",
         "gatsby-plugin-react-helmet": "^3.3.10",
