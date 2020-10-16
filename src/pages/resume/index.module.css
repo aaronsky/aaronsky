@@ -32,71 +32,68 @@ html {
     font-size: 10pt;
 }
 
-.resumeHeaderLine {
-    border: 0;
-    width: 100%;
-    height: 0.75pt;
-    margin: auto;
-    margin-top: 6pt;
-    background-color: var(--fun-blue);
-}
-
 .resumeSectionHeading {
     font-weight: bold;
-    font-size: 10pt;
+    font-size: 12pt;
     color: var(--darker-blue);
     clear: left;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
 
 .resumeProjectHeading {
+    margin-top: 3pt;
+    margin-bottom: 2pt;
+}
+
+h2.resumeProjectHeading {
+    font-weight: bold;
+    font-size: 10pt;
+    color: var(--darker-blue);
+}
+
+h3.resumeProjectHeading {
     font-weight: bold;
     font-size: 8pt;
     color: var(--dark-blue);
-    margin-top: 3pt;
-    margin-bottom: 2pt;
 }
 
 .resumeProjectDescription {
     margin: 0;
     padding: 0;
-    margin-bottom: 4pt;
+    margin-bottom: 2pt;
     color: var(--black);
     font-size: 8pt;
     text-align: justify;
     text-justify: inter-word;
 }
 
-.resumeSkillItem > strong ~ em {
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
+.resumeSkillsHeading {
+    color: var(--dark-blue);
+    font-weight: bold;
+    font-size: 10pt;
+    margin-top: 3pt;
+    margin-bottom: 2pt;
+}
+
+.resumeSkillItem {
+    padding-right: 0.5rem;
 }
 
 .resumeSkillItem ~ .resumeSkillItem {
-    padding-left: 0.25rem;
-    border-left: 1pt solid var(--fun-blue);
+    padding-left: 0.5rem;
+    border-left: 2pt solid var(--fun-blue);
 }
 
 .resumeFooter {
     margin-top: 4rem;
 }
 
-.resumeFooterLine {
-    position: fixed;
-    width: 100%;
-    height: 0.75pt;
-    bottom: 0;
-    left: 0;
-    border: 0;
-    background-color: var(--fun-blue);
-}
-
 .resumeFooterLogo {
     position: fixed;
-    left: 45%;
-    bottom: 1.5%;
-    width: 10%;
+    top: 0;
+    right: 0;
+    width: 7%;
     background-color: var(--white);
     padding: 0 1%;
 }

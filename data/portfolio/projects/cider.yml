@@ -1,0 +1,4 @@
+name: Cider
+link: 'https://cidertool.github.io/cider'
+description: Application heavily leveraging the App Store Connect API to enable continuous delivery of iOS, macOS and tvOS apps to TestFlight and App Store review. Makes use of a simple YAML configuration with sane defaults to update metadata, upload assets, and submit app builds for review. Designed to accomodate automation workflows that make use of xcodebuild and altool to build and upload apps.
+resume: true
