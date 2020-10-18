@@ -1,2 +1,4 @@
-[context.production]
-  environment = { NODE_ENV = "production" }
+[build]
+command = "make build"
+[build.environment]
+HUGO_VERSION = "0.76.5"

@@ -1,0 +1,24 @@
+<header>
+    <span>
+        <h1 class="resume_header_heading">{{ .Site.Params.Author }}</h1>
+    </span>
+    <span>
+        <h2 class="resume_header_subheading">
+            <a href="mailto:{{ .Site.Params.Email }}">{{ .Site.Params.Email }}</a>
+            •
+            <a href="{{ .Site.BaseURL }}">
+                {{ $url := urls.Parse .Site.BaseURL }}
+                {{ if eq $url.Path "/" }}
+                {{ $url.Host}}
+                {{ else }}
+                {{ printf "%s%s" $url.Host $url.Path }}
+                {{ end }}
+            </a>
+            •
+            <a href="{{ .Site.Params.Github }}">
+                {{ $githubURL := urls.Parse .Site.Params.Github }}
+                {{ printf "%s%s" $githubURL.Host $githubURL.Path }}
+            </a>
+        </h2>
+    </span>
+</header>

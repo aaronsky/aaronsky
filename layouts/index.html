@@ -1,0 +1,8 @@
+{{ define "main" }}
+<main aria-role="main">
+    <div style="margin:0 auto;max-width:80%;padding:3rem 1.5rem;">
+        {{ partial "header.html" . }}
+        <div class="content">{{ .Content }}</div>
+    </div>
+</main>
+{{ end }}
