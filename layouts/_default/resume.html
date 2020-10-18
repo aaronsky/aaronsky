@@ -1,3 +1,6 @@
+{{ define "title" }}Resume{{ end }}
+{{ define "subtitle" }}&nbsp;{{ end }}
+
 {{ define "style" }}
 {{ $style := resources.Get "sass/resume.scss" | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
@@ -44,8 +47,7 @@
 
 
         <footer class="resume_footer">
-            <img src="/images/brand/outline.svg" alt="{{ .Site.Params.Author }} brand logo"
-                class="resume_footer_logo" />
+            <img src="/images/outline.svg" alt="{{ .Site.Params.Author }} brand logo" class="resume_footer_logo" />
         </footer>
 
     </div>
