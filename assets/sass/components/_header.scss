@@ -62,12 +62,32 @@ a {
   }
 }
 
-.github {
+.icon {
+  &s{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
   svg {
-    width: 2em;
-    height: 2em;
     stroke: currentColor;
     fill: currentColor;
     stroke-width: 0;
+  }
+  
+  &_email svg {
+    width: 2em;
+    height: 2em;
+  }
+
+  &_github svg {
+    width: 2em;
+    height: 2em;
+  }
+
+  &_linkedin svg {
+    width: 2em;
+    height: 2em;
   }
 }

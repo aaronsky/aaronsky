@@ -7,11 +7,15 @@
             <h1 class="header_author">{{ .Site.Params.Author }}</h1>
             <h3 class="header_caption">{{ .Site.Params.Caption }}</h3>
         </a>
-        <div class="header_nav">
+        <div class="header_nav icons">
+            <a href="mailto:{{ .Site.Params.Email }}" class="header_nav_item">
+                <span class="icon icon_email">{{ partial "fontawesome.html" "envelope" }}</span>
+            </a>
             <a href="{{ .Site.Params.Github }}" class="header_nav_item">
-                <span class="github">
-                    {{ partial "fontawesome.html" "github" }}
-                </span>
+                <span class="icon icon_github">{{ partial "fontawesome.html" "github" }}</span>
+            </a>
+            <a href="{{ .Site.Params.Linkedin }}" class="header_nav_item">
+                <span class="icon icon_linkedin">{{ partial "fontawesome.html" "linkedin" }}</span>
             </a>
         </div>
     </header>

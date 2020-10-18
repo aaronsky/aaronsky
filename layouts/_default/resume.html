@@ -3,7 +3,7 @@
 
 {{ define "style" }}
 {{ $style := resources.Get "sass/resume.scss" | toCSS | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $style.Permalink }}">
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 {{ end }}
 
 {{ define "main" }}

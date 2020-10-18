@@ -13,7 +13,7 @@
     {{ partial "social.html" . }} {{ partial "favicon.html" . }}
     {{ block "style" . }}
     {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
     {{ end }}
 </head>
 

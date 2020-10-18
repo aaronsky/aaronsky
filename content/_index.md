@@ -1,13 +1,7 @@
-### I'm a _tools developer_ based in Boston.
+### I'm a _development productivity engineer_ based in Boston.
 
-Build infrastructure and tooling developer with specialties in iOS and Android applications. Currently a senior dev at [Wayfair](https://www.wayfair.com/), previously [SapientRazorfish](https://www.sapientrazorfish.com/) and [Xamarin](https://www.xamarin.com/). Avid cook, puzzler, and overall hungry-man.
+Build infrastructure and tooling developer with specialties with iOS and Android application development. Currently a senior developer at [Wayfair](https://www.wayfair.com/), managing our cloud-based build infrastructure for services, applications, and generalized testing pipelines. Previously at [SapientRazorfish](https://www.sapientrazorfish.com/) integrating native SDKs with React Native apps, and at [Xamarin](https://www.xamarin.com/) as an SDET and infrastructure automation engineer. I have been working in the mobile space professionally since 2013, and in cloud infrastructure since 2019.
 
-I have been working in the mobile space since 2014.
+Avid cook, puzzler, and overall hungry-man.
 
-### Contact
-
-- Email – **aaronsky** [at] _this domain_
-- LinkedIn – [aaronsky](https://www.linkedin.com/in/aaronsky/)
-- GitHub – [@aaronsky](https://github.com/aaronsky/)
-
-My full resume [can be found here](/files/resume.pdf)
+A PDF copy of my resume [can be found here](/files/resume.pdf). Want to see more of my projects or publicly-viewable development experience? If so, check out my [GitHub](https://github.com/aaronsky).
