@@ -9,27 +9,27 @@ html {
   &_header {
     &_heading {
       font-weight: bold;
-      font-size: 20pt;
-      margin-bottom: 2pt;
+      font-size: 24pt;
+      margin-bottom: 0.25rem;
     }
 
     &_subheading {
       font-style: italic;
-      font-size: 10pt;
+      font-size: 11pt;
       color: $pale-gray;
-      margin-bottom: 4pt;
+      margin-bottom: 1rem;
 
       & > a {
         color: $link-color;
         font-style: italic;
-        font-size: 10pt;
+        font-size: 11pt;
       }
     }
   }
 
   &_section_heading {
     font-weight: bold;
-    font-size: 12pt;
+    font-size: 14pt;
     color: $darker-blue;
     clear: left;
     margin-top: 0.5rem;
@@ -38,17 +38,17 @@ html {
 
   &_project {
     &_heading {
-      margin-top: 3pt;
-      margin-bottom: 2pt;
+      margin-top: 0.5rem;
+      margin-bottom: 0.25rem;
     }
 
     &_description {
       margin: 0;
       padding: 0;
-      margin-bottom: 2pt;
+      margin-bottom: 0.5rem;
       color: $black;
-      font-size: 8pt;
-      text-align: justify;
+      font-size: 10pt;
+      text-align: left;
       text-justify: inter-word;
     }
   }
@@ -58,11 +58,13 @@ html {
       color: $dark-blue;
       font-weight: bold;
       font-size: 10pt;
-      margin-top: 3pt;
-      margin-bottom: 2pt;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
     }
 
     &_item {
+      font-style: italic;
+      font-size: 10pt;
       padding-right: 0.5rem;
     }
   }
@@ -74,7 +76,7 @@ html {
       position: fixed;
       top: 0;
       right: 0;
-      width: 7%;
+      width: 10%;
       background-color: $white;
       padding: 0 1%;
     }
@@ -83,13 +85,13 @@ html {
 
 h2.resume_project_heading {
   font-weight: bold;
-  font-size: 10pt;
+  font-size: 12pt;
   color: $darker-blue;
 }
 
 h3.resume_project_heading {
   font-weight: bold;
-  font-size: 8pt;
+  font-size: 10pt;
   color: $dark-blue;
 }
 

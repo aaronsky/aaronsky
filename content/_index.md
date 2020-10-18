@@ -6,8 +6,8 @@ I have been working in the mobile space since 2014.
 
 ### Contact
 
--   Email – **aaronsky** [at] _this domain_
--   LinkedIn – [aaronsky](https://www.linkedin.com/in/aaronsky/)
--   GitHub – [@aaronsky](https://github.com/aaronsky/)
+- Email – **aaronsky** [at] _this domain_
+- LinkedIn – [aaronsky](https://www.linkedin.com/in/aaronsky/)
+- GitHub – [@aaronsky](https://github.com/aaronsky/)
 
-My full resume [can be found here]()
+My full resume [can be found here](/files/resume.pdf)

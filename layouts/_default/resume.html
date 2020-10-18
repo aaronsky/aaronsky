@@ -26,7 +26,7 @@
             <div class="resume_project_description">
                 {{ range $.Site.Data.resume.skills }}
                 <span class="resume_skill_item">
-                    <strong>{{ .skill }}</strong>
+                    {{ .skill }}
                 </span>
                 {{ end }}
             </div>

@@ -97,8 +97,8 @@ skills:
   - skill: Python
   - skill: Objective-C
   - skill: Rust
-  - skill: Java
   - skill: Ruby
+  - skill: Java
 education:
   school: Rochester Institute of Technology
   location: "Rochester, NY"
