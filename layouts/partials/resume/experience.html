@@ -1,0 +1,25 @@
+<section>
+    <h2 class="resume_section_heading">Experience</h2>
+    {{ range (where $.Site.Data.resume.experience "resume" true) }}
+    {{ $roles := .roles }}
+    <h2 class="resume_project_heading">
+        <a href="{{ .link }}">{{ .name }}</a>
+    </h2>
+    {{ range $roles }}
+    <h3 class="resume_project_heading">{{ .title }} – {{ partial "resume/role_dates" . }}</h3>
+    <p class="resume_project_description">{{ .description }}</p>
+    {{ end }}
+    {{ end }}
+</section>
+
+{{ define "partials/resume/role_dates" }}
+{{ $date := "" }}
+{{ $startDate := dateFormat "January 2006" .start }}
+{{ with .end }}
+{{ $endDate := dateFormat "January 2006" . }}
+{{ $date = printf "%s to %s" $startDate $endDate  }}
+{{ else }}
+{{ $date = printf "%s to Present" $startDate  }}
+{{ end }}
+{{ return $date }}
+{{ end }}

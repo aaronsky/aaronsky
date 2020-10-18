@@ -1,0 +1,18 @@
+<div>
+    <a href="/">
+        <img src="/images/brand/brand.svg" title="Home" class="header_logo animated" />
+    </a>
+    <header class="header">
+        <a href="/" class="header_nav header_nav_item">
+            <h1 class="header_author">{{ .Site.Params.Author }}</h1>
+            <h3 class="header_caption">{{ .Site.Params.Caption }}</h3>
+        </a>
+        <div class="header_nav">
+            <a href="{{ .Site.Params.Github }}" class="header_nav_item">
+                <span class="github">
+                    {{ partial "fontawesome.html" "github" }}
+                </span>
+            </a>
+        </div>
+    </header>
+</div>

@@ -1,0 +1,53 @@
+{{ define "style" }}
+{{ $style := resources.Get "sass/resume.scss" | toCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+{{ end }}
+
+{{ define "main" }}
+<main aria-role="main">
+    <div class="resume">
+        {{ partial "resume/header.html" . }}
+
+        {{ partial "resume/experience.html" . }}
+
+        <section>
+            <h2 class="resume_section_heading">Open Source Projects</h2>
+            {{ range sort  (where $.Site.Data.resume.projects "resume" true) "name" "asc" }}
+            <h2 class="resume_project_heading">
+                <a href="{{ .link }}">{{ .name }}</a>
+            </h2>
+            <p class="resume_project_description">{{ .description }}</p>
+            {{ end }}
+        </section>
+
+        <section>
+            <h2 class="resume_section_heading">Skills</h2>
+            <h3 class="resume_skill_heading">Selected by relevance and order of current confidence</h3>
+            <div class="resume_project_description">
+                {{ range $.Site.Data.resume.skills }}
+                <span class="resume_skill_item">
+                    <strong>{{ .skill }}</strong>
+                </span>
+                {{ end }}
+            </div>
+        </section>
+
+        <section>
+            <h2 class="resume_section_heading">Education</h2>
+            <p class="resume_project_description">
+                {{ .Site.Data.resume.education.school }}, {{ .Site.Data.resume.education.location }}
+            </p>
+            <p class="resume_project_description">
+                {{ .Site.Data.resume.education.degree }}, {{ .Site.Data.resume.education.date }}
+            </p>
+        </section>
+
+
+        <footer class="resume_footer">
+            <img src="/images/brand/outline.svg" alt="{{ .Site.Params.Author }} brand logo"
+                class="resume_footer_logo" />
+        </footer>
+
+    </div>
+</main>
+{{ end }}

@@ -1,0 +1,99 @@
+html {
+  background-color: $white;
+}
+
+.resume {
+  background-color: $white;
+  line-height: 1.3;
+
+  &_header {
+    &_heading {
+      font-weight: bold;
+      font-size: 20pt;
+      margin-bottom: 2pt;
+    }
+
+    &_subheading {
+      font-style: italic;
+      font-size: 10pt;
+      color: $pale-gray;
+      margin-bottom: 4pt;
+
+      & > a {
+        color: $link-color;
+        font-style: italic;
+        font-size: 10pt;
+      }
+    }
+  }
+
+  &_section_heading {
+    font-weight: bold;
+    font-size: 12pt;
+    color: $darker-blue;
+    clear: left;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &_project {
+    &_heading {
+      margin-top: 3pt;
+      margin-bottom: 2pt;
+    }
+
+    &_description {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 2pt;
+      color: $black;
+      font-size: 8pt;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+  }
+
+  &_skill {
+    &_heading {
+      color: $dark-blue;
+      font-weight: bold;
+      font-size: 10pt;
+      margin-top: 3pt;
+      margin-bottom: 2pt;
+    }
+
+    &_item {
+      padding-right: 0.5rem;
+    }
+  }
+
+  &_footer {
+    margin-top: 4rem;
+
+    &_logo {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 7%;
+      background-color: $white;
+      padding: 0 1%;
+    }
+  }
+}
+
+h2.resume_project_heading {
+  font-weight: bold;
+  font-size: 10pt;
+  color: $darker-blue;
+}
+
+h3.resume_project_heading {
+  font-weight: bold;
+  font-size: 8pt;
+  color: $dark-blue;
+}
+
+.resume_skill_item ~ .resume_skill_item {
+  padding-left: 0.5rem;
+  border-left: 2pt solid $fun-blue;
+}

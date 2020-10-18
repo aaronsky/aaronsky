@@ -1,0 +1,13 @@
+baseURL = "https://skyaaron.com/"
+languageCode = "en-us"
+title = "Portfolio"
+
+[params]
+author = "Aaron Sky"
+caption = "Mobile Tools Developer"
+email = "aaronsky@skyaaron.com"
+github = "https://github.com/aaronsky/"
+linkedin = "https://www.linkedin.com/in/aaronsky/"
+npm = "https://www.npmjs.com/~aaronsky"
+
+enableRobotsTXT = true

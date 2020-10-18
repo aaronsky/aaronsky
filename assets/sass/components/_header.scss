@@ -1,0 +1,73 @@
+.header {
+  margin: 1em auto;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid $darkest-blue;
+
+  &_logo {
+    position: absolute;
+    margin: 0 auto;
+    left: 1em;
+    top: 1em;
+    height: 40px;
+    transform: rotateZ(0deg);
+    transition: transform 0.4s;
+
+    &:hover {
+      transform: rotateZ(10deg);
+      transition: transform 0.4s;
+    }
+
+    &:active {
+      transform: rotateZ(-10deg);
+      transition: transform 0.25s;
+    }
+  }
+
+  &_author {
+    margin: 0 auto;
+    font-size: 32pt;
+    font-weight: 700;
+  }
+
+  &_caption {
+    font-size: 16pt;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+
+  &_nav {
+    padding: 0.5em;
+
+    &_item {
+      box-sizing: border-box;
+      font-size: 16pt;
+      color: $dark-gray;
+      padding: 0.5em;
+    }
+  }
+}
+
+a {
+  &.header_nav_item {
+    color: inherit;
+    box-shadow: 0 0 0 0 $darkest-blue;
+  }
+  &:hover.header_nav_item {
+    color: inherit;
+    box-shadow: 0 4px 0 0 $darkest-blue;
+  }
+}
+
+.github {
+  svg {
+    width: 2em;
+    height: 2em;
+    stroke: currentColor;
+    fill: currentColor;
+    stroke-width: 0;
+  }
+}

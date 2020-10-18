@@ -1,3 +1,3 @@
-# My Website
+# Portfolio Site
 
-My personal site, written with Gatsby and TypeScript!
+My personal site, built with Hugo
