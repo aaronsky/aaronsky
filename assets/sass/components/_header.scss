@@ -2,11 +2,16 @@
   margin: 1em auto;
   width: 100%;
   display: flex;
-  align-items: flex-end;
-  flex-direction: row;
+  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
   color: var(--color-heading);
   border-bottom: 1px solid;
+
+  @media screen and (min-width: $breakpoint-medium) {
+    flex-direction: row;
+    align-items: flex-end;
+  }
 
   &_logo {
     position: absolute;
@@ -48,7 +53,6 @@
 
     &_item {
       box-sizing: border-box;
-      font-size: $body-font-size;
       color: var(--color-nav-item);
       padding: 0.5em;
     }
@@ -80,17 +84,17 @@ a {
   }
 
   &_email svg {
-    width: 2em;
-    height: 2em;
+    width: 1.5em;
+    height: 1.5em;
   }
 
   &_github svg {
-    width: 2em;
-    height: 2em;
+    width: 1.5em;
+    height: 1.5em;
   }
 
   &_linkedin svg {
-    width: 2em;
-    height: 2em;
+    width: 1.5em;
+    height: 1.5em;
   }
 }
