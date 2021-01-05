@@ -1,27 +1,27 @@
-/* TYPOGRAPHY 
-/* ================================================ */
+/* 
+================================================
+TYPOGRAPHY 
+================================================ */
 
 $base-font: Tahoma, Arial, sans-serif;
 $heading-font: $base-font;
-$caption-font: $base-font;
-$code-font: "Courier New", Courier, monospace;
-$alt-font: $base-font;
-$doc-font-size: 16pt;
-$doc-line-height: 24pt;
-$border-radius: 3px;
+$body-font-size: 14pt;
+$heading-font-size: 32pt;
+$caption-font-size: 16pt;
 
 /* set-up the body font-size / line-height */
 
 body {
+  font: -apple-system-body;
   font-family: $base-font;
-  color: $text-color;
-  font-size: $doc-font-size;
+  font-size: $body-font-size;
+  color: var(--color-text);
 }
 
 p {
-  font-size: 18pt;
+  font-size: $body-font-size;
 }
 
 li {
-  font-size: 16pt;
+  font-size: $body-font-size;
 }

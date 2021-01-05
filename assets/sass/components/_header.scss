@@ -5,7 +5,8 @@
   align-items: flex-end;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 1px solid $darkest-blue;
+  color: var(--color-heading);
+  border-bottom: 1px solid;
 
   &_logo {
     position: absolute;
@@ -13,6 +14,9 @@
     left: 1em;
     top: 1em;
     height: 40px;
+
+    animation-fill-mode: both;
+    animation-duration: 1s;
     transform: rotateZ(0deg);
     transition: transform 0.4s;
 
@@ -29,12 +33,12 @@
 
   &_author {
     margin: 0 auto;
-    font-size: 32pt;
+    font-size: $heading-font-size;
     font-weight: 700;
   }
 
   &_caption {
-    font-size: 16pt;
+    font-size: $caption-font-size;
     font-weight: 400;
     margin-bottom: 0;
   }
@@ -44,8 +48,8 @@
 
     &_item {
       box-sizing: border-box;
-      font-size: 16pt;
-      color: $dark-gray;
+      font-size: $body-font-size;
+      color: var(--color-nav-item);
       padding: 0.5em;
     }
   }
@@ -53,17 +57,16 @@
 
 a {
   &.header_nav_item {
-    color: inherit;
-    box-shadow: 0 0 0 0 $darkest-blue;
+    box-shadow: 0 0 0 0 var(--color-link-active);
   }
+
   &:hover.header_nav_item {
-    color: inherit;
-    box-shadow: 0 4px 0 0 $darkest-blue;
+    box-shadow: 0 4px 0 0 var(--color-link-active);
   }
 }
 
 .icon {
-  &s{
+  &s {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -75,7 +78,7 @@ a {
     fill: currentColor;
     stroke-width: 0;
   }
-  
+
   &_email svg {
     width: 2em;
     height: 2em;

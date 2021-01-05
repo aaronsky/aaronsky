@@ -1,3 +1,7 @@
-@import "base/base";
-@import "components/components";
-@import "layout/resume";
+@import 'abstracts/variables', 'abstracts/mixins', 'abstracts/themes';
+
+@import 'base/typography', 'base/base';
+
+@import 'layout/resume';
+
+@import 'components/header';

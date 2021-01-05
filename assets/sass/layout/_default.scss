@@ -1,18 +1,9 @@
 .content h3 {
-  font-size: 24pt;
+  font-size: $caption-font-size;
   font-weight: 600;
-  color: $darkest-blue;
+  color: var(--color-subheading);
 }
 
 .content p {
-  font-size: 14pt;
   margin-bottom: 1.5em;
-}
-
-.content li {
-  font-size: 14pt;
-}
-
-.content a {
-  color: $link-color;
 }

@@ -3,10 +3,10 @@
         <img src="/images/brand.svg" title="Home" class="header_logo animated" />
     </a>
     <header class="header">
-        <a href="/" class="header_nav header_nav_item">
+        <div class="header_nav header_nav_item">
             <h1 class="header_author">{{ .Site.Params.Author }}</h1>
             <h3 class="header_caption">{{ .Site.Params.Caption }}</h3>
-        </a>
+        </div>
         <div class="header_nav icons">
             <a href="mailto:{{ .Site.Params.Email }}" class="header_nav_item">
                 <span class="icon icon_email">{{ partial "fontawesome.html" "envelope" }}</span>
