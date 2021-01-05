@@ -1,7 +1,7 @@
 .content h3 {
   font-size: $caption-font-size;
   font-weight: 600;
-  color: var(--color-subheading);
+  @include themed(color, subheading);
 }
 
 .content p {

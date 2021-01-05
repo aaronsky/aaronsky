@@ -6,7 +6,7 @@ Base elements
 // Apply a natural box layout model to all elements
 html {
   box-sizing: border-box;
-  background-color: var(--color-background);
+  @include themed(background-color, background);
 }
 
 *,
@@ -21,14 +21,14 @@ Selections
 ========================================================================== */
 
 ::-moz-selection {
-  background-color: var(--color-highlight);
-  color: var(--color-highlight-text);
+  @include themed(background-color, highlight);
+  @include themed(color, highlight-text);
   text-shadow: none;
 }
 
 ::selection {
-  background-color: var(--color-highlight);
-  color: var(--color-highlight-text);
+  @include themed(background-color, highlight);
+  @include themed(color, highlight-text);
   text-shadow: none;
 }
 
@@ -53,7 +53,9 @@ p {
 u,
 ins {
   text-decoration: none;
-  border-bottom: 1px solid var(--color-text);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  @include themed(border-bottom-color, text);
 }
 
 /*
@@ -111,17 +113,17 @@ Links
 ========================================================================== */
 
 a {
-  color: var(--color-link);
+  @include themed(color, link);
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: var(--color-link-hover);
+  @include themed(color, link-hover);
 }
 
 a:active {
-  color: var(--color-link-active);
+  @include themed(color, link-active);
 }
 
 // Apply focus state

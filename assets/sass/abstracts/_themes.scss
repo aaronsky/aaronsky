@@ -1,31 +1,91 @@
+$themes: (
+  light: (
+    background: #eee,
+    text: #222,
+    heading: #0d3d70,
+    subheading: #0d3d70,
+    caption: #3d638c,
+    nav-item: #222,
+    link: #0462c1,
+    link-hover: #0d3d70,
+    link-active: #0a3059,
+    highlight: #b6c4d4,
+    highlight-text: #0d3d70,
+    separator: #2d73b5,
+  ),
+  dark: (
+    background: #222,
+    text: #ccc,
+    heading: #73a3d6,
+    subheading: #73a3d6,
+    caption: #5a8abd,
+    nav-item: #eee,
+    link: #3795f4,
+    link-hover: #73a3d6,
+    link-active: #80b0e3,
+    highlight: #202224,
+    highlight-text: #eee,
+    separator: #2d73b5,
+  ),
+);
+
+@function color($key, $scheme: light) {
+  @if $scheme != light and $scheme != dark {
+    $scheme: light;
+  }
+
+  $theme: null;
+  @if map-has-key($themes, $scheme) {
+    $theme: map-get($themes, $scheme);
+  } @else {
+    @error "Unknown scheme `#{$scheme}` in $themes";
+  }
+
+  @if map-has-key($theme, $key) {
+    @return map-get($theme, $key);
+  }
+
+  @warn "Unknown key `#{$key}` in #{$scheme} theme.";
+  @return null;
+}
+
+@mixin themed($property, $key, $default-scheme: light) {
+  @if $default-scheme != light and $default-scheme != dark {
+    $default-scheme: light;
+  }
+
+  #{$property}: #{color($key, $default-scheme)};
+  #{$property}: var(--color-#{$key});
+}
+
 :root {
-  --color-background: #eee;
-  --color-text: #222;
-  --color-heading: #0d3d70;
-  --color-subheading: #0d3d70;
-  --color-caption: #3d638c;
-  --color-nav-item: #222;
-  --color-link: #0462c1;
-  --color-link-hover: #0d3d70;
-  --color-link-active: #0a3059;
-  --color-highlight: #b6c4d4;
-  --color-highlight-text: #0d3d70;
-  --color-separator: #2d73b5;
+  --color-background: #{color(background, light)};
+  --color-text: #{color(text, light)};
+  --color-heading: #{color(heading, light)};
+  --color-subheading: #{color(subheading, light)};
+  --color-caption: #{color(caption, light)};
+  --color-nav-item: #{color(nav-item, light)};
+  --color-link: #{color(link, light)};
+  --color-link-hover: #{color(link-hover, light)};
+  --color-link-active: #{color(link-active, light)};
+  --color-highlight: #{color(highlight, light)};
+  --color-highlight-text: #{color(highlight-text, light)};
+  --color-separator: #{color(separator, light)};
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: #222;
-    --color-text: #ccc;
-    --color-heading: #73a3d6;
-    --color-subheading: #73a3d6;
-    --color-caption: #5a8abd;
-    --color-nav-item: #eee;
-    --color-link: #3795f4;
-    --color-link-hover: #73a3d6;
-    --color-link-active: #80b0e3;
-    --color-highlight: #202224;
-    --color-highlight-text: #eee;
-    --color-separator: #2d73b5;
+    --color-background: #{color(background, dark)};
+    --color-text: #{color(text, dark)};
+    --color-heading: #{color(heading, dark)};
+    --color-subheading: #{color(subheading, dark)};
+    --color-caption: #{color(caption, dark)};
+    --color-nav-item: #{color(nav-item, dark)};
+    --color-link: #{color(link, dark)};
+    --color-link-hover: #{color(link-hover, dark)};
+    --color-link-active: #{color(link-active, dark)};
+    --color-highlight: #{color(highlight, dark)};
+    --color-highlight-text: #{color(highlight-text, dark)};
+    --color-separator: #{color(separator, dark)};
   }
 }

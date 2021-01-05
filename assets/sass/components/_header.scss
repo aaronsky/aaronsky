@@ -5,7 +5,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  color: var(--color-heading);
+  @include themed(color, heading);
   border-bottom: 1px solid;
 
   @media screen and (min-width: $breakpoint-medium) {
@@ -53,7 +53,7 @@
 
     &_item {
       box-sizing: border-box;
-      color: var(--color-nav-item);
+      @include themed(color, nav-item);
       padding: 0.5em;
     }
   }
@@ -61,11 +61,12 @@
 
 a {
   &.header_nav_item {
-    box-shadow: 0 0 0 0 var(--color-link-active);
+    box-shadow: 0 0 0 0 transparent;
   }
 
   &:hover.header_nav_item {
-    box-shadow: 0 4px 0 0 var(--color-link-active);
+    @include themed(color, link-hover);
+    box-shadow: 0 4px 0 0;
   }
 }
 

@@ -1,9 +1,11 @@
 html {
-  background-color: var(--color-background);
+  // This is forced to $white in order to accomodate wkhtmltopdf
+  background-color: $white;
 }
 
 .resume {
-  background-color: var(--color-background);
+  // This is forced to $white in order to accomodate wkhtmltopdf
+  background-color: $white;
   line-height: 1.3;
 
   &_header {
@@ -16,11 +18,11 @@ html {
     &_subheading {
       font-style: italic;
       font-size: 11pt;
-      color: var(--color-subheading);
+      @include themed(color, subheading);
       margin-bottom: 1rem;
 
       & > a {
-        color: var(--color-link);
+        @include themed(color, link);
         font-style: italic;
         font-size: 11pt;
       }
@@ -30,7 +32,7 @@ html {
   &_section_heading {
     font-weight: bold;
     font-size: 14pt;
-    color: var(--color-subheading);
+    @include themed(color, subheading);
     clear: left;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -42,7 +44,7 @@ html {
       margin-bottom: 0.25rem;
 
       & > a {
-        color: var(--color-subheading);
+        @include themed(color, subheading);
       }
     }
 
@@ -50,7 +52,7 @@ html {
       margin: 0;
       padding: 0;
       margin-bottom: 0.5rem;
-      color: var(--color-text);
+      @include themed(color, text);
       font-size: 10pt;
       text-align: left;
       text-justify: inter-word;
@@ -59,7 +61,7 @@ html {
 
   &_skill {
     &_heading {
-      color: var(--color-caption);
+      @include themed(color, caption);
       font-weight: bold;
       font-size: 10pt;
       margin-top: 0;
@@ -89,16 +91,18 @@ html {
 h2.resume_project_heading {
   font-weight: bold;
   font-size: 12pt;
-  color: var(--color-subheading);
+  @include themed(color, subheading);
 }
 
 h3.resume_project_heading {
   font-weight: bold;
   font-size: 10pt;
-  color: var(--color-caption);
+  @include themed(color, caption);
 }
 
 .resume_skill_item ~ .resume_skill_item {
   padding-left: 0.5rem;
-  border-left: 2pt solid var(--color-separator);
+  border-left-width: 2pt;
+  border-left-style: solid;
+  @include themed(border-left-color, separator);
 }

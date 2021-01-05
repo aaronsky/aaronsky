@@ -15,7 +15,7 @@ body {
   font: -apple-system-body;
   font-family: $base-font;
   font-size: $body-font-size;
-  color: var(--color-text);
+  @include themed(color, text);
 }
 
 p {
