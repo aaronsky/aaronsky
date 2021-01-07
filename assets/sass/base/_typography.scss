@@ -3,15 +3,6 @@
 TYPOGRAPHY 
 ================================================ */
 
-$base-font: "Nimbus Sans", "Liberation Sans", "Helvetica Neue", Tahoma,
-  Helvetica, Arial, sans-serif;
-$heading-font: $base-font;
-$body-font-size: 14pt;
-$heading-font-size: 32pt;
-$caption-font-size: 16pt;
-
-/* set-up the body font-size / line-height */
-
 body {
   font: -apple-system-body;
   font-family: $base-font;
