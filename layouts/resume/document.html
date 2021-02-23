@@ -1,0 +1,19 @@
+{{ define "title" }}Resume{{ end }}
+{{ define "subtitle" }}&nbsp;{{ end }}
+
+{{ define "style" }}
+{{ $style := resources.Get "sass/resume.scss" | toCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{ end }}
+
+{{ define "main" }}
+<main aria-role="main">
+    <div class="resume">
+        {{ partial "resume/header.html" . }}
+        
+        {{ partial "resume/resume.html" . }}
+        
+        {{ partial "resume/footer.html" . }}
+    </div>
+</main>
+{{ end }}
