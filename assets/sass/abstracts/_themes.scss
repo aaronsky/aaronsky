@@ -61,6 +61,8 @@ $themes: (
 }
 
 :root {
+  --color-mode: 'light';
+
   --color-background: #{color(background, light)};
   --color-resume-background: #{color(resume-background, light)};
   --color-text: #{color(text, light)};
@@ -78,6 +80,10 @@ $themes: (
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --color-mode: 'dark';
+  }
+
+  :root:not([data-user-color-scheme]) {
     --color-background: #{color(background, dark)};
     --color-resume-background: #{color(resume-background, dark)};
     --color-text: #{color(text, dark)};
@@ -92,4 +98,20 @@ $themes: (
     --color-highlight-text: #{color(highlight-text, dark)};
     --color-separator: #{color(separator, dark)};
   }
+}
+
+[data-user-color-scheme='dark'] {
+  --color-background: #{color(background, dark)};
+  --color-resume-background: #{color(resume-background, dark)};
+  --color-text: #{color(text, dark)};
+  --color-heading: #{color(heading, dark)};
+  --color-subheading: #{color(subheading, dark)};
+  --color-caption: #{color(caption, dark)};
+  --color-nav-item: #{color(nav-item, dark)};
+  --color-link: #{color(link, dark)};
+  --color-link-hover: #{color(link-hover, dark)};
+  --color-link-active: #{color(link-active, dark)};
+  --color-highlight: #{color(highlight, dark)};
+  --color-highlight-text: #{color(highlight-text, dark)};
+  --color-separator: #{color(separator, dark)};
 }

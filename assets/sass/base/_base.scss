@@ -6,7 +6,6 @@ Base elements
 // Apply a natural box layout model to all elements
 html {
   box-sizing: border-box;
-  @include themed(background-color, background);
 }
 
 *,
@@ -42,6 +41,9 @@ body {
   line-height: 1.6;
   font-weight: 400;
   margin: 0;
+
+  @include themed(background-color, background);
+  transition: background 300ms ease-in-out, color 100ms ease;
 }
 
 p {
@@ -149,4 +151,16 @@ Global Transition
 figure,
 img {
   transition: all 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    scroll-behavior: auto;
+  }
+
+  * {
+    -webkit-animation: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
 }

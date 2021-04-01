@@ -1,0 +1,42 @@
+.user_toggle {
+  margin: 2rem auto 0 auto;
+  padding-top: 2.5rem;
+  max-width: 20rem;
+  text-align: center;
+}
+
+.toggle_button {
+  display: inline-flex;
+  color: var(--button-color);
+  border: none;
+  font: inherit;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  transition: background 300ms ease-in-out, color 100ms ease;
+
+  &_icon {
+    width: 1.2em;
+    height: 1.2em;
+    margin: 0 0 0 0.5em;
+    filter: var(--button-icon-filter);
+    transform: translateY(1px); /* Optical adjustment */
+    transition: filter 300ms ease-in-out;
+  }
+
+  &:focus {
+    outline: 1px solid var(--button-background);
+    outline-offset: 0.5rem;
+  }
+}
+
+.visually_hidden {
+  display: block;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(1px);
+  white-space: nowrap;
+  position: absolute;
+}
