@@ -28,18 +28,18 @@
 
 @keyframes rockBackAndForth {
   0% {
-    rotate: z 0deg;
+    transform: rotateZ(0deg);
   }
   24% {
-    rotate: z -20deg;
+    transform: rotateZ(-20deg);
   }
   49% {
-    rotate: z 0deg;
+    transform: rotateZ(0deg);
   }
   74% {
-    rotate: z 20deg;
+    transform: rotateZ(20deg);
   }
   99% {
-    rotate: z 1deg;
+    transform: rotateZ(1deg);
   }
 }
