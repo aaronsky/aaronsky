@@ -4,4 +4,6 @@
 
 @import 'layout/default', 'layout/resume';
 
-@import 'components/header';
+@import 'components/header', 'components/theme_toggle';
+
+@import 'vendor/vendor';

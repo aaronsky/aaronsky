@@ -1,42 +1,38 @@
-.user_toggle {
-  margin: 2rem auto 0 auto;
-  padding-top: 2.5rem;
-  max-width: 20rem;
-  text-align: center;
-}
-
-.toggle_button {
-  display: inline-flex;
-  color: var(--button-color);
-  border: none;
-  font: inherit;
-  font-size: 1.5rem;
-  padding: 0.5rem 1rem;
-  transition: background 300ms ease-in-out, color 100ms ease;
-
-  &_icon {
-    width: 1.2em;
-    height: 1.2em;
-    margin: 0 0 0 0.5em;
-    filter: var(--button-icon-filter);
-    transform: translateY(1px); /* Optical adjustment */
-    transition: filter 300ms ease-in-out;
-  }
-
-  &:focus {
-    outline: 1px solid var(--button-background);
-    outline-offset: 0.5rem;
-  }
-}
-
-.visually_hidden {
-  display: block;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(1px);
-  white-space: nowrap;
+.theme_toggle {
   position: absolute;
+  margin: 0 auto;
+  right: 0.75em;
+  top: 0.75em;
+
+  &_button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--color-theme-toggle-button);
+    font-size: $theme-icon-font-size;
+    transition: 0.25s;
+
+    &:hover {
+      animation: rockBackAndForth 4s linear infinite;
+      color: var(--color-theme-toggle-button-hover);
+    }
+  }
+}
+
+@keyframes rockBackAndForth {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  24% {
+    transform: rotateZ(-30deg);
+  }
+  49% {
+    transform: rotateZ(0deg);
+  }
+  74% {
+    transform: rotateZ(30deg);
+  }
+  99% {
+    transform: rotateZ(1deg);
+  }
 }

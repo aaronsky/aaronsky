@@ -2,6 +2,7 @@ const STORAGE_KEY = 'user_color_scheme'
 const COLOR_MODE_KEY = '--color-mode'
 
 const modeToggleButton = document.querySelector('.js_mode_toggle')
+const modeToggleIcon = document.querySelector('.js_mode_toggle_icon')
 const modeToggleText = document.querySelector('.js_mode_toggle_text')
 const modeStatusElement = document.querySelector('.js_mode_status')
 
@@ -71,9 +72,21 @@ const toggleSetting = () => {
  * A shared method for setting the button text label and visually hidden status element
  */
 const setButtonLabelAndStatus = currentSetting => {
-  modeToggleText.innerText = `Enable ${
-    currentSetting === 'dark' ? 'light' : 'dark'
-  } mode`
+  let oppositeSetting
+  if (currentSetting === 'dark') {
+    oppositeSetting = 'light'
+    modeToggleIcon.classList.add('fa-sun')
+    modeToggleIcon.classList.remove('fa-moon')
+  } else {
+    oppositeSetting = 'dark'
+    modeToggleIcon.classList.add('fa-moon')
+    modeToggleIcon.classList.remove('fa-sun')
+  }
+
+  const userFacingStatus = `Enable ${oppositeSetting} mode`
+  modeToggleButton.title = userFacingStatus
+  modeToggleText.innerText = userFacingStatus
+
   modeStatusElement.innerText = `Color mode is now "${currentSetting}"`
 }
 
