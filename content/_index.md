@@ -1,4 +1,4 @@
-### I'm a _development productivity engineer_ based in Boston.
+### I'm a <span class="content_role">development productivity engineer</span> based in Boston.
 
 Build infrastructure and tooling developer specialized in iOS and Android application development. Currently a senior developer at [Wayfair](https://www.wayfair.com/), managing the cloud-based build infrastructure used by all services, applications, and generalized testing pipelines. Previously at [SapientRazorfish](https://www.sapientrazorfish.com/) integrating native SDKs into React Native apps, and at [Xamarin](https://www.xamarin.com/) as an SDET.
 

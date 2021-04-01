@@ -6,6 +6,7 @@ $themes: (
     heading: #0d3d70,
     subheading: #0d3d70,
     caption: #3d638c,
+    caption-role: orangered,
     nav-item: #222,
     link: #0462c1,
     link-hover: #0d3d70,
@@ -23,6 +24,7 @@ $themes: (
     heading: #73a3d6,
     subheading: #73a3d6,
     caption: #5a8abd,
+    caption-role: orange,
     nav-item: #eee,
     link: #3795f4,
     link-hover: #73a3d6,
@@ -73,6 +75,7 @@ $themes: (
   --color-heading: #{color(heading, light)};
   --color-subheading: #{color(subheading, light)};
   --color-caption: #{color(caption, light)};
+  --color-caption-role: #{color(caption-role, light)};
   --color-nav-item: #{color(nav-item, light)};
   --color-link: #{color(link, light)};
   --color-link-hover: #{color(link-hover, light)};
@@ -96,6 +99,7 @@ $themes: (
     --color-heading: #{color(heading, dark)};
     --color-subheading: #{color(subheading, dark)};
     --color-caption: #{color(caption, dark)};
+    --color-caption-role: #{color(caption-role, dark)};
     --color-nav-item: #{color(nav-item, dark)};
     --color-link: #{color(link, dark)};
     --color-link-hover: #{color(link-hover, dark)};
@@ -115,6 +119,7 @@ $themes: (
   --color-heading: #{color(heading, dark)};
   --color-subheading: #{color(subheading, dark)};
   --color-caption: #{color(caption, dark)};
+  --color-caption-role: #{color(caption-role, dark)};
   --color-nav-item: #{color(nav-item, dark)};
   --color-link: #{color(link, dark)};
   --color-link-hover: #{color(link-hover, dark)};
