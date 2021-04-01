@@ -1,4 +1,3 @@
 {
-  "editor.formatOnSave": true,
-  "prettier.disableLanguages": ["html"]
+  "editor.formatOnSave": true
 }
