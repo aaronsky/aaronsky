@@ -13,26 +13,31 @@
     transition: 0.25s;
 
     &:hover {
+      scale: 1.1;
       animation: rockBackAndForth 4s linear infinite;
       color: var(--color-theme-toggle-button-hover);
+    }
+
+    &:active {
+      scale: 0.99;
     }
   }
 }
 
 @keyframes rockBackAndForth {
   0% {
-    transform: rotateZ(0deg);
+    rotate: z 0deg;
   }
   24% {
-    transform: rotateZ(-30deg);
+    rotate: z -20deg;
   }
   49% {
-    transform: rotateZ(0deg);
+    rotate: z 0deg;
   }
   74% {
-    transform: rotateZ(30deg);
+    rotate: z 20deg;
   }
   99% {
-    transform: rotateZ(1deg);
+    rotate: z 1deg;
   }
 }
