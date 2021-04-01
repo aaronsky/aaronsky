@@ -25,23 +25,20 @@
     position: absolute;
     right: 0.5em;
     top: 0.5em;
+    margin: -0.75em;
+    padding: 0.75em;
 
     border: none;
     cursor: pointer;
     background-color: transparent;
     color: var(--color-theme-toggle-button);
     font-size: $theme-icon-font-size;
-    transition: 0.25s;
+    transition: color 0.25s;
 
     @media (hover: hover) {
       &:hover {
-        scale: 1.1;
         animation: rockBackAndForth 4s linear infinite;
         color: var(--color-theme-toggle-button-hover);
-      }
-
-      &:active {
-        scale: 0.99;
       }
     }
   }
