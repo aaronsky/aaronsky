@@ -1,7 +1,7 @@
 .main_container {
   margin: 0 auto;
   max-width: 80%;
-  padding: 3rem 1.5rem;
+  padding: 3rem 0;
 }
 
 .content {
@@ -14,4 +14,16 @@
   p {
     margin-bottom: 1.5em;
   }
+}
+
+.visually_hidden {
+  display: block;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(1px);
+  white-space: nowrap;
+  position: absolute;
 }

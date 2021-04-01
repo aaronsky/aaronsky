@@ -1,0 +1,43 @@
+.theme_toggle {
+  position: absolute;
+  margin: 0 auto;
+  right: 0.5em;
+  top: 1em;
+
+  &_button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--color-theme-toggle-button);
+    font-size: $theme-icon-font-size;
+    transition: 0.25s;
+
+    &:hover {
+      scale: 1.1;
+      animation: rockBackAndForth 4s linear infinite;
+      color: var(--color-theme-toggle-button-hover);
+    }
+
+    &:active {
+      scale: 0.99;
+    }
+  }
+}
+
+@keyframes rockBackAndForth {
+  0% {
+    rotate: z 0deg;
+  }
+  24% {
+    rotate: z -20deg;
+  }
+  49% {
+    rotate: z 0deg;
+  }
+  74% {
+    rotate: z 20deg;
+  }
+  99% {
+    rotate: z 1deg;
+  }
+}

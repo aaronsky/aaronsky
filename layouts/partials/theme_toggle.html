@@ -1,0 +1,18 @@
+<noscript>
+  <style>
+    .user_toggle {
+      display: none;
+    }
+  </style>
+</noscript>
+
+<div class="theme_toggle">
+  <div role="status" class="visually_hidden js_mode_status"></div>
+  <button title="" class="theme_toggle_button js_mode_toggle">
+    <i class="fas fa-sun theme_toggle_button_icon js_mode_toggle_icon" aria-hidden="true"></i>
+    <span class="visually_hidden js_mode_toggle_text">GitHub</span>
+  </button>
+</div>
+
+{{ $js := resources.Get "js/theme_toggle.js" | js.Build "theme_toggle.js" }}
+<script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>

@@ -13,6 +13,8 @@ $themes: (
     highlight: #b6c4d4,
     highlight-text: #0d3d70,
     separator: #2d73b5,
+    theme-toggle-button: #49407e,
+    theme-toggle-button-hover: #322c55,
   ),
   dark: (
     background: #222,
@@ -28,6 +30,8 @@ $themes: (
     highlight: #202224,
     highlight-text: #eee,
     separator: #2d73b5,
+    theme-toggle-button: #ffe3a4,
+    theme-toggle-button-hover: #ffd46e,
   ),
 );
 
@@ -61,6 +65,8 @@ $themes: (
 }
 
 :root {
+  --color-mode: 'light';
+
   --color-background: #{color(background, light)};
   --color-resume-background: #{color(resume-background, light)};
   --color-text: #{color(text, light)};
@@ -74,10 +80,16 @@ $themes: (
   --color-highlight: #{color(highlight, light)};
   --color-highlight-text: #{color(highlight-text, light)};
   --color-separator: #{color(separator, light)};
+  --color-theme-toggle-button: #{color(theme-toggle-button, light)};
+  --color-theme-toggle-button-hover: #{color(theme-toggle-button-hover, light)};
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --color-mode: 'dark';
+  }
+
+  :root:not([data-user-color-scheme]) {
     --color-background: #{color(background, dark)};
     --color-resume-background: #{color(resume-background, dark)};
     --color-text: #{color(text, dark)};
@@ -91,5 +103,25 @@ $themes: (
     --color-highlight: #{color(highlight, dark)};
     --color-highlight-text: #{color(highlight-text, dark)};
     --color-separator: #{color(separator, dark)};
+    --color-theme-toggle-button: #{color(theme-toggle-button, dark)};
+    --color-theme-toggle-button-hover: #{color(theme-toggle-button-hover, dark)};
   }
+}
+
+[data-user-color-scheme='dark'] {
+  --color-background: #{color(background, dark)};
+  --color-resume-background: #{color(resume-background, dark)};
+  --color-text: #{color(text, dark)};
+  --color-heading: #{color(heading, dark)};
+  --color-subheading: #{color(subheading, dark)};
+  --color-caption: #{color(caption, dark)};
+  --color-nav-item: #{color(nav-item, dark)};
+  --color-link: #{color(link, dark)};
+  --color-link-hover: #{color(link-hover, dark)};
+  --color-link-active: #{color(link-active, dark)};
+  --color-highlight: #{color(highlight, dark)};
+  --color-highlight-text: #{color(highlight-text, dark)};
+  --color-separator: #{color(separator, dark)};
+  --color-theme-toggle-button: #{color(theme-toggle-button, dark)};
+  --color-theme-toggle-button-hover: #{color(theme-toggle-button-hover, dark)};
 }

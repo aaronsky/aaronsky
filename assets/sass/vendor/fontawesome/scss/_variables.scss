@@ -1,0 +1,19 @@
+// Variables
+// --------------------------
+
+$fa-font-path: '/vendor/fontawesome' !default;
+$fa-font-display: block !default;
+$fa-css-prefix: fa !default;
+// $fa-version: '5.15.3' !default;
+
+// Convenience function used to set content property
+@function fa-content($fa-var) {
+  @return unquote('"#{ $fa-var }"');
+}
+
+$fa-var-envelope: \f0e0;
+$fa-var-file-alt: \f15c;
+$fa-var-github: \f09b;
+$fa-var-linkedin: \f08c;
+$fa-var-moon: \f186;
+$fa-var-sun: \f185;
