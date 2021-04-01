@@ -4,12 +4,14 @@
   padding: 3rem 1.5rem;
 }
 
-.content h3 {
-  font-size: $caption-font-size;
-  font-weight: 600;
-  @include themed(color, subheading);
-}
+.content {
+  h3 {
+    font-size: $caption-font-size;
+    font-weight: 600;
+    @include themed(color, subheading);
+  }
 
-.content p {
-  margin-bottom: 1.5em;
+  p {
+    margin-bottom: 1.5em;
+  }
 }

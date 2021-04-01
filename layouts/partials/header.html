@@ -8,6 +8,9 @@
             <h3 class="header_caption">{{ .Site.Params.Caption }}</h3>
         </div>
         <div class="header_nav icons">
+            <a href="/resume" class="header_nav_item">
+                <span class="icon icon_resume">{{ partial "fontawesome.html" "file-alt" }}</span>
+            </a>
             <a href="mailto:{{ .Site.Params.Email }}" class="header_nav_item">
                 <span class="icon icon_email">{{ partial "fontawesome.html" "envelope" }}</span>
             </a>
