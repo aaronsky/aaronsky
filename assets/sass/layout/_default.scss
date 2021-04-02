@@ -12,7 +12,7 @@
   }
 
   &_role {
-    @include themed(color, caption-role);
+    @include themed(color, caption-emphasis);
   }
 
   p {

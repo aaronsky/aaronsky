@@ -43,7 +43,10 @@ body {
   margin: 0;
 
   @include themed(background-color, background);
-  transition: background 300ms ease-in-out, color 100ms ease;
+
+  transition-property: background, color;
+  transition-duration: 250ms, 75ms;
+  transition-timing-function: ease-in-out, ease;
 }
 
 p {

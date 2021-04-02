@@ -1,11 +1,20 @@
 experience:
+  - name: Twitter
+    link: https://twitter.com/
+    location: Boston, MA
+    roles:
+      - title: Software Engineer III
+        description: PENDING
+        start: '2021-04-26'
+    resume: false
   - name: Wayfair
-    link: http://www.wayfair.com/
+    link: https://www.wayfair.com/
     location: Boston, MA
     roles:
       - title: Senior Development Platforms Engineer
         description: Drove a migration of CentOS-based build infrastructure from on-premises data centers to autoscaled Google Compute Engine on Google Cloud Platform. Adopted new features in Terraform, Vault, and Puppet that reduce infrastructure toil. Supported the design of a model for ephemeral testing environments for services teams.
         start: '2020-04-01'
+        end: '2021-04-09'
       - title: Senior App Infrastructure Engineer
         description: Led a team of five to create tools to support the development of apps across Wayfair. Drove a substantial SCM migration across a distributed team of over 100 developers and over 20 repositories from Gitlab Enterprise to GitHub Enterprise. Designed a framework for more performant, reproducible iOS and Android builds on Buildkite. Supported the broader transition to a weekly release of the Storefront iOS application.
         start: '2019-03-01'
@@ -16,7 +25,7 @@ experience:
         end: '2019-03-01'
     resume: true
   - name: Fangamer
-    link: http://www.fangamer.com/
+    link: https://www.fangamer.com/
     roles:
       - title: Contractor
         description: Contributed to a large Shopify Ruby-on-Rails codebase to launch an overhauled in-stock notification system.
@@ -37,7 +46,7 @@ experience:
         end: '2017-07-07'
     resume: true
   - name: Xamarin
-    link: http://xamarin.com/
+    link: https://xamarin.com/
     roles:
       - title: Mobile Testing Intern
         description: Contributed UI tests to product sample automation suite and oversaw test runs. Filled and verified bugs in the Xamarin platform. Managed and enhanced internal QA infrastructure using Chef. Drove QA-side of launch of day one support for the newly released Apple Watch. Ported newly released iOS and Android samples to come from Apple WWDC and Google I/O 2015 to Xamarin.iOS and Xamarin.Android, respectively.
@@ -65,11 +74,11 @@ experience:
     resume: false
 projects:
   - name: Cider
-    link: https://cidertool.github.io/cider
+    link: https://cidertool.github.io/cider/
     description: Application heavily leveraging the App Store Connect API to enable continuous delivery of iOS, macOS and tvOS apps to TestFlight and App Store review. Makes use of a simple YAML configuration with sane defaults to update metadata, upload assets, and submit app builds for review. Designed to accomodate automation workflows that make use of xcodebuild and altool to build and upload apps.
     resume: true
   - name: Foxdie
-    link: https://crates.io/crates/foxdie
+    link: https://crates.io/crates/foxdie/
     description: Rust application for deleting stale remote branches and pull requests on any GitHub or Gitlab repository, regardless of cloud/on-prem situation. Leverages libgit2 under the hood to achieve performance goals. Created a procedure for discerning between multiple SCMs using only a Git remote URL and an access token and adapted it for idiomatic Rust. Foxdie has deleted thousands of branches and hundreds of pull requests over its service life, reducing storage footprint and fetch times on several monorepos.
     resume: true
   - name: Buildkite Swift Client
@@ -77,15 +86,15 @@ projects:
     description: Swift package for interacting with Buildkites REST and GraphQL APIs.
     resume: false
   - name: Ibizan
-    link: http://github.com/aaronsky/ibizan/
+    link: https://github.com/aaronsky/ibizan/
     description: Ibizan is a chat bot built on the Hubot framework, originally contracted by Fangamer. Ibizan is designed to provide an intuitive and interactive interface to managing a timesheet.
     resume: false
   - name: learnVCS
-    link: http://learnvcs.github.io/
+    link: https://learnvcs.github.io/
     description: A student-driven effort to improve version control education in the Interactive Games & Media curricula, overseen by the department chair. Produced a web reference to prime newcomers on version control fundamentals with a curated collection of helpful links and an interactive Git graph using React and live data from GitHub.
     resume: false
   - name: Packed
-    link: https://www.microsoft.com/en-us/store/apps/packed/9nblggh0f0gr
+    link: https://www.microsoft.com/en-us/store/apps/packed/9nblggh0f0gr/
     description: A package tracking application for Windows Phone 8 and Windows 8 developed using C# and XAML. Made extensive use of USPS, UPS and FedEx APIs and Windows Presentation Foundation. Independently created.
     resume: false
 skills:
