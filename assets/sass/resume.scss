@@ -1,9 +1,10 @@
 @import 'abstracts/variables', 'abstracts/mixins', 'abstracts/themes';
 
+@import 'vendor/vendor';
+
 @import 'base/typography', 'base/base';
 
 @import 'layout/default', 'layout/resume';
 
-@import 'components/header', 'components/theme_toggle';
-
-@import 'vendor/vendor';
+@import 'components/header', 'components/site_functions',
+  'components/accessibility';

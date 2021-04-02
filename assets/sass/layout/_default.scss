@@ -11,6 +11,10 @@
     @include themed(color, subheading);
   }
 
+  &_role {
+    @include themed(color, caption-role);
+  }
+
   p {
     margin-bottom: 1.5em;
   }

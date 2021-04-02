@@ -11,3 +11,6 @@ linkedin = "https://www.linkedin.com/in/aaronsky/"
 npm = "https://www.npmjs.com/~aaronsky"
 
 enableRobotsTXT = true
+
+[markup.goldmark.renderer]
+unsafe= true

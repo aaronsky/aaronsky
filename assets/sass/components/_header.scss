@@ -13,29 +13,6 @@
     align-items: flex-end;
   }
 
-  &_logo {
-    position: absolute;
-    margin: 0 auto;
-    left: 1em;
-    top: 1em;
-    height: 40px;
-
-    animation-fill-mode: both;
-    animation-duration: 1s;
-    transform: rotateZ(0deg);
-    transition: transform 0.4s;
-
-    &:hover {
-      transform: rotateZ(10deg);
-      transition: transform 0.4s;
-    }
-
-    &:active {
-      transform: rotateZ(-10deg);
-      transition: transform 0.25s;
-    }
-  }
-
   &_author {
     margin: 0 auto;
     font-size: $heading-font-size;
@@ -49,7 +26,7 @@
   }
 
   &_nav {
-    padding: 0.5em;
+    padding: 0 0.5em 0.5em;
 
     &_item {
       box-sizing: border-box;
@@ -62,7 +39,7 @@
 a {
   &.header_nav_item {
     box-shadow: 0 0 0 0 transparent;
-    transition: 0.25s;
+    transition: color box-shadow 0.25s;
   }
 
   &:hover.header_nav_item {
