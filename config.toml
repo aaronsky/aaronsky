@@ -3,8 +3,6 @@ languageCode = "en-us"
 title = "Portfolio"
 
 [params]
-repository = "aaronsky/aaronsky"
-repositoryURL = "https://github.com/aaronsky/aaronsky"
 author = "Aaron Sky"
 caption = "Mobile Tools Developer"
 email = "aaronsky@skyaaron.com"
