@@ -1,0 +1,11 @@
+.footer {
+  border-top: 1pt solid darkgray;
+  padding: 1em;
+
+  &_content {
+    text-align: center;
+    font-size: $footer-font-size;
+    font-style: italic;
+    @include themed(color, body);
+  }
+}

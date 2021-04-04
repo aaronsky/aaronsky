@@ -8,14 +8,9 @@
     {{ partial "site_functions.html" . }}
     <div class="main_container">
         {{ partial "header.html" . }}
-
-        <div class="content">
-            {{ .Content }}
-        </div>
-
-        <div class="resume">
-            {{ partial "resume/resume.html" . }}
-        </div>
+        <div class="content">{{ .Content }}</div>
+        <div class="resume">{{ partial "resume/resume.html" . }}</div>
+        {{ partial "footer.html" . }}
     </div>
 </main>
 {{ end }}

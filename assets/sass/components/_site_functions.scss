@@ -31,14 +31,14 @@
     border: none;
     cursor: pointer;
     background-color: transparent;
-    color: var(--color-theme-toggle-button);
+    @include themed(color, theme-toggle-button);
     font-size: $theme-icon-font-size;
     transition: color 0.25s;
 
     @media (hover: hover) {
       &:hover {
         animation: rockBackAndForth 4s linear infinite;
-        color: var(--color-theme-toggle-button-hover);
+        @include themed(color, theme-toggle-button-hover);
       }
     }
   }
