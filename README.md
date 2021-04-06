@@ -6,7 +6,7 @@ I made developer productivity tools and operate infrastructure to automate away 
 - :beer: I develop [Cider](https://github.com/cidertool/cider), a tool for automating app submission for Apple platforms to the App Store
 - :apple: iOS, Swift, and Objective-C since 2014
 - :iphone: My first app was a US-based delivery tracking app for Windows Phone 8
-- :magnifying_glass: in addition: Rust :crab:, Go :hamster:, TypeScript & Node.js :package:, Terraform :diamond_shape_with_a_dot_inside:, Puppet :performing_arts:, Python :snake:, Ruby :gem:
+- :mag: in addition: Rust :crab:, Go :hamster:, TypeScript & Node.js :package:, Terraform :diamond_shape_with_a_dot_inside:, Puppet :performing_arts:, Python :snake:, Ruby :gem:
 - :speaking_head: Talk to me about cooking, video games, or programming language design!
 
 You can read a little more about me and what I do at <https://skyaaron.com>.
