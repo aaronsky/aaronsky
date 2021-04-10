@@ -1,6 +1,11 @@
 {{ define "title" }}Resume – Aaron Sky{{ end }}
 {{ define "subtitle" }}&nbsp;{{ end }}
 
+{{ define "head_style" }}
+{{ $style := resources.Get "sass/resume.scss" | toCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{ end }}
+
 {{ define "main" }}
 <main aria-role="main">
     <div class="resume document">
