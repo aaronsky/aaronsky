@@ -1,109 +1,40 @@
-html {
-  @include themed(background-color, resume-background);
-}
+$section-heading-font-size: 24pt;
+$project-heading-font-size: 18pt;
+$project-subheading-font-size: 14pt;
 
 .resume {
-  line-height: 1.3;
+  h2 {
+    @include themed(color, heading);
 
-  &.document {
-    @include themed(background-color, resume-background);
-  }
-
-  &_header {
-    &_heading {
-      font-weight: bold;
-      font-size: 24pt;
-      margin-bottom: 0.25rem;
+    &.resume_section_heading {
+      font-size: $section-heading-font-size;
+      font-weight: 600;
     }
 
-    &_subheading {
-      font-style: italic;
-      font-size: 11pt;
-      @include themed(color, subheading);
-      margin-bottom: 1rem;
-
-      & > a {
-        @include themed(color, link);
-        font-style: italic;
-        font-size: 11pt;
-      }
+    &.resume_project_heading {
+      font-size: $project-heading-font-size;
+      font-weight: 600;
     }
   }
 
-  &_section_heading {
-    font-weight: bold;
-    font-size: 14pt;
+  h3 {
     @include themed(color, subheading);
-    clear: left;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
 
-  &_project {
-    &_heading {
-      margin-top: 0.5rem;
-      margin-bottom: 0.25rem;
-
-      & > a {
-        @include themed(color, subheading);
-      }
+    &.resume_project_heading {
+      font-size: $project-subheading-font-size;
+      font-weight: 600;
     }
 
-    &_description {
-      margin: 0;
-      padding: 0;
-      margin-bottom: 0.5rem;
-      @include themed(color, text);
-      font-size: 10pt;
-      text-align: left;
-      text-justify: inter-word;
+    &.resume_skill_heading {
+      font-size: $project-subheading-font-size;
     }
   }
 
-  &_skill {
-    &_heading {
-      @include themed(color, caption);
-      font-weight: bold;
-      font-size: 10pt;
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-    }
-
-    &_item {
-      font-style: italic;
-      font-size: 10pt;
-      padding-right: 0.5rem;
-    }
+  .resume_skill_item {
+    font-size: $body-font-size;
   }
 
-  &_footer {
-    margin-top: 4rem;
-
-    &_logo {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 10%;
-      padding: 0 1%;
-    }
+  p {
+    margin-bottom: 1.5em;
   }
-}
-
-h2.resume_project_heading {
-  font-weight: bold;
-  font-size: 12pt;
-  @include themed(color, subheading);
-}
-
-h3.resume_project_heading {
-  font-weight: bold;
-  font-size: 10pt;
-  @include themed(color, caption);
-}
-
-.resume_skill_item ~ .resume_skill_item {
-  padding-left: 0.5rem;
-  border-left-width: 2pt;
-  border-left-style: solid;
-  @include themed(border-left-color, separator);
 }
