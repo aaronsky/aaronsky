@@ -6,35 +6,27 @@ experience:
       - title: Software Engineer III
         description: Developed a system for consuming new kinds of media content in the Twitter iOS app.
         start: '2021-04-26'
-    resume: true
+        resume: false
+    resume: false
   - name: Wayfair
     link: https://www.wayfair.com/
     location: Boston, MA
     roles:
       - title: Senior Development Platforms Engineer
-        description: Drove a migration of CentOS-based build infrastructure from on-premises data centers to autoscaled Google Compute Engine on Google Cloud Platform. Adopted new features in Terraform, Vault, and Puppet that reduce infrastructure toil. Supported the design of a model for ephemeral testing environments for services teams.
+        description: Drove a migration of CentOS-based build infrastructure from on-premises data centers to autoscaled Google Compute Engine instance groups on Google Cloud Platform (GCP). Incorporated new features in Terraform, Vault, and Puppet that reduced infrastructure toil and eliminated scheduling wait times for continuous integration. Collaborated across teams and functions in order to successfully leverage GCP in innovative ways at Wayfair.
         start: '2020-04-01'
         end: '2021-04-09'
+        resume: true
       - title: Senior App Infrastructure Engineer
         description: Led a team of five to create tools to support the development of apps across Wayfair. Drove a substantial SCM migration across a distributed team of over 100 developers and over 20 repositories from Gitlab Enterprise to GitHub Enterprise. Designed a framework for more performant, reproducible iOS and Android builds on Buildkite. Supported the broader transition to a weekly release of the Storefront iOS application.
         start: '2019-03-01'
         end: '2020-04-01'
+        resume: true
       - title: iOS Platforms Engineer L2
-        description: Led a team of three to create tools to support the development of iOS apps in the Storefront division. Maintained and administered our Jenkins and Buddybuild continuous integration platforms on iOS and Android. Created a metrics platform for build system performance and a reporting system to surface regression alerts from local and remote builds to a shared source. Negotiated infrastructural support with partners in Release Engineering to run Swift-based endpoint integration tests on Linux in Docker.
+        description: Led a team of three to create tools to support the development of iOS apps in the Storefront division. Maintained and administered our Jenkins and Buddybuild continuous integration platforms on iOS and Android. Created a metrics platform for monitoring local and remote build performance of iOS apps, in order to identify trends and regressions. Negotiated infrastructural support with partners in Release Engineering to run Swift-based endpoint integration tests on Linux in Docker. Implemented product page Handoff into the Storefront iOS app and website.
         start: '2017-07-24'
         end: '2019-03-01'
-    resume: true
-  - name: Fangamer
-    link: https://www.fangamer.com/
-    roles:
-      - title: Contractor
-        description: Contributed to a large Shopify Ruby-on-Rails codebase to launch an overhauled in-stock notification system.
-        start: '2020-03-26'
-        end: '2020-04-23'
-      - title: Contractor
-        description: Delivered a Slack-based time tracking tool for use in a small, distributed office setting. Utilized principles of test driven development, client-focused delivery and twelve-factor application design. Conducted training for use and continued development of the tool.
-        start: '2016-01-24'
-        end: '2016-05-26'
+        resume: true
     resume: true
   - name: SapientRazorfish
     link: https://www.publicissapient.com/
@@ -44,6 +36,21 @@ experience:
         description: Developed and published four apps to iOS and Android storefronts using React Native for a Fortune 100 insurance client. Served as the teams sole native mobile specialist and release engineer. Created testing and release tools for teams to reduce development friction. Built-up Jenkins cluster to create reproducible, concurrent app builds, and coordinated with clients to painlessly deploy to storefronts. Utilized Agile methodology and Scrum to effectively respond to and pivot on client input.
         start: '2016-06-06'
         end: '2017-07-07'
+        resume: true
+    resume: true
+  - name: Fangamer
+    link: https://www.fangamer.com/
+    roles:
+      - title: Contractor
+        description: Contributed to a large Shopify Ruby-on-Rails codebase to launch an overhauled in-stock notification system.
+        start: '2020-03-26'
+        end: '2020-04-23'
+        resume: false
+      - title: Contractor
+        description: Delivered a Slack-based time tracking tool for use in a small, distributed office setting. Utilized principles of test driven development, client-focused delivery and twelve-factor application design. Conducted training for use and continued development of the tool.
+        start: '2016-01-24'
+        end: '2016-05-26'
+        resume: true
     resume: true
   - name: Xamarin
     link: https://xamarin.com/
@@ -53,6 +60,7 @@ experience:
         location: Boston, MA
         start: '2015-01-12'
         end: '2015-08-14'
+        resume: true
     resume: true
   - name: Rochester Institute of Technology
     link: https://www.rit.edu/gccis/igm/
@@ -62,6 +70,7 @@ experience:
         description: Wrote backend for open source education software developed under grant program. Assisted students with questions related to iOS and Android coursework.
         start: '2015-08-24'
         end: '2016-05-20'
+        resume: false
     resume: false
   - name: iD Tech Camps
     link: https://www.idtech.com/
@@ -71,6 +80,7 @@ experience:
         description: Responsible for instructing Java and C++ programming to groups of 13-17 year olds with varying levels of programming background. My weeklong course covered basic structures of the language such as variables, code structure and flow control. I also taught my advanced students basic UI, object-oriented programming, and the importance of project scope.
         start: '2013-06-15'
         end: '2014-08-02'
+        resume: false
     resume: false
 projects:
   - name: Cider
@@ -98,16 +108,16 @@ projects:
     description: A package tracking application for Windows Phone 8 and Windows 8 developed using C# and XAML. Made extensive use of USPS, UPS and FedEx APIs and Windows Presentation Foundation. Independently created.
     resume: false
 skills:
-  - skill: Swift
-  - skill: Go
-  - skill: JavaScript/TypeScript
-  - skill: Terraform
-  - skill: Puppet
-  - skill: Python
-  - skill: Objective-C
-  - skill: Rust
-  - skill: Ruby
-  - skill: Java
+  - Swift
+  - Go
+  - JavaScript/TypeScript
+  - Terraform
+  - Puppet
+  - Python
+  - Objective-C
+  - Rust
+  - Ruby
+  - Java
 education:
   school: Rochester Institute of Technology
   location: Rochester, NY

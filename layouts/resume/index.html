@@ -1,8 +1,3 @@
-{{ define "head_style" }}
-{{ $style := resources.Get "sass/resume.scss" | toCSS | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}">
-{{ end }}
-
 {{ define "main" }}
 <main aria-role="main">
     {{ partial "site_functions.html" . }}
