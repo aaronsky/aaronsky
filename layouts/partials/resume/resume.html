@@ -16,7 +16,7 @@
     <div class="resume_project_description">
         <ul>
             {{ range $.Site.Data.resume.skills }}
-            <li class="resume_skill_item">{{ .skill }}</li>
+            <li class="resume_skill_item">{{ . }}</li>
             {{ end }}
         </ul>
     </div>
@@ -25,8 +25,8 @@
 <section>
     <h2 class="resume_section_heading">Education</h2>
     <p class="resume_project_description education">
-        {{ .Site.Data.resume.education.school }}, {{ .Site.Data.resume.education.location }}
+        {{ .Site.Data.resume.education.school }} • {{ .Site.Data.resume.education.location }}
         <br />
-        {{ .Site.Data.resume.education.degree }}, {{ .Site.Data.resume.education.date }}
+        {{ .Site.Data.resume.education.degree }} • {{ .Site.Data.resume.education.date }}
     </p>
 </section>
