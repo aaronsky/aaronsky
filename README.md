@@ -1,6 +1,6 @@
 ## Hello!
 
-I make developer productivity tools and operate infrastructure to automate away the papercuts that slow us all down. My focus has traditionally, been in the iOS and Android tools space, but I like to work on lots of different things. (He/him)
+I make developer productivity tools and operate infrastructure to automate away the papercuts that slow us all down. My focus has traditionally been in the iOS and Android tools space, but I like to work on lots of different things. (He/him)
 
 - :bird: My next gig will be developing on the media platform for iOS apps at Twitter
 - :beer: I develop [Cider](https://github.com/cidertool/cider), a tool for automating app submission for Apple platforms to the App Store
