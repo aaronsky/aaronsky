@@ -1,3 +1,2 @@
 DirectoryPath: public
-# IgnoreInternalEmptyHash: true
-# IgnoreSSLVerify: true
+IgnoreExternalBrokenLinks: true

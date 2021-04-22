@@ -4,4 +4,4 @@ Build infrastructure and tooling developer specialized in iOS and Android applic
 
 I have been working in the mobile space professionally since 2013, and in cloud infrastructure since 2019. I also love to cook!
 
-My resume can be viewed in either [HTML](/resume) or [PDF](/files/resume.pdf). My open source projects and other publicly-viewable development experience can be found on my [GitHub](https://github.com/aaronsky).
+My resume can be viewed in either [HTML](/resume/) or [PDF](/files/resume.pdf). My open source projects and other publicly-viewable development experience can be found on my [GitHub](https://github.com/aaronsky).

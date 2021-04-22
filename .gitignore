@@ -63,3 +63,8 @@ $RECYCLE.BIN/
 /public/
 /resources/
 node_modules/
+
+### htmltest ###
+
+bin/htmltest
+tmp/.htmltest/
