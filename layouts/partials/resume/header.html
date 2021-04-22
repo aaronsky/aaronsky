@@ -4,14 +4,16 @@
     </span>
     <span>
         <h2 class="resume_header_subheading">
-            <a href="mailto:{{ .Site.Params.Email }}">{{ .Site.Params.Email }}</a>
+            <a href="mailto:{{ .Site.Params.Email }}"
+                >{{ .Site.Params.Email }}</a
+            >
             •
             <a href="{{ .Site.BaseURL }}">
                 {{ $url := urls.Parse .Site.BaseURL }}
                 {{ if eq $url.Path "/" }}
-                {{ $url.Host}}
-                {{ else }}
-                {{ printf "%s%s" $url.Host $url.Path }}
+                    {{ $url.Host }}
+                    {{ else }}
+                    {{ printf "%s%s" $url.Host $url.Path }}
                 {{ end }}
             </a>
             •

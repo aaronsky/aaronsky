@@ -1,35 +1,35 @@
 .main_container {
-  position: relative;
-  margin: 0 auto;
-  max-width: 80%;
-  min-height: 100vh;
-  padding: 3rem 0;
+    position: relative;
+    margin: 0 auto;
+    max-width: 80%;
+    min-height: 100vh;
+    padding: 3rem 0;
 }
 
 .content {
-  h3 {
-    font-size: $caption-font-size;
-    font-weight: 600;
-    @include themed(color, subheading);
-  }
+    h3 {
+        font-size: $caption-font-size;
+        font-weight: 600;
+        @include themed(color, subheading);
+    }
 
-  &_role {
-    @include themed(color, caption-emphasis);
-  }
+    &_role {
+        @include themed(color, caption-emphasis);
+    }
 
-  p {
-    margin-bottom: 1.5em;
-  }
+    p {
+        margin-bottom: 1.5em;
+    }
 }
 
 .visually_hidden {
-  display: block;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(1px);
-  white-space: nowrap;
-  position: absolute;
+    display: block;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(1px);
+    white-space: nowrap;
+    position: absolute;
 }

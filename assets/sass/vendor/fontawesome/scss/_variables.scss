@@ -8,7 +8,7 @@ $fa-css-prefix: fa !default;
 
 // Convenience function used to set content property
 @function fa-content($fa-var) {
-  @return unquote('"#{ $fa-var }"');
+    @return unquote('"#{ $fa-var }"');
 }
 
 $fa-var-envelope: \f0e0;

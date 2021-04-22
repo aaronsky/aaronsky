@@ -1,10 +1,12 @@
 .PHONY: clean build dev
 
 clean:
+	rm -rf node_modules
 	rm -rf public
 	rm -rf resources
 
 build:
+	npm ci --production || true
 	hugo --cleanDestinationDir --minify
 	sed -i.bak 's/\/images/..\/..\/images/' public/resume/document/index.html
 	sed -i.bak 's/\/sass/..\/..\/sass/' public/resume/document/index.html

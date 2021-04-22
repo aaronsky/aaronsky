@@ -1,0 +1,15 @@
+{
+  "name": "aaronsky",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronsky/aaronsky.git"
+  },
+  "author": "Aaron Sky <aaronsky@skyaaron.com>",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://github.com/aaronsky/aaronsky#readme",
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "prettier-plugin-go-template": "^0.0.10"
+  }
+}

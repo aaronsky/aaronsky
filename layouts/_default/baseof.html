@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            {{ block "title" . }} {{ .Site.Params.Author }} {{ end }}
+            {{ block "subtitle" . }} | {{ .Site.Params.Caption }} {{ end }}
+        </title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="cleartype" content="on" />
+        {{ partial "social.html" . }} {{ partial "favicon.html" . }}
+        {{ block "head_style" . }}
+            {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
+            <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+        {{ end }}
+        {{ block "head_scripts" . }}{{ end }}
+    </head>
 
-<head>
-    <meta charset="utf-8" />
-    <title>
-        {{ block "title" . }} {{ .Site.Params.Author }} {{ end }}
-        {{ block "subtitle" . }} | {{ .Site.Params.Caption }} {{ end }}
-    </title>
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="cleartype" content="on" />
-    {{ partial "social.html" . }} {{ partial "favicon.html" . }}
-    {{ block "head_style" . }}
-    {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-    {{ end }}
-    {{ block "head_scripts" . }}{{ end }}
-</head>
-
-<body>
-    {{ block "main" . }}{{ end }}
-</body>
-
+    <body>
+        {{ block "main" . }}{{ end }}
+    </body>
 </html>
