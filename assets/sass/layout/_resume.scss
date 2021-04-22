@@ -3,38 +3,38 @@ $project-heading-font-size: 18pt;
 $project-subheading-font-size: 14pt;
 
 .resume {
-  h2 {
-    @include themed(color, heading);
+    h2 {
+        @include themed(color, heading);
 
-    &.resume_section_heading {
-      font-size: $section-heading-font-size;
-      font-weight: 600;
+        &.resume_section_heading {
+            font-size: $section-heading-font-size;
+            font-weight: 600;
+        }
+
+        &.resume_project_heading {
+            font-size: $project-heading-font-size;
+            font-weight: 600;
+        }
     }
 
-    &.resume_project_heading {
-      font-size: $project-heading-font-size;
-      font-weight: 600;
+    h3 {
+        @include themed(color, subheading);
+
+        &.resume_project_heading {
+            font-size: $project-subheading-font-size;
+            font-weight: 600;
+        }
+
+        &.resume_skill_heading {
+            font-size: $project-subheading-font-size;
+        }
     }
-  }
 
-  h3 {
-    @include themed(color, subheading);
-
-    &.resume_project_heading {
-      font-size: $project-subheading-font-size;
-      font-weight: 600;
+    .resume_skill_item {
+        font-size: $body-font-size;
     }
 
-    &.resume_skill_heading {
-      font-size: $project-subheading-font-size;
+    p {
+        margin-bottom: 1.5em;
     }
-  }
-
-  .resume_skill_item {
-    font-size: $body-font-size;
-  }
-
-  p {
-    margin-bottom: 1.5em;
-  }
 }

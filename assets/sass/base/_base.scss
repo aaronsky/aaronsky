@@ -5,13 +5,13 @@ Base elements
 
 // Apply a natural box layout model to all elements
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 /*
@@ -20,15 +20,15 @@ Selections
 ========================================================================== */
 
 ::-moz-selection {
-  @include themed(background-color, highlight);
-  @include themed(color, highlight-text);
-  text-shadow: none;
+    @include themed(background-color, highlight);
+    @include themed(color, highlight-text);
+    text-shadow: none;
 }
 
 ::selection {
-  @include themed(background-color, highlight);
-  @include themed(color, highlight-text);
-  text-shadow: none;
+    @include themed(background-color, highlight);
+    @include themed(color, highlight-text);
+    text-shadow: none;
 }
 
 /*
@@ -37,30 +37,30 @@ Body
 ========================================================================== */
 
 body {
-  font-size: 1.5em;
-  line-height: 1.6;
-  font-weight: 400;
-  margin: 0;
+    font-size: 1.5em;
+    line-height: 1.6;
+    font-weight: 400;
+    margin: 0;
 
-  @include themed(background-color, background);
+    @include themed(background-color, background);
 
-  transition-property: background, color;
-  transition-duration: 250ms, 75ms;
-  transition-timing-function: ease-in-out, ease;
+    transition-property: background, color;
+    transition-duration: 250ms, 75ms;
+    transition-timing-function: ease-in-out, ease;
 }
 
 p {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /* underlined text */
 u,
 ins {
-  text-decoration: none;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  @include themed(border-bottom-color, text);
+    text-decoration: none;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    @include themed(border-bottom-color, text);
 }
 
 /*
@@ -74,41 +74,41 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0.67em 0;
-  margin-top: 0;
-  font-weight: 300;
-  font-family: $heading-font;
-  text-rendering: optimizeLegibility;
+    margin: 0.67em 0;
+    margin-top: 0;
+    font-weight: 300;
+    font-family: $heading-font;
+    text-rendering: optimizeLegibility;
 }
 
 h1 {
-  font-size: 4rem;
-  line-height: 1.2;
+    font-size: 4rem;
+    line-height: 1.2;
 }
 
 h2 {
-  font-size: 3.6rem;
-  line-height: 1.25;
+    font-size: 3.6rem;
+    line-height: 1.25;
 }
 
 h3 {
-  font-size: 3rem;
-  line-height: 1.3;
+    font-size: 3rem;
+    line-height: 1.3;
 }
 
 h4 {
-  font-size: 2.4rem;
-  line-height: 1.35;
+    font-size: 2.4rem;
+    line-height: 1.35;
 }
 
 h5 {
-  font-size: 1.8rem;
-  line-height: 1.5;
+    font-size: 1.8rem;
+    line-height: 1.5;
 }
 
 h6 {
-  font-size: 1.5rem;
-  line-height: 1.6;
+    font-size: 1.5rem;
+    line-height: 1.6;
 }
 
 /*
@@ -117,32 +117,32 @@ Links
 ========================================================================== */
 
 a {
-  @include themed(color, link);
-  text-decoration: none;
-  background-color: transparent;
+    @include themed(color, link);
+    text-decoration: none;
+    background-color: transparent;
 }
 
 a:hover {
-  @include themed(color, link-hover);
+    @include themed(color, link-hover);
 }
 
 a:active {
-  @include themed(color, link-active);
+    @include themed(color, link-active);
 }
 
 // Apply focus state
 a:focus {
-  /* Default */
-  outline: thin dotted #333;
-  /* Webkit */
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+    /* Default */
+    outline: thin dotted #333;
+    /* Webkit */
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
 }
 
 // Remove outline
 a:hover,
 a:active {
-  outline: 0;
+    outline: 0;
 }
 
 /*
@@ -152,5 +152,5 @@ Global Transition
 
 figure,
 img {
-  transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }

@@ -4,16 +4,16 @@ TYPOGRAPHY
 ================================================ */
 
 body {
-  font: -apple-system-body;
-  font-family: $base-font;
-  font-size: $body-font-size;
-  @include themed(color, text);
+    font: -apple-system-body;
+    font-family: $base-font;
+    font-size: $body-font-size;
+    @include themed(color, text);
 }
 
 p {
-  font-size: $body-font-size;
+    font-size: $body-font-size;
 }
 
 li {
-  font-size: $body-font-size;
+    font-size: $body-font-size;
 }

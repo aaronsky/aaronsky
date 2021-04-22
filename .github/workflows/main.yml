@@ -1,0 +1,27 @@
+name: main
+on: push
+
+jobs:
+  tests:
+    name: htmltest site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.82.1'
+          extended: true
+
+      - name: Install wkhtmltopdf
+        run: |
+          sudo apt-get install -y xvfb libfontconfig wkhtmltopdf
+
+      - name: Build Site
+        run: make build
+
+      - name: Run htmltest
+        run: |
+          curl https://htmltest.wjdp.uk | bash
+          ./bin/htmltest -c htmltest.yml

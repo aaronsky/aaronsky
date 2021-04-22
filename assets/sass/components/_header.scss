@@ -1,62 +1,62 @@
 .header {
-  margin: 1em auto;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  @include themed(color, heading);
-  border-bottom: 1px solid;
+    margin: 1em auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    @include themed(color, heading);
+    border-bottom: 1px solid;
 
-  @media screen and (min-width: $breakpoint-medium) {
-    flex-direction: row;
-    align-items: flex-end;
-  }
-
-  &_author {
-    margin: 0 auto;
-    font-size: $heading-font-size;
-    font-weight: 700;
-  }
-
-  &_caption {
-    font-size: $caption-font-size;
-    font-weight: 400;
-    margin-bottom: 0;
-  }
-
-  &_nav {
-    padding: 0 0.5em 0.5em;
-
-    &_item {
-      box-sizing: border-box;
-      @include themed(color, nav-item);
-      padding: 0.5em;
+    @media screen and (min-width: $breakpoint-medium) {
+        flex-direction: row;
+        align-items: flex-end;
     }
-  }
+
+    &_author {
+        margin: 0 auto;
+        font-size: $heading-font-size;
+        font-weight: 700;
+    }
+
+    &_caption {
+        font-size: $caption-font-size;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    &_nav {
+        padding: 0 0.5em 0.5em;
+
+        &_item {
+            box-sizing: border-box;
+            @include themed(color, nav-item);
+            padding: 0.5em;
+        }
+    }
 }
 
 a {
-  &.header_nav_item {
-    box-shadow: 0 0 0 0 transparent;
-    transition-duration: 0.25s;
-    transition-property: color, box-shadow;
-  }
+    &.header_nav_item {
+        box-shadow: 0 0 0 0 transparent;
+        transition-duration: 0.25s;
+        transition-property: color, box-shadow;
+    }
 
-  &:hover.header_nav_item {
-    @include themed(color, link-hover);
-    box-shadow: 0 4px 0 0;
-  }
+    &:hover.header_nav_item {
+        @include themed(color, link-hover);
+        box-shadow: 0 4px 0 0;
+    }
 }
 
 .icons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-size: $icon-font-size;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: $icon-font-size;
 
-  & > .header_nav_item {
-    padding: 0.3em 0.4em;
-  }
+    & > .header_nav_item {
+        padding: 0.3em 0.4em;
+    }
 }

@@ -1,11 +1,11 @@
 .#{$fa-css-prefix}.#{$fa-css-prefix}-github {
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: 400;
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: 400;
 }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-linkedin {
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: 400;
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: 400;
 }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-linkedin:before {
-  content: fa-content($fa-var-linkedin-in);
+    content: fa-content($fa-var-linkedin-in);
 }

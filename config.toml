@@ -13,4 +13,4 @@ npm = "https://www.npmjs.com/~aaronsky"
 enableRobotsTXT = true
 
 [markup.goldmark.renderer]
-unsafe= true
+unsafe = true
