@@ -4,6 +4,9 @@ clean:
 	rm -rf public
 	rm -rf resources
 
+format:
+	./node_modules/.bin/prettier --write .
+
 build:
 	hugo --cleanDestinationDir --minify
 	sed -i.bak 's/\/images/..\/..\/images/' public/resume/document/index.html

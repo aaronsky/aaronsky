@@ -5,8 +5,11 @@
         top: 0.75em;
         height: 40px;
 
-        animation-fill-mode: both;
-        animation-duration: 1s;
+        animation: {
+            fill-mode: both;
+            duration: 1s;
+        }
+
         transform: rotateZ(0deg);
         transition: transform 0.4s;
 

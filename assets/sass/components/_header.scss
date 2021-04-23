@@ -15,13 +15,17 @@
 
     &_author {
         margin: 0 auto;
-        font-size: $heading-font-size;
-        font-weight: 700;
+        font: {
+            size: $heading-font-size;
+            weight: 700;
+        }
     }
 
     &_caption {
-        font-size: $caption-font-size;
-        font-weight: 400;
+        font: {
+            size: $caption-font-size;
+            weight: 400;
+        }
         margin-bottom: 0;
     }
 
@@ -39,8 +43,10 @@
 a {
     &.header_nav_item {
         box-shadow: 0 0 0 0 transparent;
-        transition-duration: 0.25s;
-        transition-property: color, box-shadow;
+        transition: {
+            duration: 0.25s;
+            property: color, box-shadow;
+        }
     }
 
     &:hover.header_nav_item {

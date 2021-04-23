@@ -7,13 +7,17 @@ $project-subheading-font-size: 14pt;
         @include themed(color, heading);
 
         &.resume_section_heading {
-            font-size: $section-heading-font-size;
-            font-weight: 600;
+            font: {
+                size: $section-heading-font-size;
+                weight: 600;
+            }
         }
 
         &.resume_project_heading {
-            font-size: $project-heading-font-size;
-            font-weight: 600;
+            font: {
+                size: $project-heading-font-size;
+                weight: 600;
+            }
         }
     }
 
@@ -21,8 +25,10 @@ $project-subheading-font-size: 14pt;
         @include themed(color, subheading);
 
         &.resume_project_heading {
-            font-size: $project-subheading-font-size;
-            font-weight: 600;
+            font: {
+                size: $project-subheading-font-size;
+                weight: 600;
+            }
         }
 
         &.resume_skill_heading {

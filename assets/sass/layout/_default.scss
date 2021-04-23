@@ -8,8 +8,11 @@
 
 .content {
     h3 {
-        font-size: $caption-font-size;
-        font-weight: 600;
+        font: {
+            size: $caption-font-size;
+            weight: 600;
+        }
+
         @include themed(color, subheading);
     }
 

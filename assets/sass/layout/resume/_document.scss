@@ -9,38 +9,54 @@ html {
     .resume {
         &_header {
             &_heading {
-                font-weight: bold;
-                font-size: 24pt;
+                font: {
+                    weight: bold;
+                    size: 24pt;
+                }
+
                 margin-bottom: 0.25rem;
             }
 
             &_subheading {
-                font-style: italic;
-                font-size: 11pt;
+                font: {
+                    style: italic;
+                    size: 11pt;
+                }
+
                 @include themed(color, subheading);
                 margin-bottom: 1rem;
 
                 & > a {
                     @include themed(color, link);
-                    font-style: italic;
-                    font-size: 11pt;
+                    font: {
+                        style: italic;
+                        size: 11pt;
+                    }
                 }
             }
         }
 
         &_section_heading {
-            font-weight: bold;
-            font-size: 14pt;
+            font: {
+                weight: bold;
+                size: 14pt;
+            }
+
             @include themed(color, subheading);
             clear: left;
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
+
+            margin: {
+                top: 0.5rem;
+                bottom: 0.5rem;
+            }
         }
 
         &_project {
             &_heading {
-                margin-top: 0.5rem;
-                margin-bottom: 0.25rem;
+                margin: {
+                    top: 0.5rem;
+                    bottom: 0.25rem;
+                }
 
                 & > a {
                     @include themed(color, subheading);
@@ -49,12 +65,15 @@ html {
 
             &_description {
                 margin: 0;
-                padding: 0;
                 margin-bottom: 0.5rem;
+                padding: 0;
                 @include themed(color, text);
                 font-size: 10pt;
-                text-align: left;
-                text-justify: inter-word;
+
+                text: {
+                    align: left;
+                    justify: inter-word;
+                }
 
                 &.education {
                     line-height: 2;
@@ -65,15 +84,24 @@ html {
         &_skill {
             &_heading {
                 @include themed(color, caption);
-                font-weight: bold;
-                font-size: 10pt;
-                margin-top: 0;
-                margin-bottom: 0.5rem;
+
+                font: {
+                    weight: bold;
+                    size: 10pt;
+                }
+
+                margin: {
+                    top: 0;
+                    bottom: 0.5rem;
+                }
             }
 
             &_item {
-                font-style: italic;
-                font-size: 10pt;
+                font: {
+                    style: italic;
+                    size: 10pt;
+                }
+
                 padding-right: 0.5rem;
             }
         }
@@ -98,8 +126,11 @@ html {
     }
 
     h3.resume_project_heading {
-        font-weight: bold;
-        font-size: 10pt;
+        font: {
+            weight: bold;
+            size: 10pt;
+        }
+
         @include themed(color, caption);
     }
 
@@ -114,8 +145,12 @@ html {
 
     .resume_skill_item ~ .resume_skill_item {
         padding-left: 0.5rem;
-        border-left-width: 2pt;
-        border-left-style: solid;
+
+        border-left: {
+            width: 2pt;
+            style: solid;
+        }
+
         @include themed(border-left-color, separator);
     }
 }
