@@ -16,7 +16,7 @@ build:
 dev:
 	hugo serve -D
 
-htmltest: htmltest_fetch build htmltest_run
+htmltest: htmltest_fetch htmltest_run
 
 htmltest_fetch:
 	curl https://htmltest.wjdp.uk | bash

@@ -6,9 +6,8 @@ EnforceHTTPS: true
 IgnoreCanonicalBrokenLinks: false
 
 HTTPHeaders:
-  Accept: text/html,application/xhtml+xml,application/xml
-  Accept-Encoding: gzip,deflate,br
-  Accept-Language: en-US,en
+  Accept: text/html
 
 IgnoreURLs:
+  - linkedin.com
   - dotnet.microsoft.com
