@@ -1,11 +1,13 @@
 <header>
     <span>
-        <h1 class="resume_header_heading">{{ .Site.Params.Author }}</h1>
+        <h1 class="resume_header_heading">
+            {{ .Site.Params.Identity.Author }}
+        </h1>
     </span>
     <span>
         <h2 class="resume_header_subheading">
-            <a href="mailto:{{ .Site.Params.Email }}"
-                >{{ .Site.Params.Email }}</a
+            <a href="mailto:{{ .Site.Params.Identity.Email }}"
+                >{{ .Site.Params.Identity.Email }}</a
             >
             •
             <a href="{{ .Site.BaseURL }}">
@@ -17,8 +19,8 @@
                 {{ end }}
             </a>
             •
-            <a href="{{ .Site.Params.Github }}">
-                {{ $githubURL := urls.Parse .Site.Params.Github }}
+            <a href="{{ .Site.Params.Identity.Links.Github }}">
+                {{ $githubURL := urls.Parse .Site.Params.Identity.Links.Github }}
                 {{ printf "%s%s" $githubURL.Host $githubURL.Path }}
             </a>
         </h2>

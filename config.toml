@@ -2,15 +2,20 @@ baseURL = "https://skyaaron.com/"
 languageCode = "en-us"
 title = "Portfolio"
 
-[params]
+[params.identity]
 author = "Aaron Sky"
 caption = "Mobile Tools Developer"
 email = "aaronsky@skyaaron.com"
+
+[params.identity.links]
 github = "https://github.com/aaronsky/"
 linkedin = "https://www.linkedin.com/in/aaronsky/"
 npm = "https://www.npmjs.com/~aaronsky"
 
-enableRobotsTXT = true
+[params.experience.links]
+twitter = "https://www.twitter.com/"
+wayfair = "https://www.wayfair.com/"
+sapient = "https://www.sapientrazorfish.com/"
+xamarin = "https://www.xamarin.com/"
 
-[markup.goldmark.renderer]
-unsafe = true
+enableRobotsTXT = true

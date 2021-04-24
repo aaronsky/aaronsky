@@ -16,13 +16,13 @@
         @include themed(color, subheading);
     }
 
-    &_role {
-        @include themed(color, caption-emphasis);
-    }
-
     p {
         margin-bottom: 1.5em;
     }
+}
+
+.emphasized {
+    @include themed(color, caption-emphasis);
 }
 
 .visually_hidden {

@@ -1,7 +1,7 @@
 <header class="header">
     <div class="header_nav header_nav_item">
-        <h1 class="header_author">{{ .Site.Params.Author }}</h1>
-        <h2 class="header_caption">{{ .Site.Params.Caption }}</h2>
+        <h1 class="header_author">{{ .Site.Params.Identity.Author }}</h1>
+        <h2 class="header_caption">{{ .Site.Params.Identity.Caption }}</h2>
     </div>
     <div class="header_nav icons">
         <a
@@ -14,16 +14,16 @@
             <span class="visually_hidden">Resume</span>
         </a>
         <a
-            href="mailto:{{ .Site.Params.Email }}"
+            href="mailto:{{ .Site.Params.Identity.Email }}"
             class="header_nav_item"
             title="Email me"
-            alt="Send an email to {{ .Site.Params.Email }}"
+            alt="Send an email to {{ .Site.Params.Identity.Email }}"
         >
             <i class="far fa-envelope" aria-hidden="true"></i>
             <span class="visually_hidden">Email</span>
         </a>
         <a
-            href="{{ .Site.Params.Github }}"
+            href="{{ .Site.Params.Identity.Links.Github }}"
             class="header_nav_item"
             title="GitHub"
             alt="View my GitHub profile"
@@ -32,7 +32,7 @@
             <span class="visually_hidden">GitHub</span>
         </a>
         <a
-            href="{{ .Site.Params.Linkedin }}"
+            href="{{ .Site.Params.Identity.Links.Linkedin }}"
             class="header_nav_item"
             title="LinkedIn"
             alt="View my LinkedIn profile"
