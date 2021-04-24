@@ -1,5 +1,14 @@
 DirectoryPath: public
-IgnoreExternalBrokenLinks: true
+
+CheckFavicon: true
+EnforceHTML5: true
+EnforceHTTPS: true
+IgnoreCanonicalBrokenLinks: false
+
 HTTPHeaders:
-  Accept: text/html
-  User-Agent: 'com.sky.AaronSky/6'
+  Accept: text/html,application/xhtml+xml,application/xml
+  Accept-Encoding: gzip,deflate,br
+  Accept-Language: en-US,en
+
+IgnoreURLs:
+  - dotnet.microsoft.com

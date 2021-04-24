@@ -1,8 +1,7 @@
-.PHONY: clean build dev
+.PHONY: clean format build dev htmltest htmltest_fetch htmltest_run
 
 clean:
-	rm -rf public
-	rm -rf resources
+	rm -rf bin public resources tmp
 
 format:
 	./node_modules/.bin/prettier --write .
@@ -16,3 +15,11 @@ build:
 
 dev:
 	hugo serve -D
+
+htmltest: htmltest_fetch build htmltest_run
+
+htmltest_fetch:
+	curl https://htmltest.wjdp.uk | bash
+
+htmltest_run:
+	./bin/htmltest -c htmltest.yml

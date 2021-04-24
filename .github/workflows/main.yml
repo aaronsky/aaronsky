@@ -22,6 +22,4 @@ jobs:
         run: make build
 
       - name: Run htmltest
-        run: |
-          curl https://htmltest.wjdp.uk | bash
-          ./bin/htmltest -c htmltest.yml
+        run: make htmltest
