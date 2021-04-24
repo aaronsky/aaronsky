@@ -13,9 +13,9 @@ linkedin = "https://www.linkedin.com/in/aaronsky/"
 npm = "https://www.npmjs.com/~aaronsky"
 
 [params.experience.links]
-twitter = "https://www.twitter.com/"
+twitter = "https://twitter.com/"
 wayfair = "https://www.wayfair.com/"
 sapient = "https://www.publicissapient.com/"
-xamarin = "https://www.xamarin.com/"
+xamarin = "https://dotnet.microsoft.com/apps/xamarin"
 
 enableRobotsTXT = true

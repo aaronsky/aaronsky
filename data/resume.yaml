@@ -53,7 +53,7 @@ experience:
         resume: true
     resume: true
   - name: Xamarin
-    link: https://xamarin.com/
+    link: https://dotnet.microsoft.com/apps/xamarin
     roles:
       - title: Mobile Testing Intern
         description: Contributed UI tests to product sample automation suite and oversaw test runs. Filled and verified bugs in the Xamarin platform. Managed and enhanced internal QA infrastructure using Chef. Drove QA-side of launch of day one support for the newly released Apple Watch. Ported newly released iOS and Android samples to come from Apple WWDC and Google I/O 2015 to Xamarin.iOS and Xamarin.Android, respectively.
@@ -63,7 +63,7 @@ experience:
         resume: true
     resume: true
   - name: Rochester Institute of Technology
-    link: https://www.rit.edu/gccis/igm/
+    link: https://www.rit.edu/computing/school-interactive-games-and-media
     location: Rochester, NY
     roles:
       - title: Web Developer, Teaching Assistant
@@ -113,9 +113,9 @@ skills:
   - JavaScript/TypeScript
   - Terraform
   - Puppet
-  - Python
   - Objective-C
   - Rust
+  - Python
   - Ruby
   - Java
 education:
@@ -125,7 +125,7 @@ education:
   date: May 2016
 certification:
   - title: Xamarin Certified Mobile Developer
-    link: xamarin-certification.pdf
+    link: https://skyaaron.com/files/xamarin-certification.pdf
     start: '2015-02-01'
     end: '2017-12-31'
     resume: false

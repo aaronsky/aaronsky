@@ -1,2 +1,5 @@
 DirectoryPath: public
 IgnoreExternalBrokenLinks: true
+HTTPHeaders:
+  Accept: text/html
+  User-Agent: 'com.sky.AaronSky/6'
