@@ -4,10 +4,10 @@ experience:
     location: Boston, MA
     roles:
       - title: Software Engineer III
-        description: Developed a system for consuming new kinds of media content in the Twitter iOS app.
+        description: Developing tools and A/V features to enhance the (iOS Client) Media Platform at Twitter.
         start: '2021-04-26'
-        resume: false
-    resume: false
+        resume: true
+    resume: true
   - name: Wayfair
     link: https://www.wayfair.com/
     location: Boston, MA
