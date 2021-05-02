@@ -3,11 +3,11 @@ experience:
     link: https://twitter.com/
     location: Boston, MA
     roles:
-      - title: Software Engineer III
-        description: Developed a system for consuming new kinds of media content in the Twitter iOS app.
+      - title: Senior Software Engineer
+        description: Developing tools and A/V features to enhance the media client platform leveraged by Twitter's iOS apps.
         start: '2021-04-26'
-        resume: false
-    resume: false
+        resume: true
+    resume: true
   - name: Wayfair
     link: https://www.wayfair.com/
     location: Boston, MA
