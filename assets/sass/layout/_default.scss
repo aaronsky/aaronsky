@@ -7,6 +7,10 @@
 }
 
 .content {
+    h2 {
+        font-size: $subheading-font-size;
+    }
+
     h3 {
         font: {
             size: $caption-font-size;
