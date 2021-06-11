@@ -9,7 +9,7 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://github.com/aaronsky/aaronsky#readme",
   "devDependencies": {
-    "prettier": "^2.2.1",
+    "prettier": "^2.3.1",
     "prettier-plugin-go-template": "^0.0.10"
   }
 }
