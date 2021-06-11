@@ -15,6 +15,16 @@
             {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
             <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
         {{ end }}
+        <meta
+            name="theme-color"
+            content="#eee"
+            media="(prefers-color-scheme: light)"
+        />
+        <meta
+            name="theme-color"
+            content="#222"
+            media="(prefers-color-scheme: dark)"
+        />
         {{ block "head_scripts" . }}{{ end }}
     </head>
 
