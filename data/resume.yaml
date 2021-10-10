@@ -4,7 +4,7 @@ experience:
     location: Boston, MA
     roles:
       - title: Senior Software Engineer
-        description: Developing tools and A/V features to enhance the media client platform leveraged by Twitter's iOS apps.
+        description: Delivered a migration of the core A/V client codebase to Swift Package Manager. Drove increased adoption of Swift among the Objective-C codebase to improve reliability. Developed tools within the A/V testing environment to reduce development iteration time for new features.
         start: '2021-04-26'
         resume: true
     resume: true

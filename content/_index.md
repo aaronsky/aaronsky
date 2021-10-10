@@ -7,4 +7,4 @@ App infrastructure, tooling, and build pipeline developer specialized in iOS and
 
 I have been working in the mobile space professionally since 2013, and in cloud infrastructure since 2019.
 
-My resume can be viewed in either [HTML]({{< relref "resume/_index.md" >}}) or [PDF](/files/resume.pdf). My open source projects and other publicly-viewable development experience can be found on my [GitHub]({{< param "identity.links.github" >}}).
+My resume can be viewed in either [a browser]({{< relref "resume/_index.md" >}}) or [PDF](/files/resume.pdf). My open source projects and other publicly-viewable development experience can be found on my [GitHub]({{< param "identity.links.github" >}}).

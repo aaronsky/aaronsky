@@ -1,0 +1,23 @@
+{{ $date := "" }}
+
+{{ $startMonth := time.Format "January" .start }}
+{{ $startYear := time.Format "2006" .start }}
+
+{{ with .end }}
+    {{ $endMonth := time.Format "January" . }}
+    {{ $endYear := time.Format "2006" . }}
+
+    {{ if eq $startYear $endYear }}
+        {{ if eq $startMonth $endMonth }}
+            {{ $date = printf "%s" $startMonth $startYear }}
+        {{ else }}
+            {{ $date = printf "%s to %s %s" $startMonth $endMonth $endYear }}
+        {{ end }}
+    {{ else }}
+        {{ $date = printf "%s %s to %s %s" $startMonth $startYear $endMonth $endYear }}
+    {{ end }}
+{{ else }}
+    {{ $date = printf "%s %s to Present" $startMonth $startYear }}
+{{ end }}
+
+{{ return $date }}
