@@ -13,13 +13,13 @@
 
 <section>
     <h2 class="resume_section_heading">Skills</h2>
-    <h3 class="resume_skill_heading">
-        Selected by relevance and order of current confidence
-    </h3>
     <div class="resume_project_description">
         <ul>
             {{ range $.Site.Data.resume.skills }}
-                <li class="resume_skill_item">{{ . }}</li>
+                <li class="resume_skill_item">
+                    <strong>{{ title .category }}</strong>:
+                    {{ delimit .items ", " }}
+                </li>
             {{ end }}
         </ul>
     </div>
@@ -28,10 +28,13 @@
 <section>
     <h2 class="resume_section_heading">Education</h2>
     <p class="resume_project_description education">
-        {{ .Site.Data.resume.education.school }} •
-        {{ .Site.Data.resume.education.location }}
-        <br />
-        {{ .Site.Data.resume.education.degree }} •
+        <strong
+            >{{ .Site.Data.resume.education.school }},
+            {{ .Site.Data.resume.education.department }}</strong
+        >
+    </p>
+    <p class="resume_project_description education">
+        {{ .Site.Data.resume.education.degree }},
         {{ .Site.Data.resume.education.date }}
     </p>
 </section>

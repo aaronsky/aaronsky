@@ -4,7 +4,7 @@ experience:
     location: Boston, MA
     roles:
       - title: Senior Software Engineer
-        description: Delivered a migration of the core A/V client codebase to Swift Package Manager. Drove increased adoption of Swift among the Objective-C codebase to improve reliability. Developed tools within the A/V testing environment to reduce development iteration time for new features.
+        description: Migrated the core A/V client codebase to Swift Package Manager. Developed tools for our A/V testing environment to reduce development iteration time for new features. Driving increased adoption of Swift away from Objective-C to improve reliability.
         start: '2021-04-26'
         resume: true
     resume: true
@@ -13,17 +13,17 @@ experience:
     location: Boston, MA
     roles:
       - title: Senior Development Platforms Engineer
-        description: Drove a migration of CentOS-based build infrastructure from on-premises data centers to autoscaled Google Compute Engine instance groups on Google Cloud Platform (GCP). Incorporated new features in Terraform, Vault, and Puppet that reduced infrastructure toil and eliminated scheduling wait times for continuous integration. Collaborated across teams and functions in order to successfully leverage GCP in innovative ways at Wayfair.
+        description: Migrated CentOS-based build infrastructure from on-premises data centers to autoscaled Google Compute instance groups on Google Cloud Platform (GCP). Leveraged new GCP autoscaling features to reduce infrastructure toil and eliminate scheduling-wait times for continuous integration. Collaborated across teams and functions in order to successfully leverage GCP in innovative ways at Wayfair.
         start: '2020-04-01'
         end: '2021-04-09'
         resume: true
       - title: Senior App Infrastructure Engineer
-        description: Led a team of five to create tools to support the development of apps across Wayfair. Drove a substantial SCM migration across a distributed team of over 100 developers and over 20 repositories from Gitlab Enterprise to GitHub Enterprise. Designed a framework for more performant, reproducible iOS and Android builds on Buildkite. Supported the broader transition to a weekly release of the Storefront iOS application.
+        description: Led a team of five to create tools to support the development of apps across Wayfair. Drove a substantial SCM migration across a distributed team of over 100 developers and over 20 repositories from Gitlab Enterprise to GitHub Enterprise. Designed a framework for more performant, reproducible iOS and Android builds on Buildkite. Supported transition to a weekly release of the Storefront iOS application.
         start: '2019-03-01'
         end: '2020-04-01'
         resume: true
       - title: iOS Platforms Engineer L2
-        description: Led a team of three to create tools to support the development of iOS apps in the Storefront division. Maintained and administered our Jenkins and Buddybuild continuous integration platforms on iOS and Android. Created a metrics platform for monitoring local and remote build performance of iOS apps, in order to identify trends and regressions. Negotiated infrastructural support with partners in Release Engineering to run Swift-based endpoint integration tests on Linux in Docker. Implemented product page Handoff into the Storefront iOS app and website.
+        description: Led a team of three to create tools to support the development of iOS apps in Storefront. Maintained and administered our Jenkins and Buddybuild continuous integration platforms on iOS and Android. Created a metrics platform for monitoring local and remote build performance of iOS apps, in order to identify trends and regressions. Collaborated with Release Engineering to run iOS endpoint deserialization integration tests against the backend deploy suite. Implemented product page Handoff into the Storefront iOS app and website.
         start: '2017-07-24'
         end: '2019-03-01'
         resume: true
@@ -33,7 +33,7 @@ experience:
     location: Boston, MA
     roles:
       - title: Mobile Developer
-        description: Developed and published four apps to iOS and Android storefronts using React Native for a Fortune 100 insurance client. Served as the teams sole native mobile specialist and release engineer. Created testing and release tools for teams to reduce development friction. Built-up Jenkins cluster to create reproducible, concurrent app builds, and coordinated with clients to painlessly deploy to storefronts. Utilized Agile methodology and Scrum to effectively respond to and pivot on client input.
+        description: Developed and published four apps to iOS and Android storefronts using React Native for a Fortune 100 insurance client. Served as the team's sole native-mobile specialist and release engineer. Created testing and release tools for teams to reduce development friction. Built-up Jenkins cluster to create reproducible, concurrent app builds, and coordinated with clients to painlessly deploy to storefronts. Utilized Agile methodology and Scrum to effectively respond to and pivot on client input.
         start: '2016-06-06'
         end: '2017-07-07'
         resume: true
@@ -108,21 +108,39 @@ projects:
     description: A package tracking application for Windows Phone 8 and Windows 8 developed using C# and XAML. Made extensive use of USPS, UPS and FedEx APIs and Windows Presentation Foundation. Independently created.
     resume: false
 skills:
-  - Swift
-  - Go
-  - JavaScript/TypeScript
-  - Terraform
-  - Puppet
-  - Objective-C
-  - Rust
-  - Python
-  - Ruby
-  - Java
+  - category: Languages
+    items:
+      - Swift
+      - Go
+      - Objective-C
+      - JavaScript/TypeScript
+      - Rust
+      - Python
+      - Ruby
+      - Java
+  - category: Mobile Platforms
+    items:
+      - iOS
+  - category: Backend Platforms
+    items:
+      - GCP
+  - category: Frameworks
+    items:
+      - Terraform
+      - Puppet
+      - Rails
+      - XCUI
+  # - category: Pipeline Automation Platforms
+  #   items:
+  #     - Buildkite
+  #     - Jenkins
+  #     - Buddybuild
+  #     - TeamCity
 education:
   school: Rochester Institute of Technology
-  location: Rochester, NY
-  degree: BS Game Design & Development
-  date: May 2016
+  department: Golisano College of Computing and Information Sciences
+  degree: Bachelor of Science in Game Design and Development
+  date: '2016'
 certification:
   - title: Xamarin Certified Mobile Developer
     link: https://skyaaron.com/files/xamarin-certification.pdf

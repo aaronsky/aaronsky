@@ -14,7 +14,9 @@ html {
                     size: 24pt;
                 }
 
-                margin-bottom: 0.25rem;
+                margin: {
+                    bottom: 0.25rem;
+                }
             }
 
             &_subheading {
@@ -24,7 +26,9 @@ html {
                 }
 
                 @include themed(color, subheading);
-                margin-bottom: 1rem;
+                margin: {
+                    bottom: 1rem;
+                }
 
                 & > a {
                     @include themed(color, link);
@@ -64,8 +68,12 @@ html {
             }
 
             &_description {
-                margin: 0;
-                margin-bottom: 0.5rem;
+                margin: {
+                    top: 0;
+                    left: 0;
+                    bottom: 0.5rem;
+                    right: 0;
+                }
                 padding: 0;
                 @include themed(color, text);
                 font-size: 10pt;
@@ -76,7 +84,9 @@ html {
                 }
 
                 &.education {
-                    line-height: 2;
+                    margin: {
+                        bottom: 0.25rem;
+                    }
                 }
             }
         }
@@ -98,16 +108,19 @@ html {
 
             &_item {
                 font: {
-                    style: italic;
                     size: 10pt;
                 }
 
-                padding-right: 0.5rem;
+                padding: {
+                    right: 0.5rem;
+                }
             }
         }
 
         &_footer {
-            margin-top: 4rem;
+            margin: {
+                top: 4rem;
+            }
 
             &_logo {
                 position: fixed;
@@ -135,22 +148,16 @@ html {
     }
 
     ul {
-        padding-left: 0;
+        margin: {
+            top: 0;
+            bottom: 0;
+        }
+        padding: {
+            left: 0;
+        }
 
         & > li.resume_skill_item {
             list-style-type: none;
-            display: inline;
         }
-    }
-
-    .resume_skill_item ~ .resume_skill_item {
-        padding-left: 0.5rem;
-
-        border-left: {
-            width: 2pt;
-            style: solid;
-        }
-
-        @include themed(border-left-color, separator);
     }
 }

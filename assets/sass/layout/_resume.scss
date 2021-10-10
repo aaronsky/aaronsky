@@ -41,6 +41,27 @@ $project-subheading-font-size: 14pt;
     }
 
     p {
-        margin-bottom: 1.5em;
+        margin: {
+            bottom: 1.5em;
+        }
+
+        &.resume_project_description.education {
+            margin: {
+                bottom: 0.25rem;
+            }
+        }
+    }
+
+    ul {
+        margin: {
+            top: 0;
+        }
+        padding: {
+            left: 0;
+        }
+
+        & > li.resume_skill_item {
+            list-style-type: none;
+        }
     }
 }
