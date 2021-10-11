@@ -4,7 +4,7 @@ experience:
     location: Boston, MA
     roles:
       - title: Senior Software Engineer
-        description: Migrated the core A/V client codebase to Swift Package Manager. Developed tools for our A/V testing environment to reduce development iteration time for new features. Driving increased adoption of Swift away from Objective-C to improve reliability.
+        description: Migrated the core A/V client codebase to Swift Package Manager. Developed tools for our A/V testing environment to reduce iteration time for new features. Driving increased adoption of Swift away from Objective-C to improve reliability.
         start: '2021-04-26'
         resume: true
     resume: true
@@ -18,12 +18,12 @@ experience:
         end: '2021-04-09'
         resume: true
       - title: Senior App Infrastructure Engineer
-        description: Led a team of five to create tools to support the development of apps across Wayfair. Drove a substantial SCM migration across a distributed team of over 100 developers and over 20 repositories from Gitlab Enterprise to GitHub Enterprise. Designed a framework for more performant, reproducible iOS and Android builds on Buildkite. Supported transition to a weekly release of the Storefront iOS application.
+        description: Led a team of five to create tools to support the development of apps across Wayfair. Drove a substantial SCM migration across a distributed team of over 100 developers and over 20 repositories from Gitlab Enterprise to GitHub Enterprise. Designed a framework for more performant, reproducible iOS and Android builds on Buildkite. Supported transition to a weekly release of the Storefront iOS app.
         start: '2019-03-01'
         end: '2020-04-01'
         resume: true
       - title: iOS Platforms Engineer L2
-        description: Led a team of three to create tools to support the development of iOS apps in Storefront. Maintained and administered our Jenkins and Buddybuild continuous integration platforms on iOS and Android. Created a metrics platform for monitoring local and remote build performance of iOS apps, in order to identify trends and regressions. Collaborated with Release Engineering to run iOS endpoint deserialization integration tests against the backend deploy suite. Implemented product page Handoff into the Storefront iOS app and website.
+        description: Led a team of three to create tools to support the development of iOS apps in Storefront. Maintained and administered our Jenkins and Buddybuild continuous integration platforms on iOS and Android. Created a metrics platform for monitoring local and remote build performance, in order to identify trends and regressions. Collaborated with Release Engineering to run iOS endpoint deserialization integration tests against the backend deploy suite. Implemented product page Handoff into the Storefront iOS app and website.
         start: '2017-07-24'
         end: '2019-03-01'
         resume: true
@@ -33,7 +33,7 @@ experience:
     location: Boston, MA
     roles:
       - title: Mobile Developer
-        description: Developed and published four apps to iOS and Android storefronts using React Native for a Fortune 100 insurance client. Served as the team's sole native-mobile specialist and release engineer. Created testing and release tools for teams to reduce development friction. Built-up Jenkins cluster to create reproducible, concurrent app builds, and coordinated with clients to painlessly deploy to storefronts. Utilized Agile methodology and Scrum to effectively respond to and pivot on client input.
+        description: Developed and published four apps to iOS and Android storefronts using React Native for a Fortune 100 insurance client. Served as the team's sole native-mobile specialist and release engineer. Created testing and release tools for teams to reduce development friction. Stood-up Jenkins cluster to create reproducible, concurrent app builds, and coordinated with clients to deploy to app stores. Utilized Agile methodology and Scrum to effectively respond to and pivot on client input.
         start: '2016-06-06'
         end: '2017-07-07'
         resume: true
@@ -56,7 +56,7 @@ experience:
     link: https://dotnet.microsoft.com/apps/xamarin
     roles:
       - title: Mobile Testing Intern
-        description: Contributed UI tests to product sample automation suite and oversaw test runs. Filled and verified bugs in the Xamarin platform. Managed and enhanced internal QA infrastructure using Chef. Drove QA-side of launch of day one support for the newly released Apple Watch. Ported newly released iOS and Android samples to come from Apple WWDC and Google I/O 2015 to Xamarin.iOS and Xamarin.Android, respectively.
+        description: Contributed UI tests to product sample automation suite and oversaw test runs. Filled and verified bugs in the Xamarin platform. Managed and enhanced internal QA infrastructure using Chef. Drove QA-side of launch of day one support for the newly released Apple Watch. Ported newly released iOS and Android samples to come from Apple WWDC and Google I/O 2015 to Xamarin.iOS and Xamarin.Android.
         location: Boston, MA
         start: '2015-01-12'
         end: '2015-08-14'
