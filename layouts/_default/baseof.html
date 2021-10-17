@@ -10,21 +10,12 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="cleartype" content="on" />
-        {{ partial "social.html" . }} {{ partial "favicon.html" . }}
+        {{ partial "head_social.html" . }} 
+        {{ partial "head_theme.html" . }}
         {{ block "head_style" . }}
             {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
             <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
         {{ end }}
-        <meta
-            name="theme-color"
-            content="#eee"
-            media="(prefers-color-scheme: light)"
-        />
-        <meta
-            name="theme-color"
-            content="#222"
-            media="(prefers-color-scheme: dark)"
-        />
         {{ block "head_scripts" . }}{{ end }}
     </head>
 
