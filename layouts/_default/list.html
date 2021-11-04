@@ -8,7 +8,7 @@
                 {{ range .Pages.ByPublishDate }}
                     <li class="posts_list_item">
                         <h1 class="posts_list_item_title">
-                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                         </h1>
                         <time class="posts_list_item_timestamp"
                             >{{ .Date.Format "Mon, Jan 2, 2006" }}</time
