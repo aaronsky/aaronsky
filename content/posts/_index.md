@@ -1,5 +1,6 @@
 ---
 layout: list
+title: Posts
 ---
 
-Hello
+### Posts

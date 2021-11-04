@@ -33,11 +33,26 @@ $post-title-heading-font: 24pt;
     code {
         @include themed(color, caption-emphasis);
     }
+}
 
-    .post {
-        &_title {
-            font-size: $post-title-heading-font;
-            @include themed(color, subheading);
+.posts {
+    &_title {
+        font-size: $post-title-heading-font;
+        @include themed(color, subheading);
+    }
+
+    &_list {
+        padding-left: inherit;
+        list-style: none;
+
+        &_item {
+            padding: {
+                bottom: 1em;
+            }
+
+            &_title {
+                font-size: $body-font-size;
+            }
         }
     }
 }

@@ -1,7 +1,7 @@
 ---
 publishdate: 2021-11-04
 layout: single
-title: Swift Playgrounds
+title: Swift Playgrounds App Projects
 tags:
     - ios
     - playgrounds
@@ -14,7 +14,7 @@ tags:
 
 > **Note:** this post documents details about new functionality in Xcode 13.2 beta 1, which is subject to change over the course of the beta cycle as well as into the future. Please proceed with caution.
 
-During the State of the Platform presentation at WWDC 2021, Apple announced that [the upcoming version 4.0 of the Swift Playgrounds app]() for iPad would introduce support for full-fledged app development, including the ability to upload to App Store Connect! This announcement was relatively minor amongst everything else revealed back in June, but it did raise a question in the back of my mind – what would those new playground projects look like?
+During the State of the Platform presentation at WWDC 2021, Apple announced that [the upcoming version 4.0 of the Swift Playgrounds app](https://www.macrumors.com/2021/06/07/ipados-15-allows-you-to-build-iphone-and-ipad-apps/) for iPad would introduce support for full-fledged app development, including the ability to upload to App Store Connect! This announcement was relatively minor amongst everything else revealed back in June, but it did raise a question in the back of my mind – what would those new playground projects look like?
 
 Just last week, Xcode 13.2 released its first beta. While we wait for the full release of Swift Playgrounds 4, I was surprised that not only would that question be answered by Xcode, but the new Swift Playgrounds App Project format would also share a compatibility story with Xcode! This has me more excited than ever about the future of the Xcode project format.
 
@@ -22,9 +22,9 @@ Just last week, Xcode 13.2 released its first beta. While we wait for the full r
 
 For those who haven't had the pleasure of digging into a Xcode project file merge conflict, let me briefly explain how it works. An Xcode project is what's termed as a "package" in macOS terms, with the extension `*.xcodeproj`. Contained within it is a special file named `project.pbxproj`, which is usually referred to as the "project file". The project file, introduced with Xcode 3.0, uses a proprietary, undocumented syntax to represent a huge graph of references and object definitions that make up the entirity of your project. These objects can be things like targets, phases, source membership relationships, build settings, external dependencies, and much more. GUIDs (globally-unique identifiers) are used liberally to manage the relationships between various records, much like a database. This file is automatically managed by Xcode, and should only be edited manually if required to get Xcode to parse it properly, such as in the event of a merge conflict.
 
-> Author's Note: I'm going to be referring to "packages", which are special file system directory types on Apple platforms that contain documents and bundles and can open applications, and "Swift Packages", which are a project structure for managing Swift and Objective-C projects using the Swift Package Manager. I will do my best to disambiguate between the two wherever possible. My apologies in advance for any confusion.
+> I'm going to be referring to "packages", which are special file system directory types on Apple platforms that contain documents and bundles and can open applications, and "Swift Packages", which are a project structure for managing Swift and Objective-C projects using the Swift Package Manager. I will do my best to disambiguate between the two wherever possible, by lowercasing "packages" and titlecasing "Packages" for Swift Packages. My apologies in advance for any confusion.
 
-The Xcode project file has long been the bane of many developers, especially those who have not developed the arcane and largely unnecessary skill of being able to read the syntax. In large projects or projects with a lot of file churn, merge conflicts are regular occurrences. This is because the representations of source files in the project that get frequently updated can easily get out of sync collide between independent changesets. As such, the community has produced several novel ways to either eliminate the Xcode project through generators like [Tuist]() or [XcodeGen](), or minimize its impact through expanded use of [Swift Packages]().
+The Xcode project file has long been the bane of many developers, especially those who have not developed the arcane and largely unnecessary skill of being able to read the syntax. In large projects or projects with a lot of file churn, merge conflicts are regular occurrences. This is because the representations of source files in the project that get frequently updated can easily get out of sync collide between independent changesets. As such, the community has produced several novel ways to either eliminate the Xcode project through generators like [Tuist](https://github.com/tuist/tuist) or [XcodeGen](https://github.com/yonaskolb/XcodeGen), or minimize its impact through expanded use of [Swift Packages](https://developer.apple.com/documentation/swift_packages).
 
 ### The New Project Format
 
@@ -82,7 +82,7 @@ let package = Package(
 )
 ```
 
-Let's look at what this package manifest is expressing. It's declaring a minimum platform for all products in the package, iOS 15.0. It's declaring a new iOS application product, with the arguments set as configured in Xcode. It declares a single executable target, `AppModule`, to be the primary target bundled into the product. Finally, it is imploring us not to edit this file manually, since it's intended to be managed by Xcode similar to a pbxproj.
+Let's look at what this Package's manifest is expressing. It's declaring a minimum platform for all products in the Package, iOS 15.0. It's declaring a new iOS application product, with the arguments set as configured in Xcode. It declares a single executable target, `AppModule`, to be the primary target bundled into the product. Finally, it is imploring us not to edit this file manually, since it's intended to be managed by Xcode similar to a pbxproj.
 
 Xcode's fork of Swift Package Manager, available for inspection at `/Applications/Xcode.app/Contents/PlugIns/IDESwiftPackageCore.framework/Versions/A/Frameworks/SwiftPM.framework/`, contains the custom manifest types that make this all possible in a Swift Package. We can see the full definition of `.iOSApplication` in `AppleProductTypes.swiftmodule` (which I have edited to slightly-improve readability):
 
@@ -112,19 +112,25 @@ This all seems promising to me on its own, but what else can we do with this for
 I've managed to uncover a variety of fascinating aspects and quirks to this new format that I'd like to enumerate here. Each thing would take a while to explain on its own, so I'll try and be succinct with each one and you can ask me for more information on Twitter.
 
 -   UIKit's full API is supported! As long as you aren't using storyboards (see the note below), you should still be able to develop iOS apps without going full-SwiftUI.
--   The full scope of features currently offered by Swift Package Manager is supported here. Even though a default Swift Playgrounds App project contains all its source files at the project root, you can move files into subfolders and edit the package manifest directly (at your own risk) to add additional targets. In addition, it's now even easier to add Swift Package dependencies to your project using Xcode.
+-   The full scope of features currently offered by Swift Package Manager is supported here. Even though a default Swift Playgrounds App project contains all its source files at the project root, you can move files into subfolders and edit the Package's manifest directly (at your own risk) to add additional targets. In addition, it's now even easier to add Swift Package dependencies to your project using Xcode.
 -   Objective-C, C, and C++ are all supported! You can either author your entire app in one of the supported C-family languages, or in a separate target you configure your executable target to depend on. Remember that Swift Package targets must be single-language!
 
-### Limitations of the New Project Format
+### Limitations
 
--   Only iOS apps are supported, as of beta 1. This means app extensions, test targets, and apps for other Apple platforms are not available in `AppleProductTypes.swiftmodule`.
+It's also worth calling out some limitations of the new project format, and being an initial beta, there are plenty.
+
+-   Only iOS apps are supported, as of beta 1. This means app extensions, UI test targets, apps for other Apple platforms, and other targets unsupported by Swift Package Manager are not available in `AppleProductTypes.swiftmodule`.
+    -   Unit test targets are supported, but they share the same limitations of current-day Swift Packages. You can create a test target for a library target, but not for an executable target. This has only been confirmed to work with `xcodebuild` and not in Xcode or with the Swift Playgrounds app for iPad.
 -   Automatic code signing is the only option supported from within Xcode. It may be possible to use xcodebuild to override this behavior, but I have been unable to get this to work.
 -   Storyboards are allowed in Xcode, but come with a warning that they may not be supported by all consumers of the project. This says to me that the upcoming release of Swift Playgrounds will not be porting Interface Builder, which makes sense given how SwiftUI is being pushed.
--   The Xcode project editor experience is still buggy, and missing multiple inputs for features that are available in the manifest, such as providing a path to a custom Info.plist.
--   The version control story for these projects is currently murky. Because the project is intended to be contained in a `*.swiftpm` directory, it's irregular from typical Swift Package development where the root of the project contains the README and the Package.swift. We may be expected to place the \*.swiftpm project into its own directory and commit that, but that is not the default behavior and Xcode's template editor has no options for setting up a project with version control. I could see this changing in future betas.
+-   The Xcode project editor experience is buggy in the first beta, and missing interface elements for arguments that are available in the manifest, such as providing a path to a custom Info.plist.
+-   The version control story for these projects is currently murky. Because the project is intended to be contained in a `*.swiftpm` directory, it's irregular from typical Swift Package development where the root of the project contains the README and the Package.swift. We may be expected to place the `*.swiftpm` project into its own directory and commit that, but that is not the default behavior and Xcode's template editor has no options for setting up a project with version control. I could see this changing in future betas.
+-   All products and targets in the Package must support the same baseline OS version.
 -   Customizing Xcode build settings does not appear to be supported.
--   Custom build systems do not appear to be supported. Additionally, because this is backed by Swift Package Manager, there is no supported equivalent to Run Script build phases. Maybe this will be alleviated [once plugin support fully rolls out in Swift 5.6]().
+-   Custom build systems do not appear to be supported. Additionally, because this is backed by Swift Package Manager, there is no supported equivalent to Run Script build phases. Maybe this will be alleviated [once plugin support fully rolls out in Swift 5.6](https://github.com/apple/swift-evolution/blob/main/proposals/0303-swiftpm-extensible-build-tools.md).
+
+Beyond this list, I would be remiss to point out that while Swift Package Manager works quite well when invoked with `swift-build`, the fork of Swift Package Manager that ships with Xcode has been a regular source of pain and bugs since Xcode 11 started shpiping an integration. This is the version that Xcode is using in the editor and while using `xcodebuild`. I've experienced more bugs, rough edges, and performance degredation with Xcode's Swift Package integration than I recall ever experiencing with the open source version. I'm hesitant to recommend this project format as the backbone of any app's configuration as the process for returning to a more traditional project structure feels daunting even in hypothetical. Hopefully, this is something that improves with time.
 
 ### Wrapping Up
 
-If you have any questions, feel free to reach out to me or ask the community for more information, if it's available. This is all very new, and subject to change over the beta. I have complete faith that by the time I put this to print, a new beta will release that will invalidate most of what I've written. That all being said, I hope you share my cautious optimism for a future someday where we won't have to deal with project-file conflicts to nearly the same degree anymore.
+This is all very new, and subject to change over the beta. I have complete faith that by the time I put this to print, a new beta will release that will invalidate most of what I've written. That all being said, I hope you share my cautious optimism for a future someday where we won't have to deal with project-file conflicts to nearly the same degree anymore.

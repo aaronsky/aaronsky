@@ -7,6 +7,9 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-file-alt:before {
     content: fa-content($fa-var-file-alt);
 }
+.#{$fa-css-prefix}-pen:before {
+    content: fa-content($fa-var-pen);
+}
 .#{$fa-css-prefix}-twitter:before {
     content: fa-content($fa-var-twitter);
 }
