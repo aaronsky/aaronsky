@@ -2,9 +2,9 @@
 
 @import 'vendor/vendor';
 
-@import 'base/typography', 'base/base';
+@import 'base/typography', 'base/syntax', 'base/base';
 
-@import 'layout/default', 'layout/resume';
+@import 'layout/default', 'layout/posts', 'layout/resume';
 
 @import 'components/header', 'components/site_functions',
     'components/accessibility';

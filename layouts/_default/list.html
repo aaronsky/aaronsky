@@ -1,0 +1,17 @@
+{{ define "main" }}
+    <main aria-role="main">
+        {{ partial "site_functions.html" . }}
+        <div class="main_container">
+            {{ partial "header.html" . }}
+            <div class="posts content">{{ .Content }}</div>
+            <ul>
+                {{ range .Pages.ByPublishDate }}
+                    <li>
+                        <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+                        <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+    </main>
+{{ end }}

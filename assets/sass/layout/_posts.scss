@@ -1,0 +1,43 @@
+$post-title-heading-font: 24pt;
+
+.posts.content {
+    img {
+        display: block;
+        margin: {
+            left: auto;
+            right: auto;
+        }
+
+        width: 100%;
+        @media screen and (min-width: $breakpoint-large) {
+            width: 80%;
+        }
+    }
+
+    li {
+        padding-bottom: 0.5em;
+    }
+
+    blockquote {
+        padding: {
+            left: 15px;
+        }
+        font-style: italic;
+        border-left: {
+            width: 3px;
+            style: solid;
+        }
+        @include themed(border-left-color, caption-emphasis);
+    }
+
+    code {
+        @include themed(color, caption-emphasis);
+    }
+
+    .post {
+        &_title {
+            font-size: $post-title-heading-font;
+            @include themed(color, subheading);
+        }
+    }
+}
