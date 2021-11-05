@@ -39,6 +39,14 @@ $post-title-heading-font: 24pt;
     &_title {
         font-size: $post-title-heading-font;
         @include themed(color, subheading);
+        margin-bottom: 0;
+    }
+
+    &_date {
+        font: {
+            weight: bold;
+            size: $body-font-size;
+        }
     }
 
     &_list {

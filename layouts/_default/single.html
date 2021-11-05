@@ -4,8 +4,19 @@
         <div class="main_container">
             {{ partial "header.html" . }}
             <div class="content posts">
-                <h2 class="posts_title">{{ .Title }}</h3>
-                {{ .Content }}
+                <article>
+                    <span>
+                        <h2 class="posts_title">{{ .Title }}</h2>
+                        <p class="posts_date">
+                            <time
+                                datetime="{{ .PublishDate.Format `2006-01-02T15:04:05.999999999Z07:00` }}"
+                            >
+                                {{ .PublishDate.Format "2 Jan, 2006" }}
+                            </time>
+                        </p>
+                    </span>
+                    {{ .Content }}
+                </article>
             </div>
         </div>
     </main>
