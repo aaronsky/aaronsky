@@ -1,12 +1,11 @@
 <!--Open Graph-->
-<meta property="fb:app_id" content="" />
-<meta property="og:url" content="{{ .Site.BaseURL }}" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="{{ .Site.Params.Identity.Author }}" />
-<meta property="og:image" content="/images/site/favicon.png" />
-<meta property="og:description" content="{{ .Site.Params.Identity.Caption }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:title" content="{{ partial `title.html` . }}" />
+<meta property="og:image" content="{{ `images/site/favicon.png` | absURL }}" />
+<meta property="og:description" content="{{ .Description }}" />
 <meta property="og:site_name" content="{{ .Site.Params.Identity.Author }}" />
 <meta property="og:locale" content="en_US" />
-<meta property="article:author" content="{{ .Site.Params.Identity.Author }}" />
 <!-- disallow Twitter from using your site's info for personalization purposes -->
 <meta name="twitter:dnt" content="on" />
+<meta name="twitter:card" content="summary" />

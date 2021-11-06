@@ -3,19 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>
-            {{ if .Title }}
-                {{ .Title }}
-                |
-                {{ .Site.Params.Identity.Author }}
-            {{ else }}
-                {{ block "title" . }}
-                    {{ .Site.Params.Identity.Author }}
-                {{ end }}
-                {{ block "subtitle" . }}
-                    |
-                    {{ .Site.Params.Identity.Caption }}
-                {{ end }}
-            {{ end }}
+            {{ partial "title.html" . }}
         </title>
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

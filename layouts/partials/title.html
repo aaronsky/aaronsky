@@ -1,0 +1,11 @@
+{{ if .Title }}
+    {{ printf "%s | %s" .Title .Site.Params.Identity.Author }}
+{{ else }}
+    {{ block "title" . }}
+        {{ .Site.Params.Identity.Author }}
+    {{ end }}
+    {{ block "subtitle" . }}
+        |
+        {{ .Site.Params.Identity.Caption }}
+    {{ end }}
+{{ end }}
