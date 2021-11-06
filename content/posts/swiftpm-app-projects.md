@@ -1,15 +1,7 @@
 ---
-publishdate: 2021-11-04
 layout: single
+publishdate: 2021-11-06
 title: Swift Playgrounds App Projects
-tags:
-    - ios
-    - playgrounds
-    - spm
-    - swift
-    - swiftpm
-    - swiftui
-    - xcode
 ---
 
 > **Note:** this post documents details about new functionality in Xcode 13.2 beta 1, which is subject to change over the course of the beta cycle as well as into the future. Please proceed with caution.
@@ -32,7 +24,7 @@ Enter Xcode 13.2. This first beta introduces a new kind of project, fittingly na
 
 ![Finder window demonstrating the directory structure of a Swift Playground App project](/posts/swiftpm-app-projects/xcode-default.png)
 
-Default Swift Playground App projects come pre-configured with an `App`-conforming type, a `ContentView`, and an asset catalog containing placeholders for app icons and a color set. So far, this is all typical SwiftUI boilerplate. From there, if you inspect the project in Finder, you'll discover a curious thing – this project is backed by Swift Package Manager! Could this represent the end of the Xcode project as we know it today?
+Default Swift Playground App projects come pre-configured with an [App](https://developer.apple.com/documentation/swiftui/app)-conforming type, a `ContentView`, and an asset catalog containing placeholders for app icons and a color set. So far, this is all typical SwiftUI boilerplate. From there, if you inspect the project in Finder, you'll discover a curious thing – this project is backed by Swift Package Manager! Could this represent the end of the Xcode project as we know it today?
 
 Before we get our hopes up, let's dig in a little further. Here is an excerpt of the `Package.swift` that is generated in a default project:
 
@@ -105,7 +97,7 @@ extension PackageDescription.Product {
 }
 ```
 
-This all seems promising to me on its own, but what else can we do with this format, and what are the limitations?
+This seems promising on its own, but what else can we do with this format, and what are the limitations?
 
 ### What Works?
 
@@ -120,10 +112,10 @@ I've managed to uncover a variety of fascinating aspects and quirks to this new 
 It's also worth calling out some limitations of the new project format, and being an initial beta, there are plenty.
 
 -   Only iOS apps are supported, as of beta 1. This means app extensions, UI test targets, apps for other Apple platforms, and other targets unsupported by Swift Package Manager are not available in `AppleProductTypes.swiftmodule`.
-    -   Unit test targets are supported, but they are not visible in the project editor in Xcode. In addition, though it became possible to declare test targets for executable targets in Swift 5.5, you cannot currently take advantage of this change for any executable target being used by an `iOSApplication` product. In general, testing has not been given a first-class position in the new project format at time of writing.
--   Automatic code signing is the only option supported from within Xcode. It may be possible to use xcodebuild to override this behavior, but I have been unable to get this to work.
+    -   Unit test targets are supported, but they are not visible in the project editor in Xcode. Even though it became possible to declare test targets for executable targets in Swift 5.5, this does not apply to any executable target being used by an `iOSApplication` product. In other words, it is not yet possible to run tests that require being embedded in an iOS application.
+-   Automatic code signing is the only option supported from within Xcode. It may be possible to use `xcodebuild` to override this behavior, but I have been unable to get this to work.
 -   Storyboards are allowed in Xcode, but come with a warning that they may not be supported by all consumers of the project. This says to me that the upcoming release of Swift Playgrounds will not be porting Interface Builder, which makes sense given how SwiftUI is being pushed.
--   The Xcode project editor experience is buggy in the first beta, and missing interface elements for arguments that are available in the manifest, such as providing a path to a custom Info.plist.
+-   The Xcode project editor experience is buggy in the first beta, and missing interface elements for arguments that are available in the manifest, such as providing a path to a custom Info.plist. Additionally, in order to take advantage of all the benefits of being based a Swift Package, the Package's manifest must be updated by hand against the advice of Apple's warnings.
 -   The version control story for these projects is currently murky. Because the project is intended to be contained in a `*.swiftpm` directory, it's irregular from typical Swift Package development where the root of the project contains the README and the Package.swift. We may be expected to place the `*.swiftpm` project into its own directory and commit that, but that is not the default behavior and Xcode's template editor has no options for setting up a project with version control. I could see this changing in future betas.
 -   All products and targets in the Package must support the same baseline OS version.
 -   Customizing Xcode build settings does not appear to be supported.
