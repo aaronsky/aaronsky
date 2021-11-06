@@ -8,6 +8,7 @@ caption = "Mobile Tools Developer"
 email = "aaronsky@skyaaron.com"
 
 [params.identity.links]
+twitter = "https://twitter.com/metc_sky/"
 github = "https://github.com/aaronsky/"
 linkedin = "https://www.linkedin.com/in/aaronsky/"
 npm = "https://www.npmjs.com/~aaronsky"
@@ -19,3 +20,6 @@ sapient = "https://www.publicissapient.com/"
 xamarin = "https://dotnet.microsoft.com/apps/xamarin"
 
 enableRobotsTXT = true
+
+[markup.highlight]
+noClasses=false
