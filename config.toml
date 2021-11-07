@@ -1,11 +1,11 @@
 baseURL = "https://skyaaron.com/"
 languageCode = "en-us"
-title = "Portfolio"
+title = "Aaron Sky"
 
-[params.identity]
-author = "Aaron Sky"
-caption = "Mobile Tools Developer"
-email = "aaronsky@skyaaron.com"
+[author]
+    name = "Aaron Sky"
+    caption = "Mobile Tools Developer"
+    email = "aaronsky@skyaaron.com"
 
 [params.identity.links]
 twitter = "https://twitter.com/metc_sky/"

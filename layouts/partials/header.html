@@ -1,7 +1,7 @@
 <header class="header">
     <div class="header_nav header_nav_item">
-        <h1 class="header_author">{{ .Site.Params.Identity.Author }}</h1>
-        <h2 class="header_caption">{{ .Site.Params.Identity.Caption }}</h2>
+        <h1 class="header_author">{{ .Site.Author.name }}</h1>
+        <h2 class="header_caption">{{ .Site.Author.caption }}</h2>
     </div>
     <div class="header_nav icons">
         <a
@@ -14,10 +14,10 @@
             <span class="visually_hidden">Resume</span>
         </a>
         <a
-            href="mailto:{{ .Site.Params.Identity.Email }}"
+            href="mailto:{{ .Site.Author.email }}"
             class="header_nav_item"
             title="Email me"
-            alt="Send an email to {{ .Site.Params.Identity.Email }}"
+            alt="Send an email to {{ .Site.Author.email }}"
         >
             <i class="far fa-envelope" aria-hidden="true"></i>
             <span class="visually_hidden">Email</span>
@@ -49,14 +49,5 @@
             <i class="fab fa-linkedin" aria-hidden="true"></i>
             <span class="visually_hidden">Linkedin</span>
         </a>
-        <!-- <a
-            href="/posts/"
-            class="header_nav_item"
-            title="Posts"
-            alt="View a list of my posts"
-        >
-            <i class="fas fa-pen" aria-hidden="true"></i>
-            <span class="visually_hidden">Posts</span>
-        </a> -->
     </div>
 </header>

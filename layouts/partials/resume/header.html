@@ -1,20 +1,20 @@
 <header>
     <span>
         <h1 class="resume_header_heading">
-            {{ .Site.Params.Identity.Author }}
+            {{ .Site.Author.name }}
         </h1>
     </span>
     <span>
         <h2 class="resume_header_subheading">
-            <a href="mailto:{{ .Site.Params.Identity.Email }}"
-                >{{ .Site.Params.Identity.Email }}</a
-            >
+            <a href="mailto:{{ .Site.Author.email }}">
+                {{ .Site.Author.email }}
+            </a>
             •
             <a href="{{ .Site.BaseURL }}">
                 {{ $url := urls.Parse .Site.BaseURL }}
                 {{ if eq $url.Path "/" }}
                     {{ $url.Host }}
-                    {{ else }}
+                {{ else }}
                     {{ printf "%s%s" $url.Host $url.Path }}
                 {{ end }}
             </a>

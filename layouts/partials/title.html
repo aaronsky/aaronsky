@@ -1,11 +1,11 @@
 {{ if .Title }}
-    {{ printf "%s | %s" .Title .Site.Params.Identity.Author }}
+    {{ printf "%s | %s" .Title .Site.Author.name }}
 {{ else }}
     {{ block "title" . }}
-        {{ .Site.Params.Identity.Author }}
+        {{ .Site.Author.name }}
     {{ end }}
     {{ block "subtitle" . }}
         |
-        {{ .Site.Params.Identity.Caption }}
+        {{ .Site.Author.caption }}
     {{ end }}
 {{ end }}
