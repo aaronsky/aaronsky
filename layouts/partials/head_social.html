@@ -3,9 +3,16 @@
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:title" content="{{ partial `title.html` . }}" />
 <meta property="og:image" content="{{ `images/brand.png` | absURL }}" />
-<meta property="og:description" content="{{ .Description }}" />
+<meta property="og:description" content="{{ .Summary }}" />
 <meta property="og:site_name" content="{{ .Site.Params.Identity.Author }}" />
 <meta property="og:locale" content="en_US" />
 <!-- disallow Twitter from using your site's info for personalization purposes -->
 <meta name="twitter:dnt" content="on" />
 <meta name="twitter:card" content="summary" />
+<!-- RSS -->
+<link
+    rel="alternate"
+    type="application/rss+xml"
+    href="{{ `posts/index.xml` | absURL }}"
+    title="Site Title"
+/>

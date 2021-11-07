@@ -8,3 +8,8 @@ HUGO_VERSION = "0.88.1"
   from = "/*"
   to = "/404.html"
   status = 404
+
+[[headers]]
+  for = "/posts/index.xml"
+  [headers.values]
+    Content-Type = "application/rss+xml "

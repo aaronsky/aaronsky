@@ -1,6 +1,7 @@
 ---
 layout: single
 publishdate: 2021-11-06
+summary: Xcode 13.2 beta 1 just released, and by surprise it will be supporting the new project format used for writing iOS apps in Swift Playgrounds 4! Wait a second...a new project format?
 title: Swift Playgrounds App Projects
 ---
 
