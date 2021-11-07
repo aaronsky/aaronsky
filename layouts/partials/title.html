@@ -1,8 +1,8 @@
 {{ if .Title }}
-    {{ printf "%s | %s" .Title .Site.Author.name }}
+    {{ printf "%s | %s" .Title .Site.Title }}
 {{ else }}
     {{ block "title" . }}
-        {{ .Site.Author.name }}
+        {{ .Site.Title }}
     {{ end }}
     {{ block "subtitle" . }}
         |

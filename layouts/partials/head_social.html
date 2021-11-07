@@ -4,7 +4,7 @@
 <meta property="og:title" content="{{ partial `title.html` . }}" />
 <meta property="og:image" content="{{ `images/brand.png` | absURL }}" />
 <meta property="og:description" content="{{ .Summary }}" />
-<meta property="og:site_name" content="{{ .Site.Author.name }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
 <meta property="og:locale" content="en_US" />
 <!-- disallow Twitter from using your site's info for personalization purposes -->
 <meta name="twitter:dnt" content="on" />
@@ -14,5 +14,5 @@
     rel="alternate"
     type="application/rss+xml"
     href="{{ `posts/index.xml` | absURL }}"
-    title="Site Title"
+    title="{{ .Site.Title }}"
 />
