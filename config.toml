@@ -1,11 +1,12 @@
 baseURL = "https://skyaaron.com/"
 languageCode = "en-us"
 title = "Aaron Sky"
+enableRobotsTXT = true
 
 [author]
-    name = "Aaron Sky"
-    caption = "Mobile Tools Developer"
-    email = "aaronsky@skyaaron.com"
+name = "Aaron Sky"
+caption = "Mobile Tools Developer"
+email = "aaronsky@skyaaron.com"
 
 [params.identity.links]
 twitter = "https://twitter.com/metc_sky/"
@@ -19,7 +20,8 @@ wayfair = "https://www.wayfair.com/"
 sapient = "https://www.publicissapient.com/"
 xamarin = "https://dotnet.microsoft.com/apps/xamarin"
 
-enableRobotsTXT = true
-
 [markup.highlight]
-noClasses=false
+noClasses = false
+
+[security.exec]
+osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$', '^ASDF_DIR$', '^HOME$']
