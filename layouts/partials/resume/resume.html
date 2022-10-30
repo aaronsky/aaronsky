@@ -1,29 +1,33 @@
 {{ partial "resume/experience.html" . }}
 
+{{ with (where $.Site.Data.resume.projects "resume" true) }}
+    <section>
+        <h2 class="resume_section_heading">Projects</h2>
+        {{ range sort . "name" "asc" }}
+            <h2 class="resume_project_heading">
+                <a href="{{ .link }}">{{ .name }}</a>
+            </h2>
+            <p class="resume_project_description">{{ .description }}</p>
+        {{ end }}
+    </section>
+{{ end }}
 
-<section>
-    <h2 class="resume_section_heading">Open Source Projects</h2>
-    {{ range sort  (where $.Site.Data.resume.projects "resume" true) "name" "asc" }}
-        <h2 class="resume_project_heading">
-            <a href="{{ .link }}">{{ .name }}</a>
-        </h2>
-        <p class="resume_project_description">{{ .description }}</p>
-    {{ end }}
-</section>
+{{ with $.Site.Data.resume.skills }}
+    <section>
+        <h2 class="resume_section_heading">Skills</h2>
+        <div class="resume_project_description">
+            <ul>
+                {{ range . }}
+                    <li class="resume_skill_item">
+                        <strong>{{ title .category }}</strong>:
+                        {{ delimit .items ", " }}
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+    </section>
+{{ end }}
 
-<section>
-    <h2 class="resume_section_heading">Skills</h2>
-    <div class="resume_project_description">
-        <ul>
-            {{ range $.Site.Data.resume.skills }}
-                <li class="resume_skill_item">
-                    <strong>{{ title .category }}</strong>:
-                    {{ delimit .items ", " }}
-                </li>
-            {{ end }}
-        </ul>
-    </div>
-</section>
 
 <section>
     <h2 class="resume_section_heading">Education</h2>

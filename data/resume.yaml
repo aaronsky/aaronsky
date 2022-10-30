@@ -1,16 +1,23 @@
 experience:
-  - name: Twitter
-    link: https://twitter.com/
-    location: Boston, MA
+  - name: Dropbox
+    link: https://dropbox.com/
     roles:
       - title: Senior Software Engineer
-        description: Migrated the core A/V client codebase to Swift Package Manager. Developed tools for our A/V testing environment to reduce iteration time for new features. Driving increased adoption of Swift away from Objective-C to improve reliability.
+        description: Delivered periodic Xcode and OS migration efforts to CI and mobile engineers.
+        start: '2022-07-05'
+        resume: true
+    resume: true
+  - name: Twitter
+    link: https://twitter.com/
+    roles:
+      - title: Senior Software Engineer
+        description: Migrated the core A/V client codebase to Swift Package Manager. Developed tools for our A/V testing environment to reduce iteration time for new features. Drove increased adoption of Swift away from Objective-C to improve reliability.
         start: '2021-04-26'
+        end: '2022-07-01'
         resume: true
     resume: true
   - name: Wayfair
     link: https://www.wayfair.com/
-    location: Boston, MA
     roles:
       - title: Senior Development Platforms Engineer
         description: Migrated CentOS-based build infrastructure from on-premises data centers to autoscaled Google Compute instance groups on Google Cloud Platform (GCP). Leveraged new GCP autoscaling features to reduce infrastructure toil and eliminate scheduling-wait times for continuous integration. Collaborated across teams and functions in order to successfully leverage GCP in innovative ways at Wayfair.
@@ -30,7 +37,6 @@ experience:
     resume: true
   - name: SapientNitro
     link: https://www.publicissapient.com/
-    location: Boston, MA
     roles:
       - title: Mobile Developer
         description: Developed and published four apps to iOS and Android storefronts using React Native for a Fortune 100 insurance client. Served as the team's sole native-mobile specialist and release engineer. Created testing and release tools for teams to reduce development friction. Stood-up Jenkins cluster to create reproducible, concurrent app builds, and coordinated with clients to deploy to app stores. Utilized Agile methodology and Scrum to effectively respond to and pivot on client input.
@@ -57,14 +63,12 @@ experience:
     roles:
       - title: Mobile Testing Intern
         description: Contributed UI tests to product sample automation suite and oversaw test runs. Filled and verified bugs in the Xamarin platform. Managed and enhanced internal QA infrastructure using Chef. Drove QA-side of launch of day one support for the newly released Apple Watch. Ported newly released iOS and Android samples to come from Apple WWDC and Google I/O 2015 to Xamarin.iOS and Xamarin.Android.
-        location: Boston, MA
         start: '2015-01-12'
         end: '2015-08-14'
         resume: true
     resume: true
   - name: Rochester Institute of Technology
     link: https://www.rit.edu/computing/school-interactive-games-and-media
-    location: Rochester, NY
     roles:
       - title: Web Developer, Teaching Assistant
         description: Wrote backend for open source education software developed under grant program. Assisted students with questions related to iOS and Android coursework.
@@ -74,7 +78,6 @@ experience:
     resume: false
   - name: iD Tech Camps
     link: https://www.idtech.com/
-    location: Washington, D.C.
     roles:
       - title: Instructor
         description: Responsible for instructing Java and C++ programming to groups of 13-17 year olds with varying levels of programming background. My weeklong course covered basic structures of the language such as variables, code structure and flow control. I also taught my advanced students basic UI, object-oriented programming, and the importance of project scope.
@@ -86,11 +89,11 @@ projects:
   - name: Cider
     link: https://cidertool.github.io/cider/
     description: Application heavily leveraging the App Store Connect API to enable continuous delivery of iOS, macOS and tvOS apps to TestFlight and App Store review. Makes use of a simple YAML configuration with sane defaults to update metadata, upload assets, and submit app builds for review. Designed to accomodate automation workflows that make use of xcodebuild and altool to build and upload apps.
-    resume: true
+    resume: false
   - name: Foxdie
     link: https://crates.io/crates/foxdie/
     description: Rust application for deleting stale remote branches and pull requests on any GitHub or Gitlab repository, regardless of cloud/on-prem situation. Leverages libgit2 under the hood to achieve performance goals. Created a procedure for discerning between multiple SCMs using only a Git remote URL and an access token and adapted it for idiomatic Rust. Foxdie has deleted thousands of branches and hundreds of pull requests over its service life, reducing storage footprint and fetch times on several monorepos.
-    resume: true
+    resume: false
   - name: Buildkite Swift Client
     link: https://github.com/aaronsky/buildkite-swift
     description: Swift package for interacting with Buildkites REST and GraphQL APIs.
@@ -113,29 +116,29 @@ skills:
       - Swift
       - Go
       - Objective-C
-      - JavaScript/TypeScript
-      - Rust
       - Python
+      - JavaScript/TypeScript
       - Ruby
+      - Rust
       - Java
   - category: Mobile Platforms
     items:
       - iOS
-  - category: Backend Platforms
+  - category: Server Technologies
     items:
       - GCP
   - category: Frameworks
     items:
       - Terraform
       - Puppet
+      - Chef
       - Rails
-      - XCUI
-  # - category: Pipeline Automation Platforms
-  #   items:
-  #     - Buildkite
-  #     - Jenkins
-  #     - Buddybuild
-  #     - TeamCity
+  - category: Pipeline Automation Platforms
+    items:
+      - Buildkite
+      - Jenkins
+      - Buddybuild
+      - Phabricator
 education:
   school: Rochester Institute of Technology
   department: Golisano College of Computing and Information Sciences

@@ -12,10 +12,10 @@ build:
 	sed -i.bak 's/\/sass/..\/..\/sass/' public/resume/document/index.html
 	wkhtmltopdf \
 		--dpi 300 \
-		--margin-top 0.30in \
-		--margin-bottom 0.30in \
-		--margin-left 0.65in \
-		--margin-right 0.65in \
+		--margin-top 0.5in \
+		--margin-bottom 0.5in \
+		--margin-left 0.5in \
+		--margin-right 0.5in \
 		--disable-local-file-access \
 		--allow public/ \
 		public/resume/document/index.html \

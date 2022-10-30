@@ -1,16 +1,18 @@
-<section>
-    <h2 class="resume_section_heading">Experience</h2>
-    {{ range (where $.Site.Data.resume.experience "resume" true) }}
-        {{ $roles := .roles }}
-        <h2 class="resume_project_heading">
-            <a href="{{ .link }}">{{ .name }}</a>
-        </h2>
-        {{ range (where $roles "resume" true) }}
-            <h3 class="resume_project_heading">
-                {{ .title }}
-                – {{ partial "resume/date_range" . }}
-            </h3>
-            <p class="resume_project_description">{{ .description }}</p>
+{{ with (where $.Site.Data.resume.experience "resume" true) }}
+    <section>
+        <h2 class="resume_section_heading">Experience</h2>
+        {{ range . }}
+            {{ $roles := .roles }}
+            <h2 class="resume_project_heading">
+                <a href="{{ .link }}">{{ .name }}</a>
+            </h2>
+            {{ range (where $roles "resume" true) }}
+                <h3 class="resume_project_heading">
+                    {{ .title }}
+                    – {{ partial "resume/date_range" . }}
+                </h3>
+                <p class="resume_project_description">{{ .description }}</p>
+            {{ end }}
         {{ end }}
-    {{ end }}
-</section>
+    </section>
+{{ end }}
