@@ -7,6 +7,7 @@
         <a
             href="/resume/"
             class="header_nav_item"
+            rel="me"
             title="Resume"
             alt="Check out my resume"
         >
@@ -16,6 +17,7 @@
         <a
             href="mailto:{{ .Site.Author.email }}"
             class="header_nav_item"
+            rel="external"
             title="Email me"
             alt="Send an email to {{ .Site.Author.email }}"
         >
@@ -25,29 +27,12 @@
         <a
             href="{{ .Site.Params.Identity.Links.Github }}"
             class="header_nav_item"
+            rel="me"
             title="GitHub"
             alt="View my GitHub profile"
         >
             <i class="fab fa-github" aria-hidden="true"></i>
             <span class="visually_hidden">GitHub</span>
-        </a>
-        <a
-            href="{{ .Site.Params.Identity.Links.Twitter }}"
-            class="header_nav_item"
-            title="Twitter"
-            alt="View my Twitter profile"
-        >
-            <i class="fab fa-twitter" aria-hidden="true"></i>
-            <span class="visually_hidden">Twitter</span>
-        </a>
-        <a
-            href="{{ .Site.Params.Identity.Links.Linkedin }}"
-            class="header_nav_item"
-            title="LinkedIn"
-            alt="View my LinkedIn profile"
-        >
-            <i class="fab fa-linkedin" aria-hidden="true"></i>
-            <span class="visually_hidden">Linkedin</span>
         </a>
     </div>
 </header>

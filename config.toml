@@ -14,7 +14,13 @@ github = "https://github.com/aaronsky/"
 linkedin = "https://www.linkedin.com/in/aaronsky/"
 npm = "https://www.npmjs.com/~aaronsky"
 
+[[params.identity.links.mastodon]]
+instance = "macaw.social"
+username = "sky"
+link = "https://macaw.social/@sky"
+
 [params.experience.links]
+dropbox = "https://dropbox.com/"
 twitter = "https://twitter.com/"
 wayfair = "https://www.wayfair.com/"
 sapient = "https://www.publicissapient.com/"

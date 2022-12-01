@@ -2,7 +2,7 @@
 command = "make build"
 
 [build.environment]
-HUGO_VERSION = "0.105.0"
+HUGO_VERSION = "0.107.0"
 
 [[redirects]]
 from = "/*"

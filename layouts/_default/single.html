@@ -7,6 +7,9 @@
                 <article>
                     <span>
                         <h2 class="posts_title">{{ .Title }}</h2>
+                        <a href="/" rel="author" class="visually_hidden">
+                            {{ .Site.Author.name }}
+                        </a>
                         <p class="posts_date">
                             <time
                                 datetime="{{ .PublishDate.Format `2006-01-02T15:04:05.999999999Z07:00` }}"

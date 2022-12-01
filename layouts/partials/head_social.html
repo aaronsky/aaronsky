@@ -16,3 +16,11 @@
     href="{{ `posts/index.xml` | absURL }}"
     title="{{ .Site.Title }}"
 />
+<!-- Mastodon -->
+{{ range .Site.Params.Identity.Links.Mastodon }}
+    <link
+        rel="me"
+        href="{{ .link }}"
+        title="@{{ .username }} on {{ .instance }}"
+    />
+{{ end }}
