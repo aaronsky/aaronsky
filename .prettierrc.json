@@ -6,7 +6,7 @@
   "trailingComma": "es5",
   "arrowParens": "avoid",
   "bracketSpacing": true,
-
+  "plugins": ["prettier-plugin-go-template"],
   "overrides": [
     {
       "files": ["*.json", "*.yml", "*.yaml"],

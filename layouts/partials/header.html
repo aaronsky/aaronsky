@@ -1,7 +1,7 @@
 <header class="header">
     <div class="header_nav header_nav_item">
-        <h1 class="header_author">{{ .Site.Author.name }}</h1>
-        <h2 class="header_caption">{{ .Site.Author.caption }}</h2>
+        <h1 class="header_author">{{ .Site.Params.Author.name }}</h1>
+        <h2 class="header_caption">{{ .Site.Params.Author.caption }}</h2>
     </div>
     <div class="header_nav icons">
         <a
@@ -15,11 +15,11 @@
             <span class="visually_hidden">Resume</span>
         </a>
         <a
-            href="mailto:{{ .Site.Author.email }}"
+            href="mailto:{{ .Site.Params.Author.email }}"
             class="header_nav_item"
             rel="external"
             title="Email me"
-            alt="Send an email to {{ .Site.Author.email }}"
+            alt="Send an email to {{ .Site.Params.Author.email }}"
         >
             <i class="far fa-envelope" aria-hidden="true"></i>
             <span class="visually_hidden">Email</span>

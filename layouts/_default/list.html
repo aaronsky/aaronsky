@@ -5,7 +5,7 @@
             {{ partial "header.html" . }}
             <div class="content posts">{{ .Content }}</div>
             <ul class="posts_list">
-                {{ range .Pages.ByPublishDate }}
+                {{ range .Pages.ByPublishDate.Reverse }}
                     <li class="posts_list_item">
                         <h1 class="posts_list_item_title">
                             <a href="{{ .RelPermalink }}">{{ .Title }}</a>

@@ -3,7 +3,7 @@ experience:
     link: https://dropbox.com/
     roles:
       - title: Senior Software Engineer
-        description: Delivered periodic Xcode and OS migration efforts to CI and mobile engineers.
+        description: Migrated a large mobile codebase from Buck to Bazel for iOS development. Collaborated with the open source community to form solutions to the unique challenges of the Dropbox mobile apps. Supported the migration of a monorepo used by 60 developers from Phabricator to GitHub. Drove efforts to modernize and standardize tooling and infrastructure in a complex ecosystem to reduce toil.
         start: '2022-07-05'
         resume: true
     resume: true
@@ -57,7 +57,7 @@ experience:
         start: '2016-01-24'
         end: '2016-05-26'
         resume: true
-    resume: true
+    resume: false
   - name: Xamarin
     link: https://dotnet.microsoft.com/apps/xamarin
     roles:
@@ -115,20 +115,20 @@ skills:
     items:
       - Swift
       - Go
+      - Starlark
       - Objective-C
       - Python
+      - Rust
       - JavaScript/TypeScript
       - Ruby
-      - Rust
-      - Java
   - category: Mobile Platforms
     items:
       - iOS
-  - category: Server Technologies
+  - category: Technologies
     items:
-      - GCP
-  - category: Frameworks
-    items:
+      - Bazel
+      - Buck
+      - Google Cloud Platform
       - Terraform
       - Puppet
       - Chef

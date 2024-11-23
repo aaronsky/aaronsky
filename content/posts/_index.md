@@ -2,4 +2,4 @@
 layout: list
 ---
 
-### Posts
+## Posts

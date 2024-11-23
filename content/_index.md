@@ -1,9 +1,9 @@
 ---
 ---
 
-### I'm a {{< emphasize >}}development productivity engineer{{< /emphasize >}} based in Boston.
+### I'm a {{< emphasize >}}build engineer{{< /emphasize >}} based in Washington, D.C.
 
-App infrastructure, tooling, and build pipeline developer specialized in iOS and Android application development. Currently a senior developer at [Dropbox]({{< param "experience.links.dropbox" >}}) working on the mobile developer experience. Previously at [Twitter]({{< param "experience.links.twitter" >}}) producing tools for handling media content in iOS apps, at [Wayfair]({{< param "experience.links.wayfair" >}}) managing build infrastructure and tools for mobile apps and backend services, at [SapientNitro]({{< param "experience.links.sapient" >}}) integrating native SDKs into React Native apps, and at [Xamarin]({{< param "experience.links.xamarin" >}}) as an SDET for the Xamarin development platform.
+App infrastructure, tooling, and build engineer specialized in iOS and Android application development. Currently a senior developer at [Dropbox]({{< param "experience.links.dropbox" >}}) working on the mobile build and developer experience. Previously at [Twitter]({{< param "experience.links.twitter" >}}) producing tools for handling media content in iOS apps, at [Wayfair]({{< param "experience.links.wayfair" >}}) managing build infrastructure and tools for mobile apps and backend services, at [SapientNitro]({{< param "experience.links.sapient" >}}) integrating native SDKs into React Native apps, and at [Xamarin]({{< param "experience.links.xamarin" >}}) as an SDET for the Xamarin development platform.
 
 I have been working in the mobile space professionally since 2013, and in cloud infrastructure since 2019.
 
