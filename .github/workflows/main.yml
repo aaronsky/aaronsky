@@ -6,21 +6,11 @@ jobs:
     name: htmltest site
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.82.1'
-          extended: true
-
+      - uses: actions/checkout@v4
+      - uses: jdx/mise-action@v2
       - name: Install wkhtmltopdf
         run: |
           sudo apt-get update -y
           sudo apt-get install -y xvfb libfontconfig wkhtmltopdf
-
-      - name: Build Site
-        run: make build
-
-      - name: Run htmltest
-        run: make htmltest
+      - run: mise build
+      - run: mise htmltest

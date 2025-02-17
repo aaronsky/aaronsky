@@ -4,7 +4,19 @@ node = "latest"
 
 [env]
 _.path = ['{{config_root}}/node_modules/.bin']
-HUGO_VERSION = { value = "{{ exec(command='hugo version') }}", tools = true }
+
+[env.HUGO_VERSION]
+value = """{{ exec(command='hugo version') \
+    | split(pat=' ') \
+    | nth(n=1) \
+    | split(pat='-') \
+    | first \
+    | trim }}"""
+tools = true
+
+[env.NODE_VERSION]
+value = "{{ exec(command='node --version') }}"
+tools = true
 
 [tasks.clean]
 run = "rm -rf bin public resources tmp"
