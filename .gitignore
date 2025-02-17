@@ -69,3 +69,5 @@ node_modules/
 
 bin/htmltest
 tmp/.htmltest/
+
+/.vscode

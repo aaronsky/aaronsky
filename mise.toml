@@ -1,0 +1,31 @@
+[tools]
+hugo-extended = "0.143"
+node = "latest"
+
+[env]
+_.path = ['{{config_root}}/node_modules/.bin']
+
+[env.HUGO_VERSION]
+value = """{{ exec(command='hugo version') \
+    | split(pat=' ') \
+    | nth(n=1) \
+    | split(pat='-') \
+    | first \
+    | trim }}"""
+tools = true
+
+[env.NODE_VERSION]
+value = "{{ exec(command='node --version') }}"
+tools = true
+
+[tasks.clean]
+run = "rm -rf bin public resources tmp"
+
+[tasks.format]
+run = "prettier --write ."
+
+[tasks.dev]
+run = "hugo serve -D"
+
+[tasks.htmltest]
+run = ["curl https://htmltest.wjdp.uk | bash", "bin/htmltest -c htmltest.yml"]
