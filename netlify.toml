@@ -1,9 +1,6 @@
 [build]
 command = "mise run build"
 
-[build.environment]
-HUGO_VERSION = "0.143.1"
-
 [[redirects]]
 from = "/*"
 to = "/404.html"
