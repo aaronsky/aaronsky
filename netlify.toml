@@ -1,8 +1,8 @@
 [build]
-command = "make build"
+command = "mise run build"
 
 [build.environment]
-HUGO_VERSION = "0.139.0"
+HUGO_VERSION = "0.143.1"
 
 [[redirects]]
 from = "/*"
