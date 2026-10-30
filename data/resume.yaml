@@ -25,7 +25,7 @@ experience:
         end: '2021-04-09'
         resume: true
       - title: Senior App Infrastructure Engineer
-        description: Led a team of five to create tools to support the development of apps across Wayfair. Drove a substantial SCM migration across a distributed team of over 100 developers and over 20 repositories from Gitlab Enterprise to GitHub Enterprise. Designed a framework for more performant, reproducible iOS and Android builds on Buildkite. Supported transition to a weekly release of the Storefront iOS app.
+        description: Led a team of five to create tools to support the development of apps across Wayfair. Drove a substantial SCM migration across a distributed team of over 100 developers and over 20 repositories from Gitlab Enterprise to GitHub Enterprise. Implemented a model for reproducible iOS and Android builds on Buildkite. Supported transition to a weekly release of the Storefront iOS app.
         start: '2019-03-01'
         end: '2020-04-01'
         resume: true
