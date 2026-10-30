@@ -26,13 +26,10 @@ html {
             &_subheading {
                 font: {
                     style: italic;
-                    size: 10pt;
+                    size: 8pt;
                 }
 
                 @include themed(color, subheading);
-                margin: {
-                    bottom: 1rem;
-                }
 
                 & > a {
                     @include themed(color, link);
@@ -47,7 +44,7 @@ html {
         &_section_heading {
             font: {
                 weight: bold;
-                size: 12pt;
+                size: 10pt;
             }
 
             @include themed(color, subheading);
