@@ -30,7 +30,7 @@ experience:
         end: '2020-04-01'
         resume: true
       - title: iOS Platforms Engineer L2
-        description: Led a team of three to create tools to support the development of iOS apps in Storefront. Maintained and administered our Jenkins and Buddybuild continuous integration platforms on iOS and Android. Created a metrics platform for monitoring local and remote build performance, in order to identify trends and regressions. Collaborated with Release Engineering to run iOS endpoint deserialization integration tests against the backend deploy suite. Implemented product page Handoff into the Storefront iOS app and website.
+        description: Led a team of three to create tools to support the development of iOS apps in Storefront. Maintained and administered our Jenkins and Buddybuild continuous integration platforms on iOS and Android. Created a metrics platform for monitoring local and remote build performance, in order to identify trends and regressions. Collaborated with Release Engineering to integration test iOS endpoint deserialization against backend deployments. Implemented product page Handoff into the Storefront iOS app and website.
         start: '2017-07-24'
         end: '2019-03-01'
         resume: true
@@ -62,7 +62,7 @@ experience:
     link: https://dotnet.microsoft.com/apps/xamarin
     roles:
       - title: Mobile Testing Intern
-        description: Contributed UI tests to product sample automation suite and oversaw test runs. Filled and verified bugs in the Xamarin platform. Managed and enhanced internal QA infrastructure using Chef. Drove QA-side of launch of day one support for the newly released Apple Watch. Ported newly released iOS and Android samples to come from Apple WWDC and Google I/O 2015 to Xamarin.iOS and Xamarin.Android.
+        description: Contributed UI tests to product sample automation suite and oversaw test runs. Investigated bugs in the Xamarin platform. Managed and enhanced internal QA infrastructure using Chef. Drove QA-side of launch of day one support for the newly released Apple Watch. Ported newly released iOS and Android samples to come from Apple WWDC and Google I/O 2015 to Xamarin.iOS and Xamarin.Android.
         start: '2015-01-12'
         end: '2015-08-14'
         resume: true
