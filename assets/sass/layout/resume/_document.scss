@@ -15,7 +15,7 @@ html {
             &_heading {
                 font: {
                     weight: bold;
-                    size: 20pt;
+                    size: 18pt;
                 }
 
                 margin: {
@@ -44,7 +44,7 @@ html {
         &_section_heading {
             font: {
                 weight: bold;
-                size: 10pt;
+                size: 12pt;
             }
 
             @include themed(color, subheading);
