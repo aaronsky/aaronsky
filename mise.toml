@@ -1,6 +1,6 @@
 [tools]
 hugo-extended = "0.143"
-node = "latest"
+node = "lts"
 
 [env]
 _.path = ['{{config_root}}/node_modules/.bin']

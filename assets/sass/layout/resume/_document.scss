@@ -1,3 +1,7 @@
+@page {
+    margin: 0.5in;
+}
+
 html {
     @include themed(background-color, resume-background);
 }
@@ -11,7 +15,7 @@ html {
             &_heading {
                 font: {
                     weight: bold;
-                    size: 24pt;
+                    size: 20pt;
                 }
 
                 margin: {
@@ -22,7 +26,7 @@ html {
             &_subheading {
                 font: {
                     style: italic;
-                    size: 11pt;
+                    size: 10pt;
                 }
 
                 @include themed(color, subheading);
@@ -34,7 +38,7 @@ html {
                     @include themed(color, link);
                     font: {
                         style: italic;
-                        size: 11pt;
+                        size: 8pt;
                     }
                 }
             }
@@ -76,7 +80,7 @@ html {
                 }
                 padding: 0;
                 @include themed(color, text);
-                font-size: 10pt;
+                font-size: 8pt;
 
                 text: {
                     align: left;
@@ -108,7 +112,7 @@ html {
 
             &_item {
                 font: {
-                    size: 10pt;
+                    size: 8pt;
                 }
 
                 padding: {
@@ -134,14 +138,14 @@ html {
 
     h2.resume_project_heading {
         font-weight: bold;
-        font-size: 12pt;
+        font-size: 10pt;
         @include themed(color, subheading);
     }
 
     h3.resume_project_heading {
         font: {
             weight: bold;
-            size: 10pt;
+            size: 8pt;
         }
 
         @include themed(color, caption);

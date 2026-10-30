@@ -8,9 +8,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: jdx/mise-action@v2
-      - name: Install wkhtmltopdf
-        run: |
-          sudo apt-get update -y
-          sudo apt-get install -y xvfb libfontconfig wkhtmltopdf
       - run: mise build
       - run: mise htmltest
