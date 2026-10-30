@@ -3,7 +3,7 @@ experience:
     link: https://dropbox.com/
     roles:
       - title: Senior Software Engineer
-        description: Migrated a large mobile codebase from Buck to Bazel for iOS development. Collaborated with the open source community to form solutions to the unique challenges of the Dropbox mobile apps. Supported the migration of a monorepo used by 60 developers from Phabricator to GitHub. Drove efforts to modernize and standardize tooling and infrastructure in a complex ecosystem to reduce toil.
+        description: Migrated a large mobile codebase from Buck to Bazel for iOS development. Participated extensively in the Bazel open source community to  deliver solutions to the unique challenges of the Dropbox mobile apps. Supported the migration of a monorepo used by 60 developers from Phabricator to GitHub. Supported the migration of the same monorepo from an internal CI platform to Buildkite. Planned and coordinated the migration of the same monorepo from its internal app release infrastructure to the company release platform in order to increase delivery to weekly. Drove efforts to modernize and standardize tooling and infrastructure in a complex ecosystem to reduce toil.
         start: '2022-07-05'
         resume: true
     resume: true
@@ -128,6 +128,7 @@ skills:
     items:
       - Bazel
       - Buck
+      - Amazon Web Services
       - Google Cloud Platform
       - Terraform
       - Puppet
