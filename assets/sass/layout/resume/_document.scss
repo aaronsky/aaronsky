@@ -47,7 +47,7 @@ html {
         &_section_heading {
             font: {
                 weight: bold;
-                size: 14pt;
+                size: 12pt;
             }
 
             @include themed(color, subheading);
