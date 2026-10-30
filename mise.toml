@@ -1,4 +1,5 @@
 [tools]
+"github:wjdp/htmltest" = "latest"
 hugo-extended = "0.143"
 node = "lts"
 
@@ -28,4 +29,5 @@ run = "prettier --write ."
 run = "hugo serve -D"
 
 [tasks.htmltest]
-run = ["curl https://htmltest.wjdp.uk | bash", "bin/htmltest -c htmltest.yml"]
+depends = ["build"]
+run = "htmltest -c htmltest.yml"
