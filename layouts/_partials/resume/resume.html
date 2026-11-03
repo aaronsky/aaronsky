@@ -1,6 +1,6 @@
 {{ partial "resume/experience.html" . }}
 
-{{ with (where $.Site.Data.resume.projects "resume" true) }}
+{{ with where hugo.Data.resume.projects "resume" true }}
     <section>
         <h2 class="resume_section_heading">Projects</h2>
         {{ range sort . "name" "asc" }}
@@ -12,7 +12,7 @@
     </section>
 {{ end }}
 
-{{ with $.Site.Data.resume.skills }}
+{{ with hugo.Data.resume.skills }}
     <section>
         <h2 class="resume_section_heading">Skills</h2>
         <div class="resume_project_description">
@@ -33,12 +33,12 @@
     <h2 class="resume_section_heading">Education</h2>
     <p class="resume_project_description education">
         <strong
-            >{{ .Site.Data.resume.education.school }},
-            {{ .Site.Data.resume.education.department }}</strong
+            >{{ hugo.Data.resume.education.school }},
+            {{ hugo.Data.resume.education.department }}</strong
         >
     </p>
     <p class="resume_project_description education">
-        {{ .Site.Data.resume.education.degree }},
-        {{ .Site.Data.resume.education.date }}
+        {{ hugo.Data.resume.education.degree }},
+        {{ hugo.Data.resume.education.date }}
     </p>
 </section>

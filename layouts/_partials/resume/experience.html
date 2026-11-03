@@ -1,4 +1,4 @@
-{{ with (where $.Site.Data.resume.experience "resume" true) }}
+{{ with where hugo.Data.resume.experience "resume" true }}
     <section>
         <h2 class="resume_section_heading">Experience</h2>
         {{ range . }}

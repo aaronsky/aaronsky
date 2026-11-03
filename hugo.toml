@@ -1,5 +1,5 @@
 baseURL = "https://skyaaron.com/"
-languageCode = "en-us"
+locale = "en-us"
 title = "Aaron Sky"
 enableRobotsTXT = true
 
@@ -9,7 +9,6 @@ caption = "Mobile Tools Developer"
 email = "aaronsky@skyaaron.com"
 
 [params.identity.links]
-twitter = "https://twitter.com/metc_sky/"
 github = "https://github.com/aaronsky/"
 linkedin = "https://www.linkedin.com/in/aaronsky/"
 npm = "https://www.npmjs.com/~aaronsky"
@@ -28,6 +27,3 @@ xamarin = "https://dotnet.microsoft.com/apps/xamarin"
 
 [markup.highlight]
 noClasses = false
-
-[security.exec]
-osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$', '^ASDF_DIR$', '^HOME$']

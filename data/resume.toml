@@ -1,0 +1,198 @@
+[[experience]]
+name = "Dropbox"
+link = "https://dropbox.com/"
+resume = true
+
+[[experience.roles]]
+title = "Senior Software Engineer"
+description = "Migrated a large mobile codebase from Buck to Bazel for iOS development. Participated extensively in the Bazel open source community to  deliver solutions to the unique challenges of the Dropbox mobile apps. Supported the migration of a monorepo used by 60 developers from Phabricator to GitHub. Supported the migration of the same monorepo from an internal CI platform to Buildkite. Planned and coordinated the migration of the same monorepo from its internal app release infrastructure to the company release platform in order to increase delivery to weekly. Drove efforts to modernize and standardize tooling and infrastructure in a complex ecosystem to reduce toil."
+start = "2022-07-05"
+resume = true
+
+[[experience]]
+name = "Twitter"
+link = "https://twitter.com/"
+resume = true
+
+[[experience.roles]]
+title = "Senior Software Engineer"
+description = "Migrated the core A/V client codebase to Swift Package Manager. Developed tools for our A/V testing environment to reduce iteration time for new features. Drove increased adoption of Swift away from Objective-C to improve reliability."
+start = "2021-04-26"
+end = "2022-07-01"
+resume = true
+
+[[experience]]
+name = "Wayfair"
+link = "https://www.wayfair.com/"
+resume = true
+
+[[experience.roles]]
+title = "Senior Development Platforms Engineer"
+description = "Migrated CentOS-based build infrastructure from on-premises data centers to autoscaled Google Compute instance groups on Google Cloud Platform (GCP). Leveraged new GCP autoscaling features to reduce infrastructure toil and eliminate scheduling-wait times for continuous integration. Collaborated across teams and functions in order to successfully leverage GCP in innovative ways at Wayfair."
+start = "2020-04-01"
+end = "2021-04-09"
+resume = true
+
+[[experience.roles]]
+title = "Senior App Infrastructure Engineer"
+description = "Led a team of five to create tools to support the development of apps across Wayfair. Drove a substantial SCM migration across a distributed team of over 100 developers and over 20 repositories from Gitlab Enterprise to GitHub Enterprise. Implemented a model for reproducible iOS and Android builds on Buildkite. Supported transition to a weekly release of the Storefront iOS app."
+start = "2019-03-01"
+end = "2020-04-01"
+resume = true
+
+[[experience.roles]]
+title = "iOS Platforms Engineer L2"
+description = "Led a team of three to create tools to support the development of iOS apps in Storefront. Maintained and administered our Jenkins and Buddybuild continuous integration platforms on iOS and Android. Created a metrics platform for monitoring local and remote build performance, in order to identify trends and regressions. Collaborated with Release Engineering to integration test iOS endpoint deserialization against backend deployments. Implemented product page Handoff into the Storefront iOS app and website."
+start = "2017-07-24"
+end = "2019-03-01"
+resume = true
+
+[[experience]]
+name = "SapientNitro"
+link = "https://www.publicissapient.com/"
+resume = true
+
+[[experience.roles]]
+title = "Mobile Developer"
+description = "Developed and published four apps to iOS and Android storefronts using React Native for a Fortune 100 insurance client. Served as the team's sole native-mobile specialist and release engineer. Created testing and release tools for teams to reduce development friction. Stood-up Jenkins cluster to create reproducible, concurrent app builds, and coordinated with clients to deploy to app stores. Utilized Agile methodology and Scrum to effectively respond to and pivot on client input."
+start = "2016-06-06"
+end = "2017-07-07"
+resume = true
+
+[[experience]]
+name = "Fangamer"
+link = "https://www.fangamer.com/"
+resume = false
+
+[[experience.roles]]
+title = "Contractor"
+description = "Contributed to a large Shopify Ruby-on-Rails codebase to launch an overhauled in-stock notification system."
+start = "2020-03-26"
+end = "2020-04-23"
+resume = false
+
+[[experience.roles]]
+title = "Contractor"
+description = "Delivered a Slack-based time tracking tool for use in a small, distributed office setting. Utilized principles of test driven development, client-focused delivery and twelve-factor application design. Conducted training for use and continued development of the tool."
+start = "2016-01-24"
+end = "2016-05-26"
+resume = true
+
+[[experience]]
+name = "Xamarin"
+link = "https://dotnet.microsoft.com/apps/xamarin"
+resume = true
+
+[[experience.roles]]
+title = "Mobile Testing Intern"
+description = "Contributed UI tests to product sample automation suite and oversaw test runs. Investigated bugs in the Xamarin platform. Managed and enhanced internal QA infrastructure using Chef. Drove QA-side of launch of day one support for the newly released Apple Watch. Ported newly released iOS and Android samples to come from Apple WWDC and Google I/O 2015 to Xamarin.iOS and Android."
+start = "2015-01-12"
+end = "2015-08-14"
+resume = true
+
+[[experience]]
+name = "Rochester Institute of Technology"
+link = "https://www.rit.edu/computing/school-interactive-games-and-media"
+resume = false
+
+[[experience.roles]]
+title = "Web Developer, Teaching Assistant"
+description = "Wrote backend for open source education software developed under grant program. Assisted students with questions related to iOS and Android coursework."
+start = "2015-08-24"
+end = "2016-05-20"
+resume = false
+
+[[experience]]
+name = "iD Tech Camps"
+link = "https://www.idtech.com/"
+resume = false
+
+[[experience.roles]]
+title = "Instructor"
+description = "Responsible for instructing Java and C++ programming to groups of 13-17 year olds with varying levels of programming background. My weeklong course covered basic structures of the language such as variables, code structure and flow control. I also taught my advanced students basic UI, object-oriented programming, and the importance of project scope."
+start = "2013-06-15"
+end = "2014-08-02"
+resume = false
+
+[[projects]]
+name = "Cider"
+link = "https://cidertool.github.io/cider/"
+description = "Application heavily leveraging the App Store Connect API to enable continuous delivery of iOS, macOS and tvOS apps to TestFlight and App Store review. Makes use of a simple YAML configuration with sane defaults to update metadata, upload assets, and submit app builds for review. Designed to accomodate automation workflows that make use of xcodebuild and altool to build and upload apps."
+resume = false
+
+[[projects]]
+name = "Foxdie"
+link = "https://crates.io/crates/foxdie/"
+description = "Rust application for deleting stale remote branches and pull requests on any GitHub or Gitlab repository, regardless of cloud/on-prem situation. Leverages libgit2 under the hood to achieve performance goals. Created a procedure for discerning between multiple SCMs using only a Git remote URL and an access token and adapted it for idiomatic Rust. Foxdie has deleted thousands of branches and hundreds of pull requests over its service life, reducing storage footprint and fetch times on several monorepos."
+resume = false
+
+[[projects]]
+name = "Buildkite Swift Client"
+link = "https://github.com/aaronsky/buildkite-swift"
+description = "Swift package for interacting with Buildkites REST and GraphQL APIs."
+resume = false
+
+[[projects]]
+name = "Ibizan"
+link = "https://github.com/aaronsky/ibizan/"
+description = "Ibizan is a chat bot built on the Hubot framework, originally contracted by Fangamer. Ibizan is designed to provide an intuitive and interactive interface to managing a timesheet."
+resume = false
+
+[[projects]]
+name = "learnVCS"
+link = "https://learnvcs.github.io/"
+description = "A student-driven effort to improve version control education in the Interactive Games & Media curricula, overseen by the department chair. Produced a web reference to prime newcomers on version control fundamentals with a curated collection of helpful links and an interactive Git graph using React and live data from GitHub."
+resume = false
+
+[[projects]]
+name = "Packed"
+link = "https://www.microsoft.com/en-us/store/apps/packed/9nblggh0f0gr/"
+description = "A package tracking application for Windows Phone 8 and Windows 8 developed using C# and XAML. Made extensive use of USPS, UPS and FedEx APIs and Windows Presentation Foundation. Independently created."
+resume = false
+
+[[skills]]
+category = "Languages"
+items = [
+    "Swift",
+    "Go",
+    "Starlark",
+    "Objective-C",
+    "Python",
+    "Rust",
+    "JavaScript/TypeScript",
+    "Ruby",
+]
+
+[[skills]]
+category = "Mobile Platforms"
+items = ["iOS"]
+
+[[skills]]
+category = "Technologies"
+items = [
+    "Bazel",
+    "Buck",
+    "Amazon Web Services",
+    "Google Cloud Platform",
+    "Terraform",
+    "Puppet",
+    "Chef",
+    "Rails",
+]
+
+[[skills]]
+category = "Pipeline Automation Platforms"
+items = ["Buildkite", "Jenkins", "Buddybuild", "Phabricator"]
+
+[education]
+school = "Rochester Institute of Technology"
+department = "Golisano College of Computing and Information Sciences"
+degree = "Bachelor of Science in Game Design and Development"
+date = "2016"
+
+[[certification]]
+title = "Xamarin Certified Mobile Developer"
+link = "https://skyaaron.com/files/xamarin-certification.pdf"
+start = "2015-02-01"
+end = "2017-12-31"
+resume = false

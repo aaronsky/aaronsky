@@ -1,6 +1,6 @@
 [tools]
 "github:wjdp/htmltest" = "latest"
-hugo-extended = "0.143"
+hugo-extended = "0.169"
 node = "lts"
 
 [env]
