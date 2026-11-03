@@ -1,3 +1,5 @@
+@use "../abstracts/themes";
+
 /* 
 ==========================================================================
 Base elements
@@ -20,14 +22,14 @@ Selections
 ========================================================================== */
 
 ::-moz-selection {
-    @include themed(background-color, highlight);
-    @include themed(color, highlight-text);
+    @include themes.themed(background-color, highlight);
+    @include themes.themed(color, highlight-text);
     text-shadow: none;
 }
 
 ::selection {
-    @include themed(background-color, highlight);
-    @include themed(color, highlight-text);
+    @include themes.themed(background-color, highlight);
+    @include themes.themed(color, highlight-text);
     text-shadow: none;
 }
 
@@ -44,7 +46,7 @@ body {
     line-height: 1.6;
     margin: 0;
 
-    @include themed(background-color, background);
+    @include themes.themed(background-color, background);
 
     transition: {
         property: background, color;
@@ -66,7 +68,7 @@ ins {
         width: 1px;
         style: solid;
     }
-    @include themed(border-bottom-color, text);
+    @include themes.themed(border-bottom-color, text);
 }
 
 /*
@@ -94,17 +96,17 @@ Links
 ========================================================================== */
 
 a {
-    @include themed(color, link);
+    @include themes.themed(color, link);
     text-decoration: none;
     background-color: transparent;
 }
 
 a:hover {
-    @include themed(color, link-hover);
+    @include themes.themed(color, link-hover);
 }
 
 a:active {
-    @include themed(color, link-active);
+    @include themes.themed(color, link-active);
 }
 
 // Apply focus state

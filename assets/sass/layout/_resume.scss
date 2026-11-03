@@ -1,10 +1,13 @@
+@use "../abstracts/themes";
+@use "../abstracts/variables";
+
 $section-heading-font-size: 24pt;
 $project-heading-font-size: 18pt;
 $project-subheading-font-size: 14pt;
 
 .resume {
     h2 {
-        @include themed(color, heading);
+        @include themes.themed(color, heading);
 
         &.resume_section_heading {
             font: {
@@ -22,7 +25,7 @@ $project-subheading-font-size: 14pt;
     }
 
     h3 {
-        @include themed(color, subheading);
+        @include themes.themed(color, subheading);
 
         &.resume_project_heading {
             font: {
@@ -37,7 +40,7 @@ $project-subheading-font-size: 14pt;
     }
 
     .resume_skill_item {
-        font-size: $body-font-size;
+        font-size: variables.$body-font-size;
     }
 
     p {

@@ -1,9 +1,12 @@
-@import 'abstracts/variables', 'abstracts/mixins', 'abstracts/themes';
+@forward 'abstracts/variables';
+@forward 'abstracts/mixins';
+@forward 'abstracts/themes';
 
-@import 'vendor/vendor';
+@forward 'vendor/vendor';
 
-@import 'base/typography', 'base/base';
+@forward 'base/typography';
+@forward 'base/base';
 
-@import 'layout/resume/document';
+@forward 'layout/resume/document';
 
-@import 'components/accessibility';
+@forward 'components/accessibility';

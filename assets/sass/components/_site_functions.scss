@@ -1,3 +1,6 @@
+@use "../abstracts/themes";
+@use "../abstracts/variables";
+
 .site_functions {
     .go_home_link {
         position: absolute;
@@ -34,14 +37,14 @@
         border: none;
         cursor: pointer;
         background-color: transparent;
-        @include themed(color, theme-toggle-button);
-        font-size: $theme-icon-font-size;
+        @include themes.themed(color, theme-toggle-button);
+        font-size: variables.$theme-icon-font-size;
         transition: color 0.25s;
 
         @media (hover: hover) {
             &:hover {
                 animation: rockBackAndForth 4s linear infinite;
-                @include themed(color, theme-toggle-button-hover);
+                @include themes.themed(color, theme-toggle-button-hover);
             }
         }
     }

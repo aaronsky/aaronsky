@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $themes: (
     light: (
         background: #eee,
@@ -41,14 +43,14 @@ $themes: (
     }
 
     $theme: null;
-    @if map-has-key($themes, $scheme) {
-        $theme: map-get($themes, $scheme);
+    @if map.has-key($themes, $scheme) {
+        $theme: map.get($themes, $scheme);
     } @else {
         @error "Unknown scheme `#{$scheme}` in $themes";
     }
 
-    @if map-has-key($theme, $key) {
-        @return map-get($theme, $key);
+    @if map.has-key($theme, $key) {
+        @return map.get($theme, $key);
     }
 
     @warn "Unknown key `#{$key}` in #{$scheme} theme.";

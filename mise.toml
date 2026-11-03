@@ -1,6 +1,7 @@
 [tools]
+"github:sass/dart-sass" = "1.107.1"
 "github:wjdp/htmltest" = "latest"
-hugo-extended = "0.169"
+hugo = "0.169"
 node = "lts"
 
 [env]

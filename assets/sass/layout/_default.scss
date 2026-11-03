@@ -1,3 +1,6 @@
+@use "../abstracts/themes";
+@use "../abstracts/variables";
+
 .main_container {
     position: relative;
     margin: 0 auto;
@@ -8,16 +11,16 @@
 
 .content {
     h2 {
-        font-size: $subheading-font-size;
+        font-size: variables.$subheading-font-size;
     }
 
     h3 {
         font: {
-            size: $caption-font-size;
+            size: variables.$caption-font-size;
             weight: 600;
         }
 
-        @include themed(color, subheading);
+        @include themes.themed(color, subheading);
     }
 
     p {
@@ -26,7 +29,7 @@
 }
 
 .emphasized {
-    @include themed(color, caption-emphasis);
+    @include themes.themed(color, caption-emphasis);
 }
 
 .visually_hidden {
