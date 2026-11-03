@@ -1,3 +1,6 @@
+@use "../abstracts/themes";
+@use "../abstracts/variables";
+
 /* 
 ================================================
 TYPOGRAPHY 
@@ -5,10 +8,10 @@ TYPOGRAPHY
 
 body {
     font: {
-        family: $base-font;
-        size: $body-font-size;
+        family: variables.$base-font;
+        size: variables.$body-font-size;
     }
-    @include themed(color, text);
+    @include themes.themed(color, text);
 }
 
 h1,
@@ -17,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $heading-font;
+    font-family: variables.$heading-font;
     text-rendering: optimizeLegibility;
 }
 
@@ -52,11 +55,11 @@ h6 {
 }
 
 p {
-    font-size: $body-font-size;
+    font-size: variables.$body-font-size;
 }
 
 li {
-    font-size: $body-font-size;
+    font-size: variables.$body-font-size;
 }
 
 @supports (font: -apple-system-body) {

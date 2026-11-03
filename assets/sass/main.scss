@@ -1,10 +1,17 @@
-@import 'abstracts/variables', 'abstracts/mixins', 'abstracts/themes';
+@forward 'abstracts/variables';
+@forward 'abstracts/mixins';
+@forward 'abstracts/themes';
 
-@import 'vendor/vendor';
+@forward 'vendor/vendor';
 
-@import 'base/typography', 'base/syntax', 'base/base';
+@forward 'base/typography';
+@forward 'base/syntax';
+@forward 'base/base';
 
-@import 'layout/default', 'layout/posts', 'layout/resume';
+@forward 'layout/default';
+@forward 'layout/posts';
+@forward 'layout/resume';
 
-@import 'components/header', 'components/site_functions',
-    'components/accessibility';
+@forward 'components/header';
+@forward 'components/site_functions';
+@forward 'components/accessibility';

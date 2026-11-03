@@ -1,3 +1,6 @@
+@use "../abstracts/themes";
+@use "../abstracts/variables";
+
 .header {
     margin: 1em auto;
     width: 100%;
@@ -5,10 +8,10 @@
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    @include themed(color, heading);
+    @include themes.themed(color, heading);
     border-bottom: 1px solid;
 
-    @media screen and (min-width: $breakpoint-medium) {
+    @media screen and (min-width: variables.$breakpoint-medium) {
         flex-direction: row;
         align-items: flex-end;
     }
@@ -16,14 +19,14 @@
     &_author {
         margin: 0 auto;
         font: {
-            size: $heading-font-size;
+            size: variables.$heading-font-size;
             weight: 700;
         }
     }
 
     &_caption {
         font: {
-            size: $caption-font-size;
+            size: variables.$caption-font-size;
             weight: 400;
         }
         margin-bottom: 0;
@@ -34,7 +37,7 @@
 
         &_item {
             box-sizing: border-box;
-            @include themed(color, nav-item);
+            @include themes.themed(color, nav-item);
             padding: 0.5em;
         }
     }
@@ -50,7 +53,7 @@ a {
     }
 
     &:hover.header_nav_item {
-        @include themed(color, link-hover);
+        @include themes.themed(color, link-hover);
         box-shadow: 0 4px 0 0;
     }
 }
@@ -60,7 +63,7 @@ a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: $icon-font-size;
+    font-size: variables.$icon-font-size;
 
     & > .header_nav_item {
         padding: 0.3em 0.4em;

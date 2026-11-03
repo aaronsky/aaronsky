@@ -1,3 +1,6 @@
+@use "../abstracts/themes";
+@use "../abstracts/variables";
+
 $post-title-heading-font: 24pt;
 
 .posts.content {
@@ -9,7 +12,7 @@ $post-title-heading-font: 24pt;
         }
 
         width: 100%;
-        @media screen and (min-width: $breakpoint-large) {
+        @media screen and (min-width: variables.$breakpoint-large) {
             width: 80%;
         }
     }
@@ -27,25 +30,25 @@ $post-title-heading-font: 24pt;
             width: 3px;
             style: solid;
         }
-        @include themed(border-left-color, caption-emphasis);
+        @include themes.themed(border-left-color, caption-emphasis);
     }
 
     code {
-        @include themed(color, caption-emphasis);
+        @include themes.themed(color, caption-emphasis);
     }
 }
 
 .posts {
     &_title {
         font-size: $post-title-heading-font;
-        @include themed(color, subheading);
+        @include themes.themed(color, subheading);
         margin-bottom: 0;
     }
 
     &_date {
         font: {
             weight: bold;
-            size: $body-font-size;
+            size: variables.$body-font-size;
         }
     }
 
@@ -59,7 +62,7 @@ $post-title-heading-font: 24pt;
             }
 
             &_title {
-                font-size: $body-font-size;
+                font-size: variables.$body-font-size;
             }
         }
     }

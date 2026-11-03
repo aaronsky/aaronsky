@@ -1,27 +1,29 @@
+@use "variables";
+
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
 readers do not read off random characters that represent icons */
 
-.#{$fa-css-prefix}-envelope:before {
-    content: fa-content($fa-var-envelope);
+.#{variables.$fa-css-prefix}-envelope:before {
+    content: variables.fa-content(variables.$fa-var-envelope);
 }
-.#{$fa-css-prefix}-file-alt:before {
-    content: fa-content($fa-var-file-alt);
+.#{variables.$fa-css-prefix}-file-alt:before {
+    content: variables.fa-content(variables.$fa-var-file-alt);
 }
-.#{$fa-css-prefix}-pen:before {
-    content: fa-content($fa-var-pen);
+.#{variables.$fa-css-prefix}-pen:before {
+    content: variables.fa-content(variables.$fa-var-pen);
 }
-.#{$fa-css-prefix}-twitter:before {
-    content: fa-content($fa-var-twitter);
+.#{variables.$fa-css-prefix}-twitter:before {
+    content: variables.fa-content(variables.$fa-var-twitter);
 }
-.#{$fa-css-prefix}-github:before {
-    content: fa-content($fa-var-github);
+.#{variables.$fa-css-prefix}-github:before {
+    content: variables.fa-content(variables.$fa-var-github);
 }
-.#{$fa-css-prefix}-linkedin:before {
-    content: fa-content($fa-var-linkedin);
+.#{variables.$fa-css-prefix}-linkedin:before {
+    content: variables.fa-content(variables.$fa-var-linkedin);
 }
-.#{$fa-css-prefix}-moon:before {
-    content: fa-content($fa-var-moon);
+.#{variables.$fa-css-prefix}-moon:before {
+    content: variables.fa-content(variables.$fa-var-moon);
 }
-.#{$fa-css-prefix}-sun:before {
-    content: fa-content($fa-var-sun);
+.#{variables.$fa-css-prefix}-sun:before {
+    content: variables.fa-content(variables.$fa-var-sun);
 }

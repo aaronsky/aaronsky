@@ -1,2 +1,4 @@
-@import 'fontawesome/scss/fontawesome.scss', 'fontawesome/scss/solid.scss',
-    'fontawesome/scss/regular.scss', 'fontawesome/scss/brands.scss';
+@forward 'fontawesome/scss/fontawesome.scss';
+@forward 'fontawesome/scss/solid.scss';
+@forward 'fontawesome/scss/regular.scss';
+@forward 'fontawesome/scss/brands.scss';

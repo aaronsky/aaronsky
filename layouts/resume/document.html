@@ -2,7 +2,8 @@
 {{ define "subtitle" }}&nbsp;{{ end }}
 
 {{ define "head_style" }}
-    {{ $style := resources.Get "sass/resume.scss" | toCSS | minify | fingerprint }}
+    {{ $opts := dict "transpiler" "dartsass" }}
+    {{ $style := resources.Get "sass/resume.scss" | toCSS $opts | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 {{ end }}
 
